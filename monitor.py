@@ -44,7 +44,9 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 SEEN_PRODUCTS_FILE = DATA_DIR / "seen_products.json"
 SEEN_NEWS_FILE = DATA_DIR / "seen_news.json"
 PRICE_HISTORY_FILE = DATA_DIR / "price_history.json"
-DASHBOARD_FEED_FILE = PROJECT_ROOT / "dragonball-tracker" / "data.json"
+DASHBOARD_FEED_FILE = Path(
+    os.getenv("TCG_DASHBOARD_FEED", str(PROJECT_ROOT / "dragonball-tracker" / "data.json"))
+)
 
 # ─── Watchlist ───────────────────────────────────────────────────────────
 # These are the booster boxes Gianni actively wants to pre-order.
