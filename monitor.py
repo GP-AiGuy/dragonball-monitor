@@ -37,17 +37,14 @@ log = logging.getLogger(__name__)
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
-PROJECT_ROOT = Path(__file__).resolve().parent
-# Override via TCG_STATE_DIR env var (GitHub Actions persists state inside repo)
-DATA_DIR = Path(os.getenv("TCG_STATE_DIR", str(PROJECT_ROOT / "state")))
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+# Override via TCG_STATE_DIR env var (used by GitHub Actions to persist state in repo)
+DATA_DIR = Path(os.getenv("TCG_STATE_DIR", str(PROJECT_ROOT / ".tmp" / "tcg_monitor")))
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 SEEN_PRODUCTS_FILE = DATA_DIR / "seen_products.json"
 SEEN_NEWS_FILE = DATA_DIR / "seen_news.json"
 PRICE_HISTORY_FILE = DATA_DIR / "price_history.json"
-# Override via TCG_DASHBOARD_FEED env var (GH Pages reads from repo root)
-DASHBOARD_FEED_FILE = Path(
-    os.getenv("TCG_DASHBOARD_FEED", str(PROJECT_ROOT / "data.json"))
-)
+DASHBOARD_FEED_FILE = PROJECT_ROOT / "dragonball-tracker" / "data.json"
 
 # ─── Watchlist ───────────────────────────────────────────────────────────
 # These are the booster boxes Gianni actively wants to pre-order.
@@ -163,24 +160,6 @@ SHOP_SEARCHES = [
         "extractor": "bol",
     },
     {
-        "name": "101 Cardgames",
-        "country": "NL",
-        "url": "https://www.101cardgames.nl/zoekresultaten/?q=dragon+ball+booster",
-        "extractor": "generic_shop",
-    },
-    {
-        "name": "Boostercardshop",
-        "country": "NL",
-        "url": "https://www.boostercardshop.nl/?s=dragon+ball+booster+box",
-        "extractor": "generic_shop",
-    },
-    {
-        "name": "Magicsale",
-        "country": "NL",
-        "url": "https://www.magicsale.nl/zoekresultaten?q=dragon+ball+booster",
-        "extractor": "generic_shop",
-    },
-    {
         "name": "Ludofy",
         "country": "NL",
         "url": "https://ludofy.com/search?q=dragon+ball+fusion+world",
@@ -265,12 +244,6 @@ SHOP_SEARCHES = [
         "name": "Fantasywelt",
         "country": "DE",
         "url": "https://www.fantasywelt.de/Suche?q=dragon+ball+booster+display",
-        "extractor": "generic_shop",
-    },
-    {
-        "name": "Strategiezone",
-        "country": "BE",
-        "url": "https://www.strategiezone.be/zoeken?q=dragon+ball+booster",
         "extractor": "generic_shop",
     },
     # ── Amazon (NL + UK) ──
@@ -426,11 +399,22 @@ EXTRACTOR_JS = {
         const seen = new Set();
         for (const a of links) {
             const href = a.href || '';
-            let text = a.textContent.trim();
+            // Prefer aria-label or alt text from img inside (cleanest for Shopify).
+            // Fall back to textContent stripped of script/style/HTML noise.
+            let text = (a.getAttribute('aria-label') || '').trim();
+            if (!text) {
+                const img = a.querySelector('img[alt]');
+                if (img) text = (img.getAttribute('alt') || '').trim();
+            }
+            if (!text) {
+                text = a.textContent.replace(/<[^>]+>/g, ' ').replace(/\\s+/g, ' ').trim();
+            }
             if (text.length < 10 || text.length > 300) continue;
             if (seen.has(href)) continue;
             // Skip nav/category/login links
             if (/\\b(login|account|cart|winkelwagen|menu|home)\\b/i.test(text)) continue;
+            // Skip embedded HTML/JS leakage
+            if (/^<|noscript|cdn\\.shop/i.test(text)) continue;
             seen.add(href);
             const parent = a.closest('article, .product, .product-item, .product-card, li, div');
             const pText = parent ? parent.textContent : text;
@@ -597,27 +581,34 @@ def is_dragonball_booster_box(title):
 
     Rules (all on title only, fullText is too noisy on grid pages):
     1. Must contain a booster-box keyword
-    2. Must contain Dragon Ball branding
-    3. Must NOT contain a hard-exclude keyword (sleeves, ETB, single pack, etc)
-    4. Must NOT contain a blocked old-series keyword (Zenkai, Unison, etc)
-    5. Must mention Masters / Fusion World OR a Masters/FW set code (B25+ or FB##)
+    2. Must NOT contain a hard-exclude keyword (sleeves, ETB, single pack, etc)
+    3. Must NOT contain a blocked old-series keyword (Zenkai, Unison, etc)
+    4. Must mention Masters / Fusion World OR a Masters/FW set code (B25+ or FB##)
+       OR explicit Dragon Ball branding. Series code alone is enough since FB##
+       and B25+ are unique to Dragon Ball Super CCG.
     """
     title_lower = title.lower()
     if not any(kw in title_lower for kw in BOOSTER_BOX_KEYWORDS):
-        return False
-    if not any(kw in title_lower for kw in DRAGONBALL_KEYWORDS):
         return False
     if any(kw in title_lower for kw in EXCLUDE_KEYWORDS):
         return False
     if any(kw in title_lower for kw in BLOCKED_SERIES_KEYWORDS):
         return False
-    series_match = (
-        any(kw in title_lower for kw in ALLOWED_SERIES_KEYWORDS)
-        or ALLOWED_SERIES_REGEX.search(title_lower)
+    has_dragonball = any(kw in title_lower for kw in DRAGONBALL_KEYWORDS)
+    has_fw_or_code = (
+        "fusion world" in title_lower
+        or "fusionworld" in title_lower
+        or ALLOWED_SERIES_REGEX.search(title_lower) is not None
     )
-    if not series_match:
+    has_masters_with_code = "masters" in title_lower and ALLOWED_SERIES_REGEX.search(title_lower) is not None
+    if not (has_dragonball or has_fw_or_code or has_masters_with_code):
         return False
     return True
+
+
+# Booster box minimum price (€). Anything below this is almost certainly an
+# accessory / bundle / single pack misidentified as a box.
+MIN_BOOSTER_BOX_PRICE = 25.0
 
 
 EBAY_URL_RE = re.compile(r"(^|//)(www\.|m\.)?ebay\.", re.IGNORECASE)
@@ -718,10 +709,19 @@ def scrape_shops(context):
                 log.warning(f"  Extraction failed: {e}")
                 continue
 
-            relevant = [
-                p for p in raw_products
-                if is_dragonball_booster_box(p["title"]) and is_shop_url(p.get("url", ""))
-            ]
+            def _passes(p):
+                if not is_dragonball_booster_box(p["title"]):
+                    return False
+                if not is_shop_url(p.get("url", "")):
+                    return False
+                # Filter accessories/bundles misidentified as boxes by checking price.
+                # Allow products without a price (could be pre-order with hidden price).
+                price_num = parse_price(p.get("price", ""))
+                if price_num is not None and price_num < MIN_BOOSTER_BOX_PRICE:
+                    return False
+                return True
+
+            relevant = [p for p in raw_products if _passes(p)]
             log.info(f"  Found {len(relevant)} Dragon Ball booster box products")
 
             for p in relevant:
