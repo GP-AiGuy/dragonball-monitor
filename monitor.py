@@ -1,0 +1,1131 @@
+"""
+Dragon Ball TCG Booster Box Pre-Order Monitor
+
+Focused tracker for Dragon Ball Super Card Game:
+  - Masters series (current target: B31)
+  - Fusion World series (current target: FB11)
+
+Watches NL/EU/UK shops + Dragon Ball news sources.
+PRIORITY alerts when B31 or FB11 booster box pre-orders go live.
+Also detects: restocks, price drops, sold-out -> available transitions.
+
+Usage:
+    python3 execution/tcg_preorder_monitor.py              # Run once
+    python3 execution/tcg_preorder_monitor.py --dry-run    # Check without alerts
+    python3 execution/tcg_preorder_monitor.py --reset      # Reset DB
+    python3 execution/tcg_preorder_monitor.py --list       # Show tracked products
+    python3 execution/tcg_preorder_monitor.py --priority   # Show only priority watchlist matches
+"""
+
+import os
+import re
+import json
+import time
+import hashlib
+import logging
+import argparse
+from datetime import datetime
+from pathlib import Path
+
+import requests
+from dotenv import load_dotenv
+
+load_dotenv()
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+log = logging.getLogger(__name__)
+
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+
+PROJECT_ROOT = Path(__file__).resolve().parent
+# Override via TCG_STATE_DIR env var (GitHub Actions persists state inside repo)
+DATA_DIR = Path(os.getenv("TCG_STATE_DIR", str(PROJECT_ROOT / "state")))
+DATA_DIR.mkdir(parents=True, exist_ok=True)
+SEEN_PRODUCTS_FILE = DATA_DIR / "seen_products.json"
+SEEN_NEWS_FILE = DATA_DIR / "seen_news.json"
+PRICE_HISTORY_FILE = DATA_DIR / "price_history.json"
+# Override via TCG_DASHBOARD_FEED env var (GH Pages reads from repo root)
+DASHBOARD_FEED_FILE = Path(
+    os.getenv("TCG_DASHBOARD_FEED", str(PROJECT_ROOT / "data.json"))
+)
+
+# ─── Watchlist ───────────────────────────────────────────────────────────
+# These are the booster boxes Gianni actively wants to pre-order.
+# Hits trigger HIGH-PRIORITY Telegram alert (separate from regular alerts).
+
+PRIORITY_WATCHLIST = [
+    {
+        "id": "B31",
+        "series": "Masters",
+        "name": "Dragon Ball Super Card Game Masters Booster Box B31",
+        # Strict: only exact B31 / B-31 token (word boundary)
+        "patterns": [
+            r"(?<![a-z0-9])b[\s\-]?31(?![a-z0-9])",
+        ],
+    },
+    {
+        "id": "FB11",
+        "series": "Fusion World",
+        "name": "Dragon Ball Super Card Game Fusion World Booster Box FB11",
+        "patterns": [
+            r"(?<![a-z0-9])fb[\s\-]?11(?![a-z0-9])",
+        ],
+    },
+]
+
+# ─── Filters ─────────────────────────────────────────────────────────────
+
+# Title MUST contain one of these to be considered a booster box.
+BOOSTER_BOX_KEYWORDS = [
+    "booster box", "booster display", "display box", "boosterbox",
+    "boosterdisplay", "display 24", "display 36", "24 boosters",
+    "display van 24", "box of 24",
+]
+
+# Title MUST contain Dragon Ball branding.
+DRAGONBALL_KEYWORDS = [
+    "dragon ball", "dragonball", "dbs ", "dbsccg", "dbs-ccg",
+    "dragon-ball",
+]
+
+# We ONLY care about Masters series + Fusion World. All older DB series ignored.
+ALLOWED_SERIES_KEYWORDS = [
+    "masters",
+    "fusion world", "fusionworld", "fusion-world",
+]
+# Also allow if set code matches Masters (B25+) or Fusion World (FB##)
+ALLOWED_SERIES_REGEX = re.compile(
+    r"(?<![a-z0-9])("
+    r"fb[\s\-]?\d{1,2}"           # FB01..FB99
+    r"|b[\s\-]?(2[5-9]|[3-9]\d)"  # B25..B99 = Masters era
+    r")(?![a-z0-9])"
+)
+
+# Old/blocked DB series we explicitly do NOT want.
+BLOCKED_SERIES_KEYWORDS = [
+    "zenkai", "unison warrior", "vermilion bloodline", "battle evolution",
+    "world champion", "supreme rivalry", "miraculous revival",
+    "dawn of the z-legends", "rise of the unison", "saiyan showdown",
+    "ultimate squad", "cross spirits", "ultimate deck", "destroyer kings",
+    "expert deck", "themed booster", "perfect combination", "fighter's ambition",
+    "absolute approach", "magnificent collection", "tournament of power",
+    "colossal warfare", "union force", "draft box", "special anniversary",
+]
+
+# Hard exclude (case, sleeves, single packs, ETB, etc).
+EXCLUDE_KEYWORDS = [
+    "acryl", "acrylic", "case voor", "display case", "opbergdoos",
+    "beschermhoes", "sleeves", "protector", "magnetische", "playmat",
+    "boosterpack", "booster pack", "1 pakje", "single pack",
+    "elite trainer", "etb", "tin box", "collection box", "premium collection",
+    "starter deck", "starter box", "deck box", "promo pack", "promo card",
+    "bundle starter", "binder", "portfolio", "gift set", "gift box",
+    "deck case", "card sleeve", "playmat",
+]
+
+PREORDER_KEYWORDS = [
+    "pre-order", "preorder", "pre order", "voorbestelling", "presale",
+    "coming soon", "verwacht", "binnenkort beschikbaar", "verschijnt",
+    "release date", "to be released", "available from",
+]
+
+OUT_OF_STOCK_KEYWORDS = [
+    "uitverkocht", "niet op voorraad", "out of stock", "sold out",
+    "currently unavailable", "niet leverbaar", "tijdelijk uitverkocht",
+    "wachtlijst", "notify me", "back in stock",
+]
+
+IN_STOCK_KEYWORDS = [
+    "op voorraad", "in stock", "direct leverbaar", "vandaag verzonden",
+    "morgen in huis", "available now",
+]
+
+# ─── Shop Configurations (NL first, then EU/UK) ──────────────────────────
+
+SHOP_SEARCHES = [
+    # ── Nederlandse shops ──
+    {
+        "name": "Bol.com",
+        "country": "NL",
+        "url": "https://www.bol.com/nl/nl/s/?searchtext=dragon+ball+booster+box",
+        "extractor": "bol",
+    },
+    {
+        "name": "Bol.com",
+        "country": "NL",
+        "url": "https://www.bol.com/nl/nl/s/?searchtext=dragon+ball+fusion+world+booster",
+        "extractor": "bol",
+    },
+    {
+        "name": "Bol.com",
+        "country": "NL",
+        "url": "https://www.bol.com/nl/nl/s/?searchtext=dragon+ball+masters+booster",
+        "extractor": "bol",
+    },
+    {
+        "name": "101 Cardgames",
+        "country": "NL",
+        "url": "https://www.101cardgames.nl/zoekresultaten/?q=dragon+ball+booster",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Boostercardshop",
+        "country": "NL",
+        "url": "https://www.boostercardshop.nl/?s=dragon+ball+booster+box",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Magicsale",
+        "country": "NL",
+        "url": "https://www.magicsale.nl/zoekresultaten?q=dragon+ball+booster",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Ludofy",
+        "country": "NL",
+        "url": "https://ludofy.com/search?q=dragon+ball+fusion+world",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "TBH Store",
+        "country": "NL",
+        "url": "https://www.tbhstore.nl/zoeken/?q=dragon+ball+booster+box",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "TBH Store",
+        "country": "NL",
+        "url": "https://www.tbhstore.nl/c-7253195/dragon-ball-tcg/",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Pokeca",
+        "country": "NL",
+        "url": "https://pokeca.nl/collections/dragon-ball-super",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Spellenvariant",
+        "country": "NL",
+        "url": "https://www.spellenvariant.nl/trading-card-games/dragon-ball-tcg",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Gamerz Paradize",
+        "country": "NL",
+        "url": "https://gamerzparadize.nl/collections/brand-dragon-ball-super-card-game",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Oppacards",
+        "country": "NL",
+        "url": "https://oppacards.com/product-category/dragon-ball-super/",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "TF-Robots",
+        "country": "NL",
+        "url": "https://www.tf-robots.nl/?s=dragon+ball+booster",
+        "extractor": "generic_shop",
+    },
+    # ── EU marketplace ──
+    {
+        "name": "Cardmarket",
+        "country": "EU",
+        "url": "https://www.cardmarket.com/en/DragonBallSuperFusionWorld/Products/Booster-Boxes",
+        "extractor": "cardmarket",
+    },
+    {
+        "name": "Cardmarket",
+        "country": "EU",
+        "url": "https://www.cardmarket.com/en/DragonBallSuper/Products/Booster-Boxes",
+        "extractor": "cardmarket",
+    },
+    # ── UK shops ──
+    {
+        "name": "Magic Madhouse",
+        "country": "UK",
+        "url": "https://www.magicmadhouse.co.uk/search?w=dragon+ball+booster+box",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Chaos Cards",
+        "country": "UK",
+        "url": "https://www.chaoscards.co.uk/cards/dragon-ball-super/sealed-product",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Total Cards",
+        "country": "UK",
+        "url": "https://www.totalcards.net/dragon-ball-super-card-game?p=1&search=booster+box",
+        "extractor": "generic_shop",
+    },
+    # ── DE / BE ──
+    {
+        "name": "Fantasywelt",
+        "country": "DE",
+        "url": "https://www.fantasywelt.de/Suche?q=dragon+ball+booster+display",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Strategiezone",
+        "country": "BE",
+        "url": "https://www.strategiezone.be/zoeken?q=dragon+ball+booster",
+        "extractor": "generic_shop",
+    },
+    # ── Amazon (NL + UK) ──
+    {
+        "name": "Amazon.nl",
+        "country": "NL",
+        "url": "https://www.amazon.nl/s?k=dragon+ball+super+card+game+booster+box&i=toys",
+        "extractor": "amazon",
+    },
+    {
+        "name": "Amazon.nl",
+        "country": "NL",
+        "url": "https://www.amazon.nl/s?k=dragon+ball+fusion+world+booster+display&i=toys",
+        "extractor": "amazon",
+    },
+    {
+        "name": "Amazon.co.uk",
+        "country": "UK",
+        "url": "https://www.amazon.co.uk/s?k=dragon+ball+super+card+game+booster+box",
+        "extractor": "amazon",
+    },
+]
+
+# ─── News Sources ────────────────────────────────────────────────────────
+# Dragon Ball specific. PokeBeach / PokeGuardian removed.
+
+NEWS_SOURCES = [
+    {
+        "name": "DBS Card Game (Official)",
+        "url": "https://www.dbs-cardgame.com/us/news/",
+    },
+    {
+        "name": "Fusion World (Official)",
+        "url": "https://www.dbs-cardgame.com/fw/en/news/",
+    },
+    {
+        "name": "Reddit r/DragonballTCG",
+        "url": "https://old.reddit.com/r/DragonballTCG/new/",
+    },
+    {
+        "name": "Reddit r/DragonballSuperTCG",
+        "url": "https://old.reddit.com/r/DragonballSuperTCG/new/",
+    },
+]
+
+NEWS_KEYWORDS = [
+    "booster box", "booster display", "release date", "releasing", "release in",
+    "pre-order", "preorder", "announced", "reveal", "spoilers", "card list",
+    "set list", "expansion", "next set", "upcoming", "b31", "fb11",
+    "fb12", "b32", "masters", "fusion world",
+]
+
+# ─── Extractors ──────────────────────────────────────────────────────────
+
+EXTRACTOR_JS = {
+    "bol": """() => {
+        const results = [];
+        const links = document.querySelectorAll('a[href*="/p/"]');
+        const seen = new Set();
+        for (const a of links) {
+            const href = a.href || '';
+            const text = a.textContent.trim();
+            if (text.length < 15 || text.length > 300) continue;
+            if (text === 'Bekijk en bestel') continue;
+            if (seen.has(href)) continue;
+            seen.add(href);
+            let container = a.parentElement;
+            for (let i = 0; i < 8 && container; i++) {
+                if ((container.textContent || '').match(/\\d+[.,]\\d{2}/)) break;
+                container = container.parentElement;
+            }
+            const allText = container ? (container.textContent || '') : text;
+            const priceMatch = allText.match(/(\\d+)[.,](\\d{2})/);
+            const price = priceMatch ? '€' + priceMatch[1] + ',' + priceMatch[2] : '';
+            results.push({
+                title: text.substring(0, 200),
+                url: href.substring(0, 300),
+                price: price || 'Prijs onbekend',
+                fullText: allText.toLowerCase().substring(0, 800)
+            });
+        }
+        return results;
+    }""",
+
+    "amazon": """() => {
+        const results = [];
+        const items = document.querySelectorAll('[data-component-type="s-search-result"]');
+        for (const el of items) {
+            const titleEl = el.querySelector('h2 a span, h2 span');
+            const linkEl = el.querySelector('h2 a');
+            const priceEl = el.querySelector('.a-price .a-offscreen');
+            if (!titleEl) continue;
+            const title = titleEl.textContent.trim();
+            const href = linkEl ? linkEl.href : '';
+            const price = priceEl ? priceEl.textContent.trim() : 'Prijs onbekend';
+            results.push({
+                title: title.substring(0, 200),
+                url: href.substring(0, 300),
+                price: price,
+                fullText: el.textContent.toLowerCase().substring(0, 800)
+            });
+        }
+        return results;
+    }""",
+
+    "cardmarket": """() => {
+        const results = [];
+        const links = document.querySelectorAll('a[href*="/Products/"]');
+        const seen = new Set();
+        for (const a of links) {
+            const href = a.href || '';
+            let text = a.textContent.trim();
+            if (text.length < 10 || text.length > 300) continue;
+            if (seen.has(href) || !href.includes('Booster-Box')) continue;
+            seen.add(href);
+            text = text.replace(/From\\s*[\\d.,]+\\s*€/gi, '').trim();
+            const parent = a.closest('tr, .row, div') || a.parentElement;
+            const pText = parent ? parent.textContent : text;
+            const priceMatch = pText.match(/(\\d+)[.,](\\d{2})\\s*€/);
+            const price = priceMatch ? '€' + priceMatch[1] + ',' + priceMatch[2] : '';
+            results.push({
+                title: text.substring(0, 200),
+                url: href.startsWith('http') ? href.substring(0, 300) : 'https://www.cardmarket.com' + href,
+                price: price || 'Prijs onbekend',
+                fullText: pText.toLowerCase().substring(0, 800)
+            });
+        }
+        return results;
+    }""",
+
+    # Generic extractor: works on most Shopify/WooCommerce/Magento shops.
+    # Looks for product links with prices nearby.
+    "generic_shop": """() => {
+        const results = [];
+        // Common product link selectors across NL/EU TCG shops
+        const linkSelectors = [
+            'a.product-item-link',
+            'a.product-link',
+            'a.product-title-link',
+            'a.product-title',
+            'a.product-name',
+            '.product a[href]',
+            '.product-item a[href]',
+            '.product-card a[href]',
+            'article a[href]',
+            'h2 a[href]',
+            'h3 a[href]',
+            'a[href*="/product"]',
+            'a[href*="/products/"]',
+            'a[href*="/p/"]',
+        ];
+        const links = document.querySelectorAll(linkSelectors.join(', '));
+        const seen = new Set();
+        for (const a of links) {
+            const href = a.href || '';
+            let text = a.textContent.trim();
+            if (text.length < 10 || text.length > 300) continue;
+            if (seen.has(href)) continue;
+            // Skip nav/category/login links
+            if (/\\b(login|account|cart|winkelwagen|menu|home)\\b/i.test(text)) continue;
+            seen.add(href);
+            const parent = a.closest('article, .product, .product-item, .product-card, li, div');
+            const pText = parent ? parent.textContent : text;
+            const priceMatch = pText.match(/[€£]\\s*(\\d+)[.,](\\d{2})|(\\d+)[.,](\\d{2})\\s*[€£]/);
+            let price = 'Prijs onbekend';
+            if (priceMatch) {
+                const m = priceMatch[0];
+                price = m.replace(/\\s+/g, '');
+                if (!price.includes('€') && !price.includes('£')) price = '€' + price;
+            }
+            results.push({
+                title: text.substring(0, 200),
+                url: href.substring(0, 300),
+                price: price,
+                fullText: pText.toLowerCase().substring(0, 800)
+            });
+        }
+        return results;
+    }""",
+}
+
+# Deep product-page check: opens a single product page and reads the
+# add-to-cart button + stock indicators directly. Far more accurate than
+# the listing-page heuristic. Used for B31/FB11 hits only.
+DEEP_CHECK_JS = """() => {
+    const bodyText = (document.body.innerText || '').toLowerCase();
+    // Refined price from page
+    const priceMatch = bodyText.match(/[€£]\\s*(\\d+)[.,](\\d{2})|(\\d+)[.,](\\d{2})\\s*[€£]/);
+    let price = null;
+    if (priceMatch) {
+        price = priceMatch[0].replace(/\\s+/g, '');
+        if (!price.includes('€') && !price.includes('£')) price = '€' + price;
+    }
+    // Add-to-cart button presence (and not disabled)
+    const cartSelectors = [
+        'button[name="add"]', 'button.add-to-cart', 'button.product-add',
+        'form[action*="cart"] button[type="submit"]', '[class*="AddToCart"]',
+        '#add-to-cart', 'button[data-action="add-to-cart"]',
+        'button:not([disabled]).btn-cart', 'button.add_to_cart_button',
+    ];
+    let cartBtn = null;
+    for (const sel of cartSelectors) {
+        const b = document.querySelector(sel);
+        if (b) { cartBtn = b; break; }
+    }
+    const cartEnabled = !!cartBtn && !cartBtn.disabled && !cartBtn.classList.contains('disabled');
+    // Notify-me / waitlist signals
+    const notifySignals = [
+        'notify me', 'op de hoogte', 'mail mij', 'wachtlijst',
+        'sign up to be notified', 'back in stock', 'meld u aan',
+    ];
+    const hasNotify = notifySignals.some(s => bodyText.includes(s));
+    return {
+        price: price,
+        cart_enabled: cartEnabled,
+        has_notify_signup: hasNotify,
+        body_excerpt: bodyText.substring(0, 2000),
+    };
+}"""
+
+
+NEWS_EXTRACTOR_JS = """() => {
+    const results = [];
+    const els = document.querySelectorAll(
+        'h1 a, h2 a, h3 a, article a, .post-title a, .entry-title a, ' +
+        '.news-item a, [class*="headline"] a, [class*="title"] a, ' +
+        'a.title, .Post a[data-event-action="title"]'
+    );
+    const seen = new Set();
+    for (const el of els) {
+        const text = el.textContent.trim();
+        const href = el.href || '';
+        if (text.length > 10 && text.length < 300 && href && !seen.has(href)) {
+            seen.add(href);
+            results.push({ title: text.substring(0, 250), url: href.substring(0, 300) });
+        }
+    }
+    return results.slice(0, 30);
+}"""
+
+
+# ─── Helpers ─────────────────────────────────────────────────────────────
+
+def load_json(path):
+    if path.exists():
+        return json.loads(path.read_text())
+    return {}
+
+
+def save_json(path, data):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, indent=2, ensure_ascii=False))
+
+
+def make_hash(key):
+    return hashlib.md5(key.encode()).hexdigest()
+
+
+def parse_price(price_str):
+    """Extract numeric price for comparison. Returns float or None."""
+    if not price_str or price_str == "Prijs onbekend":
+        return None
+    m = re.search(r"(\d+)[.,](\d{2})", price_str)
+    if not m:
+        return None
+    try:
+        return float(f"{m.group(1)}.{m.group(2)}")
+    except ValueError:
+        return None
+
+
+def detect_stock_status(full_text):
+    """Returns: 'preorder' | 'in_stock' | 'out_of_stock' | 'unknown'."""
+    text = full_text.lower()
+    if any(kw in text for kw in PREORDER_KEYWORDS):
+        return "preorder"
+    if any(kw in text for kw in OUT_OF_STOCK_KEYWORDS):
+        return "out_of_stock"
+    if any(kw in text for kw in IN_STOCK_KEYWORDS):
+        return "in_stock"
+    return "unknown"
+
+
+def deep_check_product(context, url):
+    """Open a product detail page and verify stock via add-to-cart + body text.
+
+    Returns dict with: stock_status, price (if found), cart_enabled, raw signals.
+    Returns None on error.
+    """
+    page = context.new_page()
+    try:
+        page.goto(url, wait_until="domcontentloaded", timeout=20000)
+        page.wait_for_timeout(2000)
+        accept_cookies(page)
+        page.wait_for_timeout(1000)
+        result = page.evaluate(DEEP_CHECK_JS)
+        body = result.get("body_excerpt", "")
+        # Decide stock status using best signals available
+        if any(kw in body for kw in PREORDER_KEYWORDS):
+            status = "preorder"
+        elif any(kw in body for kw in OUT_OF_STOCK_KEYWORDS) or result.get("has_notify_signup"):
+            status = "out_of_stock"
+        elif result.get("cart_enabled"):
+            status = "in_stock"
+        elif any(kw in body for kw in IN_STOCK_KEYWORDS):
+            status = "in_stock"
+        else:
+            status = "unknown"
+        return {
+            "stock_status": status,
+            "price": result.get("price"),
+            "cart_enabled": result.get("cart_enabled", False),
+            "deep_checked_at": datetime.now().isoformat(),
+        }
+    except Exception as e:
+        log.warning(f"  Deep check failed for {url}: {e}")
+        return None
+    finally:
+        page.close()
+
+
+def is_dragonball_booster_box(title):
+    """Strict: title must be a Dragon Ball Masters or Fusion World booster BOX.
+
+    Rules (all on title only, fullText is too noisy on grid pages):
+    1. Must contain a booster-box keyword
+    2. Must contain Dragon Ball branding
+    3. Must NOT contain a hard-exclude keyword (sleeves, ETB, single pack, etc)
+    4. Must NOT contain a blocked old-series keyword (Zenkai, Unison, etc)
+    5. Must mention Masters / Fusion World OR a Masters/FW set code (B25+ or FB##)
+    """
+    title_lower = title.lower()
+    if not any(kw in title_lower for kw in BOOSTER_BOX_KEYWORDS):
+        return False
+    if not any(kw in title_lower for kw in DRAGONBALL_KEYWORDS):
+        return False
+    if any(kw in title_lower for kw in EXCLUDE_KEYWORDS):
+        return False
+    if any(kw in title_lower for kw in BLOCKED_SERIES_KEYWORDS):
+        return False
+    series_match = (
+        any(kw in title_lower for kw in ALLOWED_SERIES_KEYWORDS)
+        or ALLOWED_SERIES_REGEX.search(title_lower)
+    )
+    if not series_match:
+        return False
+    return True
+
+
+EBAY_URL_RE = re.compile(r"(^|//)(www\.|m\.)?ebay\.", re.IGNORECASE)
+
+
+def is_shop_url(url):
+    """Block eBay (marketplace, not shop). Only real shops allowed."""
+    if not url:
+        return False
+    return not EBAY_URL_RE.search(url)
+
+
+def detect_priority_match(title):
+    """Returns watchlist entry dict if title matches B31 or FB11 exactly, else None.
+
+    Title-only (no fullText): set codes are short, fullText leakage from
+    neighbouring products causes false positives.
+    """
+    title_lower = title.lower()
+    for entry in PRIORITY_WATCHLIST:
+        for pattern in entry["patterns"]:
+            if re.search(pattern, title_lower):
+                return entry
+    return None
+
+
+def is_relevant_news(title):
+    """News must mention Dragon Ball + Masters/FW + a news keyword. No Pokemon, no other DB series, no eBay listings."""
+    title_lower = title.lower()
+    has_dragonball = any(kw in title_lower for kw in ["dragon ball", "dragonball", "dbs", "dbsccg"])
+    if not has_dragonball:
+        return False
+    if "ebay" in title_lower:
+        return False
+    if any(kw in title_lower for kw in BLOCKED_SERIES_KEYWORDS):
+        return False
+    has_target_series = (
+        any(kw in title_lower for kw in ALLOWED_SERIES_KEYWORDS)
+        or ALLOWED_SERIES_REGEX.search(title_lower)
+    )
+    has_news_kw = any(kw in title_lower for kw in NEWS_KEYWORDS)
+    return has_target_series and has_news_kw
+
+
+# ─── Browser ─────────────────────────────────────────────────────────────
+
+def accept_cookies(page):
+    for btn in [
+        "#sp-cc", "#onetrust-accept-btn-handler",
+        "button:has-text('Accepteren')", "button:has-text('Accept All')",
+        "button:has-text('Allow All')", "button:has-text('Alle cookies accepteren')",
+        "button:has-text('Alles accepteren')", "#js-first-screen-accept",
+        "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll",
+        "button:has-text('Agree')", "button:has-text('I Accept')",
+        "button:has-text('Akkoord')",
+    ]:
+        try:
+            page.click(btn, timeout=1500)
+            page.wait_for_timeout(500)
+            return True
+        except Exception:
+            continue
+    return False
+
+
+# ─── Scraping ────────────────────────────────────────────────────────────
+
+def scrape_shops(context):
+    """Scrape all shop searches. Returns (new_products, status_changes, price_drops)."""
+    seen = load_json(SEEN_PRODUCTS_FILE)
+    price_history = load_json(PRICE_HISTORY_FILE)
+
+    new_products = []
+    status_changes = []  # (product_dict, old_status, new_status)
+    price_drops = []     # (product_dict, old_price, new_price)
+
+    for search in SHOP_SEARCHES:
+        page = context.new_page()
+        try:
+            log.info(f"Checking {search['name']} ({search['country']})...")
+            page.goto(search["url"], wait_until="domcontentloaded", timeout=20000)
+            page.wait_for_timeout(2000)
+            accept_cookies(page)
+            page.wait_for_timeout(1500)
+
+            if search["extractor"] in ("cardmarket", "generic_shop"):
+                for _ in range(4):
+                    page.evaluate("window.scrollBy(0, 800)")
+                    page.wait_for_timeout(400)
+
+            js_code = EXTRACTOR_JS.get(search["extractor"])
+            if not js_code:
+                continue
+
+            try:
+                raw_products = page.evaluate(js_code)
+            except Exception as e:
+                log.warning(f"  Extraction failed: {e}")
+                continue
+
+            relevant = [
+                p for p in raw_products
+                if is_dragonball_booster_box(p["title"]) and is_shop_url(p.get("url", ""))
+            ]
+            log.info(f"  Found {len(relevant)} Dragon Ball booster box products")
+
+            for p in relevant:
+                priority = detect_priority_match(p["title"])
+                stock_status = detect_stock_status(p.get("fullText", ""))
+                price = p["price"]
+                price_num = parse_price(price)
+
+                # Priority hits (B31/FB11) get a deep check on the product detail page.
+                # Far more accurate stock detection (real add-to-cart button check).
+                deep_checked = False
+                if priority and p.get("url"):
+                    log.info(f"  Deep check {priority['id']}: {p['url'][:80]}")
+                    deep = deep_check_product(context, p["url"])
+                    if deep:
+                        stock_status = deep["stock_status"]
+                        if deep.get("price"):
+                            price = deep["price"]
+                            price_num = parse_price(price) or price_num
+                        deep_checked = True
+
+                h = make_hash(f"{search['name']}|{p['title']}")
+
+                product_record = {
+                    "title": p["title"],
+                    "shop": search["name"],
+                    "country": search["country"],
+                    "price": price,
+                    "price_num": price_num,
+                    "stock_status": stock_status,
+                    "url": p["url"],
+                    "priority": priority["id"] if priority else None,
+                    "priority_series": priority["series"] if priority else None,
+                    "deep_checked": deep_checked,
+                    "last_seen": datetime.now().isoformat(),
+                }
+
+                if h not in seen:
+                    # Brand new
+                    product_record["first_seen"] = datetime.now().isoformat()
+                    seen[h] = product_record
+                    new_products.append(product_record)
+                    tag = ""
+                    if priority:
+                        tag = f" [PRIORITY: {priority['id']}]"
+                    elif stock_status == "preorder":
+                        tag = " [PRE-ORDER]"
+                    log.info(f"  NEW{tag}: {p['title'][:80]} | {p['price']}")
+                else:
+                    # Existing - check for changes
+                    old = seen[h]
+                    old_status = old.get("stock_status", "unknown")
+                    old_price = old.get("price_num")
+
+                    # Status transition (e.g. out_of_stock -> in_stock = restock!)
+                    if old_status != stock_status and stock_status != "unknown":
+                        status_changes.append((product_record, old_status, stock_status))
+                        log.info(f"  STATUS: {p['title'][:60]} | {old_status} -> {stock_status}")
+
+                    # Price drop (>5% lower)
+                    if old_price and price_num and price_num < old_price * 0.95:
+                        price_drops.append((product_record, old_price, price_num))
+                        log.info(f"  PRICE DROP: {p['title'][:60]} | €{old_price} -> €{price_num}")
+
+                    # Update record (preserve first_seen)
+                    product_record["first_seen"] = old.get("first_seen", datetime.now().isoformat())
+                    seen[h] = product_record
+
+                # Append to price history
+                if price_num is not None:
+                    price_history.setdefault(h, []).append({
+                        "ts": datetime.now().isoformat(),
+                        "price": price_num,
+                        "stock_status": stock_status,
+                    })
+                    # Cap history at 200 points per product
+                    price_history[h] = price_history[h][-200:]
+
+        except Exception as e:
+            log.warning(f"  Error scraping {search['name']}: {e}")
+        finally:
+            page.close()
+
+    save_json(SEEN_PRODUCTS_FILE, seen)
+    save_json(PRICE_HISTORY_FILE, price_history)
+    return new_products, status_changes, price_drops
+
+
+def scrape_news(context):
+    seen = load_json(SEEN_NEWS_FILE)
+    new_news = []
+
+    for source in NEWS_SOURCES:
+        page = context.new_page()
+        try:
+            log.info(f"Checking news: {source['name']}...")
+            page.goto(source["url"], wait_until="domcontentloaded", timeout=15000)
+            page.wait_for_timeout(2000)
+            accept_cookies(page)
+            page.wait_for_timeout(1000)
+
+            headlines = page.evaluate(NEWS_EXTRACTOR_JS)
+            relevant = [
+                h for h in headlines
+                if is_relevant_news(h["title"]) and is_shop_url(h.get("url", ""))
+            ]
+            log.info(f"  {len(relevant)} relevant (of {len(headlines)} total)")
+
+            for article in relevant:
+                h = make_hash(article["url"])
+                if h not in seen:
+                    # Detect priority mention in headline
+                    priority = detect_priority_match(article["title"])
+                    record = {
+                        "title": article["title"],
+                        "source": source["name"],
+                        "url": article["url"],
+                        "priority": priority["id"] if priority else None,
+                        "first_seen": datetime.now().isoformat(),
+                    }
+                    seen[h] = record
+                    new_news.append(record)
+                    tag = f" [PRIORITY: {priority['id']}]" if priority else ""
+                    log.info(f"  NEW{tag}: {article['title'][:90]}")
+
+        except Exception as e:
+            log.warning(f"  Error: {e}")
+        finally:
+            page.close()
+
+    save_json(SEEN_NEWS_FILE, seen)
+    return new_news
+
+
+def scrape_all():
+    from playwright.sync_api import sync_playwright
+
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch(
+            headless=True,
+            args=["--disable-blink-features=AutomationControlled"],
+        )
+        context = browser.new_context(
+            user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+            locale="nl-NL",
+            viewport={"width": 1920, "height": 1080},
+        )
+        new_products, status_changes, price_drops = scrape_shops(context)
+        new_news = scrape_news(context)
+        browser.close()
+
+    return new_products, status_changes, price_drops, new_news
+
+
+# ─── Telegram ────────────────────────────────────────────────────────────
+
+def send_telegram(message):
+    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
+        log.error("Telegram credentials not configured")
+        return False
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+    payload = {
+        "chat_id": TELEGRAM_CHAT_ID,
+        "text": message[:4096],
+        "parse_mode": "HTML",
+        "disable_web_page_preview": False,
+    }
+    try:
+        resp = requests.post(url, json=payload, timeout=10)
+        resp.raise_for_status()
+        return True
+    except requests.RequestException as e:
+        log.error(f"Telegram send failed: {e}")
+        return False
+
+
+def send_priority_alert(product):
+    """Loud alert for B31/FB11 hits."""
+    series = product.get("priority_series", "")
+    pid = product.get("priority", "")
+    msg = (
+        f"<b>!!! {pid} BOOSTER BOX GEVONDEN !!!</b>\n"
+        f"<b>Serie:</b> Dragon Ball {series}\n\n"
+        f"<b>Shop:</b> {product['shop']} ({product['country']})\n"
+        f"<b>Product:</b> {product['title'][:120]}\n"
+        f"<b>Prijs:</b> {product['price']}\n"
+        f"<b>Status:</b> {product['stock_status']}\n\n"
+        f"<a href=\"{product['url']}\">DIRECT BESTELLEN</a>"
+    )
+    send_telegram(msg)
+
+
+def send_preorder_alert(product):
+    msg = (
+        f"<b>Nieuwe Dragon Ball Pre-Order</b>\n\n"
+        f"<b>Shop:</b> {product['shop']} ({product['country']})\n"
+        f"<b>Product:</b> {product['title'][:120]}\n"
+        f"<b>Prijs:</b> {product['price']}\n\n"
+        f"<a href=\"{product['url']}\">Pre-orderen</a>"
+    )
+    send_telegram(msg)
+
+
+def send_restock_alert(product, old_status):
+    msg = (
+        f"<b>RESTOCK!</b>\n\n"
+        f"<b>Shop:</b> {product['shop']} ({product['country']})\n"
+        f"<b>Product:</b> {product['title'][:120]}\n"
+        f"<b>Was:</b> {old_status} -> nu {product['stock_status']}\n"
+        f"<b>Prijs:</b> {product['price']}\n\n"
+        f"<a href=\"{product['url']}\">Bekijk</a>"
+    )
+    send_telegram(msg)
+
+
+def send_price_drop_alert(product, old_price, new_price):
+    pct = round((1 - new_price / old_price) * 100)
+    msg = (
+        f"<b>Prijs gedaald ({pct}%)</b>\n\n"
+        f"<b>Shop:</b> {product['shop']} ({product['country']})\n"
+        f"<b>Product:</b> {product['title'][:120]}\n"
+        f"<b>Was:</b> €{old_price:.2f} -> nu €{new_price:.2f}\n\n"
+        f"<a href=\"{product['url']}\">Bekijk</a>"
+    )
+    send_telegram(msg)
+
+
+def send_news_digest(new_news):
+    if not new_news:
+        return
+    priority_news = [n for n in new_news if n.get("priority")]
+    regular_news = [n for n in new_news if not n.get("priority")]
+
+    # Priority news = individual loud messages
+    for article in priority_news:
+        msg = (
+            f"<b>!!! {article['priority']} NIEUWS !!!</b>\n\n"
+            f"<b>Bron:</b> {article['source']}\n"
+            f"<b>{article['title'][:200]}</b>\n\n"
+            f"<a href=\"{article['url']}\">Lees meer</a>"
+        )
+        send_telegram(msg)
+        time.sleep(0.5)
+
+    # Regular news = digest
+    if regular_news:
+        lines = [f"<b>Dragon Ball TCG Nieuws ({len(regular_news)})</b>\n"]
+        for article in regular_news[:10]:
+            lines.append(
+                f"- <b>{article['title'][:120]}</b>\n"
+                f"  {article['source']} - <a href=\"{article['url']}\">link</a>\n"
+            )
+        if len(regular_news) > 10:
+            lines.append(f"\n... en {len(regular_news) - 10} meer")
+        send_telegram("\n".join(lines))
+
+
+# ─── Dashboard Feed ──────────────────────────────────────────────────────
+
+def write_dashboard_feed():
+    """Write data.json for the dragonball-tracker frontend to consume."""
+    seen_products = load_json(SEEN_PRODUCTS_FILE)
+    seen_news = load_json(SEEN_NEWS_FILE)
+    price_history = load_json(PRICE_HISTORY_FILE)
+
+    products = list(seen_products.values())
+    products.sort(key=lambda x: (x.get("priority") is None, -ord(x.get("last_seen", "")[0]) if x.get("last_seen") else 0, x.get("last_seen", "")), reverse=False)
+
+    feed = {
+        "generated_at": datetime.now().isoformat(),
+        "watchlist": [
+            {"id": w["id"], "series": w["series"], "name": w["name"]}
+            for w in PRIORITY_WATCHLIST
+        ],
+        "products": products,
+        "news": list(seen_news.values()),
+        "price_history": price_history,
+        "stats": {
+            "total_products": len(products),
+            "preorders": sum(1 for p in products if p.get("stock_status") == "preorder"),
+            "in_stock": sum(1 for p in products if p.get("stock_status") == "in_stock"),
+            "out_of_stock": sum(1 for p in products if p.get("stock_status") == "out_of_stock"),
+            "priority_hits": sum(1 for p in products if p.get("priority")),
+            "news_articles": len(seen_news),
+        },
+    }
+    save_json(DASHBOARD_FEED_FILE, feed)
+    log.info(f"Dashboard feed written: {DASHBOARD_FEED_FILE}")
+
+
+# ─── Commands ────────────────────────────────────────────────────────────
+
+def cmd_run(dry_run=False):
+    log.info("Starting Dragon Ball TCG monitor...")
+    new_products, status_changes, price_drops, new_news = scrape_all()
+
+    priority_hits = [p for p in new_products if p.get("priority")]
+    new_preorders = [p for p in new_products if p.get("stock_status") == "preorder" and not p.get("priority")]
+    restocks = [(p, old) for p, old, new in status_changes if old == "out_of_stock" and new in ("in_stock", "preorder")]
+
+    log.info(
+        f"Results: {len(new_products)} new ({len(priority_hits)} PRIORITY, {len(new_preorders)} pre-orders), "
+        f"{len(restocks)} restocks, {len(price_drops)} price drops, {len(new_news)} news"
+    )
+
+    if dry_run:
+        for p in new_products:
+            tag = f" [{p['priority']}]" if p.get("priority") else f" [{p['stock_status']}]"
+            log.info(f"[DRY] {p['shop']} ({p['country']}){tag} | {p['title'][:80]} | {p['price']}")
+        for p, old, new in status_changes:
+            log.info(f"[DRY] STATUS: {p['title'][:60]} | {old} -> {new}")
+        for p, old, new in price_drops:
+            log.info(f"[DRY] PRICE: {p['title'][:60]} | €{old} -> €{new}")
+        for n in new_news:
+            tag = f" [{n['priority']}]" if n.get("priority") else ""
+            log.info(f"[DRY] NEWS{tag} | {n['source']} | {n['title'][:90]}")
+    else:
+        for product in priority_hits:
+            send_priority_alert(product)
+            time.sleep(0.5)
+        for product in new_preorders:
+            send_preorder_alert(product)
+            time.sleep(0.5)
+        for product, old in restocks:
+            send_restock_alert(product, old)
+            time.sleep(0.5)
+        for product, old, new in price_drops:
+            send_price_drop_alert(product, old, new)
+            time.sleep(0.5)
+        send_news_digest(new_news)
+
+    write_dashboard_feed()
+    return new_products, status_changes, price_drops, new_news
+
+
+def cmd_list(priority_only=False):
+    seen_products = load_json(SEEN_PRODUCTS_FILE)
+    seen_news = load_json(SEEN_NEWS_FILE)
+
+    products = list(seen_products.values())
+    if priority_only:
+        products = [p for p in products if p.get("priority")]
+
+    if not products and not seen_news:
+        print("Geen data in database.")
+        return
+
+    if products:
+        priority = [p for p in products if p.get("priority")]
+        regular = [p for p in products if not p.get("priority")]
+
+        if priority:
+            print(f"\n{'='*70}")
+            print(f"  PRIORITY WATCHLIST HITS ({len(priority)})")
+            print(f"{'='*70}")
+            for p in sorted(priority, key=lambda x: x.get("first_seen", ""), reverse=True):
+                print(f"  [{p['priority']}] {p['shop']:18s} ({p['country']}) | {p['price']:12s} | {p.get('stock_status','?'):12s} | {p['title'][:55]}")
+
+        if regular and not priority_only:
+            print(f"\n{'='*70}")
+            print(f"  Alle Dragon Ball Booster Boxes ({len(regular)})")
+            print(f"{'='*70}")
+            for p in sorted(regular, key=lambda x: x.get("first_seen", ""), reverse=True):
+                print(f"  {p['shop']:18s} ({p['country']}) | {p['price']:12s} | {p.get('stock_status','?'):12s} | {p['title'][:55]}")
+
+    if seen_news and not priority_only:
+        print(f"\n{'='*70}")
+        print(f"  Nieuws ({len(seen_news)})")
+        print(f"{'='*70}")
+        for h, info in sorted(seen_news.items(), key=lambda x: x[1].get("first_seen", ""), reverse=True)[:30]:
+            tag = f"[{info['priority']}] " if info.get("priority") else ""
+            print(f"  {info['source']:25s} | {tag}{info['title'][:75]}")
+
+
+# ─── Main ────────────────────────────────────────────────────────────────
+
+def main():
+    parser = argparse.ArgumentParser(description="Dragon Ball TCG Booster Box Pre-Order Monitor")
+    parser.add_argument("--reset", action="store_true", help="Reset all databases")
+    parser.add_argument("--dry-run", action="store_true", help="Check without sending alerts")
+    parser.add_argument("--list", action="store_true", help="Show all tracked products & news")
+    parser.add_argument("--priority", action="store_true", help="Show only priority watchlist matches")
+    args = parser.parse_args()
+
+    if args.reset:
+        for f in [SEEN_PRODUCTS_FILE, SEEN_NEWS_FILE, PRICE_HISTORY_FILE]:
+            if f.exists():
+                f.unlink()
+        log.info("Databases gereset.")
+
+    if args.list or args.priority:
+        cmd_list(priority_only=args.priority)
+        return
+
+    new_products, status_changes, price_drops, new_news = cmd_run(dry_run=args.dry_run)
+    priority_hits = sum(1 for p in new_products if p.get("priority"))
+    preorders = sum(1 for p in new_products if p.get("stock_status") == "preorder")
+    print(
+        f"\n{len(new_products)} nieuwe producten "
+        f"({priority_hits} PRIORITY hits, {preorders} pre-orders), "
+        f"{len(status_changes)} status changes, {len(price_drops)} price drops, "
+        f"{len(new_news)} nieuws."
+    )
+
+
+if __name__ == "__main__":
+    main()

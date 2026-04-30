@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Dragon Ball Pre-Order Monitor</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root { color-scheme: dark; }
+  html, body { background: #0a0a0a; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif; -webkit-font-smoothing: antialiased; }
+  .glass { background: rgba(20,20,20,.72); backdrop-filter: blur(24px) saturate(160%); border: 1px solid rgba(255,255,255,.06); }
+  .grad-orange { background: linear-gradient(135deg, #FF6A00 0%, #E85D04 50%, #B5340A 100%); }
+  .grad-priority { background: linear-gradient(135deg, #FFD93D 0%, #FF6A00 60%, #E85D04 100%); }
+  .chip { display:inline-flex; align-items:center; gap:6px; padding:3px 10px; border-radius:999px; font-size:11px; font-weight:600; letter-spacing:.02em; }
+  .chip-preorder { background:rgba(232,93,4,.15); color:#FF8A33; border:1px solid rgba(232,93,4,.4); }
+  .chip-instock { background:rgba(74,222,128,.15); color:#4ade80; border:1px solid rgba(74,222,128,.4); }
+  .chip-oos { background:rgba(248,113,113,.15); color:#f87171; border:1px solid rgba(248,113,113,.4); }
+  .chip-unknown { background:rgba(255,255,255,.06); color:#999; border:1px solid rgba(255,255,255,.1); }
+  .chip-priority { background: linear-gradient(135deg, #FFD93D, #FF6A00); color:#1a0a00; border:1px solid #FFD93D; font-weight:700; }
+  .chip-country { background:rgba(255,255,255,.05); color:#aaa; border:1px solid rgba(255,255,255,.08); font-size:10px; }
+  .row-hover:hover { background: rgba(255,255,255,.04); }
+  .input { background:#111; border:1px solid #2a2a2a; border-radius:10px; padding:8px 12px; color:#eee; outline:none; transition:border .15s; }
+  .input:focus { border-color:#E85D04; }
+  .btn-ghost { background:transparent; color:#bbb; border:1px solid #2a2a2a; border-radius:10px; padding:7px 14px; transition:.15s; cursor:pointer; }
+  .btn-ghost:hover { color:#fff; border-color:#444; }
+  .stat-card { padding:18px 20px; border-radius: 16px; background:#111; border:1px solid #1c1c1c; transition: .2s; }
+  .stat-card.priority { background: linear-gradient(135deg, rgba(255,217,61,.08), rgba(232,93,4,.08)); border-color: rgba(255,217,61,.3); }
+  .stat-label { font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:#888; font-weight:600; }
+  .stat-value { font-size:28px; font-weight:700; margin-top:6px; letter-spacing:-.02em; }
+  th { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color:#888; font-weight:600; padding: 12px 14px; text-align:left; border-bottom:1px solid #1f1f1f; background:#0d0d0d; }
+  td { padding: 14px; border-bottom:1px solid #161616; font-size: 14px; color:#ddd; }
+  table { border-collapse: separate; border-spacing: 0; width:100%; }
+  .priority-card { background: linear-gradient(135deg, rgba(255,217,61,.06), rgba(232,93,4,.06)); border:1px solid rgba(255,217,61,.3); border-radius:18px; padding:24px; }
+  .priority-card.found { background: linear-gradient(135deg, rgba(74,222,128,.1), rgba(74,222,128,.04)); border-color: rgba(74,222,128,.5); box-shadow: 0 0 0 1px rgba(74,222,128,.2), 0 8px 32px -8px rgba(74,222,128,.3); }
+  a.shop-link { color:#FF8A33; text-decoration:none; }
+  a.shop-link:hover { text-decoration: underline; }
+  .pulse { animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:.6; } }
+</style>
+</head>
+<body class="text-zinc-100">
+
+<header class="sticky top-0 z-40 glass">
+  <div class="max-w-[1400px] mx-auto px-6 py-4 flex items-center gap-6">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 grad-orange rounded-xl flex items-center justify-center text-lg font-black text-white">DB</div>
+      <div>
+        <div class="font-semibold tracking-tight">Pre-Order Monitor</div>
+        <div class="text-[11px] text-zinc-500">B31 Masters & FB11 Fusion World watchlist</div>
+      </div>
+    </div>
+    <nav class="flex gap-2 ml-4">
+      <span class="btn-ghost text-sm" style="color:#fff;border-color:#E85D04;cursor:default">Pre-Orders</span>
+    </nav>
+    <div class="ml-auto flex items-center gap-3">
+      <span id="lastUpdated" class="text-xs text-zinc-500"></span>
+      <button class="btn-ghost text-sm" id="reloadBtn">Reload</button>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-[1400px] mx-auto px-6 py-8 space-y-8">
+
+  <!-- Priority watchlist -->
+  <section>
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-lg font-semibold tracking-tight">Priority Watchlist</h2>
+      <span class="text-xs text-zinc-500">Targets die je wil pre-orderen zodra ze live gaan</span>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="watchlistCards"></div>
+  </section>
+
+  <!-- Stats -->
+  <section>
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-3" id="statsCards"></div>
+  </section>
+
+  <!-- Filters -->
+  <section class="flex flex-wrap items-center gap-3">
+    <input type="text" id="searchInput" class="input flex-1 min-w-[240px]" placeholder="Zoek in producten..." />
+    <select id="countryFilter" class="input">
+      <option value="">Alle landen</option>
+      <option value="NL">NL</option>
+      <option value="EU">EU</option>
+      <option value="UK">UK</option>
+      <option value="DE">DE</option>
+      <option value="BE">BE</option>
+    </select>
+    <select id="statusFilter" class="input">
+      <option value="">Alle statussen</option>
+      <option value="preorder">Pre-order</option>
+      <option value="in_stock">Op voorraad</option>
+      <option value="out_of_stock">Uitverkocht</option>
+      <option value="unknown">Onbekend</option>
+    </select>
+    <label class="flex items-center gap-2 text-sm text-zinc-400 cursor-pointer">
+      <input type="checkbox" id="priorityOnly" class="w-4 h-4 accent-orange-500" />
+      Alleen priority
+    </label>
+  </section>
+
+  <!-- Products table -->
+  <section class="glass rounded-2xl overflow-hidden">
+    <div class="overflow-x-auto">
+      <table>
+        <thead>
+          <tr>
+            <th>Match</th>
+            <th>Product</th>
+            <th>Shop</th>
+            <th>Land</th>
+            <th>Prijs</th>
+            <th>Status</th>
+            <th>Eerste keer gezien</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="productsBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section>
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-lg font-semibold tracking-tight">Dragon Ball TCG Nieuws</h2>
+      <span class="text-xs text-zinc-500" id="newsCount"></span>
+    </div>
+    <div class="glass rounded-2xl p-2" id="newsList"></div>
+  </section>
+
+</main>
+
+<script>
+const STATUS_LABEL = {
+  preorder: { label: 'Pre-order', cls: 'chip-preorder' },
+  in_stock: { label: 'Op voorraad', cls: 'chip-instock' },
+  out_of_stock: { label: 'Uitverkocht', cls: 'chip-oos' },
+  unknown: { label: 'Onbekend', cls: 'chip-unknown' },
+};
+
+let DATA = null;
+
+async function loadData() {
+  try {
+    const resp = await fetch('data.json?_=' + Date.now());
+    if (!resp.ok) throw new Error('No data.json yet');
+    DATA = await resp.json();
+    document.getElementById('lastUpdated').textContent =
+      'Laatst bijgewerkt: ' + new Date(DATA.generated_at).toLocaleString('nl-NL');
+    render();
+  } catch (e) {
+    document.getElementById('lastUpdated').textContent = 'Geen data nog. Run: python3 execution/tcg_preorder_monitor.py';
+    document.getElementById('watchlistCards').innerHTML =
+      '<div class="priority-card col-span-full text-zinc-400">Run de monitor minstens 1x om data te genereren.</div>';
+  }
+}
+
+function escapeHtml(s) {
+  return String(s || '').replace(/[&<>"']/g, c =>
+    ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c])
+  );
+}
+
+function renderWatchlist() {
+  if (!DATA) return;
+  const container = document.getElementById('watchlistCards');
+  const html = DATA.watchlist.map(w => {
+    const matches = (DATA.products || []).filter(p => p.priority === w.id);
+    const found = matches.length > 0;
+    const cheapest = matches
+      .filter(p => typeof p.price_num === 'number')
+      .sort((a, b) => a.price_num - b.price_num)[0];
+    return `
+      <div class="priority-card ${found ? 'found' : ''}">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 ${found ? 'bg-green-500' : 'grad-priority'} rounded-xl flex items-center justify-center font-black text-black">${w.id}</div>
+          <div class="flex-1">
+            <div class="font-semibold">${escapeHtml(w.name)}</div>
+            <div class="text-xs text-zinc-500">Serie: Dragon Ball ${escapeHtml(w.series)}</div>
+          </div>
+          <span class="chip ${found ? 'chip-instock' : 'chip-unknown'} ${found ? '' : 'pulse'}">
+            ${found ? `${matches.length} hit${matches.length > 1 ? 's' : ''}` : 'wachten...'}
+          </span>
+        </div>
+        ${found ? `
+          <div class="text-sm text-zinc-300 mb-2">Beste deal: <strong>${escapeHtml(cheapest?.price || matches[0].price)}</strong> bij <a class="shop-link" href="${escapeHtml((cheapest||matches[0]).url)}" target="_blank" rel="noopener">${escapeHtml((cheapest||matches[0]).shop)}</a></div>
+          <div class="text-xs text-zinc-500">Klik op Pre-orderen in de tabel hieronder.</div>
+        ` : `
+          <div class="text-sm text-zinc-500">Nog geen pre-order gevonden. Telegram alert volgt zodra een shop hem listet.</div>
+        `}
+      </div>
+    `;
+  }).join('');
+  container.innerHTML = html;
+}
+
+function renderStats() {
+  if (!DATA) return;
+  const s = DATA.stats || {};
+  const cards = [
+    { label: 'Priority hits', value: s.priority_hits ?? 0, priority: true },
+    { label: 'Pre-orders live', value: s.preorders ?? 0 },
+    { label: 'Op voorraad', value: s.in_stock ?? 0 },
+    { label: 'Uitverkocht', value: s.out_of_stock ?? 0 },
+    { label: 'Producten totaal', value: s.total_products ?? 0 },
+  ];
+  document.getElementById('statsCards').innerHTML = cards.map(c => `
+    <div class="stat-card ${c.priority ? 'priority' : ''}">
+      <div class="stat-label">${c.label}</div>
+      <div class="stat-value">${c.value}</div>
+    </div>
+  `).join('');
+}
+
+function getFilteredProducts() {
+  if (!DATA) return [];
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const country = document.getElementById('countryFilter').value;
+  const status = document.getElementById('statusFilter').value;
+  const priorityOnly = document.getElementById('priorityOnly').checked;
+
+  return (DATA.products || []).filter(p => {
+    if (search && !(p.title || '').toLowerCase().includes(search) &&
+        !(p.shop || '').toLowerCase().includes(search)) return false;
+    if (country && p.country !== country) return false;
+    if (status && p.stock_status !== status) return false;
+    if (priorityOnly && !p.priority) return false;
+    return true;
+  }).sort((a, b) => {
+    if (!!b.priority - !!a.priority !== 0) return !!b.priority - !!a.priority;
+    return (b.first_seen || '').localeCompare(a.first_seen || '');
+  });
+}
+
+function renderProducts() {
+  if (!DATA) return;
+  const products = getFilteredProducts();
+  const tbody = document.getElementById('productsBody');
+  if (!products.length) {
+    tbody.innerHTML = '<tr><td colspan="8" class="text-center text-zinc-600 italic py-8">Geen producten matchen je filter.</td></tr>';
+    return;
+  }
+  tbody.innerHTML = products.map(p => {
+    const status = STATUS_LABEL[p.stock_status] || STATUS_LABEL.unknown;
+    const priorityChip = p.priority
+      ? `<span class="chip chip-priority">${escapeHtml(p.priority)}</span>`
+      : '<span class="text-zinc-700">-</span>';
+    const firstSeen = p.first_seen ? new Date(p.first_seen).toLocaleDateString('nl-NL') : '-';
+    return `
+      <tr class="row-hover">
+        <td>${priorityChip}</td>
+        <td><span title="${escapeHtml(p.title)}">${escapeHtml((p.title || '').slice(0, 90))}</span></td>
+        <td>${escapeHtml(p.shop || '')}</td>
+        <td><span class="chip chip-country">${escapeHtml(p.country || '?')}</span></td>
+        <td class="font-semibold">${escapeHtml(p.price || '-')}</td>
+        <td><span class="chip ${status.cls}">${status.label}</span></td>
+        <td class="text-zinc-500">${firstSeen}</td>
+        <td><a href="${escapeHtml(p.url)}" target="_blank" rel="noopener" class="shop-link text-sm">Bekijk -></a></td>
+      </tr>
+    `;
+  }).join('');
+}
+
+function renderNews() {
+  if (!DATA) return;
+  const news = (DATA.news || []).sort((a, b) => (b.first_seen || '').localeCompare(a.first_seen || ''));
+  document.getElementById('newsCount').textContent = `${news.length} artikelen`;
+  if (!news.length) {
+    document.getElementById('newsList').innerHTML = '<div class="empty-state text-zinc-600 italic text-center py-8">Nog geen nieuws.</div>';
+    return;
+  }
+  document.getElementById('newsList').innerHTML = news.slice(0, 50).map(n => `
+    <a href="${escapeHtml(n.url)}" target="_blank" rel="noopener" class="block px-4 py-3 hover:bg-white/5 rounded-xl transition">
+      <div class="flex items-start gap-3">
+        ${n.priority ? `<span class="chip chip-priority mt-0.5">${escapeHtml(n.priority)}</span>` : ''}
+        <div class="flex-1 min-w-0">
+          <div class="text-sm font-medium text-zinc-200 truncate">${escapeHtml(n.title)}</div>
+          <div class="text-xs text-zinc-500 mt-0.5">${escapeHtml(n.source)} - ${n.first_seen ? new Date(n.first_seen).toLocaleDateString('nl-NL') : ''}</div>
+        </div>
+      </div>
+    </a>
+  `).join('');
+}
+
+function render() {
+  renderWatchlist();
+  renderStats();
+  renderProducts();
+  renderNews();
+}
+
+document.getElementById('searchInput').addEventListener('input', renderProducts);
+document.getElementById('countryFilter').addEventListener('change', renderProducts);
+document.getElementById('statusFilter').addEventListener('change', renderProducts);
+document.getElementById('priorityOnly').addEventListener('change', renderProducts);
+document.getElementById('reloadBtn').addEventListener('click', loadData);
+
+loadData();
+</script>
+</body>
+</html>
