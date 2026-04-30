@@ -1,0 +1,30 @@
+{
+  "1ea680bc8a039f5554e88e2b9078056b": [
+    {
+      "ts": "2026-04-30T17:05:19.181156",
+      "price": 84.99,
+      "stock_status": "unknown"
+    }
+  ],
+  "615537f44ba8afc55578c59bf9d54b76": [
+    {
+      "ts": "2026-04-30T17:05:19.181230",
+      "price": 99.99,
+      "stock_status": "unknown"
+    }
+  ],
+  "78ae300f37182ec2e1adca4b7fad81a7": [
+    {
+      "ts": "2026-04-30T17:05:40.874052",
+      "price": 119.99,
+      "stock_status": "out_of_stock"
+    }
+  ],
+  "0f1f9299e22d2f2af24de358c64bd6d1": [
+    {
+      "ts": "2026-04-30T17:05:40.874161",
+      "price": 109.99,
+      "stock_status": "unknown"
+    }
+  ]
+}
