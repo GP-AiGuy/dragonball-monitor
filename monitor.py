@@ -552,14 +552,23 @@ def deep_check_product(context, url):
         page.wait_for_timeout(1000)
         result = page.evaluate(DEEP_CHECK_JS)
         body = result.get("body_excerpt", "")
-        # Decide stock status using best signals available
-        if any(kw in body for kw in PREORDER_KEYWORDS):
-            status = "preorder"
-        elif any(kw in body for kw in OUT_OF_STOCK_KEYWORDS) or result.get("has_notify_signup"):
+        cart_enabled = bool(result.get("cart_enabled"))
+        has_oos = any(kw in body for kw in OUT_OF_STOCK_KEYWORDS) or result.get("has_notify_signup")
+        has_preorder = any(kw in body for kw in PREORDER_KEYWORDS)
+        has_instock = any(kw in body for kw in IN_STOCK_KEYWORDS)
+
+        # OOS signals win over preorder wording: a "pre-order" product can still be sold out.
+        # Notify-me/wachtlijst widgets are a strong OOS signal even if the page also says
+        # "pre-order" elsewhere.
+        if has_oos and not cart_enabled:
             status = "out_of_stock"
-        elif result.get("cart_enabled"):
+        elif cart_enabled and has_preorder:
+            status = "preorder"
+        elif cart_enabled:
             status = "in_stock"
-        elif any(kw in body for kw in IN_STOCK_KEYWORDS):
+        elif has_preorder:
+            status = "preorder"
+        elif has_instock:
             status = "in_stock"
         else:
             status = "unknown"
