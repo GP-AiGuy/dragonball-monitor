@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T11:12:13.975458",
+  "generated_at": "2026-05-02T11:47:54.039698",
   "watchlist": [
     {
       "id": "BT31",
@@ -14,6 +14,34 @@
   ],
   "products": [
     {
+      "title": "Dragon Ball SCG Masters - Ultra-Bout Series Set 4 - Battles Beyond Dimensions - Booster Box - B31",
+      "shop": "Gamerz Paradize",
+      "country": "NL",
+      "price": "€119,99",
+      "price_num": 119.99,
+      "stock_status": "out_of_stock",
+      "url": "https://gamerzparadize.nl/products/dragon-ball-scg-masters-ultra-bout-series-set-4-battles-beyond-dimensions-booster-box-b31",
+      "priority": "BT31",
+      "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
+      "deep_checked": true,
+      "last_seen": "2026-05-02T11:45:57.490409",
+      "first_seen": "2026-05-02T10:32:19.843094"
+    },
+    {
+      "title": "Dragon Ball Super Card Game Masters \"Ultra-Bout Series\" B-31 Booster Display (24 Packs) - EN Pre-Order",
+      "shop": "AlpsTCG",
+      "country": "NL",
+      "price": "€119,95",
+      "price_num": 119.95,
+      "stock_status": "out_of_stock",
+      "url": "https://alpstcg.nl/products/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-booster-display-24-packs-en-pre-order",
+      "priority": "BT31",
+      "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
+      "deep_checked": true,
+      "last_seen": "2026-05-02T11:46:21.160374",
+      "first_seen": "2026-05-02T10:22:20.362270"
+    },
+    {
       "title": "Dragon Ball Super Card Game Masters “Ultra-Bout Series” B-31 Boosterbox",
       "shop": "Arly Trading",
       "country": "NL",
@@ -24,7 +52,7 @@
       "priority": "BT31",
       "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
       "deep_checked": true,
-      "last_seen": "2026-05-02T10:57:36.846056",
+      "last_seen": "2026-05-02T11:46:43.891209",
       "first_seen": "2026-05-02T10:22:43.224086"
     },
     {
@@ -38,7 +66,7 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-02T10:57:59.070472",
+      "last_seen": "2026-05-02T11:47:06.097266",
       "first_seen": "2026-05-02T10:23:05.503852"
     },
     {
@@ -52,7 +80,7 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-02T10:58:23.148179",
+      "last_seen": "2026-05-02T11:47:30.110649",
       "first_seen": "2026-05-02T10:23:29.172559"
     },
     {
@@ -62,68 +90,12 @@
       "price": "€84,99",
       "price_num": 84.99,
       "stock_status": "out_of_stock",
-      "url": "https://gamerzparadize.nl/products/dragon-ball-scg-fusion-world-10-booster-box",
-      "priority": "FB10",
-      "priority_series": "Fusion World Cross Force",
-      "deep_checked": true,
-      "last_seen": "2026-05-02T11:02:33.448625",
-      "first_seen": "2026-05-02T10:27:38.392112"
-    },
-    {
-      "title": "Dragon Ball SCG Masters - Ultra-Bout Series Set 4 - Battles Beyond Dimensions - Booster Box - B31",
-      "shop": "Gamerz Paradize",
-      "country": "NL",
-      "price": "€119,99",
-      "price_num": 119.99,
-      "stock_status": "out_of_stock",
-      "url": "https://gamerzparadize.nl/products/dragon-ball-scg-masters-ultra-bout-series-set-4-battles-beyond-dimensions-booster-box-b31",
-      "priority": "BT31",
-      "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
-      "deep_checked": true,
-      "last_seen": "2026-05-02T11:02:54.944499",
-      "first_seen": "2026-05-02T10:21:56.492522"
-    },
-    {
-      "title": "Dragon Ball Super Card Game Masters \"Ultra-Bout Series\" B-31 Booster Display (24 Packs) - EN Pre-Order",
-      "shop": "AlpsTCG",
-      "country": "NL",
-      "price": "€119,95",
-      "price_num": 119.95,
-      "stock_status": "out_of_stock",
-      "url": "https://alpstcg.nl/products/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-booster-display-24-packs-en-pre-order?_pos=1&_sid=ed0102d3d&_ss=r",
-      "priority": "BT31",
-      "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
-      "deep_checked": true,
-      "last_seen": "2026-05-02T11:05:16.883575",
-      "first_seen": "2026-05-02T10:22:20.362270"
-    },
-    {
-      "title": "Dragon Ball SCG - Fusion World 10 - Booster Box",
-      "shop": "Gamerz Paradize (booster boxen)",
-      "country": "NL",
-      "price": "€84,99",
-      "price_num": 84.99,
-      "stock_status": "out_of_stock",
       "url": "https://gamerzparadize.nl/en/products/dragon-ball-scg-fusion-world-10-booster-box",
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-02T11:06:53.113859",
+      "last_seen": "2026-05-02T11:47:53.981336",
       "first_seen": "2026-05-02T10:23:52.351002"
-    },
-    {
-      "title": "Dragon Ball SCG Masters - Ultra-Bout Series Set 4 - Battles Beyond Dimensions - Booster Box - B31",
-      "shop": "Gamerz Paradize (booster boxen)",
-      "country": "NL",
-      "price": "€119,99",
-      "price_num": 119.99,
-      "stock_status": "out_of_stock",
-      "url": "https://gamerzparadize.nl/en/products/dragon-ball-scg-masters-ultra-bout-series-set-4-battles-beyond-dimensions-booster-box-b31",
-      "priority": "BT31",
-      "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
-      "deep_checked": true,
-      "last_seen": "2026-05-02T11:07:14.866831",
-      "first_seen": "2026-05-02T10:32:19.843094"
     },
     {
       "title": "Dragon Ball Super Three Glorious Fighters B30 Booster Box - Pokeca.NL",
@@ -628,34 +600,6 @@
       "deep_checked": false,
       "last_seen": "2026-05-02T11:01:47.727830",
       "first_seen": "2026-05-02T10:26:52.794635"
-    },
-    {
-      "title": "Dragon Ball SCG Masters - UB05 Booster Box - B32",
-      "shop": "Gamerz Paradize",
-      "country": "NL",
-      "price": "€99,99",
-      "price_num": 99.99,
-      "stock_status": "unknown",
-      "url": "https://gamerzparadize.nl/products/dragon-ball-scg-masters-ub05-booster-box-b32",
-      "priority": null,
-      "priority_series": null,
-      "deep_checked": false,
-      "last_seen": "2026-05-02T11:02:33.448671",
-      "first_seen": "2026-05-02T10:27:38.392258"
-    },
-    {
-      "title": "Dragon Ball Super Card Game - Fusion World Special Booster Box",
-      "shop": "Gamerz Paradize",
-      "country": "NL",
-      "price": "€109,99",
-      "price_num": 109.99,
-      "stock_status": "unknown",
-      "url": "https://gamerzparadize.nl/products/dragon-ball-super-card-game-fusion-world-special-booster-box",
-      "priority": null,
-      "priority_series": null,
-      "deep_checked": false,
-      "last_seen": "2026-05-02T11:02:54.944583",
-      "first_seen": "2026-05-02T10:28:00.013258"
     },
     {
       "title": "Dragon Ball Super Three Glorious Fighters Booster Box – B30",
@@ -1460,6 +1404,11 @@
         "ts": "2026-05-02T11:02:54.944510",
         "price": 119.99,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-02T11:45:57.490425",
+        "price": 119.99,
+        "stock_status": "out_of_stock"
       }
     ],
     "c17961f7f7639ba49cc142495e089edd": [
@@ -1477,6 +1426,11 @@
         "ts": "2026-05-02T11:05:16.883680",
         "price": 119.95,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-02T11:46:21.160394",
+        "price": 119.95,
+        "stock_status": "out_of_stock"
       }
     ],
     "ae587fa4381da54cfb212080111474dd": [
@@ -1489,6 +1443,11 @@
         "ts": "2026-05-02T10:57:36.846202",
         "price": 139.95,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-02T11:46:43.891225",
+        "price": 139.95,
+        "stock_status": "out_of_stock"
       }
     ],
     "5d4b59bd31c591ee34700cb33cf9a509": [
@@ -1499,6 +1458,11 @@
       },
       {
         "ts": "2026-05-02T10:58:23.148198",
+        "price": 99.0,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-02T11:47:30.110664",
         "price": 99.0,
         "stock_status": "out_of_stock"
       }
@@ -1533,6 +1497,11 @@
       },
       {
         "ts": "2026-05-02T11:02:33.448635",
+        "price": 84.99,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-02T11:47:53.981353",
         "price": 84.99,
         "stock_status": "out_of_stock"
       }
@@ -1599,11 +1568,11 @@
     ]
   },
   "stats": {
-    "total_products": 69,
+    "total_products": 65,
     "preorders": 0,
     "in_stock": 0,
-    "out_of_stock": 20,
-    "priority_hits": 8,
+    "out_of_stock": 18,
+    "priority_hits": 6,
     "news_articles": 0,
     "shops_total": 27,
     "shops_healthy": 26,
@@ -1840,7 +1809,7 @@
       {
         "shop": "AlpsTCG",
         "id": "BT31",
-        "consecutive_unknown": 1,
+        "consecutive_unknown": 0,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -1856,7 +1825,7 @@
       {
         "shop": "Dracoon",
         "id": "FB10",
-        "consecutive_unknown": 3,
+        "consecutive_unknown": 4,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
