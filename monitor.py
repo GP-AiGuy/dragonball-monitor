@@ -556,7 +556,7 @@ DEEP_CHECK_JS = """() => {
         const euros = parseInt(m[1] || m[3]);
         const cents = parseInt(m[2] || m[4]);
         const num = euros + cents / 100;
-        if (num >= 25 && num <= 500) allPrices.push({num, raw: m[0]});
+        if (num >= 25 && num <= 250) allPrices.push({num, raw: m[0]});
     }
     let price = null;
     if (allPrices.length) {
@@ -1090,6 +1090,31 @@ def scrape_news(context):
     return new_news
 
 
+def migrate_dedup_state():
+    """One-time migration: collapse duplicate seen_products entries that refer to the
+    same canonical URL (caused by old hash schemes). Keeps the most recently seen record.
+    Idempotent - safe to run every time.
+    """
+    seen = load_json(SEEN_PRODUCTS_FILE)
+    if not seen:
+        return
+    by_canonical = {}  # canonical_url -> (key, record)
+    for k, rec in seen.items():
+        url = rec.get("url", "")
+        c = canonical_url(url) or k  # fall back to old key if no URL
+        existing = by_canonical.get(c)
+        if not existing or rec.get("last_seen", "") > existing[1].get("last_seen", ""):
+            by_canonical[c] = (k, rec)
+    # Rebuild keyed by canonical-URL hash
+    new_seen = {}
+    for c, (_old_key, rec) in by_canonical.items():
+        new_key = make_hash(c)
+        new_seen[new_key] = rec
+    if len(new_seen) < len(seen):
+        log.info(f"State migration: collapsed {len(seen)} -> {len(new_seen)} products (removed {len(seen) - len(new_seen)} dupes)")
+        save_json(SEEN_PRODUCTS_FILE, new_seen)
+
+
 def scrape_priority_urls(context):
     """Always deep-check known direct B31/FB11 product URLs.
 
@@ -1395,6 +1420,7 @@ BUYABLE_STATUSES = ("in_stock", "preorder")
 def cmd_run(dry_run=False, priority_only=False):
     mode = "priority-only (fast)" if priority_only else "full"
     log.info(f"Starting Dragon Ball TCG monitor ({mode})...")
+    migrate_dedup_state()  # idempotent cleanup of old hash-scheme dupes
     new_products, status_changes, price_drops, new_news = scrape_all(priority_only=priority_only)
 
     # ALERT POLICY: only ping Telegram for products that are actually buyable
