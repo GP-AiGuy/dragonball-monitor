@@ -57,20 +57,25 @@ PRIORITY_WATCHLIST = [
         "id": "BT31",
         "series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
         "name": "Dragon Ball Super Card Game Masters BT31 Booster Box",
-        # Match both BT31 (official) and B31 (shop variant naming)
+        # Spelling variants seen in the wild:
+        #   B31, BT31, B-31, BT-31, B 31, BT 31, B_31, B31E, BT31EN, B-31-EN
+        # Boundaries: not preceded by alphanumeric (avoid e.g. "ZB31" or "FB31"),
+        # not FOLLOWED by a digit (avoid e.g. "B315"). Letters after are OK
+        # (suffixes like E, EN, JP).
         "patterns": [
-            r"(?<![a-z0-9])bt[\s\-]?31(?![a-z0-9])",
-            r"(?<![a-z0-9])b[\s\-]?31(?![a-z0-9])",
+            r"(?<![a-z0-9])bt?[\s\-_]?31(?!\d)",
         ],
     },
     {
         "id": "FB10",
         "series": "Fusion World Cross Force",
         "name": "Dragon Ball Super Card Game Fusion World FB10 Booster Box (Cross Force)",
+        # Variants: FB10, FB-10, FB_10, FB 10, FB10E, FB10EN.
+        # Right-guard prevents matching FB100/FB101/FB108.
         "patterns": [
-            r"(?<![a-z0-9])fb[\s\-]?10(?![a-z0-9])",
-            r"fusion\s*world\s*10\b",
-            r"cross\s*force",
+            r"(?<![a-z0-9])fb[\s\-_]?10(?!\d)",
+            r"fusion\s*world[\s\-_]*10(?!\d)",
+            r"cross[\s\-_]*force",
         ],
     },
 ]
