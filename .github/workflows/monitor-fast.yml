@@ -54,14 +54,27 @@ jobs:
             -d "text=$MSG" >/dev/null
 
       - name: Commit state + dashboard data
+        continue-on-error: true
         run: |
           git config user.name "tcg-monitor-bot"
           git config user.email "tcg-monitor@users.noreply.github.com"
-          git pull --rebase origin main || true
           git add state/ data.json 2>/dev/null || true
           if git diff --staged --quiet; then
-            echo "No changes"
-          else
-            git commit -m "Fast: priority URL update ($(date -u +%H:%MZ))"
-            git push
+            echo "No changes to commit"
+            exit 0
           fi
+          git stash --include-untracked || true
+          git pull --rebase origin main || true
+          git stash pop || true
+          git add state/ data.json 2>/dev/null || true
+          git commit -m "Fast: priority URL update ($(date -u +%H:%MZ))" || exit 0
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push attempt $i failed, retrying..."
+            git pull --rebase origin main || true
+            sleep $((i * 2))
+          done
+          echo "WARN: push failed after 5 retries, will retry next run"
+          exit 0
