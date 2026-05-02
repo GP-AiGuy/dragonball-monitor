@@ -1,5 +1,9 @@
 {
+<<<<<<< Updated upstream
   "generated_at": "2026-05-02T10:02:53.547095",
+=======
+  "generated_at": "2026-05-02T10:03:08.438000",
+>>>>>>> Stashed changes
   "watchlist": [
     {
       "id": "BT31",
@@ -17,17 +21,116 @@
       "title": "Dragon Ball SCG Masters - Ultra-Bout Series Set 4 - Battles Beyond Dimensions - Booster Box - B31",
       "shop": "Gamerz Paradize",
       "country": "NL",
-      "price": "€0,00",
+      "price": "€119,99",
       "price_num": 119.99,
       "stock_status": "out_of_stock",
       "url": "https://gamerzparadize.nl/products/dragon-ball-scg-masters-ultra-bout-series-set-4-battles-beyond-dimensions-booster-box-b31",
-      "priority": "B31",
-      "priority_series": "Masters",
+      "priority": "BT31",
+      "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
       "deep_checked": true,
-      "last_seen": "2026-05-02T09:12:28.980167",
+      "last_seen": "2026-05-02T09:47:31.284444",
+      "first_seen": "2026-05-02T09:47:31.284451"
+    },
+    {
+      "title": "Dragon Ball Super Card Game Masters \"Ultra-Bout Series\" B-31 Booster Display (24 Packs) - EN Pre-Order",
+      "shop": "AlpsTCG",
+      "country": "NL",
+      "price": "€119,95",
+      "price_num": 119.95,
+      "stock_status": "out_of_stock",
+      "url": "https://alpstcg.nl/products/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-booster-display-24-packs-en-pre-order",
+      "priority": "BT31",
+      "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
+      "deep_checked": true,
+      "last_seen": "2026-05-02T09:47:55.377043",
+      "first_seen": "2026-05-02T09:47:55.377056"
+    },
+    {
+      "title": "Dragon Ball Super Card Game Masters “Ultra-Bout Series” B-31 Boosterbox",
+      "shop": "Arly Trading",
+      "country": "NL",
+      "price": "€139,95",
+      "price_num": 139.95,
+      "stock_status": "preorder",
+      "url": "https://arlytrading.nl/winkel/preorder/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-boosterbox/",
+      "priority": "BT31",
+      "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
+      "deep_checked": true,
+      "last_seen": "2026-05-02T09:48:18.390688",
+      "first_seen": "2026-05-02T09:48:18.390700"
+    },
+    {
+      "title": "Sorry, you have been blocked",
+      "shop": "Dracoon",
+      "country": "NL",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://dracoon.nl/product/fusion-world-cross-force-fb10-boosterbox/",
+      "priority": "FB10",
+      "priority_series": "Fusion World Cross Force",
+      "deep_checked": true,
+      "last_seen": "2026-05-02T09:48:40.757024",
+      "first_seen": "2026-05-02T09:48:40.757033"
+    },
+    {
+      "title": "Pre-Order Dragon Ball Super Card Game - Fusion World FB10 – TCGHAVEN",
+      "shop": "TCGHaven",
+      "country": "NL",
+      "price": "€499,95",
+      "price_num": 499.95,
+      "stock_status": "out_of_stock",
+      "url": "https://tcghaven.nl/products/pre-order-dragon-ball-super-card-game-fusion-world-fb10",
+      "priority": "FB10",
+      "priority_series": "Fusion World Cross Force",
+      "deep_checked": true,
+      "last_seen": "2026-05-02T09:49:04.824998",
+      "first_seen": "2026-05-02T09:49:04.825012"
+    },
+    {
+      "title": "Dragon Ball SCG - Fusion World 10 - Booster Box",
+      "shop": "Gamerz Paradize",
+      "country": "NL",
+      "price": "€84,99",
+      "price_num": 84.99,
+      "stock_status": "out_of_stock",
+      "url": "https://gamerzparadize.nl/en/products/dragon-ball-scg-fusion-world-10-booster-box",
+      "priority": "FB10",
+      "priority_series": "Fusion World Cross Force",
+      "deep_checked": true,
+      "last_seen": "2026-05-02T09:49:28.211240",
+      "first_seen": "2026-05-02T09:49:28.211249"
+    },
+    {
+      "title": "Dragon Ball SCG - Fusion World 10 - Booster Box",
+      "shop": "Gamerz Paradize",
+      "country": "NL",
+      "price": "€84,99",
+      "price_num": 84.99,
+      "stock_status": "out_of_stock",
+      "url": "https://gamerzparadize.nl/products/dragon-ball-scg-fusion-world-10-booster-box",
+      "priority": "FB10",
+      "priority_series": "Fusion World Cross Force",
+      "deep_checked": true,
+      "last_seen": "2026-05-02T09:53:15.863262",
+      "first_seen": "2026-04-30T17:05:19.181113"
+    },
+    {
+      "title": "Dragon Ball SCG Masters - Ultra-Bout Series Set 4 - Battles Beyond Dimensions - Booster Box - B31",
+      "shop": "Gamerz Paradize",
+      "country": "NL",
+      "price": "€119,99",
+      "price_num": 119.99,
+      "stock_status": "out_of_stock",
+      "url": "https://gamerzparadize.nl/products/dragon-ball-scg-masters-ultra-bout-series-set-4-battles-beyond-dimensions-booster-box-b31",
+      "priority": "BT31",
+      "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
+      "deep_checked": true,
+      "last_seen": "2026-05-02T09:53:37.536008",
       "first_seen": "2026-04-30T17:05:40.873950"
     },
     {
+<<<<<<< Updated upstream
       "title": "Dragon Ball SCG Masters - Ultra-Bout Series Set 4 - Battles Beyond Dimensions - Booster Box - B31",
       "shop": "Gamerz Paradize",
       "country": "NL",
@@ -42,12 +145,15 @@
       "first_seen": "2026-05-02T10:00:57.162420"
     },
     {
+=======
+>>>>>>> Stashed changes
       "title": "Dragon Ball Super Card Game Masters \"Ultra-Bout Series\" B-31 Booster Display (24 Packs) - EN Pre-Order",
       "shop": "AlpsTCG",
       "country": "NL",
       "price": "€119,95",
       "price_num": 119.95,
       "stock_status": "out_of_stock",
+<<<<<<< Updated upstream
       "url": "https://alpstcg.nl/products/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-booster-display-24-packs-en-pre-order",
       "priority": "BT31",
       "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
@@ -100,6 +206,18 @@
     {
       "title": "Dragon Ball SCG - Fusion World 10 - Booster Box",
       "shop": "Gamerz Paradize",
+=======
+      "url": "https://alpstcg.nl/products/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-booster-display-24-packs-en-pre-order?_pos=1&_sid=ed0102d3d&_ss=r",
+      "priority": "BT31",
+      "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
+      "deep_checked": true,
+      "last_seen": "2026-05-02T09:56:00.347225",
+      "first_seen": "2026-05-02T09:56:00.347235"
+    },
+    {
+      "title": "Dragon Ball SCG - Fusion World 10 - Booster Box",
+      "shop": "Gamerz Paradize (booster boxen)",
+>>>>>>> Stashed changes
       "country": "NL",
       "price": "€84,99",
       "price_num": 84.99,
@@ -108,8 +226,27 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
+<<<<<<< Updated upstream
       "last_seen": "2026-05-02T10:02:52.623301",
       "first_seen": "2026-05-02T10:02:52.623311"
+=======
+      "last_seen": "2026-05-02T09:57:37.773954",
+      "first_seen": "2026-05-02T09:57:37.773959"
+    },
+    {
+      "title": "Dragon Ball SCG Masters - Ultra-Bout Series Set 4 - Battles Beyond Dimensions - Booster Box - B31",
+      "shop": "Gamerz Paradize (booster boxen)",
+      "country": "NL",
+      "price": "€119,99",
+      "price_num": 119.99,
+      "stock_status": "out_of_stock",
+      "url": "https://gamerzparadize.nl/en/products/dragon-ball-scg-masters-ultra-bout-series-set-4-battles-beyond-dimensions-booster-box-b31",
+      "priority": "BT31",
+      "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
+      "deep_checked": true,
+      "last_seen": "2026-05-02T09:57:59.627208",
+      "first_seen": "2026-05-02T09:57:59.627220"
+>>>>>>> Stashed changes
     },
     {
       "title": "Dragon Ball Super Three Glorious Fighters B30 Booster Box - Pokeca.NL",
@@ -122,7 +259,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861175",
+      "last_seen": "2026-05-02T09:52:05.158826",
       "first_seen": "2026-04-30T17:04:30.536207"
     },
     {
@@ -136,7 +273,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861208",
+      "last_seen": "2026-05-02T09:52:05.158862",
       "first_seen": "2026-04-30T17:04:30.536297"
     },
     {
@@ -150,7 +287,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861230",
+      "last_seen": "2026-05-02T09:52:05.158883",
       "first_seen": "2026-04-30T17:04:30.536358"
     },
     {
@@ -164,7 +301,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861243",
+      "last_seen": "2026-05-02T09:52:05.158901",
       "first_seen": "2026-04-30T17:04:30.536411"
     },
     {
@@ -178,7 +315,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861262",
+      "last_seen": "2026-05-02T09:52:05.158924",
       "first_seen": "2026-04-30T17:04:30.536477"
     },
     {
@@ -192,7 +329,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861279",
+      "last_seen": "2026-05-02T09:52:05.158946",
       "first_seen": "2026-04-30T17:04:30.536540"
     },
     {
@@ -206,7 +343,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861291",
+      "last_seen": "2026-05-02T09:52:05.158963",
       "first_seen": "2026-04-30T17:04:30.536603"
     },
     {
@@ -220,7 +357,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861310",
+      "last_seen": "2026-05-02T09:52:05.158986",
       "first_seen": "2026-04-30T17:04:30.536686"
     },
     {
@@ -234,7 +371,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861323",
+      "last_seen": "2026-05-02T09:52:05.159004",
       "first_seen": "2026-04-30T17:04:30.536751"
     },
     {
@@ -248,7 +385,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861335",
+      "last_seen": "2026-05-02T09:52:05.159020",
       "first_seen": "2026-04-30T17:04:30.536798"
     },
     {
@@ -262,7 +399,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861347",
+      "last_seen": "2026-05-02T09:52:05.159038",
       "first_seen": "2026-04-30T17:04:30.536847"
     },
     {
@@ -276,7 +413,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861359",
+      "last_seen": "2026-05-02T09:52:05.159054",
       "first_seen": "2026-04-30T17:04:30.536894"
     },
     {
@@ -290,7 +427,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861372",
+      "last_seen": "2026-05-02T09:52:05.159071",
       "first_seen": "2026-04-30T17:04:30.536954"
     },
     {
@@ -304,7 +441,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861383",
+      "last_seen": "2026-05-02T09:52:05.159088",
       "first_seen": "2026-04-30T17:04:30.537018"
     },
     {
@@ -318,7 +455,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861396",
+      "last_seen": "2026-05-02T09:52:05.159106",
       "first_seen": "2026-04-30T17:04:30.537078"
     },
     {
@@ -332,7 +469,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861408",
+      "last_seen": "2026-05-02T09:52:05.159135",
       "first_seen": "2026-04-30T17:04:30.537150"
     },
     {
@@ -346,7 +483,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861420",
+      "last_seen": "2026-05-02T09:52:05.159152",
       "first_seen": "2026-04-30T17:04:30.537230"
     },
     {
@@ -360,7 +497,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861432",
+      "last_seen": "2026-05-02T09:52:05.159168",
       "first_seen": "2026-04-30T17:04:30.537298"
     },
     {
@@ -374,7 +511,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861443",
+      "last_seen": "2026-05-02T09:52:05.159184",
       "first_seen": "2026-04-30T17:04:30.537364"
     },
     {
@@ -388,7 +525,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861455",
+      "last_seen": "2026-05-02T09:52:05.159201",
       "first_seen": "2026-04-30T17:04:30.537429"
     },
     {
@@ -402,7 +539,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861466",
+      "last_seen": "2026-05-02T09:52:05.159218",
       "first_seen": "2026-04-30T17:04:30.537480"
     },
     {
@@ -416,7 +553,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:17.861477",
+      "last_seen": "2026-05-02T09:52:05.159234",
       "first_seen": "2026-04-30T17:04:30.537515"
     },
     {
@@ -430,7 +567,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:42.469725",
+      "last_seen": "2026-05-02T09:52:29.891475",
       "first_seen": "2026-04-30T17:04:54.752042"
     },
     {
@@ -444,7 +581,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:42.469769",
+      "last_seen": "2026-05-02T09:52:29.891526",
       "first_seen": "2026-04-30T17:04:54.752113"
     },
     {
@@ -458,7 +595,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:42.469788",
+      "last_seen": "2026-05-02T09:52:29.891567",
       "first_seen": "2026-04-30T17:04:54.752287"
     },
     {
@@ -472,7 +609,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:42.469807",
+      "last_seen": "2026-05-02T09:52:29.891613",
       "first_seen": "2026-04-30T17:04:54.752363"
     },
     {
@@ -486,7 +623,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:42.469821",
+      "last_seen": "2026-05-02T09:52:29.891635",
       "first_seen": "2026-04-30T17:04:54.752431"
     },
     {
@@ -500,7 +637,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:42.469835",
+      "last_seen": "2026-05-02T09:52:29.891655",
       "first_seen": "2026-04-30T17:04:54.752492"
     },
     {
@@ -514,7 +651,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:42.469849",
+      "last_seen": "2026-05-02T09:52:29.891674",
       "first_seen": "2026-04-30T17:04:54.752554"
     },
     {
@@ -528,7 +665,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:42.469862",
+      "last_seen": "2026-05-02T09:52:29.891692",
       "first_seen": "2026-04-30T17:04:54.752614"
     },
     {
@@ -542,7 +679,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:42.469876",
+      "last_seen": "2026-05-02T09:52:29.891710",
       "first_seen": "2026-04-30T17:04:54.752670"
     },
     {
@@ -556,7 +693,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:42.469890",
+      "last_seen": "2026-05-02T09:52:29.891728",
       "first_seen": "2026-04-30T17:04:54.752725"
     },
     {
@@ -570,7 +707,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:42.469904",
+      "last_seen": "2026-05-02T09:52:29.891746",
       "first_seen": "2026-04-30T17:04:54.752786"
     },
     {
@@ -584,7 +721,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:42.469917",
+      "last_seen": "2026-05-02T09:52:29.891764",
       "first_seen": "2026-04-30T17:04:54.752846"
     },
     {
@@ -598,7 +735,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:42.469931",
+      "last_seen": "2026-05-02T09:52:29.891800",
       "first_seen": "2026-04-30T17:04:54.752907"
     },
     {
@@ -612,22 +749,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:11:42.469944",
+      "last_seen": "2026-05-02T09:52:29.891819",
       "first_seen": "2026-04-30T17:04:54.752980"
-    },
-    {
-      "title": "Dragon Ball SCG - Fusion World 10 - Booster Box",
-      "shop": "Gamerz Paradize",
-      "country": "NL",
-      "price": "€84,99",
-      "price_num": 84.99,
-      "stock_status": "unknown",
-      "url": "https://gamerzparadize.nl/products/dragon-ball-scg-fusion-world-10-booster-box",
-      "priority": null,
-      "priority_series": null,
-      "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:07.290169",
-      "first_seen": "2026-04-30T17:05:19.181113"
     },
     {
       "title": "Dragon Ball SCG Masters - UB05 Booster Box - B32",
@@ -640,7 +763,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:07.290201",
+      "last_seen": "2026-05-02T09:53:15.863440",
       "first_seen": "2026-04-30T17:05:19.181194"
     },
     {
@@ -654,7 +777,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:28.980213",
+      "last_seen": "2026-05-02T09:53:37.536050",
       "first_seen": "2026-04-30T17:05:40.874109"
     },
     {
@@ -668,7 +791,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:54.062685",
+      "last_seen": "2026-05-02T09:54:03.078550",
       "first_seen": "2026-04-30T17:06:07.302702"
     },
     {
@@ -682,7 +805,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:54.062712",
+      "last_seen": "2026-05-02T09:54:03.078587",
       "first_seen": "2026-04-30T17:06:07.302764"
     },
     {
@@ -696,7 +819,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:54.062728",
+      "last_seen": "2026-05-02T09:54:03.078619",
       "first_seen": "2026-04-30T17:06:07.302820"
     },
     {
@@ -710,7 +833,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:54.062754",
+      "last_seen": "2026-05-02T09:54:03.078642",
       "first_seen": "2026-04-30T17:06:07.302875"
     },
     {
@@ -724,7 +847,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:54.062767",
+      "last_seen": "2026-05-02T09:54:03.078665",
       "first_seen": "2026-04-30T17:06:07.302936"
     },
     {
@@ -738,7 +861,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:54.062779",
+      "last_seen": "2026-05-02T09:54:03.078687",
       "first_seen": "2026-04-30T17:06:07.302987"
     },
     {
@@ -752,7 +875,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:54.062791",
+      "last_seen": "2026-05-02T09:54:03.078713",
       "first_seen": "2026-04-30T17:06:07.303033"
     },
     {
@@ -766,7 +889,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:54.062804",
+      "last_seen": "2026-05-02T09:54:03.078728",
       "first_seen": "2026-04-30T17:06:07.303079"
     },
     {
@@ -780,7 +903,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:54.062815",
+      "last_seen": "2026-05-02T09:54:03.078741",
       "first_seen": "2026-04-30T17:06:07.303124"
     },
     {
@@ -794,7 +917,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:54.062826",
+      "last_seen": "2026-05-02T09:54:03.078752",
       "first_seen": "2026-04-30T17:06:07.303168"
     },
     {
@@ -808,7 +931,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:54.062836",
+      "last_seen": "2026-05-02T09:54:03.078764",
       "first_seen": "2026-04-30T17:06:07.303210"
     },
     {
@@ -822,7 +945,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:54.062849",
+      "last_seen": "2026-05-02T09:54:03.078776",
       "first_seen": "2026-04-30T17:06:07.303255"
     },
     {
@@ -836,7 +959,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:54.062861",
+      "last_seen": "2026-05-02T09:54:03.078830",
       "first_seen": "2026-04-30T17:06:07.303299"
     },
     {
@@ -850,7 +973,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:54.062874",
+      "last_seen": "2026-05-02T09:54:03.078848",
       "first_seen": "2026-04-30T17:06:07.303343"
     },
     {
@@ -864,7 +987,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:54.062886",
+      "last_seen": "2026-05-02T09:54:03.078862",
       "first_seen": "2026-04-30T17:06:07.303387"
     },
     {
@@ -878,7 +1001,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:54.062899",
+      "last_seen": "2026-05-02T09:54:03.078874",
       "first_seen": "2026-04-30T17:06:07.303431"
     },
     {
@@ -892,8 +1015,92 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-02T09:12:54.062910",
+      "last_seen": "2026-05-02T09:54:03.078887",
       "first_seen": "2026-04-30T17:06:07.303474"
+    },
+    {
+      "title": "Dragon Ball SCG Masters - UB05 Booster Box - B32",
+      "shop": "Gamerz Paradize (booster boxen)",
+      "country": "NL",
+      "price": "€99,99",
+      "price_num": 99.99,
+      "stock_status": "unknown",
+      "url": "https://gamerzparadize.nl/en/products/dragon-ball-scg-masters-ub05-booster-box-b32",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-02T09:57:37.774094",
+      "first_seen": "2026-05-02T09:57:37.774098"
+    },
+    {
+      "title": "Dragon Ball Super Card Game - Fusion World Special Booster Box",
+      "shop": "Gamerz Paradize (booster boxen)",
+      "country": "NL",
+      "price": "€109,99",
+      "price_num": 109.99,
+      "stock_status": "unknown",
+      "url": "https://gamerzparadize.nl/en/products/dragon-ball-super-card-game-fusion-world-special-booster-box",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-02T09:57:59.627379",
+      "first_seen": "2026-05-02T09:57:59.627383"
+    },
+    {
+      "title": "Dragon Ball Super Boosterbox - B29 Fearsome Rivals",
+      "shop": "Card Game Shop BE",
+      "country": "BE",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://www.cardgameshop.be/en/products/dragon-ball-super-boosterbox-b29-new-series-set-2",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-02T09:58:14.757598",
+      "first_seen": "2026-05-02T09:58:14.757607"
+    },
+    {
+      "title": "Dragon Ball Super Boosterbox - Fusion World FB03 Raging Roar",
+      "shop": "Card Game Shop BE",
+      "country": "BE",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://www.cardgameshop.be/en/products/dragon-ball-fusion-world-03-boosterbox",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-02T09:58:14.757681",
+      "first_seen": "2026-05-02T09:58:14.757685"
+    },
+    {
+      "title": "Dragon Ball Super Boosterbox - Fusion World FB04: Ultra Limit",
+      "shop": "Card Game Shop BE",
+      "country": "BE",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://www.cardgameshop.be/en/products/dragon-ball-fusion-world-04-boosterbox",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-02T09:58:14.757764",
+      "first_seen": "2026-05-02T09:58:14.757770"
+    },
+    {
+      "title": "Dragon Ball Super Japanse Boosterbox - FB03 Fusion World Raging Roar",
+      "shop": "Card Game Shop BE",
+      "country": "BE",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://www.cardgameshop.be/en/products/dragon-ball-z-japanse-box-fusion-world-03",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-02T09:58:14.757869",
+      "first_seen": "2026-05-02T09:58:14.757874"
     }
   ],
   "news": [],
@@ -988,6 +1195,11 @@
         "ts": "2026-05-02T09:12:07.290180",
         "price": 84.99,
         "stock_status": "unknown"
+      },
+      {
+        "ts": "2026-05-02T09:53:15.863387",
+        "price": 84.99,
+        "stock_status": "out_of_stock"
       }
     ],
     "615537f44ba8afc55578c59bf9d54b76": [
@@ -1078,6 +1290,11 @@
       },
       {
         "ts": "2026-05-02T09:12:07.290208",
+        "price": 99.99,
+        "stock_status": "unknown"
+      },
+      {
+        "ts": "2026-05-02T09:53:15.863449",
         "price": 99.99,
         "stock_status": "unknown"
       }
@@ -1172,6 +1389,11 @@
         "ts": "2026-05-02T09:12:28.980179",
         "price": 119.99,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-02T09:53:37.536017",
+        "price": 119.99,
+        "stock_status": "out_of_stock"
       }
     ],
     "0f1f9299e22d2f2af24de358c64bd6d1": [
@@ -1264,6 +1486,81 @@
         "ts": "2026-05-02T09:12:28.980219",
         "price": 109.99,
         "stock_status": "unknown"
+      },
+      {
+        "ts": "2026-05-02T09:53:37.536054",
+        "price": 109.99,
+        "stock_status": "unknown"
+      }
+    ],
+    "4b91a575b056e34f1d16ada6f32f6c8d": [
+      {
+        "ts": "2026-05-02T09:47:31.284557",
+        "price": 119.99,
+        "stock_status": "out_of_stock"
+      }
+    ],
+    "bff8404ed8e307f777166673f75b1261": [
+      {
+        "ts": "2026-05-02T09:47:55.377191",
+        "price": 119.95,
+        "stock_status": "out_of_stock"
+      }
+    ],
+    "1da0eef5af50642676d9e6387eac7633": [
+      {
+        "ts": "2026-05-02T09:48:18.390924",
+        "price": 139.95,
+        "stock_status": "preorder"
+      }
+    ],
+    "5cdf0e00c7cfdf254ced119a857e6104": [
+      {
+        "ts": "2026-05-02T09:49:04.825129",
+        "price": 499.95,
+        "stock_status": "out_of_stock"
+      }
+    ],
+    "3dd31612ad81614613314bf6a2702fdc": [
+      {
+        "ts": "2026-05-02T09:49:28.211363",
+        "price": 84.99,
+        "stock_status": "out_of_stock"
+      }
+    ],
+    "aa7693a4556d26ed64e26491b715921b": [
+      {
+        "ts": "2026-05-02T09:56:00.347334",
+        "price": 119.95,
+        "stock_status": "out_of_stock"
+      }
+    ],
+    "7d3a057457b5c32b7cfcabf04c2de787": [
+      {
+        "ts": "2026-05-02T09:57:37.774047",
+        "price": 84.99,
+        "stock_status": "out_of_stock"
+      }
+    ],
+    "e2d85c2557dedd92a32400ed11a2cbe1": [
+      {
+        "ts": "2026-05-02T09:57:37.774155",
+        "price": 99.99,
+        "stock_status": "unknown"
+      }
+    ],
+    "c31857457b02290cbcc5f9468915e11d": [
+      {
+        "ts": "2026-05-02T09:57:59.627327",
+        "price": 119.99,
+        "stock_status": "out_of_stock"
+      }
+    ],
+    "cd6176f44ff2bf386c083b19f8fd25ab": [
+      {
+        "ts": "2026-05-02T09:57:59.627430",
+        "price": 109.99,
+        "stock_status": "unknown"
       }
     ],
     "4b91a575b056e34f1d16ada6f32f6c8d": [
@@ -1303,6 +1600,7 @@
     ]
   },
   "stats": {
+<<<<<<< Updated upstream
     "total_products": 63,
     "preorders": 1,
     "in_stock": 0,
@@ -1365,5 +1663,13 @@
         "last_error": null
       }
     ]
+=======
+    "total_products": 72,
+    "preorders": 1,
+    "in_stock": 0,
+    "out_of_stock": 22,
+    "priority_hits": 11,
+    "news_articles": 0
+>>>>>>> Stashed changes
   }
 }
