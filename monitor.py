@@ -91,6 +91,12 @@ PRIORITY_PRODUCT_URLS = [
         "country": "NL",
         "url": "https://alpstcg.nl/products/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-booster-display-24-packs-en-pre-order",
     },
+    {
+        "id": "BT31",
+        "shop": "Arly Trading",
+        "country": "NL",
+        "url": "https://arlytrading.nl/winkel/preorder/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-boosterbox/",
+    },
     # ── FB10 (Fusion World Cross Force) ──
     {
         "id": "FB10",
@@ -271,6 +277,24 @@ SHOP_SEARCHES = [
         "name": "TcgReus",
         "country": "NL",
         "url": "https://www.tcgreus.nl/en/categories/dragon-ball-super-card-game",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Arly Trading",
+        "country": "NL",
+        "url": "https://arlytrading.nl/productcategorie/dragon-ball-super-card-game/",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Gamerz Paradize (booster boxen)",
+        "country": "NL",
+        "url": "https://gamerzparadize.nl/en/collections/dragon-ball-booster-boxen",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Card Game Shop BE",
+        "country": "BE",
+        "url": "https://www.cardgameshop.be/en/categories/dragon-ball",
         "extractor": "generic_shop",
     },
     # ── EU marketplace ──
@@ -1022,7 +1046,10 @@ def scrape_priority_urls(context):
     return new_products, status_changes, price_drops
 
 
-def scrape_all():
+def scrape_all(priority_only=False):
+    """Run scrapes. priority_only=True skips slow shop searches + news,
+    only deep-checks PRIORITY_PRODUCT_URLS. Use for fast polling (every 15 min).
+    """
     from playwright.sync_api import sync_playwright
 
     with sync_playwright() as pw:
@@ -1035,14 +1062,16 @@ def scrape_all():
             locale="nl-NL",
             viewport={"width": 1920, "height": 1080},
         )
-        # Priority URLs first (always deep-checked)
+        # Priority URLs always run (the highest-value check)
         prio_new, prio_status, prio_prices = scrape_priority_urls(context)
-        new_products, status_changes, price_drops = scrape_shops(context)
-        # Merge
-        new_products = prio_new + new_products
-        status_changes = prio_status + status_changes
-        price_drops = prio_prices + price_drops
-        new_news = scrape_news(context)
+        if priority_only:
+            new_products, status_changes, price_drops, new_news = prio_new, prio_status, prio_prices, []
+        else:
+            new_products, status_changes, price_drops = scrape_shops(context)
+            new_products = prio_new + new_products
+            status_changes = prio_status + status_changes
+            price_drops = prio_prices + price_drops
+            new_news = scrape_news(context)
         browser.close()
 
     return new_products, status_changes, price_drops, new_news
@@ -1186,9 +1215,10 @@ def write_dashboard_feed():
 
 # ─── Commands ────────────────────────────────────────────────────────────
 
-def cmd_run(dry_run=False):
-    log.info("Starting Dragon Ball TCG monitor...")
-    new_products, status_changes, price_drops, new_news = scrape_all()
+def cmd_run(dry_run=False, priority_only=False):
+    mode = "priority-only (fast)" if priority_only else "full"
+    log.info(f"Starting Dragon Ball TCG monitor ({mode})...")
+    new_products, status_changes, price_drops, new_news = scrape_all(priority_only=priority_only)
 
     priority_hits = [p for p in new_products if p.get("priority")]
     new_preorders = [p for p in new_products if p.get("stock_status") == "preorder" and not p.get("priority")]
@@ -1276,6 +1306,7 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Check without sending alerts")
     parser.add_argument("--list", action="store_true", help="Show all tracked products & news")
     parser.add_argument("--priority", action="store_true", help="Show only priority watchlist matches")
+    parser.add_argument("--priority-only", action="store_true", help="Fast mode: only deep-check priority URLs (skip slow shop searches)")
     args = parser.parse_args()
 
     if args.reset:
@@ -1288,7 +1319,7 @@ def main():
         cmd_list(priority_only=args.priority)
         return
 
-    new_products, status_changes, price_drops, new_news = cmd_run(dry_run=args.dry_run)
+    new_products, status_changes, price_drops, new_news = cmd_run(dry_run=args.dry_run, priority_only=args.priority_only)
     priority_hits = sum(1 for p in new_products if p.get("priority"))
     preorders = sum(1 for p in new_products if p.get("stock_status") == "preorder")
     print(

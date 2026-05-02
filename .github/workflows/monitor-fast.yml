@@ -1,0 +1,54 @@
+name: Dragon Ball TCG Monitor (Fast)
+
+# Fast polling of priority URLs only (BT31 + FB10 direct product pages).
+# Runs every 15 minutes. Skips slow shop searches + news. Catches drops fast.
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tcg-monitor-fast
+  cancel-in-progress: true
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium --with-deps
+
+      - name: Run priority-only check
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TCG_STATE_DIR: ${{ github.workspace }}/state
+          TCG_DASHBOARD_FEED: ${{ github.workspace }}/data.json
+        run: python monitor.py --priority-only
+
+      - name: Commit state + dashboard data
+        run: |
+          git config user.name "tcg-monitor-bot"
+          git config user.email "tcg-monitor@users.noreply.github.com"
+          git pull --rebase origin main || true
+          git add state/ data.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Fast: priority URL update ($(date -u +%H:%MZ))"
+            git push
+          fi
