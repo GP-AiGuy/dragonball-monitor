@@ -44,6 +44,9 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 SEEN_PRODUCTS_FILE = DATA_DIR / "seen_products.json"
 SEEN_NEWS_FILE = DATA_DIR / "seen_news.json"
 PRICE_HISTORY_FILE = DATA_DIR / "price_history.json"
+# Self-healing: per-shop + per-priority-URL health stats. Auto-disables dead shops.
+HEALTH_FILE = DATA_DIR / "health.json"
+MAX_CONSECUTIVE_FAILURES = 5
 DASHBOARD_FEED_FILE = Path(
     os.getenv("TCG_DASHBOARD_FEED", str(PROJECT_ROOT / "dragonball-tracker" / "data.json"))
 )
@@ -622,6 +625,70 @@ def make_hash(key):
     return hashlib.md5(key.encode()).hexdigest()
 
 
+# ─── Self-healing: shop health tracking ─────────────────────────────────
+
+def load_health():
+    return load_json(HEALTH_FILE) or {"shops": {}, "priority_urls": {}}
+
+
+def record_shop_result(health, shop_key, success, error=None, products_found=0):
+    """Track per-shop success/failure. Returns True if shop should be auto-disabled now."""
+    s = health["shops"].setdefault(shop_key, {
+        "consecutive_failures": 0,
+        "consecutive_zero_results": 0,
+        "last_success": None,
+        "last_error": None,
+        "disabled": False,
+        "alerted_disabled": False,
+    })
+    if success:
+        s["consecutive_failures"] = 0
+        s["last_success"] = datetime.now().isoformat()
+        s["last_error"] = None
+        if products_found == 0:
+            s["consecutive_zero_results"] += 1
+        else:
+            s["consecutive_zero_results"] = 0
+    else:
+        s["consecutive_failures"] += 1
+        s["last_error"] = str(error)[:200] if error else "unknown"
+
+    # Auto-disable after MAX_CONSECUTIVE_FAILURES hard errors (DNS, timeouts, etc).
+    # Zero-results doesn't auto-disable but flags warning.
+    just_disabled = False
+    if s["consecutive_failures"] >= MAX_CONSECUTIVE_FAILURES and not s["disabled"]:
+        s["disabled"] = True
+        just_disabled = True
+        log.warning(f"AUTO-DISABLED shop '{shop_key}' after {s['consecutive_failures']} failures: {s['last_error']}")
+    return just_disabled
+
+
+def is_shop_disabled(health, shop_key):
+    s = health["shops"].get(shop_key)
+    return bool(s and s.get("disabled"))
+
+
+def record_priority_url_result(health, key, status, error=None):
+    """Track health of priority URL deep checks."""
+    p = health["priority_urls"].setdefault(key, {
+        "consecutive_unknown": 0,
+        "consecutive_failures": 0,
+        "last_buyable": None,
+        "last_error": None,
+    })
+    if error:
+        p["consecutive_failures"] += 1
+        p["last_error"] = str(error)[:200]
+    elif status == "unknown":
+        p["consecutive_unknown"] += 1
+    else:
+        p["consecutive_unknown"] = 0
+        p["consecutive_failures"] = 0
+        p["last_error"] = None
+        if status in ("in_stock", "preorder"):
+            p["last_buyable"] = datetime.now().isoformat()
+
+
 def parse_price(price_str):
     """Extract numeric price for comparison. Returns float or None."""
     if not price_str or price_str == "Prijs onbekend":
@@ -798,12 +865,19 @@ def scrape_shops(context):
     """Scrape all shop searches. Returns (new_products, status_changes, price_drops)."""
     seen = load_json(SEEN_PRODUCTS_FILE)
     price_history = load_json(PRICE_HISTORY_FILE)
+    health = load_health()
 
     new_products = []
     status_changes = []  # (product_dict, old_status, new_status)
     price_drops = []     # (product_dict, old_price, new_price)
+    auto_disabled_now = []  # for Telegram heads-up
 
     for search in SHOP_SEARCHES:
+        shop_key = f"{search['name']}|{search['url']}"
+        if is_shop_disabled(health, shop_key):
+            log.info(f"SKIP (auto-disabled): {search['name']} ({search['country']})")
+            continue
+
         page = context.new_page()
         try:
             log.info(f"Checking {search['name']} ({search['country']})...")
@@ -841,6 +915,8 @@ def scrape_shops(context):
 
             relevant = [p for p in raw_products if _passes(p)]
             log.info(f"  Found {len(relevant)} Dragon Ball booster box products")
+            if record_shop_result(health, shop_key, success=True, products_found=len(relevant)):
+                auto_disabled_now.append(search["name"])
 
             for p in relevant:
                 priority = detect_priority_match(p["title"])
@@ -920,11 +996,32 @@ def scrape_shops(context):
 
         except Exception as e:
             log.warning(f"  Error scraping {search['name']}: {e}")
+            if record_shop_result(health, shop_key, success=False, error=e):
+                auto_disabled_now.append(search["name"])
         finally:
             page.close()
 
     save_json(SEEN_PRODUCTS_FILE, seen)
     save_json(PRICE_HISTORY_FILE, price_history)
+    save_json(HEALTH_FILE, health)
+
+    # One-time Telegram heads-up for shops that just got auto-disabled
+    if auto_disabled_now and TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID:
+        send_telegram(
+            "<b>Monitor self-heal:</b>\n"
+            f"Auto-disabled {len(auto_disabled_now)} broken shop(s) "
+            f"after {MAX_CONSECUTIVE_FAILURES} consecutive failures:\n\n"
+            + "\n".join(f"- {name}" for name in auto_disabled_now)
+            + "\n\nUpdate URLs in monitor.py and re-enable in health.json."
+        )
+        # Mark as alerted so we don't re-ping
+        for search in SHOP_SEARCHES:
+            if search["name"] in auto_disabled_now:
+                k = f"{search['name']}|{search['url']}"
+                if k in health["shops"]:
+                    health["shops"][k]["alerted_disabled"] = True
+        save_json(HEALTH_FILE, health)
+
     return new_products, status_changes, price_drops
 
 
@@ -983,15 +1080,23 @@ def scrape_priority_urls(context):
     """
     seen = load_json(SEEN_PRODUCTS_FILE)
     price_history = load_json(PRICE_HISTORY_FILE)
+    health = load_health()
     new_products = []
     status_changes = []
     price_drops = []
+    broken_priority = []
 
     for entry in PRIORITY_PRODUCT_URLS:
+        url_key = f"{entry['shop']}|{entry['id']}|{entry['url']}"
         log.info(f"Priority URL check: {entry['shop']} {entry['id']} -> {entry['url'][:80]}")
         deep = deep_check_product(context, entry["url"])
         if not deep:
+            record_priority_url_result(health, url_key, status=None, error="deep check failed")
+            p = health["priority_urls"].get(url_key, {})
+            if p.get("consecutive_failures", 0) == MAX_CONSECUTIVE_FAILURES:
+                broken_priority.append(f"{entry['shop']} {entry['id']}")
             continue
+        record_priority_url_result(health, url_key, status=deep["stock_status"])
         # Get title from the page itself
         page = context.new_page()
         title = entry["id"]
@@ -1050,6 +1155,16 @@ def scrape_priority_urls(context):
 
     save_json(SEEN_PRODUCTS_FILE, seen)
     save_json(PRICE_HISTORY_FILE, price_history)
+    save_json(HEALTH_FILE, health)
+
+    if broken_priority and TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID:
+        send_telegram(
+            "<b>Monitor self-heal: broken priority URL(s)</b>\n\n"
+            f"{MAX_CONSECUTIVE_FAILURES} consecutive failures on:\n"
+            + "\n".join(f"- {x}" for x in broken_priority)
+            + "\n\nLikely the shop changed the URL. Update PRIORITY_PRODUCT_URLS in monitor.py."
+        )
+
     return new_products, status_changes, price_drops
 
 
@@ -1194,9 +1309,34 @@ def write_dashboard_feed():
     seen_products = load_json(SEEN_PRODUCTS_FILE)
     seen_news = load_json(SEEN_NEWS_FILE)
     price_history = load_json(PRICE_HISTORY_FILE)
+    health = load_health()
 
     products = list(seen_products.values())
     products.sort(key=lambda x: (x.get("priority") is None, -ord(x.get("last_seen", "")[0]) if x.get("last_seen") else 0, x.get("last_seen", "")), reverse=False)
+
+    # Health summary for dashboard transparency: which shops are working, dead, or silent.
+    shop_health = []
+    for shop_key, s in (health.get("shops") or {}).items():
+        name = shop_key.split("|", 1)[0]
+        shop_health.append({
+            "shop": name,
+            "disabled": s.get("disabled", False),
+            "consecutive_failures": s.get("consecutive_failures", 0),
+            "consecutive_zero_results": s.get("consecutive_zero_results", 0),
+            "last_success": s.get("last_success"),
+            "last_error": s.get("last_error"),
+        })
+    priority_health = []
+    for url_key, p in (health.get("priority_urls") or {}).items():
+        parts = url_key.split("|")
+        priority_health.append({
+            "shop": parts[0] if len(parts) > 0 else "?",
+            "id": parts[1] if len(parts) > 1 else "?",
+            "consecutive_unknown": p.get("consecutive_unknown", 0),
+            "consecutive_failures": p.get("consecutive_failures", 0),
+            "last_buyable": p.get("last_buyable"),
+            "last_error": p.get("last_error"),
+        })
 
     feed = {
         "generated_at": datetime.now().isoformat(),
@@ -1214,6 +1354,13 @@ def write_dashboard_feed():
             "out_of_stock": sum(1 for p in products if p.get("stock_status") == "out_of_stock"),
             "priority_hits": sum(1 for p in products if p.get("priority")),
             "news_articles": len(seen_news),
+            "shops_total": len(shop_health),
+            "shops_healthy": sum(1 for s in shop_health if not s["disabled"] and s["consecutive_failures"] == 0),
+            "shops_disabled": sum(1 for s in shop_health if s["disabled"]),
+        },
+        "health": {
+            "shops": shop_health,
+            "priority_urls": priority_health,
         },
     }
     save_json(DASHBOARD_FEED_FILE, feed)
