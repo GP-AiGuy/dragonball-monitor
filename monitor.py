@@ -72,6 +72,23 @@ PRIORITY_WATCHLIST = [
     },
 ]
 
+# Known direct product URLs for B31/FB11. Always deep-checked every run, regardless
+# of whether the shop's category page surfaces them. Add new ones as they're discovered.
+PRIORITY_PRODUCT_URLS = [
+    {
+        "id": "FB11",
+        "shop": "TBH Store",
+        "country": "NL",
+        "url": "https://www.tbhstore.nl/a-110786962/dragon-ball-tcg/pre-order-dragon-ball-tcg-scg-fusion-world-fb11-booster-box/",
+    },
+    {
+        "id": "B31",
+        "shop": "Gamerz Paradize",
+        "country": "NL",
+        "url": "https://gamerzparadize.nl/products/dragon-ball-scg-masters-ultra-bout-series-set-4-battles-beyond-dimensions-booster-box-b31",
+    },
+]
+
 # ─── Filters ─────────────────────────────────────────────────────────────
 
 # Title MUST contain one of these to be considered a booster box.
@@ -443,11 +460,23 @@ EXTRACTOR_JS = {
 # the listing-page heuristic. Used for B31/FB11 hits only.
 DEEP_CHECK_JS = """() => {
     const bodyText = (document.body.innerText || '').toLowerCase();
-    // Refined price from page
-    const priceMatch = bodyText.match(/[€£]\\s*(\\d+)[.,](\\d{2})|(\\d+)[.,](\\d{2})\\s*[€£]/);
+    // Refined price: collect ALL prices on page, skip 0/sub-min, prefer highest
+    // (booster box prices €40-€300 range; lower values are typically strikethroughs
+    // for accessories or zero-fields).
+    const priceRegex = /[€£]\\s*(\\d+)[.,](\\d{2})|(\\d+)[.,](\\d{2})\\s*[€£]/g;
+    const allPrices = [];
+    let m;
+    while ((m = priceRegex.exec(bodyText)) !== null) {
+        const euros = parseInt(m[1] || m[3]);
+        const cents = parseInt(m[2] || m[4]);
+        const num = euros + cents / 100;
+        if (num >= 25 && num <= 500) allPrices.push({num, raw: m[0]});
+    }
     let price = null;
-    if (priceMatch) {
-        price = priceMatch[0].replace(/\\s+/g, '');
+    if (allPrices.length) {
+        // Use the most common price if multiple, else max
+        allPrices.sort((a, b) => b.num - a.num);
+        price = allPrices[0].raw.replace(/\\s+/g, '');
         if (!price.includes('€') && !price.includes('£')) price = '€' + price;
     }
     // Add-to-cart button presence (and not disabled)
@@ -867,6 +896,85 @@ def scrape_news(context):
     return new_news
 
 
+def scrape_priority_urls(context):
+    """Always deep-check known direct B31/FB11 product URLs.
+
+    These URLs may not be discoverable via shop search/category pages (they may
+    be hidden, require category filters, or the shop's search may be broken).
+    Returns same tuple shape as scrape_shops.
+    """
+    seen = load_json(SEEN_PRODUCTS_FILE)
+    price_history = load_json(PRICE_HISTORY_FILE)
+    new_products = []
+    status_changes = []
+    price_drops = []
+
+    for entry in PRIORITY_PRODUCT_URLS:
+        log.info(f"Priority URL check: {entry['shop']} {entry['id']} -> {entry['url'][:80]}")
+        deep = deep_check_product(context, entry["url"])
+        if not deep:
+            continue
+        # Get title from the page itself
+        page = context.new_page()
+        title = entry["id"]
+        try:
+            page.goto(entry["url"], wait_until="domcontentloaded", timeout=15000)
+            page.wait_for_timeout(1000)
+            title = page.evaluate("() => (document.querySelector('h1, .product-title, .product-name')?.textContent || document.title || '').trim().substring(0, 200)") or entry["id"]
+        except Exception:
+            pass
+        finally:
+            page.close()
+
+        watchlist = next((w for w in PRIORITY_WATCHLIST if w["id"] == entry["id"]), None)
+        price = deep.get("price") or "Prijs onbekend"
+        price_num = parse_price(price)
+        h = make_hash(f"{entry['shop']}|{title}|{entry['id']}")
+
+        product_record = {
+            "title": title,
+            "shop": entry["shop"],
+            "country": entry["country"],
+            "price": price,
+            "price_num": price_num,
+            "stock_status": deep["stock_status"],
+            "url": entry["url"],
+            "priority": entry["id"],
+            "priority_series": watchlist["series"] if watchlist else "",
+            "deep_checked": True,
+            "last_seen": datetime.now().isoformat(),
+        }
+
+        if h not in seen:
+            product_record["first_seen"] = datetime.now().isoformat()
+            seen[h] = product_record
+            new_products.append(product_record)
+            log.info(f"  NEW [{entry['id']}]: {title[:80]} | {price} | {deep['stock_status']}")
+        else:
+            old = seen[h]
+            old_status = old.get("stock_status", "unknown")
+            old_price = old.get("price_num")
+            if old_status != deep["stock_status"] and deep["stock_status"] != "unknown":
+                status_changes.append((product_record, old_status, deep["stock_status"]))
+                log.info(f"  STATUS [{entry['id']}]: {old_status} -> {deep['stock_status']}")
+            if old_price and price_num and price_num < old_price * 0.95:
+                price_drops.append((product_record, old_price, price_num))
+            product_record["first_seen"] = old.get("first_seen", datetime.now().isoformat())
+            seen[h] = product_record
+
+        if price_num is not None:
+            price_history.setdefault(h, []).append({
+                "ts": datetime.now().isoformat(),
+                "price": price_num,
+                "stock_status": deep["stock_status"],
+            })
+            price_history[h] = price_history[h][-200:]
+
+    save_json(SEEN_PRODUCTS_FILE, seen)
+    save_json(PRICE_HISTORY_FILE, price_history)
+    return new_products, status_changes, price_drops
+
+
 def scrape_all():
     from playwright.sync_api import sync_playwright
 
@@ -880,7 +988,13 @@ def scrape_all():
             locale="nl-NL",
             viewport={"width": 1920, "height": 1080},
         )
+        # Priority URLs first (always deep-checked)
+        prio_new, prio_status, prio_prices = scrape_priority_urls(context)
         new_products, status_changes, price_drops = scrape_shops(context)
+        # Merge
+        new_products = prio_new + new_products
+        status_changes = prio_status + status_changes
+        price_drops = prio_prices + price_drops
         new_news = scrape_news(context)
         browser.close()
 
