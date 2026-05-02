@@ -64,6 +64,8 @@ PRIORITY_WATCHLIST = [
         # (suffixes like E, EN, JP).
         "patterns": [
             r"(?<![a-z0-9])bt?[\s\-_]?31(?!\d)",
+            r"impact[\s\-_]*beyond[\s\-_]*dimensions",
+            r"battles[\s\-_]*beyond[\s\-_]*dimensions",
         ],
     },
     {
@@ -1220,14 +1222,28 @@ def write_dashboard_feed():
 
 # ─── Commands ────────────────────────────────────────────────────────────
 
+BUYABLE_STATUSES = ("in_stock", "preorder")
+
+
 def cmd_run(dry_run=False, priority_only=False):
     mode = "priority-only (fast)" if priority_only else "full"
     log.info(f"Starting Dragon Ball TCG monitor ({mode})...")
     new_products, status_changes, price_drops, new_news = scrape_all(priority_only=priority_only)
 
-    priority_hits = [p for p in new_products if p.get("priority")]
-    new_preorders = [p for p in new_products if p.get("stock_status") == "preorder" and not p.get("priority")]
-    restocks = [(p, old) for p, old, new in status_changes if old == "out_of_stock" and new in ("in_stock", "preorder")]
+    # ALERT POLICY: only ping Telegram for products that are actually buyable
+    # (in_stock or preorder). OOS / unknown are tracked silently.
+    priority_hits = [
+        p for p in new_products
+        if p.get("priority") and p.get("stock_status") in BUYABLE_STATUSES
+    ]
+    new_preorders = [
+        p for p in new_products
+        if p.get("stock_status") == "preorder" and not p.get("priority")
+    ]
+    restocks = [
+        (p, old) for p, old, new in status_changes
+        if new in BUYABLE_STATUSES and old not in BUYABLE_STATUSES
+    ]
 
     log.info(
         f"Results: {len(new_products)} new ({len(priority_hits)} PRIORITY, {len(new_preorders)} pre-orders), "
