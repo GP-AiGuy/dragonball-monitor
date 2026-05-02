@@ -53,25 +53,30 @@ jobs:
       - name: Commit state + dashboard data
         continue-on-error: true
         run: |
+          set +e
           git config user.name "tcg-monitor-bot"
           git config user.email "tcg-monitor@users.noreply.github.com"
-          git add state/ data.json 2>/dev/null || true
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-          git stash --include-untracked || true
-          git pull --rebase origin main || true
-          git stash pop || true
-          git add state/ data.json 2>/dev/null || true
-          git commit -m "Update TCG monitor data ($(date -u +%Y-%m-%dT%H:%MZ))" || exit 0
+          # data.json + state/* are GENERATED files. Never merge - always overwrite
+          # remote with our latest scrape result.
+          mkdir -p /tmp/scraped
+          [ -d state ] && cp -r state /tmp/scraped/
+          [ -f data.json ] && cp data.json /tmp/scraped/
           for i in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            [ -d /tmp/scraped/state ] && cp -r /tmp/scraped/state .
+            [ -f /tmp/scraped/data.json ] && cp /tmp/scraped/data.json .
+            git add state data.json 2>/dev/null
+            if git diff --staged --quiet; then
+              echo "No changes to commit"
+              exit 0
+            fi
+            git commit -m "Update TCG monitor data ($(date -u +%Y-%m-%dT%H:%MZ))"
             if git push; then
               exit 0
             fi
-            echo "Push attempt $i failed, retrying..."
-            git pull --rebase origin main || true
+            echo "Push attempt $i failed, refetching and retrying..."
             sleep $((i * 2))
           done
-          echo "WARN: push failed after 5 retries, will retry next run"
+          echo "WARN: push failed after 5 retries"
           exit 0
