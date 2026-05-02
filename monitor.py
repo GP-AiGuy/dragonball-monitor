@@ -625,6 +625,15 @@ def make_hash(key):
     return hashlib.md5(key.encode()).hexdigest()
 
 
+def canonical_url(url):
+    """Normalize URL for dedup: lowercase, strip query/fragment, drop www, strip trailing /."""
+    if not url:
+        return ""
+    u = url.lower().split("?")[0].split("#")[0].rstrip("/")
+    u = u.replace("://www.", "://")
+    return u
+
+
 # ─── Self-healing: shop health tracking ─────────────────────────────────
 
 def load_health():
@@ -703,12 +712,16 @@ def parse_price(price_str):
 
 
 def detect_stock_status(full_text):
-    """Returns: 'preorder' | 'in_stock' | 'out_of_stock' | 'unknown'."""
+    """Returns: 'preorder' | 'in_stock' | 'out_of_stock' | 'unknown'.
+
+    OOS wins over preorder: a 'pre-order' product can be sold out (no more
+    pre-orders accepted). Don't alert in that case.
+    """
     text = full_text.lower()
-    if any(kw in text for kw in PREORDER_KEYWORDS):
-        return "preorder"
     if any(kw in text for kw in OUT_OF_STOCK_KEYWORDS):
         return "out_of_stock"
+    if any(kw in text for kw in PREORDER_KEYWORDS):
+        return "preorder"
     if any(kw in text for kw in IN_STOCK_KEYWORDS):
         return "in_stock"
     return "unknown"
@@ -937,7 +950,8 @@ def scrape_shops(context):
                             price_num = parse_price(price) or price_num
                         deep_checked = True
 
-                h = make_hash(f"{search['name']}|{p['title']}")
+                # Canonical key: normalized URL (dedupe across shop-scrape + priority-URL)
+                h = make_hash(canonical_url(p["url"])) if p.get("url") else make_hash(f"{search['name']}|{p['title']}")
 
                 product_record = {
                     "title": p["title"],
@@ -1112,7 +1126,8 @@ def scrape_priority_urls(context):
         watchlist = next((w for w in PRIORITY_WATCHLIST if w["id"] == entry["id"]), None)
         price = deep.get("price") or "Prijs onbekend"
         price_num = parse_price(price)
-        h = make_hash(f"{entry['shop']}|{title}|{entry['id']}")
+        # Canonical key: normalized URL (matches scrape_shops, prevents dupes)
+        h = make_hash(canonical_url(entry["url"]))
 
         product_record = {
             "title": title,
@@ -1409,10 +1424,21 @@ def cmd_run(dry_run=False, priority_only=False):
             tag = f" [{n['priority']}]" if n.get("priority") else ""
             log.info(f"[DRY] NEWS{tag} | {n['source']} | {n['title'][:90]}")
     else:
+        # Alert-time dedup: never ping twice for the same (priority_id, shop) or URL
+        sent_priority = set()
+        sent_preorder = set()
         for product in priority_hits:
+            key = (product.get("priority"), product["shop"])
+            if key in sent_priority:
+                continue
+            sent_priority.add(key)
             send_priority_alert(product)
             time.sleep(0.5)
         for product in new_preorders:
+            key = canonical_url(product.get("url", "")) or product["title"]
+            if key in sent_preorder:
+                continue
+            sent_preorder.add(key)
             send_preorder_alert(product)
             time.sleep(0.5)
         for product, old in restocks:
