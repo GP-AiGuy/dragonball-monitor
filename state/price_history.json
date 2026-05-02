@@ -594,7 +594,17 @@
       "stock_status": "out_of_stock"
     },
     {
-      "ts": "2026-05-02T22:42:36.769556",
+      "ts": "2026-05-02T22:43:52.440757",
+      "price": 119.99,
+      "stock_status": "out_of_stock"
+    },
+    {
+      "ts": "2026-05-02T22:49:44.513196",
+      "price": 119.99,
+      "stock_status": "out_of_stock"
+    },
+    {
+      "ts": "2026-05-02T22:54:04.267754",
       "price": 119.99,
       "stock_status": "out_of_stock"
     }
@@ -706,7 +716,12 @@
       "stock_status": "out_of_stock"
     },
     {
-      "ts": "2026-05-02T22:43:00.777545",
+      "ts": "2026-05-02T22:44:16.197119",
+      "price": 119.95,
+      "stock_status": "out_of_stock"
+    },
+    {
+      "ts": "2026-05-02T22:52:06.139285",
       "price": 119.95,
       "stock_status": "out_of_stock"
     }
@@ -788,7 +803,7 @@
       "stock_status": "out_of_stock"
     },
     {
-      "ts": "2026-05-02T22:43:30.954159",
+      "ts": "2026-05-02T22:44:46.396470",
       "price": 139.95,
       "stock_status": "out_of_stock"
     }
@@ -870,7 +885,7 @@
       "stock_status": "out_of_stock"
     },
     {
-      "ts": "2026-05-02T22:44:17.110770",
+      "ts": "2026-05-02T22:45:32.337991",
       "price": 99.0,
       "stock_status": "out_of_stock"
     }
@@ -1024,7 +1039,17 @@
       "stock_status": "out_of_stock"
     },
     {
-      "ts": "2026-05-02T22:44:40.506063",
+      "ts": "2026-05-02T22:45:55.679631",
+      "price": 84.99,
+      "stock_status": "out_of_stock"
+    },
+    {
+      "ts": "2026-05-02T22:49:22.871930",
+      "price": 84.99,
+      "stock_status": "out_of_stock"
+    },
+    {
+      "ts": "2026-05-02T22:53:42.663917",
       "price": 84.99,
       "stock_status": "out_of_stock"
     }
@@ -1089,6 +1114,16 @@
       "ts": "2026-05-02T20:53:41.248789",
       "price": 99.99,
       "stock_status": "unknown"
+    },
+    {
+      "ts": "2026-05-02T22:49:22.872021",
+      "price": 99.99,
+      "stock_status": "unknown"
+    },
+    {
+      "ts": "2026-05-02T22:53:42.664001",
+      "price": 99.99,
+      "stock_status": "unknown"
     }
   ],
   "03e0751b5f816e9900049929606a6823": [
@@ -1149,6 +1184,16 @@
     },
     {
       "ts": "2026-05-02T20:54:02.971216",
+      "price": 109.99,
+      "stock_status": "unknown"
+    },
+    {
+      "ts": "2026-05-02T22:49:44.513253",
+      "price": 109.99,
+      "stock_status": "unknown"
+    },
+    {
+      "ts": "2026-05-02T22:54:04.267800",
       "price": 109.99,
       "stock_status": "unknown"
     }
