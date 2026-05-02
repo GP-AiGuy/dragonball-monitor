@@ -54,38 +54,61 @@ DASHBOARD_FEED_FILE = Path(
 
 PRIORITY_WATCHLIST = [
     {
-        "id": "B31",
-        "series": "Masters",
-        "name": "Dragon Ball Super Card Game Masters Booster Box B31",
-        # Strict: only exact B31 / B-31 token (word boundary)
+        "id": "BT31",
+        "series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
+        "name": "Dragon Ball Super Card Game Masters BT31 Booster Box",
+        # Match both BT31 (official) and B31 (shop variant naming)
         "patterns": [
+            r"(?<![a-z0-9])bt[\s\-]?31(?![a-z0-9])",
             r"(?<![a-z0-9])b[\s\-]?31(?![a-z0-9])",
         ],
     },
     {
-        "id": "FB11",
-        "series": "Fusion World",
-        "name": "Dragon Ball Super Card Game Fusion World Booster Box FB11",
+        "id": "FB10",
+        "series": "Fusion World Cross Force",
+        "name": "Dragon Ball Super Card Game Fusion World FB10 Booster Box (Cross Force)",
         "patterns": [
-            r"(?<![a-z0-9])fb[\s\-]?11(?![a-z0-9])",
+            r"(?<![a-z0-9])fb[\s\-]?10(?![a-z0-9])",
+            r"fusion\s*world\s*10\b",
+            r"cross\s*force",
         ],
     },
 ]
 
-# Known direct product URLs for B31/FB11. Always deep-checked every run, regardless
-# of whether the shop's category page surfaces them. Add new ones as they're discovered.
+# Known direct product URLs. Always deep-checked every run, regardless of whether
+# the shop's category page surfaces them. Add new ones as they're discovered.
 PRIORITY_PRODUCT_URLS = [
+    # ── BT31 (Masters Ultra-Bout Set 4) ──
     {
-        "id": "FB11",
-        "shop": "TBH Store",
-        "country": "NL",
-        "url": "https://www.tbhstore.nl/a-110786962/dragon-ball-tcg/pre-order-dragon-ball-tcg-scg-fusion-world-fb11-booster-box/",
-    },
-    {
-        "id": "B31",
+        "id": "BT31",
         "shop": "Gamerz Paradize",
         "country": "NL",
         "url": "https://gamerzparadize.nl/products/dragon-ball-scg-masters-ultra-bout-series-set-4-battles-beyond-dimensions-booster-box-b31",
+    },
+    {
+        "id": "BT31",
+        "shop": "AlpsTCG",
+        "country": "NL",
+        "url": "https://alpstcg.nl/products/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-booster-display-24-packs-en-pre-order",
+    },
+    # ── FB10 (Fusion World Cross Force) ──
+    {
+        "id": "FB10",
+        "shop": "Dracoon",
+        "country": "NL",
+        "url": "https://dracoon.nl/product/fusion-world-cross-force-fb10-boosterbox/",
+    },
+    {
+        "id": "FB10",
+        "shop": "TCGHaven",
+        "country": "NL",
+        "url": "https://tcghaven.nl/products/pre-order-dragon-ball-super-card-game-fusion-world-fb10",
+    },
+    {
+        "id": "FB10",
+        "shop": "Gamerz Paradize",
+        "country": "NL",
+        "url": "https://gamerzparadize.nl/en/products/dragon-ball-scg-fusion-world-10-booster-box",
     },
 ]
 
@@ -224,6 +247,30 @@ SHOP_SEARCHES = [
         "name": "TF-Robots",
         "country": "NL",
         "url": "https://www.tf-robots.nl/?s=dragon+ball+booster",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Dracoon",
+        "country": "NL",
+        "url": "https://dracoon.nl/product-category/trading-card-games/dragon-ball-super-card-game/",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "TCGHaven",
+        "country": "NL",
+        "url": "https://tcghaven.nl/collections/dragon-ball-super",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "AlpsTCG",
+        "country": "NL",
+        "url": "https://alpstcg.nl/collections/dragon-ball-super-card-game",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "TcgReus",
+        "country": "NL",
+        "url": "https://www.tcgreus.nl/en/categories/dragon-ball-super-card-game",
         "extractor": "generic_shop",
     },
     # ── EU marketplace ──
