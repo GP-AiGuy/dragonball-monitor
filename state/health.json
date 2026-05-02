@@ -1,0 +1,41 @@
+{
+  "shops": {},
+  "priority_urls": {
+    "Gamerz Paradize|BT31|https://gamerzparadize.nl/products/dragon-ball-scg-masters-ultra-bout-series-set-4-battles-beyond-dimensions-booster-box-b31": {
+      "consecutive_unknown": 0,
+      "consecutive_failures": 0,
+      "last_buyable": null,
+      "last_error": null
+    },
+    "AlpsTCG|BT31|https://alpstcg.nl/products/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-booster-display-24-packs-en-pre-order": {
+      "consecutive_unknown": 0,
+      "consecutive_failures": 0,
+      "last_buyable": null,
+      "last_error": null
+    },
+    "Arly Trading|BT31|https://arlytrading.nl/winkel/preorder/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-boosterbox/": {
+      "consecutive_unknown": 0,
+      "consecutive_failures": 0,
+      "last_buyable": "2026-05-02T10:01:42.532970",
+      "last_error": null
+    },
+    "Dracoon|FB10|https://dracoon.nl/product/fusion-world-cross-force-fb10-boosterbox/": {
+      "consecutive_unknown": 1,
+      "consecutive_failures": 0,
+      "last_buyable": null,
+      "last_error": null
+    },
+    "TCGHaven|FB10|https://tcghaven.nl/products/pre-order-dragon-ball-super-card-game-fusion-world-fb10": {
+      "consecutive_unknown": 0,
+      "consecutive_failures": 0,
+      "last_buyable": null,
+      "last_error": null
+    },
+    "Gamerz Paradize|FB10|https://gamerzparadize.nl/en/products/dragon-ball-scg-fusion-world-10-booster-box": {
+      "consecutive_unknown": 0,
+      "consecutive_failures": 0,
+      "last_buyable": null,
+      "last_error": null
+    }
+  }
+}

@@ -366,5 +366,40 @@
       "price": 109.99,
       "stock_status": "unknown"
     }
+  ],
+  "4b91a575b056e34f1d16ada6f32f6c8d": [
+    {
+      "ts": "2026-05-02T10:00:57.162583",
+      "price": 119.99,
+      "stock_status": "out_of_stock"
+    }
+  ],
+  "bff8404ed8e307f777166673f75b1261": [
+    {
+      "ts": "2026-05-02T10:01:20.996168",
+      "price": 119.95,
+      "stock_status": "out_of_stock"
+    }
+  ],
+  "1da0eef5af50642676d9e6387eac7633": [
+    {
+      "ts": "2026-05-02T10:01:43.736980",
+      "price": 139.95,
+      "stock_status": "preorder"
+    }
+  ],
+  "5cdf0e00c7cfdf254ced119a857e6104": [
+    {
+      "ts": "2026-05-02T10:02:29.433445",
+      "price": 499.95,
+      "stock_status": "out_of_stock"
+    }
+  ],
+  "3dd31612ad81614613314bf6a2702fdc": [
+    {
+      "ts": "2026-05-02T10:02:52.623415",
+      "price": 84.99,
+      "stock_status": "out_of_stock"
+    }
   ]
 }
