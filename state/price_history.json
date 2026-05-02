@@ -91,11 +91,7 @@
       "stock_status": "unknown"
     },
     {
-<<<<<<< Updated upstream
-      "ts": "2026-05-02T09:53:15.863387",
-=======
       "ts": "2026-05-02T10:10:03.732543",
->>>>>>> Stashed changes
       "price": 84.99,
       "stock_status": "out_of_stock"
     }
@@ -192,11 +188,7 @@
       "stock_status": "unknown"
     },
     {
-<<<<<<< Updated upstream
-      "ts": "2026-05-02T09:53:15.863449",
-=======
       "ts": "2026-05-02T10:10:03.732609",
->>>>>>> Stashed changes
       "price": 99.99,
       "stock_status": "unknown"
     }
@@ -293,11 +285,7 @@
       "stock_status": "out_of_stock"
     },
     {
-<<<<<<< Updated upstream
-      "ts": "2026-05-02T09:53:37.536017",
-=======
       "ts": "2026-05-02T10:10:25.265937",
->>>>>>> Stashed changes
       "price": 119.99,
       "stock_status": "out_of_stock"
     }
@@ -394,160 +382,79 @@
       "stock_status": "unknown"
     },
     {
-<<<<<<< Updated upstream
-      "ts": "2026-05-02T09:53:37.536054",
-=======
       "ts": "2026-05-02T10:10:25.266003",
->>>>>>> Stashed changes
       "price": 109.99,
       "stock_status": "unknown"
     }
   ],
   "4b91a575b056e34f1d16ada6f32f6c8d": [
     {
-<<<<<<< Updated upstream
-      "ts": "2026-05-02T09:47:31.284557",
-=======
       "ts": "2026-05-02T10:04:20.252218",
->>>>>>> Stashed changes
       "price": 119.99,
       "stock_status": "out_of_stock"
     }
   ],
   "bff8404ed8e307f777166673f75b1261": [
     {
-<<<<<<< Updated upstream
-      "ts": "2026-05-02T09:47:55.377191",
-=======
       "ts": "2026-05-02T10:04:44.250550",
->>>>>>> Stashed changes
       "price": 119.95,
       "stock_status": "out_of_stock"
     }
   ],
   "1da0eef5af50642676d9e6387eac7633": [
     {
-<<<<<<< Updated upstream
-      "ts": "2026-05-02T09:48:18.390924",
-=======
       "ts": "2026-05-02T10:05:07.028556",
->>>>>>> Stashed changes
       "price": 139.95,
       "stock_status": "preorder"
     }
   ],
   "5cdf0e00c7cfdf254ced119a857e6104": [
     {
-<<<<<<< Updated upstream
-      "ts": "2026-05-02T09:49:04.825129",
-=======
       "ts": "2026-05-02T10:05:53.393755",
->>>>>>> Stashed changes
       "price": 499.95,
       "stock_status": "out_of_stock"
     }
   ],
   "3dd31612ad81614613314bf6a2702fdc": [
     {
-<<<<<<< Updated upstream
-      "ts": "2026-05-02T09:49:28.211363",
-=======
       "ts": "2026-05-02T10:06:16.626556",
->>>>>>> Stashed changes
       "price": 84.99,
       "stock_status": "out_of_stock"
     }
   ],
   "aa7693a4556d26ed64e26491b715921b": [
     {
-<<<<<<< Updated upstream
-      "ts": "2026-05-02T09:56:00.347334",
-=======
       "ts": "2026-05-02T10:12:47.309335",
->>>>>>> Stashed changes
       "price": 119.95,
       "stock_status": "out_of_stock"
     }
   ],
   "7d3a057457b5c32b7cfcabf04c2de787": [
     {
-<<<<<<< Updated upstream
-      "ts": "2026-05-02T09:57:37.774047",
-=======
       "ts": "2026-05-02T10:14:24.591457",
->>>>>>> Stashed changes
       "price": 84.99,
       "stock_status": "out_of_stock"
     }
   ],
   "e2d85c2557dedd92a32400ed11a2cbe1": [
     {
-<<<<<<< Updated upstream
-      "ts": "2026-05-02T09:57:37.774155",
-=======
       "ts": "2026-05-02T10:14:24.591577",
->>>>>>> Stashed changes
       "price": 99.99,
       "stock_status": "unknown"
     }
   ],
   "c31857457b02290cbcc5f9468915e11d": [
     {
-<<<<<<< Updated upstream
-      "ts": "2026-05-02T09:57:59.627327",
-=======
       "ts": "2026-05-02T10:14:46.381805",
->>>>>>> Stashed changes
       "price": 119.99,
       "stock_status": "out_of_stock"
     }
   ],
   "cd6176f44ff2bf386c083b19f8fd25ab": [
     {
-<<<<<<< Updated upstream
-      "ts": "2026-05-02T09:57:59.627430",
-      "price": 109.99,
-      "stock_status": "unknown"
-    }
-  ],
-  "4b91a575b056e34f1d16ada6f32f6c8d": [
-    {
-      "ts": "2026-05-02T10:00:57.162583",
-      "price": 119.99,
-      "stock_status": "out_of_stock"
-    }
-  ],
-  "bff8404ed8e307f777166673f75b1261": [
-    {
-      "ts": "2026-05-02T10:01:20.996168",
-      "price": 119.95,
-      "stock_status": "out_of_stock"
-    }
-  ],
-  "1da0eef5af50642676d9e6387eac7633": [
-    {
-      "ts": "2026-05-02T10:01:43.736980",
-      "price": 139.95,
-      "stock_status": "preorder"
-    }
-  ],
-  "5cdf0e00c7cfdf254ced119a857e6104": [
-    {
-      "ts": "2026-05-02T10:02:29.433445",
-      "price": 499.95,
-      "stock_status": "out_of_stock"
-    }
-  ],
-  "3dd31612ad81614613314bf6a2702fdc": [
-    {
-      "ts": "2026-05-02T10:02:52.623415",
-      "price": 84.99,
-      "stock_status": "out_of_stock"
-=======
       "ts": "2026-05-02T10:14:46.381903",
       "price": 109.99,
       "stock_status": "unknown"
->>>>>>> Stashed changes
     }
   ]
 }

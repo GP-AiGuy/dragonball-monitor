@@ -1,7 +1,4 @@
 {
-<<<<<<< Updated upstream
-  "shops": {},
-=======
   "shops": {
     "Bol.com|https://www.bol.com/nl/nl/s/?searchtext=dragon+ball+booster+box": {
       "consecutive_failures": 0,
@@ -220,7 +217,6 @@
       "alerted_disabled": false
     }
   },
->>>>>>> Stashed changes
   "priority_urls": {
     "Gamerz Paradize|BT31|https://gamerzparadize.nl/products/dragon-ball-scg-masters-ultra-bout-series-set-4-battles-beyond-dimensions-booster-box-b31": {
       "consecutive_unknown": 0,
@@ -237,11 +233,7 @@
     "Arly Trading|BT31|https://arlytrading.nl/winkel/preorder/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-boosterbox/": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-<<<<<<< Updated upstream
-      "last_buyable": "2026-05-02T10:01:42.532970",
-=======
       "last_buyable": "2026-05-02T10:05:05.750844",
->>>>>>> Stashed changes
       "last_error": null
     },
     "Dracoon|FB10|https://dracoon.nl/product/fusion-world-cross-force-fb10-boosterbox/": {
