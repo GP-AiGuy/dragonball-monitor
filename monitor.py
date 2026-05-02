@@ -631,11 +631,14 @@ def make_hash(key):
 
 
 def canonical_url(url):
-    """Normalize URL for dedup: lowercase, strip query/fragment, drop www, strip trailing /."""
+    """Normalize URL for dedup: lowercase, strip query/fragment, drop www,
+    strip trailing /, strip locale prefixes (/en/, /nl/, /fr/, /de/)."""
     if not url:
         return ""
     u = url.lower().split("?")[0].split("#")[0].rstrip("/")
     u = u.replace("://www.", "://")
+    # Strip locale path prefix (e.g. gamerzparadize.nl/en/products/x → gamerzparadize.nl/products/x)
+    u = re.sub(r"(://[^/]+)/(en|nl|fr|de|us|gb|be)(?=/)", r"\1", u)
     return u
 
 
