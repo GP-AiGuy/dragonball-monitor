@@ -997,8 +997,15 @@ def scrape_shops(context):
                         status_changes.append((product_record, old_status, stock_status))
                         log.info(f"  STATUS: {p['title'][:60]} | {old_status} -> {stock_status}")
 
-                    # Price drop (>5% lower)
-                    if old_price and price_num and price_num < old_price * 0.95:
+                    # Price drop (>5% lower) — only meaningful if product is BUYABLE.
+                    # Skip OOS items (you can't buy them anyway) and ignore wild swings
+                    # >40% which usually indicate extractor instability, not real drops.
+                    if (
+                        old_price and price_num
+                        and price_num < old_price * 0.95
+                        and price_num > old_price * 0.60
+                        and stock_status in ("in_stock", "preorder")
+                    ):
                         price_drops.append((product_record, old_price, price_num))
                         log.info(f"  PRICE DROP: {p['title'][:60]} | €{old_price} -> €{price_num}")
 
@@ -1188,7 +1195,13 @@ def scrape_priority_urls(context):
             if old_status != deep["stock_status"] and deep["stock_status"] != "unknown":
                 status_changes.append((product_record, old_status, deep["stock_status"]))
                 log.info(f"  STATUS [{entry['id']}]: {old_status} -> {deep['stock_status']}")
-            if old_price and price_num and price_num < old_price * 0.95:
+            # Same OOS-and-volatility guard as scrape_shops
+            if (
+                old_price and price_num
+                and price_num < old_price * 0.95
+                and price_num > old_price * 0.60
+                and deep["stock_status"] in ("in_stock", "preorder")
+            ):
                 price_drops.append((product_record, old_price, price_num))
             product_record["first_seen"] = old.get("first_seen", datetime.now().isoformat())
             seen[h] = product_record
