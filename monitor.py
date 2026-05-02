@@ -188,6 +188,11 @@ OUT_OF_STOCK_KEYWORDS = [
     "uitverkocht", "niet op voorraad", "out of stock", "sold out",
     "currently unavailable", "niet leverbaar", "tijdelijk uitverkocht",
     "wachtlijst", "notify me", "back in stock",
+    # Dutch shop variants seen on Arly Trading, AlpsTCG, etc
+    "momenteel niet beschikbaar", "niet beschikbaar", "tijdelijk niet beschikbaar",
+    "voorraad: 0", "geen voorraad", "stock: 0", "out-of-stock",
+    "nicht verfügbar", "epuisé",  # DE/FR for international shops
+    "houd mij op de hoogte", "laat het mij weten", "email me",
 ]
 
 IN_STOCK_KEYWORDS = [
