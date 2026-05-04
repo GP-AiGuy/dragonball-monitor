@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T15:33:06.968817",
+  "generated_at": "2026-05-04T17:18:00.430696",
   "watchlist": [
     {
       "id": "BT31",
@@ -24,7 +24,7 @@
       "priority": "BT31",
       "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
       "deep_checked": true,
-      "last_seen": "2026-05-04T15:31:02.492467",
+      "last_seen": "2026-05-04T17:15:55.713365",
       "first_seen": "2026-05-02T10:32:19.843094"
     },
     {
@@ -38,21 +38,21 @@
       "priority": "BT31",
       "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
       "deep_checked": true,
-      "last_seen": "2026-05-04T15:31:26.522531",
+      "last_seen": "2026-05-04T17:16:19.957714",
       "first_seen": "2026-05-02T10:22:20.362270"
     },
     {
       "title": "Dragon Ball Super Card Game Masters “Ultra-Bout Series” B-31 Boosterbox",
       "shop": "Arly Trading",
       "country": "NL",
-      "price": "€139,95",
-      "price_num": 139.95,
+      "price": "€109,95",
+      "price_num": 109.95,
       "stock_status": "out_of_stock",
       "url": "https://arlytrading.nl/winkel/preorder/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-boosterbox/",
       "priority": "BT31",
       "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
       "deep_checked": true,
-      "last_seen": "2026-05-04T15:31:56.980215",
+      "last_seen": "2026-05-04T17:16:50.611613",
       "first_seen": "2026-05-02T10:22:43.224086"
     },
     {
@@ -66,7 +66,7 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-04T15:32:19.245624",
+      "last_seen": "2026-05-04T17:17:12.948817",
       "first_seen": "2026-05-02T10:23:05.503852"
     },
     {
@@ -80,7 +80,7 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-04T15:32:43.639628",
+      "last_seen": "2026-05-04T17:17:36.881338",
       "first_seen": "2026-05-02T10:23:29.172559"
     },
     {
@@ -94,7 +94,7 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-04T15:33:06.917726",
+      "last_seen": "2026-05-04T17:18:00.386122",
       "first_seen": "2026-05-02T10:23:52.351002"
     },
     {
@@ -1844,6 +1844,11 @@
         "ts": "2026-05-04T15:31:02.492483",
         "price": 119.99,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-04T17:15:55.713383",
+        "price": 119.99,
+        "stock_status": "out_of_stock"
       }
     ],
     "c17961f7f7639ba49cc142495e089edd": [
@@ -2201,6 +2206,11 @@
         "ts": "2026-05-04T15:31:26.522547",
         "price": 119.95,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-04T17:16:19.957729",
+        "price": 119.95,
+        "stock_status": "out_of_stock"
       }
     ],
     "ae587fa4381da54cfb212080111474dd": [
@@ -2453,6 +2463,11 @@
         "ts": "2026-05-04T15:31:56.980234",
         "price": 139.95,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-04T17:16:50.611646",
+        "price": 109.95,
+        "stock_status": "out_of_stock"
       }
     ],
     "5d4b59bd31c591ee34700cb33cf9a509": [
@@ -2703,6 +2718,11 @@
       },
       {
         "ts": "2026-05-04T15:32:43.639645",
+        "price": 99.0,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-04T17:17:36.881352",
         "price": 99.0,
         "stock_status": "out_of_stock"
       }
@@ -3177,6 +3197,11 @@
       },
       {
         "ts": "2026-05-04T15:33:06.917739",
+        "price": 84.99,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-04T17:18:00.386141",
         "price": 84.99,
         "stock_status": "out_of_stock"
       }
@@ -3900,7 +3925,7 @@
       {
         "shop": "Dracoon",
         "id": "FB10",
-        "consecutive_unknown": 51,
+        "consecutive_unknown": 52,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
