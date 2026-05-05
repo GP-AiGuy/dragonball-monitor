@@ -2,24 +2,24 @@
   "shops": {
     "Bol.com|https://www.bol.com/nl/nl/s/?searchtext=dragon+ball+booster+box": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:09:30.392370",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:00:46.260518",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Bol.com|https://www.bol.com/nl/nl/s/?searchtext=dragon+ball+fusion+world+booster": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:09:52.140809",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:01:08.090027",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Bol.com|https://www.bol.com/nl/nl/s/?searchtext=dragon+ball+masters+booster": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:10:13.893241",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:01:29.799074",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -34,16 +34,16 @@
     },
     "TBH Store|https://www.tbhstore.nl/zoeken/?q=dragon+ball+booster+box": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:10:37.134602",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:01:53.067620",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "TBH Store|https://www.tbhstore.nl/c-7253195/dragon-ball-tcg/": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:11:00.349860",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:02:16.298489",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -51,7 +51,7 @@
     "Pokeca|https://pokeca.nl/collections/dragon-ball-super": {
       "consecutive_failures": 0,
       "consecutive_zero_results": 0,
-      "last_success": "2026-05-05T21:11:25.033125",
+      "last_success": "2026-05-05T23:02:40.836677",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -59,7 +59,7 @@
     "Spellenvariant|https://www.spellenvariant.nl/trading-card-games/dragon-ball-tcg": {
       "consecutive_failures": 0,
       "consecutive_zero_results": 0,
-      "last_success": "2026-05-05T21:11:49.775153",
+      "last_success": "2026-05-05T23:03:04.962446",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -67,7 +67,7 @@
     "Gamerz Paradize|https://gamerzparadize.nl/collections/brand-dragon-ball-super-card-game": {
       "consecutive_failures": 0,
       "consecutive_zero_results": 0,
-      "last_success": "2026-05-05T21:12:13.907582",
+      "last_success": "2026-05-05T23:03:29.318443",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -75,31 +75,31 @@
     "Oppacards|https://oppacards.com/product-category/dragon-ball-super/": {
       "consecutive_failures": 0,
       "consecutive_zero_results": 0,
-      "last_success": "2026-05-05T21:13:22.684319",
+      "last_success": "2026-05-05T23:04:38.869060",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "TF-Robots|https://www.tf-robots.nl/?s=dragon+ball+booster": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:13:45.941615",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:05:02.140440",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Dracoon|https://dracoon.nl/product-category/trading-card-games/dragon-ball-super-card-game/": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:14:09.146759",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:05:25.379407",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "TCGHaven|https://tcghaven.nl/collections/dragon-ball-super": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:14:33.502133",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:05:49.652163",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -107,23 +107,23 @@
     "AlpsTCG|https://alpstcg.nl/collections/dragon-ball-super-card-game": {
       "consecutive_failures": 0,
       "consecutive_zero_results": 0,
-      "last_success": "2026-05-05T21:14:57.643040",
+      "last_success": "2026-05-05T23:06:13.679975",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "TcgReus|https://www.tcgreus.nl/en/categories/dragon-ball-super-card-game": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:15:44.509499",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:07:00.586553",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Arly Trading|https://arlytrading.nl/productcategorie/dragon-ball-super-card-game/": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:16:11.527082",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:07:27.421377",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -131,13 +131,13 @@
     "Gamerz Paradize (booster boxen)|https://gamerzparadize.nl/en/collections/dragon-ball-booster-boxen": {
       "consecutive_failures": 0,
       "consecutive_zero_results": 0,
-      "last_success": "2026-05-05T21:16:35.349428",
+      "last_success": "2026-05-05T23:07:51.427311",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Card Game Shop BE|https://www.cardgameshop.be/en/categories/dragon-ball": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 2,
       "consecutive_zero_results": 0,
       "last_success": "2026-05-05T19:34:07.031154",
       "last_error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\nnavigating to \"https://www.cardgameshop.be/en/categories/dragon-ball\", waiting until \"domcontentloaded\"\n",
@@ -146,72 +146,72 @@
     },
     "Cardmarket|https://www.cardmarket.com/en/DragonBallSuperFusionWorld/Products/Booster-Boxes": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:18:01.938645",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:09:18.316954",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Cardmarket|https://www.cardmarket.com/en/DragonBallSuper/Products/Booster-Boxes": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:18:25.156677",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:09:41.539189",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Magic Madhouse|https://www.magicmadhouse.co.uk/search?w=dragon+ball+booster+box": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:18:39.382494",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:09:55.744334",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Chaos Cards|https://www.chaoscards.co.uk/cards/dragon-ball-super/sealed-product": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:19:02.659305",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:10:19.035892",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Total Cards|https://www.totalcards.net/dragon-ball-super-card-game?p=1&search=booster+box": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:19:27.393946",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:10:43.440101",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Fantasywelt|https://www.fantasywelt.de/Suche?q=dragon+ball+booster+display": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:19:50.652992",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:11:06.732209",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Amazon.nl|https://www.amazon.nl/s?k=dragon+ball+super+card+game+booster+box&i=toys": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:20:12.445075",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:11:28.414999",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Amazon.nl|https://www.amazon.nl/s?k=dragon+ball+fusion+world+booster+display&i=toys": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:20:35.344477",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:11:51.545814",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Amazon.co.uk|https://www.amazon.co.uk/s?k=dragon+ball+super+card+game+booster+box": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 35,
-      "last_success": "2026-05-05T21:20:57.288608",
+      "consecutive_zero_results": 36,
+      "last_success": "2026-05-05T23:12:13.516783",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
