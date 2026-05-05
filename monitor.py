@@ -37,6 +37,10 @@ log = logging.getLogger(__name__)
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
+# eBay Browse API (optional). Skipped if credentials missing.
+EBAY_APP_ID = os.getenv("EBAY_APP_ID")
+EBAY_CERT_ID = os.getenv("EBAY_CERT_ID")
+
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 # Override via TCG_STATE_DIR env var (used by GitHub Actions to persist state in repo)
 DATA_DIR = Path(os.getenv("TCG_STATE_DIR", str(PROJECT_ROOT / ".tmp" / "tcg_monitor")))
@@ -47,6 +51,11 @@ PRICE_HISTORY_FILE = DATA_DIR / "price_history.json"
 # Self-healing: per-shop + per-priority-URL health stats. Auto-disables dead shops.
 HEALTH_FILE = DATA_DIR / "health.json"
 MAX_CONSECUTIVE_FAILURES = 5
+
+# eBay state: active listings (Browse API) + sold listings (scrape)
+EBAY_LISTINGS_FILE = DATA_DIR / "ebay_listings.json"
+EBAY_SOLD_FILE = DATA_DIR / "ebay_sold.json"
+EBAY_TOKEN_FILE = DATA_DIR / "ebay_token.json"
 DASHBOARD_FEED_FILE = Path(
     os.getenv("TCG_DASHBOARD_FEED", str(PROJECT_ROOT / "dragonball-tracker" / "data.json"))
 )
@@ -859,6 +868,222 @@ def is_relevant_news(title):
     return has_target_series and has_news_kw
 
 
+# ─── eBay Integration ────────────────────────────────────────────────────
+
+EBAY_QUERIES = {
+    "BT31": [
+        "dragon ball masters bt31 booster",
+        "dragon ball masters b31 booster",
+        "dragon ball impact beyond dimensions booster",
+        "dragon ball battles beyond dimensions booster",
+    ],
+    "FB10": [
+        "dragon ball fusion world fb10",
+        "dragon ball fusion world cross force",
+    ],
+}
+EBAY_MARKETS = ["EBAY_NL", "EBAY_DE", "EBAY_GB", "EBAY_BE", "EBAY_FR"]
+
+
+def ebay_get_token():
+    """Get OAuth token, cached for ~110 minutes (eBay tokens last 2h)."""
+    if not EBAY_APP_ID or not EBAY_CERT_ID:
+        return None
+    cached = load_json(EBAY_TOKEN_FILE)
+    if cached.get("token") and cached.get("expires_at", 0) > time.time() + 60:
+        return cached["token"]
+    import base64
+    auth = base64.b64encode(f"{EBAY_APP_ID}:{EBAY_CERT_ID}".encode()).decode()
+    try:
+        r = requests.post(
+            "https://api.ebay.com/identity/v1/oauth2/token",
+            headers={
+                "Authorization": f"Basic {auth}",
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            data="grant_type=client_credentials&scope=https://api.ebay.com/oauth/api_scope",
+            timeout=15,
+        )
+        r.raise_for_status()
+        d = r.json()
+        token = d["access_token"]
+        save_json(EBAY_TOKEN_FILE, {"token": token, "expires_at": time.time() + d.get("expires_in", 7200) - 120})
+        return token
+    except Exception as e:
+        log.warning(f"eBay OAuth failed: {e}")
+        return None
+
+
+def ebay_search_active(target_id, queries, token):
+    """Browse API: active listings. Dedupe by itemId across queries/markets."""
+    found = {}
+    for q in queries:
+        for market in EBAY_MARKETS:
+            try:
+                r = requests.get(
+                    "https://api.ebay.com/buy/browse/v1/item_summary/search",
+                    params={"q": q, "limit": 50},
+                    headers={
+                        "Authorization": f"Bearer {token}",
+                        "X-EBAY-C-MARKETPLACE-ID": market,
+                    },
+                    timeout=15,
+                )
+                if r.status_code != 200:
+                    continue
+                for item in r.json().get("itemSummaries", []):
+                    iid = item.get("itemId")
+                    if not iid or iid in found:
+                        continue
+                    title = (item.get("title") or "").lower()
+                    # Filter: must mention target ID and be a sealed booster box (not single packs/cards)
+                    if not any(re.search(p, title) for w in PRIORITY_WATCHLIST if w["id"] == target_id for p in w["patterns"]):
+                        continue
+                    if not any(kw in title for kw in ["booster box", "booster display", "boosterbox", "display box", "sealed", "box display"]):
+                        continue
+                    if any(kw in title for kw in ["card lot", "single", "1 pack", "loose", "opened"]):
+                        continue
+                    price = item.get("price") or {}
+                    found[iid] = {
+                        "item_id": iid,
+                        "target": target_id,
+                        "title": item.get("title", "")[:200],
+                        "price_value": float(price.get("value", 0) or 0),
+                        "price_currency": price.get("currency", ""),
+                        "url": item.get("itemWebUrl", ""),
+                        "condition": item.get("condition", ""),
+                        "seller": (item.get("seller") or {}).get("username", ""),
+                        "feedback_pct": (item.get("seller") or {}).get("feedbackPercentage", ""),
+                        "country": (item.get("itemLocation") or {}).get("country", ""),
+                        "marketplace": market,
+                        "image": (item.get("image") or {}).get("imageUrl", ""),
+                        "buying_options": item.get("buyingOptions", []),
+                        "first_seen": datetime.now().isoformat(),
+                    }
+            except Exception as e:
+                log.warning(f"  eBay search error ({market}/{q[:30]}): {e}")
+    return found
+
+
+def ebay_scrape_sold(target_id, queries):
+    """Scrape eBay sold listings (last 90d) for market price reference.
+
+    eBay's sold-search page is publicly accessible without auth. Returns
+    aggregate stats (count, avg, min, max, recent sold) per target.
+    """
+    sold = []
+    for q in queries[:1]:  # one query per target is enough for market stats
+        for market_host in ["www.ebay.nl", "www.ebay.de"]:
+            try:
+                r = requests.get(
+                    f"https://{market_host}/sch/i.html",
+                    params={"_nkw": q, "LH_Sold": "1", "LH_Complete": "1", "_ipg": "60"},
+                    headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"},
+                    timeout=15,
+                )
+                if r.status_code != 200:
+                    continue
+                html = r.text
+                # Sold prices are in elements like <span class="POSITIVE">EUR 199,00</span>
+                # or <span class="s-item__price">EUR 199,00</span> within sold blocks.
+                # Cheap parse: find all "EUR 99,99" or "GBP 89.99" near each item card.
+                items = re.findall(
+                    r'<li[^>]*class="s-item[^"]*"[^>]*>.*?<div class="s-item__title"[^>]*>(?:<span[^>]*>)?([^<]+).*?<span class="s-item__price"[^>]*>([^<]+)</span>',
+                    html,
+                    flags=re.DOTALL,
+                )
+                for title, price_raw in items:
+                    title = re.sub(r"\s+", " ", title).strip()
+                    if "shop on ebay" in title.lower():
+                        continue
+                    # Filter target match
+                    title_lc = title.lower()
+                    if not any(re.search(p, title_lc) for w in PRIORITY_WATCHLIST if w["id"] == target_id for p in w["patterns"]):
+                        continue
+                    if not any(kw in title_lc for kw in ["booster box", "booster display", "boosterbox", "display box", "sealed"]):
+                        continue
+                    # Parse price (handle "EUR 199,00", "EUR 199.00", "199,00 EUR")
+                    pm = re.search(r"(\d+[.,]\d{2})", price_raw)
+                    if not pm:
+                        continue
+                    price = float(pm.group(1).replace(",", "."))
+                    if 25 <= price <= 500:
+                        sold.append({"title": title[:120], "price": price, "host": market_host})
+            except Exception as e:
+                log.warning(f"  eBay sold scrape error ({market_host}/{q[:30]}): {e}")
+    if not sold:
+        return None
+    prices = sorted(p["price"] for p in sold)
+    return {
+        "target": target_id,
+        "scraped_at": datetime.now().isoformat(),
+        "count": len(prices),
+        "min": prices[0],
+        "max": prices[-1],
+        "avg": round(sum(prices) / len(prices), 2),
+        "median": prices[len(prices) // 2],
+        "samples": sold[:10],
+    }
+
+
+def scrape_ebay():
+    """Run both Browse-API active listings + sold-scrape per priority target."""
+    token = ebay_get_token()
+    seen = load_json(EBAY_LISTINGS_FILE)
+    sold_data = load_json(EBAY_SOLD_FILE)
+    new_listings = []
+
+    if not token:
+        log.info("eBay credentials missing, skipping eBay integration")
+        return new_listings, sold_data
+
+    for target_id, queries in EBAY_QUERIES.items():
+        log.info(f"eBay search: {target_id}...")
+        active = ebay_search_active(target_id, queries, token)
+        for iid, item in active.items():
+            if iid not in seen:
+                seen[iid] = item
+                new_listings.append(item)
+                log.info(f"  NEW: {item['price_value']} {item['price_currency']} | {item['title'][:80]} | {item['marketplace']}")
+            else:
+                seen[iid]["last_seen"] = datetime.now().isoformat()
+                seen[iid]["price_value"] = item["price_value"]  # update price
+
+        # Sold prices (only refresh every ~6h to be polite)
+        existing_sold = sold_data.get(target_id) or {}
+        last_sold_age = datetime.now().timestamp() - datetime.fromisoformat(existing_sold.get("scraped_at", "2020-01-01T00:00:00")).timestamp() if existing_sold.get("scraped_at") else 99999
+        if last_sold_age > 6 * 3600:
+            log.info(f"eBay sold scrape: {target_id}...")
+            stats = ebay_scrape_sold(target_id, queries)
+            if stats:
+                sold_data[target_id] = stats
+                log.info(f"  Sold (last 90d): {stats['count']} items, avg €{stats['avg']}, range €{stats['min']}-€{stats['max']}")
+
+    save_json(EBAY_LISTINGS_FILE, seen)
+    save_json(EBAY_SOLD_FILE, sold_data)
+    return new_listings, sold_data
+
+
+def send_ebay_alert(item, sold_stats=None):
+    """Telegram ping for new eBay listing matching priority target."""
+    market_label = item["marketplace"].replace("EBAY_", "")
+    avg_line = ""
+    if sold_stats and sold_stats.get("avg"):
+        avg = sold_stats["avg"]
+        delta = item["price_value"] - avg
+        sign = "▲" if delta > 0 else "▼"
+        avg_line = f"\n<b>vs sold avg:</b> €{avg:.2f} ({sign} €{abs(delta):.2f})"
+    msg = (
+        f"<b>eBay listing: {item['target']}</b>\n\n"
+        f"<b>Prijs:</b> {item['price_value']:.2f} {item['price_currency']}\n"
+        f"<b>Markt:</b> {market_label} ({item['country']})\n"
+        f"<b>Verkoper:</b> {item['seller']} ({item['feedback_pct']}%)\n"
+        f"<b>Titel:</b> {item['title'][:120]}{avg_line}\n\n"
+        f"<a href=\"{item['url']}\">Bekijk op eBay</a>"
+    )
+    send_telegram(msg)
+
+
 # ─── Browser ─────────────────────────────────────────────────────────────
 
 def accept_cookies(page):
@@ -1257,7 +1482,10 @@ def scrape_all(priority_only=False):
             new_news = scrape_news(context)
         browser.close()
 
-    return new_products, status_changes, price_drops, new_news
+    # eBay (no browser needed - REST API + lightweight scrape)
+    new_ebay, ebay_sold = scrape_ebay()
+
+    return new_products, status_changes, price_drops, new_news, new_ebay, ebay_sold
 
 
 # ─── Telegram ────────────────────────────────────────────────────────────
@@ -1371,6 +1599,8 @@ def write_dashboard_feed():
     seen_news = load_json(SEEN_NEWS_FILE)
     price_history = load_json(PRICE_HISTORY_FILE)
     health = load_health()
+    ebay_listings = load_json(EBAY_LISTINGS_FILE)
+    ebay_sold = load_json(EBAY_SOLD_FILE)
 
     products = list(seen_products.values())
     products.sort(key=lambda x: (x.get("priority") is None, -ord(x.get("last_seen", "")[0]) if x.get("last_seen") else 0, x.get("last_seen", "")), reverse=False)
@@ -1423,6 +1653,14 @@ def write_dashboard_feed():
             "shops": shop_health,
             "priority_urls": priority_health,
         },
+        "ebay": {
+            "active_listings": sorted(
+                ebay_listings.values(),
+                key=lambda x: (x.get("target", ""), x.get("price_value", 999))
+            ),
+            "sold_stats": ebay_sold,
+            "active_count": len(ebay_listings),
+        },
     }
     save_json(DASHBOARD_FEED_FILE, feed)
     log.info(f"Dashboard feed written: {DASHBOARD_FEED_FILE}")
@@ -1437,7 +1675,7 @@ def cmd_run(dry_run=False, priority_only=False):
     mode = "priority-only (fast)" if priority_only else "full"
     log.info(f"Starting Dragon Ball TCG monitor ({mode})...")
     migrate_dedup_state()  # idempotent cleanup of old hash-scheme dupes
-    new_products, status_changes, price_drops, new_news = scrape_all(priority_only=priority_only)
+    new_products, status_changes, price_drops, new_news, new_ebay, ebay_sold = scrape_all(priority_only=priority_only)
 
     # ALERT POLICY: only ping Telegram for products that are actually buyable
     # (in_stock or preorder). OOS / unknown are tracked silently.
@@ -1493,6 +1731,11 @@ def cmd_run(dry_run=False, priority_only=False):
             time.sleep(0.5)
         for product, old, new in price_drops:
             send_price_drop_alert(product, old, new)
+            time.sleep(0.5)
+        # eBay: ping for new listings (sorted by price asc, max 5 per run to avoid spam)
+        for item in sorted(new_ebay, key=lambda x: x.get("price_value", 999))[:5]:
+            sold_stats = ebay_sold.get(item["target"]) if ebay_sold else None
+            send_ebay_alert(item, sold_stats)
             time.sleep(0.5)
         send_news_digest(new_news)
 
