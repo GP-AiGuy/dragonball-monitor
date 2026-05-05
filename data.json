@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T07:21:00.447791",
+  "generated_at": "2026-05-05T09:30:28.208800",
   "watchlist": [
     {
       "id": "BT31",
@@ -24,7 +24,7 @@
       "priority": "BT31",
       "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
       "deep_checked": true,
-      "last_seen": "2026-05-05T07:18:57.838242",
+      "last_seen": "2026-05-05T09:28:24.524343",
       "first_seen": "2026-05-02T10:32:19.843094"
     },
     {
@@ -38,7 +38,7 @@
       "priority": "BT31",
       "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
       "deep_checked": true,
-      "last_seen": "2026-05-05T07:19:21.711967",
+      "last_seen": "2026-05-05T09:28:48.839957",
       "first_seen": "2026-05-02T10:22:20.362270"
     },
     {
@@ -52,7 +52,7 @@
       "priority": "BT31",
       "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
       "deep_checked": true,
-      "last_seen": "2026-05-05T07:19:51.700992",
+      "last_seen": "2026-05-05T09:29:18.389807",
       "first_seen": "2026-05-02T10:22:43.224086"
     },
     {
@@ -66,7 +66,7 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-05T07:20:13.929229",
+      "last_seen": "2026-05-05T09:29:40.614877",
       "first_seen": "2026-05-02T10:23:05.503852"
     },
     {
@@ -80,21 +80,21 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-05T07:20:37.635649",
+      "last_seen": "2026-05-05T09:30:04.639208",
       "first_seen": "2026-05-02T10:23:29.172559"
     },
     {
       "title": "Dragon Ball SCG - Fusion World 10 - Booster Box",
       "shop": "Gamerz Paradize",
       "country": "NL",
-      "price": "Prijs onbekend",
-      "price_num": null,
-      "stock_status": "unknown",
+      "price": "€84,99",
+      "price_num": 84.99,
+      "stock_status": "out_of_stock",
       "url": "https://gamerzparadize.nl/en/products/dragon-ball-scg-fusion-world-10-booster-box",
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-05T07:21:00.399228",
+      "last_seen": "2026-05-05T09:30:28.153706",
       "first_seen": "2026-05-02T10:23:52.351002"
     },
     {
@@ -1974,6 +1974,11 @@
         "ts": "2026-05-05T07:18:57.838258",
         "price": 119.99,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-05T09:28:24.524355",
+        "price": 119.99,
+        "stock_status": "out_of_stock"
       }
     ],
     "c17961f7f7639ba49cc142495e089edd": [
@@ -2431,6 +2436,11 @@
         "ts": "2026-05-05T07:19:21.712003",
         "price": 119.95,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-05T09:28:48.839973",
+        "price": 119.95,
+        "stock_status": "out_of_stock"
       }
     ],
     "ae587fa4381da54cfb212080111474dd": [
@@ -2753,6 +2763,11 @@
         "ts": "2026-05-05T07:19:51.701010",
         "price": 109.95,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-05T09:29:18.389821",
+        "price": 109.95,
+        "stock_status": "out_of_stock"
       }
     ],
     "5d4b59bd31c591ee34700cb33cf9a509": [
@@ -3073,6 +3088,11 @@
       },
       {
         "ts": "2026-05-05T07:20:37.635666",
+        "price": 99.0,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-05T09:30:04.639220",
         "price": 99.0,
         "stock_status": "out_of_stock"
       }
@@ -3674,6 +3694,11 @@
         "ts": "2026-05-05T06:29:12.441988",
         "price": 84.99,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-05T09:30:28.153862",
+        "price": 84.99,
+        "stock_status": "out_of_stock"
       }
     ],
     "3cf6d5898c0ff69f9ca4a86c0ad78bc1": [
@@ -4261,7 +4286,7 @@
     "total_products": 65,
     "preorders": 0,
     "in_stock": 0,
-    "out_of_stock": 17,
+    "out_of_stock": 18,
     "priority_hits": 6,
     "news_articles": 0,
     "shops_total": 27,
@@ -4515,7 +4540,7 @@
       {
         "shop": "Dracoon",
         "id": "FB10",
-        "consecutive_unknown": 65,
+        "consecutive_unknown": 66,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -4531,7 +4556,7 @@
       {
         "shop": "Gamerz Paradize",
         "id": "FB10",
-        "consecutive_unknown": 1,
+        "consecutive_unknown": 0,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
