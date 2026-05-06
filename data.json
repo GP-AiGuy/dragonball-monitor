@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T15:43:56.584253",
+  "generated_at": "2026-05-06T17:44:14.408190",
   "watchlist": [
     {
       "id": "BT31",
@@ -24,7 +24,7 @@
       "priority": "BT31",
       "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
       "deep_checked": true,
-      "last_seen": "2026-05-06T15:41:45.621648",
+      "last_seen": "2026-05-06T17:42:09.167734",
       "first_seen": "2026-05-02T10:32:19.843094"
     },
     {
@@ -38,7 +38,7 @@
       "priority": "BT31",
       "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
       "deep_checked": true,
-      "last_seen": "2026-05-06T15:42:10.208282",
+      "last_seen": "2026-05-06T17:42:33.546649",
       "first_seen": "2026-05-02T10:22:20.362270"
     },
     {
@@ -52,7 +52,7 @@
       "priority": "BT31",
       "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
       "deep_checked": true,
-      "last_seen": "2026-05-06T15:42:40.122107",
+      "last_seen": "2026-05-06T17:43:03.620056",
       "first_seen": "2026-05-02T10:22:43.224086"
     },
     {
@@ -66,7 +66,7 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-06T15:43:02.316653",
+      "last_seen": "2026-05-06T17:43:25.858720",
       "first_seen": "2026-05-02T10:23:05.503852"
     },
     {
@@ -80,7 +80,7 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-06T15:43:26.475094",
+      "last_seen": "2026-05-06T17:43:50.866925",
       "first_seen": "2026-05-02T10:23:29.172559"
     },
     {
@@ -94,7 +94,7 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-06T15:43:56.529838",
+      "last_seen": "2026-05-06T17:44:14.347617",
       "first_seen": "2026-05-02T10:23:52.351002"
     },
     {
@@ -2214,6 +2214,11 @@
         "ts": "2026-05-06T15:41:45.621659",
         "price": 119.99,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-06T17:42:09.167746",
+        "price": 119.99,
+        "stock_status": "out_of_stock"
       }
     ],
     "c17961f7f7639ba49cc142495e089edd": [
@@ -2856,6 +2861,11 @@
         "ts": "2026-05-06T15:42:10.208294",
         "price": 119.95,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-06T17:42:33.546667",
+        "price": 119.95,
+        "stock_status": "out_of_stock"
       }
     ],
     "ae587fa4381da54cfb212080111474dd": [
@@ -3308,6 +3318,11 @@
         "ts": "2026-05-06T15:42:40.122120",
         "price": 109.95,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-06T17:43:03.620071",
+        "price": 109.95,
+        "stock_status": "out_of_stock"
       }
     ],
     "5d4b59bd31c591ee34700cb33cf9a509": [
@@ -3758,6 +3773,11 @@
       },
       {
         "ts": "2026-05-06T15:43:26.475107",
+        "price": 99.0,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-06T17:43:50.866942",
         "price": 99.0,
         "stock_status": "out_of_stock"
       }
@@ -4597,6 +4617,11 @@
       },
       {
         "ts": "2026-05-06T15:43:56.529855",
+        "price": 84.99,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-06T17:44:14.347634",
         "price": 84.99,
         "stock_status": "out_of_stock"
       }
@@ -5660,7 +5685,7 @@
       {
         "shop": "Dracoon",
         "id": "FB10",
-        "consecutive_unknown": 91,
+        "consecutive_unknown": 92,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
