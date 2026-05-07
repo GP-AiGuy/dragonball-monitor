@@ -186,6 +186,19 @@ BOOSTER_BOX_KEYWORDS = [
     "booster box", "booster display", "display box", "boosterbox",
     "boosterdisplay", "display 24", "display 36", "24 boosters",
     "display van 24", "box of 24",
+    # Pack-count variants common in JP/EU shops (Hobby Genki, Nin-Nin-Game, 4X Trading)
+    "20pack box", "24pack box", "20 pack box", "24 pack box",
+    "20-pack box", "24-pack box", "(20 packs)", "(24 packs)",
+    "20 packs box", "24 packs box",
+]
+# Catches "20 packs" / "24-pack" / "20Pack" — but NOT "1 pack" or "single pack"
+PACK_COUNT_BOX_RE = re.compile(r"\b(?:1[2-9]|2[0-9]|3[0-6])[\s\-]?packs?\b", re.IGNORECASE)
+
+# Block-page / error markers that some shops serve when bot-detected
+BLOCK_PAGE_MARKERS = [
+    "you have been blocked", "access denied", "checking your browser",
+    "please verify you are a human", "ddos protection",
+    "cloudflare", "captcha", "are you a robot", "request blocked",
 ]
 
 # Title MUST contain Dragon Ball branding.
@@ -820,6 +833,11 @@ def deep_check_product(context, url):
         page.wait_for_timeout(1000)
         result = page.evaluate(DEEP_CHECK_JS)
         body = result.get("body_excerpt", "")
+        # Bot-block / Cloudflare-challenge detection: skip these, they're not real pages.
+        # Treat as failure so health tracking notices and we don't pollute state.
+        if any(marker in body for marker in BLOCK_PAGE_MARKERS):
+            log.warning(f"  Deep check blocked (bot detection) for {url}")
+            return None
         cart_enabled = bool(result.get("cart_enabled"))
         has_oos = any(kw in body for kw in OUT_OF_STOCK_KEYWORDS) or result.get("has_notify_signup")
         has_preorder = any(kw in body for kw in PREORDER_KEYWORDS)
@@ -854,18 +872,19 @@ def deep_check_product(context, url):
 
 
 def is_dragonball_booster_box(title):
-    """Strict: title must be a Dragon Ball Masters or Fusion World booster BOX.
+    """Strict: title must be a Dragon Ball Masters / Fusion World / Story Booster box.
 
-    Rules (all on title only, fullText is too noisy on grid pages):
-    1. Must contain a booster-box keyword
+    Rules (all on title only):
+    1. Must contain a booster-box keyword OR a 12-36 pack-count pattern
     2. Must NOT contain a hard-exclude keyword (sleeves, ETB, single pack, etc)
     3. Must NOT contain a blocked old-series keyword (Zenkai, Unison, etc)
-    4. Must mention Masters / Fusion World OR a Masters/FW set code (B25+ or FB##)
-       OR explicit Dragon Ball branding. Series code alone is enough since FB##
-       and B25+ are unique to Dragon Ball Super CCG.
+    4. Must mention Masters / Fusion World / Story Booster OR matching set code
+       OR explicit Dragon Ball branding.
     """
     title_lower = title.lower()
-    if not any(kw in title_lower for kw in BOOSTER_BOX_KEYWORDS):
+    has_box_kw = any(kw in title_lower for kw in BOOSTER_BOX_KEYWORDS)
+    has_pack_count = PACK_COUNT_BOX_RE.search(title_lower) is not None
+    if not (has_box_kw or has_pack_count):
         return False
     if any(kw in title_lower for kw in EXCLUDE_KEYWORDS):
         return False
@@ -878,7 +897,8 @@ def is_dragonball_booster_box(title):
         or ALLOWED_SERIES_REGEX.search(title_lower) is not None
     )
     has_masters_with_code = "masters" in title_lower and ALLOWED_SERIES_REGEX.search(title_lower) is not None
-    if not (has_dragonball or has_fw_or_code or has_masters_with_code):
+    has_story_booster = "story booster" in title_lower or re.search(r"(?<![a-z0-9])st[\s\-_]?\d{2}(?!\d)", title_lower)
+    if not (has_dragonball or has_fw_or_code or has_masters_with_code or has_story_booster):
         return False
     return True
 
