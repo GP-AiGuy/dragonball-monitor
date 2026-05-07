@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T08:08:37.949951",
+  "generated_at": "2026-05-07T08:31:11.324026",
   "watchlist": [
     {
       "id": "BT31",
@@ -10,6 +10,11 @@
       "id": "FB10",
       "series": "Fusion World Cross Force",
       "name": "Dragon Ball Super Card Game Fusion World FB10 Booster Box (Cross Force)"
+    },
+    {
+      "id": "ST01",
+      "series": "Fusion World Story Booster 01",
+      "name": "Dragon Ball Super Card Game Fusion World Story Booster 01 [ST01]"
     }
   ],
   "products": [
@@ -24,7 +29,7 @@
       "priority": "BT31",
       "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
       "deep_checked": true,
-      "last_seen": "2026-05-07T07:54:00.216420",
+      "last_seen": "2026-05-07T08:13:18.234055",
       "first_seen": "2026-05-02T10:22:43.224086"
     },
     {
@@ -38,7 +43,7 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-07T07:54:22.572678",
+      "last_seen": "2026-05-07T08:13:40.538532",
       "first_seen": "2026-05-02T10:23:05.503852"
     },
     {
@@ -52,8 +57,78 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-07T07:54:46.635549",
+      "last_seen": "2026-05-07T08:14:04.088695",
       "first_seen": "2026-05-02T10:23:29.172559"
+    },
+    {
+      "title": "404",
+      "shop": "4X Trading",
+      "country": "EU",
+      "price": "€200.00",
+      "price_num": 200.0,
+      "stock_status": "unknown",
+      "url": "https://4xtrading.eu/prodotto/dragon-ball-super-card-game-fusion-world-special-story-booster-display-01-st01-20-packs-en/",
+      "priority": "ST01",
+      "priority_series": "Fusion World Story Booster 01",
+      "deep_checked": true,
+      "last_seen": "2026-05-07T08:14:51.959712",
+      "first_seen": "2026-05-07T08:14:51.959719"
+    },
+    {
+      "title": "403 Forbidden",
+      "shop": "Nin-Nin-Game",
+      "country": "FR",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://www.nin-nin-game.com/en/dragon-ball-tcg/230352-dragon-ball-super-card-game-fusion-world-story-booster-01-st01-20-packs-box-bandai-.html",
+      "priority": "ST01",
+      "priority_series": "Fusion World Story Booster 01",
+      "deep_checked": true,
+      "last_seen": "2026-05-07T08:15:14.307747",
+      "first_seen": "2026-05-07T08:15:14.307755"
+    },
+    {
+      "title": "hobby-genki.com",
+      "shop": "Hobby Genki",
+      "country": "JP",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://hobby-genki.com/en/dragon-ball-series/85786-dragon-ball-super-card-game-fusion-world-story-booster-st01-20pack-box-4582770011982.html",
+      "priority": "ST01",
+      "priority_series": "Fusion World Story Booster 01",
+      "deep_checked": true,
+      "last_seen": "2026-05-07T08:15:36.587832",
+      "first_seen": "2026-05-07T08:15:36.587842"
+    },
+    {
+      "title": "hobby-genki.com",
+      "shop": "Hobby Genki (JP)",
+      "country": "JP",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://hobby-genki.com/en/dragon-ball-series/dragon-ball-super-card-game-fusion-world-cross-force-fb10-booster-box.html",
+      "priority": "FB10",
+      "priority_series": "Fusion World Cross Force",
+      "deep_checked": true,
+      "last_seen": "2026-05-07T08:15:58.803089",
+      "first_seen": "2026-05-07T08:15:58.803099"
+    },
+    {
+      "title": "403 Forbidden",
+      "shop": "Nin-Nin-Game",
+      "country": "FR",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://www.nin-nin-game.com/en/dragon-ball-tcg/217631-dragon-ball-super-card-game-fusion-world-booster-pack-fb10-24-packs-box-bandai-.html",
+      "priority": "FB10",
+      "priority_series": "Fusion World Cross Force",
+      "deep_checked": true,
+      "last_seen": "2026-05-07T08:16:21.123583",
+      "first_seen": "2026-05-07T08:16:21.123591"
     },
     {
       "title": "Dragon Ball Super Card Game Masters \"Ultra-Bout Series\" B-31 Booster Display (24 Packs) - EN Pre-Order",
@@ -62,11 +137,11 @@
       "price": "€119,95",
       "price_num": 119.95,
       "stock_status": "out_of_stock",
-      "url": "https://alpstcg.nl/products/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-booster-display-24-packs-en-pre-order?_pos=1&_sid=be53e1498&_ss=r",
+      "url": "https://alpstcg.nl/products/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-booster-display-24-packs-en-pre-order?_pos=1&_sid=8f82890ac&_ss=r",
       "priority": "BT31",
       "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
       "deep_checked": true,
-      "last_seen": "2026-05-07T08:01:19.759548",
+      "last_seen": "2026-05-07T08:22:32.532717",
       "first_seen": "2026-05-02T10:22:20.362270"
     },
     {
@@ -80,7 +155,7 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-07T08:02:56.227954",
+      "last_seen": "2026-05-07T08:24:09.729435",
       "first_seen": "2026-05-02T10:23:52.351002"
     },
     {
@@ -94,7 +169,7 @@
       "priority": "BT31",
       "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
       "deep_checked": true,
-      "last_seen": "2026-05-07T08:03:17.973324",
+      "last_seen": "2026-05-07T08:24:31.420001",
       "first_seen": "2026-05-02T10:32:19.843094"
     },
     {
@@ -122,7 +197,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977230",
+      "last_seen": "2026-05-07T08:18:37.668232",
       "first_seen": "2026-05-02T10:26:28.372267"
     },
     {
@@ -136,7 +211,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977270",
+      "last_seen": "2026-05-07T08:18:37.668273",
       "first_seen": "2026-05-02T10:26:28.372359"
     },
     {
@@ -150,7 +225,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977298",
+      "last_seen": "2026-05-07T08:18:37.668302",
       "first_seen": "2026-05-02T10:26:28.372431"
     },
     {
@@ -164,7 +239,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977323",
+      "last_seen": "2026-05-07T08:18:37.668330",
       "first_seen": "2026-05-02T10:26:28.372489"
     },
     {
@@ -178,7 +253,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977357",
+      "last_seen": "2026-05-07T08:18:37.668364",
       "first_seen": "2026-05-02T10:26:28.372551"
     },
     {
@@ -192,7 +267,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977391",
+      "last_seen": "2026-05-07T08:18:37.668397",
       "first_seen": "2026-05-02T10:26:28.372629"
     },
     {
@@ -206,7 +281,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977414",
+      "last_seen": "2026-05-07T08:18:37.668451",
       "first_seen": "2026-05-02T10:26:28.372682"
     },
     {
@@ -220,7 +295,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977448",
+      "last_seen": "2026-05-07T08:18:37.668489",
       "first_seen": "2026-05-02T10:26:28.372750"
     },
     {
@@ -234,7 +309,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977473",
+      "last_seen": "2026-05-07T08:18:37.668517",
       "first_seen": "2026-05-02T10:26:28.372815"
     },
     {
@@ -248,7 +323,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977495",
+      "last_seen": "2026-05-07T08:18:37.668543",
       "first_seen": "2026-05-02T10:26:28.372879"
     },
     {
@@ -262,7 +337,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977519",
+      "last_seen": "2026-05-07T08:18:37.668569",
       "first_seen": "2026-05-02T10:26:28.372942"
     },
     {
@@ -276,7 +351,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977541",
+      "last_seen": "2026-05-07T08:18:37.668594",
       "first_seen": "2026-05-02T10:26:28.372998"
     },
     {
@@ -290,7 +365,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977564",
+      "last_seen": "2026-05-07T08:18:37.668620",
       "first_seen": "2026-05-02T10:26:28.373065"
     },
     {
@@ -304,7 +379,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977587",
+      "last_seen": "2026-05-07T08:18:37.668646",
       "first_seen": "2026-05-02T10:26:28.373122"
     },
     {
@@ -318,7 +393,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977612",
+      "last_seen": "2026-05-07T08:18:37.668673",
       "first_seen": "2026-05-02T10:26:28.373182"
     },
     {
@@ -332,7 +407,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977636",
+      "last_seen": "2026-05-07T08:18:37.668700",
       "first_seen": "2026-05-02T10:26:28.373242"
     },
     {
@@ -346,7 +421,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977659",
+      "last_seen": "2026-05-07T08:18:37.668725",
       "first_seen": "2026-05-02T10:26:28.373299"
     },
     {
@@ -360,7 +435,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977681",
+      "last_seen": "2026-05-07T08:18:37.668750",
       "first_seen": "2026-05-02T10:26:28.373356"
     },
     {
@@ -374,7 +449,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977703",
+      "last_seen": "2026-05-07T08:18:37.668775",
       "first_seen": "2026-05-02T10:26:28.373415"
     },
     {
@@ -388,7 +463,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977726",
+      "last_seen": "2026-05-07T08:18:37.668800",
       "first_seen": "2026-05-02T10:26:28.373472"
     },
     {
@@ -402,7 +477,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977748",
+      "last_seen": "2026-05-07T08:18:37.668825",
       "first_seen": "2026-05-02T10:26:28.373526"
     },
     {
@@ -416,7 +491,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:25.977770",
+      "last_seen": "2026-05-07T08:18:37.668848",
       "first_seen": "2026-05-02T10:26:28.373603"
     },
     {
@@ -430,7 +505,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:50.402180",
+      "last_seen": "2026-05-07T08:19:01.466200",
       "first_seen": "2026-05-02T10:26:52.793806"
     },
     {
@@ -444,7 +519,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:50.402231",
+      "last_seen": "2026-05-07T08:19:01.466262",
       "first_seen": "2026-05-02T10:26:52.793902"
     },
     {
@@ -458,7 +533,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:50.402282",
+      "last_seen": "2026-05-07T08:19:01.466323",
       "first_seen": "2026-05-02T10:26:52.793974"
     },
     {
@@ -472,7 +547,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:50.402335",
+      "last_seen": "2026-05-07T08:19:01.466388",
       "first_seen": "2026-05-02T10:26:52.794046"
     },
     {
@@ -486,7 +561,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:50.402379",
+      "last_seen": "2026-05-07T08:19:01.466442",
       "first_seen": "2026-05-02T10:26:52.794111"
     },
     {
@@ -500,7 +575,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:50.402417",
+      "last_seen": "2026-05-07T08:19:01.466473",
       "first_seen": "2026-05-02T10:26:52.794171"
     },
     {
@@ -514,7 +589,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:50.402444",
+      "last_seen": "2026-05-07T08:19:01.466503",
       "first_seen": "2026-05-02T10:26:52.794226"
     },
     {
@@ -528,7 +603,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:50.402469",
+      "last_seen": "2026-05-07T08:19:01.466532",
       "first_seen": "2026-05-02T10:26:52.794279"
     },
     {
@@ -542,7 +617,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:50.402494",
+      "last_seen": "2026-05-07T08:19:01.466560",
       "first_seen": "2026-05-02T10:26:52.794334"
     },
     {
@@ -556,7 +631,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:50.402519",
+      "last_seen": "2026-05-07T08:19:01.466589",
       "first_seen": "2026-05-02T10:26:52.794387"
     },
     {
@@ -570,7 +645,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:50.402544",
+      "last_seen": "2026-05-07T08:19:01.466617",
       "first_seen": "2026-05-02T10:26:52.794439"
     },
     {
@@ -584,7 +659,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:50.402569",
+      "last_seen": "2026-05-07T08:19:01.466646",
       "first_seen": "2026-05-02T10:26:52.794491"
     },
     {
@@ -598,7 +673,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:50.402593",
+      "last_seen": "2026-05-07T08:19:01.466674",
       "first_seen": "2026-05-02T10:26:52.794552"
     },
     {
@@ -612,7 +687,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:57:50.402618",
+      "last_seen": "2026-05-07T08:19:01.466701",
       "first_seen": "2026-05-02T10:26:52.794635"
     },
     {
@@ -626,7 +701,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:59:22.687887",
+      "last_seen": "2026-05-07T08:20:34.675939",
       "first_seen": "2026-05-02T10:28:25.114022"
     },
     {
@@ -640,7 +715,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:59:22.687918",
+      "last_seen": "2026-05-07T08:20:34.675987",
       "first_seen": "2026-05-02T10:28:25.114108"
     },
     {
@@ -654,7 +729,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:59:22.687948",
+      "last_seen": "2026-05-07T08:20:34.676029",
       "first_seen": "2026-05-02T10:28:25.114166"
     },
     {
@@ -668,7 +743,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:59:22.687972",
+      "last_seen": "2026-05-07T08:20:34.676059",
       "first_seen": "2026-05-02T10:28:25.114212"
     },
     {
@@ -682,7 +757,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:59:22.688000",
+      "last_seen": "2026-05-07T08:20:34.676095",
       "first_seen": "2026-05-02T10:28:25.114251"
     },
     {
@@ -696,7 +771,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:59:22.688030",
+      "last_seen": "2026-05-07T08:20:34.676117",
       "first_seen": "2026-05-02T10:28:25.114289"
     },
     {
@@ -710,7 +785,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:59:22.688057",
+      "last_seen": "2026-05-07T08:20:34.676135",
       "first_seen": "2026-05-02T10:28:25.114336"
     },
     {
@@ -724,7 +799,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:59:22.688081",
+      "last_seen": "2026-05-07T08:20:34.676153",
       "first_seen": "2026-05-02T10:28:25.114378"
     },
     {
@@ -738,7 +813,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:59:22.688108",
+      "last_seen": "2026-05-07T08:20:34.676172",
       "first_seen": "2026-05-02T10:28:25.114420"
     },
     {
@@ -752,7 +827,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:59:22.688132",
+      "last_seen": "2026-05-07T08:20:34.676189",
       "first_seen": "2026-05-02T10:28:25.114465"
     },
     {
@@ -766,7 +841,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:59:22.688146",
+      "last_seen": "2026-05-07T08:20:34.676204",
       "first_seen": "2026-05-02T10:28:25.114506"
     },
     {
@@ -780,7 +855,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:59:22.688161",
+      "last_seen": "2026-05-07T08:20:34.676221",
       "first_seen": "2026-05-02T10:28:25.114556"
     },
     {
@@ -794,7 +869,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:59:22.688175",
+      "last_seen": "2026-05-07T08:20:34.676238",
       "first_seen": "2026-05-02T10:28:25.114617"
     },
     {
@@ -808,7 +883,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:59:22.688189",
+      "last_seen": "2026-05-07T08:20:34.676255",
       "first_seen": "2026-05-02T10:28:25.114658"
     },
     {
@@ -822,7 +897,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:59:22.688204",
+      "last_seen": "2026-05-07T08:20:34.676272",
       "first_seen": "2026-05-02T10:28:25.114715"
     },
     {
@@ -836,7 +911,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:59:22.688218",
+      "last_seen": "2026-05-07T08:20:34.676290",
       "first_seen": "2026-05-02T10:28:25.114757"
     },
     {
@@ -850,7 +925,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T07:59:22.688233",
+      "last_seen": "2026-05-07T08:20:34.676306",
       "first_seen": "2026-05-02T10:28:25.114796"
     },
     {
@@ -864,7 +939,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T08:02:56.228028",
+      "last_seen": "2026-05-07T08:24:09.729514",
       "first_seen": "2026-05-02T10:31:58.092559"
     },
     {
@@ -878,7 +953,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T08:03:17.973397",
+      "last_seen": "2026-05-07T08:24:31.420059",
       "first_seen": "2026-05-02T10:32:19.843259"
     },
     {
@@ -892,7 +967,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T08:03:31.443664",
+      "last_seen": "2026-05-07T08:24:44.286338",
       "first_seen": "2026-05-02T10:32:32.575620"
     },
     {
@@ -906,7 +981,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T08:03:31.443704",
+      "last_seen": "2026-05-07T08:24:44.286384",
       "first_seen": "2026-05-02T10:32:32.575684"
     },
     {
@@ -920,7 +995,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-07T08:03:31.443723",
+      "last_seen": "2026-05-07T08:24:44.286452",
       "first_seen": "2026-05-02T10:32:32.575735"
     }
   ],
@@ -2331,17 +2406,17 @@
         "stock_status": "out_of_stock"
       },
       {
-        "ts": "2026-05-07T07:53:06.503296",
+        "ts": "2026-05-07T08:12:24.416467",
         "price": 119.99,
         "stock_status": "out_of_stock"
       },
       {
-        "ts": "2026-05-07T07:58:57.596996",
+        "ts": "2026-05-07T08:20:08.953855",
         "price": 119.99,
         "stock_status": "out_of_stock"
       },
       {
-        "ts": "2026-05-07T08:03:17.973338",
+        "ts": "2026-05-07T08:24:31.420009",
         "price": 119.99,
         "stock_status": "out_of_stock"
       }
@@ -3073,12 +3148,12 @@
         "stock_status": "out_of_stock"
       },
       {
-        "ts": "2026-05-07T07:53:30.566847",
+        "ts": "2026-05-07T08:12:48.477624",
         "price": 119.95,
         "stock_status": "out_of_stock"
       },
       {
-        "ts": "2026-05-07T08:01:19.759566",
+        "ts": "2026-05-07T08:22:32.532733",
         "price": 119.95,
         "stock_status": "out_of_stock"
       }
@@ -3590,7 +3665,7 @@
         "stock_status": "out_of_stock"
       },
       {
-        "ts": "2026-05-07T07:54:00.216441",
+        "ts": "2026-05-07T08:13:18.234073",
         "price": 109.95,
         "stock_status": "out_of_stock"
       }
@@ -4102,7 +4177,7 @@
         "stock_status": "out_of_stock"
       },
       {
-        "ts": "2026-05-07T07:54:46.635565",
+        "ts": "2026-05-07T08:14:04.088716",
         "price": 99.0,
         "stock_status": "out_of_stock"
       }
@@ -5061,17 +5136,17 @@
         "stock_status": "out_of_stock"
       },
       {
-        "ts": "2026-05-07T07:55:09.778967",
+        "ts": "2026-05-07T08:14:27.422199",
         "price": 84.99,
         "stock_status": "out_of_stock"
       },
       {
-        "ts": "2026-05-07T07:58:36.006961",
+        "ts": "2026-05-07T08:19:47.163165",
         "price": 84.99,
         "stock_status": "out_of_stock"
       },
       {
-        "ts": "2026-05-07T08:02:56.227966",
+        "ts": "2026-05-07T08:24:09.729447",
         "price": 84.99,
         "stock_status": "out_of_stock"
       }
@@ -5518,12 +5593,12 @@
         "stock_status": "unknown"
       },
       {
-        "ts": "2026-05-07T07:58:36.007030",
+        "ts": "2026-05-07T08:19:47.163232",
         "price": 99.99,
         "stock_status": "unknown"
       },
       {
-        "ts": "2026-05-07T08:02:56.228036",
+        "ts": "2026-05-07T08:24:09.729521",
         "price": 99.99,
         "stock_status": "unknown"
       }
@@ -5970,12 +6045,12 @@
         "stock_status": "unknown"
       },
       {
-        "ts": "2026-05-07T07:58:57.597064",
+        "ts": "2026-05-07T08:20:08.953906",
         "price": 109.99,
         "stock_status": "unknown"
       },
       {
-        "ts": "2026-05-07T08:03:17.973404",
+        "ts": "2026-05-07T08:24:31.420065",
         "price": 109.99,
         "stock_status": "unknown"
       }
@@ -6015,17 +6090,24 @@
         "price": 109.99,
         "stock_status": "unknown"
       }
+    ],
+    "8679b1ff9daf38c7175d13f90a1f07f1": [
+      {
+        "ts": "2026-05-07T08:14:51.959846",
+        "price": 200.0,
+        "stock_status": "unknown"
+      }
     ]
   },
   "stats": {
-    "total_products": 65,
+    "total_products": 70,
     "preorders": 0,
     "in_stock": 0,
     "out_of_stock": 18,
-    "priority_hits": 6,
+    "priority_hits": 11,
     "news_articles": 0,
-    "shops_total": 27,
-    "shops_healthy": 26,
+    "shops_total": 30,
+    "shops_healthy": 29,
     "shops_disabled": 1
   },
   "health": {
@@ -6035,7 +6117,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T07:55:31.655969",
+        "last_success": "2026-05-07T08:16:42.993997",
         "last_error": null
       },
       {
@@ -6043,7 +6125,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T07:55:53.377031",
+        "last_success": "2026-05-07T08:17:04.697234",
         "last_error": null
       },
       {
@@ -6051,7 +6133,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T07:56:15.086429",
+        "last_success": "2026-05-07T08:17:26.498946",
         "last_error": null
       },
       {
@@ -6067,7 +6149,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T07:56:38.427290",
+        "last_success": "2026-05-07T08:17:49.790073",
         "last_error": null
       },
       {
@@ -6075,7 +6157,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T07:57:01.649728",
+        "last_success": "2026-05-07T08:18:13.020732",
         "last_error": null
       },
       {
@@ -6083,7 +6165,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-07T07:57:25.976676",
+        "last_success": "2026-05-07T08:18:37.667581",
         "last_error": null
       },
       {
@@ -6091,7 +6173,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-07T07:57:50.402096",
+        "last_success": "2026-05-07T08:19:01.466101",
         "last_error": null
       },
       {
@@ -6099,7 +6181,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-07T07:58:14.432633",
+        "last_success": "2026-05-07T08:19:25.477684",
         "last_error": null
       },
       {
@@ -6107,7 +6189,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-07T07:59:22.687833",
+        "last_success": "2026-05-07T08:20:34.675886",
         "last_error": null
       },
       {
@@ -6115,7 +6197,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T07:59:46.039393",
+        "last_success": "2026-05-07T08:20:57.993807",
         "last_error": null
       },
       {
@@ -6123,7 +6205,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T08:00:09.278397",
+        "last_success": "2026-05-07T08:21:21.273757",
         "last_error": null
       },
       {
@@ -6131,7 +6213,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T08:00:33.331073",
+        "last_success": "2026-05-07T08:21:45.507503",
         "last_error": null
       },
       {
@@ -6139,7 +6221,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-07T08:00:57.343905",
+        "last_success": "2026-05-07T08:22:09.655007",
         "last_error": null
       },
       {
@@ -6147,7 +6229,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T08:01:44.091311",
+        "last_success": "2026-05-07T08:22:56.667702",
         "last_error": null
       },
       {
@@ -6155,7 +6237,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T08:02:10.787618",
+        "last_success": "2026-05-07T08:23:23.580108",
         "last_error": null
       },
       {
@@ -6163,7 +6245,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-07T08:02:34.662155",
+        "last_success": "2026-05-07T08:23:47.915039",
         "last_error": null
       },
       {
@@ -6171,7 +6253,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-07T08:03:31.443596",
+        "last_success": "2026-05-07T08:24:44.286273",
         "last_error": null
       },
       {
@@ -6179,7 +6261,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T08:03:54.818910",
+        "last_success": "2026-05-07T08:26:18.740905",
         "last_error": null
       },
       {
@@ -6187,7 +6269,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T08:04:18.038949",
+        "last_success": "2026-05-07T08:26:41.966994",
         "last_error": null
       },
       {
@@ -6195,7 +6277,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T08:04:32.250035",
+        "last_success": "2026-05-07T08:26:56.043520",
         "last_error": null
       },
       {
@@ -6203,7 +6285,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T08:04:55.796760",
+        "last_success": "2026-05-07T08:27:19.488636",
         "last_error": null
       },
       {
@@ -6211,7 +6293,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T08:05:20.931273",
+        "last_success": "2026-05-07T08:27:43.762636",
         "last_error": null
       },
       {
@@ -6219,7 +6301,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T08:05:44.364949",
+        "last_success": "2026-05-07T08:28:07.102340",
         "last_error": null
       },
       {
@@ -6227,7 +6309,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T08:06:07.489267",
+        "last_success": "2026-05-07T08:28:28.792924",
         "last_error": null
       },
       {
@@ -6235,7 +6317,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T08:06:30.176503",
+        "last_success": "2026-05-07T08:28:50.450116",
         "last_error": null
       },
       {
@@ -6243,7 +6325,31 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 47,
-        "last_success": "2026-05-07T08:06:52.191176",
+        "last_success": "2026-05-07T08:29:12.197490",
+        "last_error": null
+      },
+      {
+        "shop": "Nin-Nin-Game",
+        "disabled": false,
+        "consecutive_failures": 0,
+        "consecutive_zero_results": 1,
+        "last_success": "2026-05-07T08:25:07.655144",
+        "last_error": null
+      },
+      {
+        "shop": "4X Trading",
+        "disabled": false,
+        "consecutive_failures": 0,
+        "consecutive_zero_results": 1,
+        "last_success": "2026-05-07T08:25:32.175753",
+        "last_error": null
+      },
+      {
+        "shop": "Hobby Genki",
+        "disabled": false,
+        "consecutive_failures": 0,
+        "consecutive_zero_results": 1,
+        "last_success": "2026-05-07T08:25:55.487622",
         "last_error": null
       }
     ],
@@ -6295,6 +6401,46 @@
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
+      },
+      {
+        "shop": "4X Trading",
+        "id": "ST01",
+        "consecutive_unknown": 1,
+        "consecutive_failures": 0,
+        "last_buyable": null,
+        "last_error": null
+      },
+      {
+        "shop": "Nin-Nin-Game",
+        "id": "ST01",
+        "consecutive_unknown": 1,
+        "consecutive_failures": 0,
+        "last_buyable": null,
+        "last_error": null
+      },
+      {
+        "shop": "Hobby Genki",
+        "id": "ST01",
+        "consecutive_unknown": 1,
+        "consecutive_failures": 0,
+        "last_buyable": null,
+        "last_error": null
+      },
+      {
+        "shop": "Hobby Genki (JP)",
+        "id": "FB10",
+        "consecutive_unknown": 1,
+        "consecutive_failures": 0,
+        "last_buyable": null,
+        "last_error": null
+      },
+      {
+        "shop": "Nin-Nin-Game",
+        "id": "FB10",
+        "consecutive_unknown": 1,
+        "consecutive_failures": 0,
+        "last_buyable": null,
+        "last_error": null
       }
     ]
   },
@@ -6316,7 +6462,7 @@
         "buying_options": [
           "FIXED_PRICE"
         ],
-        "first_seen": "2026-05-07T08:08:29.505964"
+        "first_seen": "2026-05-07T08:30:51.324041"
       },
       {
         "item_id": "v1|147270256801|0",
@@ -6334,7 +6480,7 @@
         "buying_options": [
           "FIXED_PRICE"
         ],
-        "first_seen": "2026-05-07T08:08:29.505943"
+        "first_seen": "2026-05-07T08:30:51.324030"
       },
       {
         "item_id": "v1|206256909210|0",
@@ -6342,7 +6488,7 @@
         "title": "DRAGON BALL SUPER FUSION WORLD: Cross Force FB10 Booster Box Sealed Ships 6/12",
         "price_value": 238.34,
         "price_currency": "EUR",
-        "url": "https://www.ebay.nl/itm/206256909210?_skw=dragon+ball+fusion+world+fb10&hash=item3005deab9a:g:3qUAAeSwM4Zp-7nf&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGbZjegzk6XfHcQoaWLCgO7IapYMhfGHJJmt5T3Y4RR%2BVGL1GMVQHjhlzKdVs1RsGK2nkZ7xQ0nGA2I%2BIZaho5vWWOLr0tf%2FpEJuY2UyY22ajFS6BMwPNU%2FEwz1XEsBFE86Rnb0kOevI%2FXDyX6RfpAa58paEbDnmn%2BS85ONFwkPyiOvBzC--%2B1HGyhEFhjIcyGhVSZA5KbWLZdvR4oCK4G59gaDJBUtC3mO2VdCA1i0MM4ieWQs6wbMSlqYANMK6ChJHXcAVEcVNHcWUL%2FBswGwLbL680UER25GzBaQozuf5kGF9E0j4nuTKbdg4N8%2BGkFQ%3D",
+        "url": "https://www.ebay.nl/itm/206256909210?_skw=dragon+ball+fusion+world+fb10&hash=item3005deab9a:g:3qUAAeSwM4Zp-7nf&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGbZjegzk6XfHcQoaWLCgO7IapYMhfGHJJmt5T3Y4RR%2BVGL1GMVQHjhlzKdVs1RsGK2nkZ7xQ0nGA2I%2BIZaho5vWWOLr0tf%2FpEJuY2UyY22ajFS6BMwPNU%2FEwz1XEsBFE87y7fLbtM4YEY7j2h3owDj2bnG7L9u0OFRJEdiyBagHkan%2BkGaQTzhhSEgmDv4X6b%2Fy6I5FSlVfBHTeKJDnKuGAqV9vM5rU8dnKIN6fDL0VzebHi%2BpQc7XS8xQ%2F4OBZ2xc1ntYNfnAbA5r9DAxiodjL3P55i94RQNVI%2Bja4TnHFFDnBY15bdzDTyOKtZBri7u4%3D",
         "condition": "New/Factory Sealed",
         "seller": "simplyunlucky",
         "feedback_pct": "99.9",
@@ -6352,10 +6498,28 @@
         "buying_options": [
           "FIXED_PRICE"
         ],
-        "first_seen": "2026-05-07T08:08:29.505918"
+        "first_seen": "2026-05-07T08:30:51.324006"
+      },
+      {
+        "item_id": "v1|161868089668|0",
+        "target": "ST01",
+        "title": "IC Carddass Dragon Ball Part 1 Starter Deck ST01 Sealed Japanese",
+        "price_value": 18.33,
+        "price_currency": "EUR",
+        "url": "https://www.ebay.nl/itm/161868089668?_skw=dragon+ball+st01+japanese&hash=item25b0170944:g:8NMAAOSwwbdWKy7U",
+        "condition": "New",
+        "seller": "poly_100",
+        "feedback_pct": "100.0",
+        "country": "JP",
+        "marketplace": "EBAY_NL",
+        "image": "https://i.ebayimg.com/images/g/8NMAAOSwwbdWKy7U/s-l225.jpg",
+        "buying_options": [
+          "FIXED_PRICE"
+        ],
+        "first_seen": "2026-05-07T08:31:05.463026"
       }
     ],
     "sold_stats": {},
-    "active_count": 3
+    "active_count": 4
   }
 }
