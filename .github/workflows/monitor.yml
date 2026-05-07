@@ -34,6 +34,8 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
+          EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
           TCG_STATE_DIR: ${{ github.workspace }}/state
           TCG_DASHBOARD_FEED: ${{ github.workspace }}/data.json
         run: python monitor.py
