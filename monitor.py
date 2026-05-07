@@ -220,6 +220,24 @@ PRIORITY_PRODUCT_URLS = [
         "country": "UK",
         "url": "https://www.zavvi.com/p/toys/dragon-ball-super-card-game-booster-box-fusion-world-10-fb10-24-packs/17706253/",
     },
+    {
+        "id": "FB10",
+        "shop": "Loot Cave",
+        "country": "DE",
+        "url": "https://lootcave.de/shop/dragon-ball-super-fb10-cross-force-booster-box/",
+    },
+    {
+        "id": "FB10",
+        "shop": "PT Merch",
+        "country": "PT",
+        "url": "https://ptmerch.com/pt/dragon-ball-preorder/17326-dragon-ball-super-card-game-fusion-world-fb-10-booster-display-preorder.html",
+    },
+    {
+        "id": "FB10",
+        "shop": "Gathering Games",
+        "country": "UK",
+        "url": "https://gatheringgames.co.uk/products/dragon-ball-super-cg-fusion-world-booster-box-10-fb10",
+    },
 ]
 
 # ─── Filters ─────────────────────────────────────────────────────────────
@@ -503,6 +521,30 @@ SHOP_SEARCHES = [
         "name": "Hobbix Change",
         "country": "NZ",
         "url": "https://www.hobbixchange.co.nz/collections/dragon-ball-super-card-game",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Games Island",
+        "country": "DE",
+        "url": "https://games-island.eu/en/c/Card-Games/Dragon-Ball-Booster-Display",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Loot Cave",
+        "country": "DE",
+        "url": "https://lootcave.de/category/dragon-ball-super/",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "PT Merch",
+        "country": "PT",
+        "url": "https://ptmerch.com/pt/dragon-ball-preorder/",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Gathering Games",
+        "country": "UK",
+        "url": "https://gatheringgames.co.uk/collections/dragon-ball-super-cg",
         "extractor": "generic_shop",
     },
     # ── EU marketplace ──
