@@ -1028,9 +1028,21 @@ def ebay_search_active(target_id, queries, token):
                     # Filter: must mention target ID and be a sealed booster box (not single packs/cards)
                     if not any(re.search(p, title) for w in PRIORITY_WATCHLIST if w["id"] == target_id for p in w["patterns"]):
                         continue
-                    if not any(kw in title for kw in ["booster box", "booster display", "boosterbox", "display box", "sealed", "box display"]):
+                    # Box-detection: keyword OR pack-count regex (catches JP "20Pack BOX")
+                    if not (
+                        any(kw in title for kw in ["booster box", "booster display", "boosterbox", "display box", "sealed", "box display"])
+                        or PACK_COUNT_BOX_RE.search(title)
+                    ):
                         continue
-                    if any(kw in title for kw in ["card lot", "single", "1 pack", "loose", "opened"]):
+                    # Hard excludes: old products with same code (Carddass ST01 from 90s, etc)
+                    if any(kw in title for kw in ["card lot", "single", "1 pack", "loose", "opened",
+                                                   "carddass", "starter deck", "starter pack",
+                                                   "deck box", "promo card"]):
+                        continue
+                    # ST01 specifically: must be Fusion World era (not old Carddass ST01)
+                    if target_id == "ST01" and not (
+                        "fusion world" in title or "fusionworld" in title or "story booster" in title
+                    ):
                         continue
                     price = item.get("price") or {}
                     found[iid] = {
