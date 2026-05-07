@@ -183,6 +183,43 @@ PRIORITY_PRODUCT_URLS = [
         "country": "IT",
         "url": "https://onytcg.com/en/prodotto/dragon-ball-super-box-zenkai-new-series-ultra-bout-4-b31-eng",
     },
+    # ── More FB10 priority URLs (8 added) ──
+    {
+        "id": "FB10",
+        "shop": "Il Nuovo Mondo",
+        "country": "IT",
+        "url": "https://www.ilnuovomondoshop.it/en/trading-cards/dragon-ball-fusion-/dragon-ball-super-card-game-box-of-24-packs-fb-10",
+    },
+    {
+        "id": "FB10",
+        "shop": "GameTrade",
+        "country": "IT",
+        "url": "https://www.gametrade.it/Product/147785/Dragon_Ball_Super_Card_Game_Fusion_World_10_Box_FB10_Eng",
+    },
+    {
+        "id": "FB10",
+        "shop": "WonderClub",
+        "country": "IT",
+        "url": "https://wonderclub.it/prodotto/fusion-world-fb10-dragon-ball-cross-force-24-bustine-box-eng/",
+    },
+    {
+        "id": "FB10",
+        "shop": "Jap-One",
+        "country": "EU",
+        "url": "https://jap-one.com/en/dragon-ball-super-card-game-fusion-world-fb-10-booster-display-24-packs-en-810158838338.html",
+    },
+    {
+        "id": "FB10",
+        "shop": "Aquitaz",
+        "country": "SE",
+        "url": "https://aquitaz.se/en/products/dragon-ball-super-fusion-world-booster-display-fb10-24-pack-eng",
+    },
+    {
+        "id": "FB10",
+        "shop": "Zavvi",
+        "country": "UK",
+        "url": "https://www.zavvi.com/p/toys/dragon-ball-super-card-game-booster-box-fusion-world-10-fb10-24-packs/17706253/",
+    },
 ]
 
 # ─── Filters ─────────────────────────────────────────────────────────────
@@ -418,6 +455,54 @@ SHOP_SEARCHES = [
         "name": "OnyTCG (Masters preorders)",
         "country": "IT",
         "url": "https://onytcg.com/en/categoria/Preordini-dragon-ball-super-card-game-masters",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Il Nuovo Mondo",
+        "country": "IT",
+        "url": "https://www.ilnuovomondoshop.it/en/trading-cards/dragon-ball-fusion-",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "GameTrade",
+        "country": "IT",
+        "url": "https://www.gametrade.it/Search/dragon-ball-super-fusion-world",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "WonderClub",
+        "country": "IT",
+        "url": "https://wonderclub.it/categoria-prodotto/dragon-ball-super/fusion-world/",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Jap-One",
+        "country": "EU",
+        "url": "https://jap-one.com/en/65-dragon-ball-super",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Aquitaz",
+        "country": "SE",
+        "url": "https://aquitaz.se/en/collections/dragon-ball-super",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "The Card Vault",
+        "country": "UK",
+        "url": "https://thecardvault.co.uk/collections/dragon-ball-super-cg-booster-boxes",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Zavvi (Dragon Ball)",
+        "country": "UK",
+        "url": "https://www.zavvi.com/search/dragon+ball+booster+box.list",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Hobbix Change",
+        "country": "NZ",
+        "url": "https://www.hobbixchange.co.nz/collections/dragon-ball-super-card-game",
         "extractor": "generic_shop",
     },
     # ── EU marketplace ──
