@@ -177,6 +177,12 @@ PRIORITY_PRODUCT_URLS = [
         "country": "FR",
         "url": "https://www.nin-nin-game.com/en/dragon-ball-tcg/217631-dragon-ball-super-card-game-fusion-world-booster-pack-fb10-24-packs-box-bandai-.html",
     },
+    {
+        "id": "BT31",
+        "shop": "OnyTCG",
+        "country": "IT",
+        "url": "https://onytcg.com/en/prodotto/dragon-ball-super-box-zenkai-new-series-ultra-bout-4-b31-eng",
+    },
 ]
 
 # ─── Filters ─────────────────────────────────────────────────────────────
@@ -394,6 +400,24 @@ SHOP_SEARCHES = [
         "name": "Hobby Genki",
         "country": "JP",
         "url": "https://hobby-genki.com/en/dragon-ball-series/",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Master of Games",
+        "country": "ES",
+        "url": "https://masterofgames.es/en/210-pre-orders",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "OnyTCG (Fusion World preorders)",
+        "country": "IT",
+        "url": "https://onytcg.com/en/categoria/Preordini-dragon-ball-super-fusion-world",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "OnyTCG (Masters preorders)",
+        "country": "IT",
+        "url": "https://onytcg.com/en/categoria/Preordini-dragon-ball-super-card-game-masters",
         "extractor": "generic_shop",
     },
     # ── EU marketplace ──
