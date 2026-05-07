@@ -84,12 +84,22 @@ PRIORITY_WATCHLIST = [
         "id": "FB10",
         "series": "Fusion World Cross Force",
         "name": "Dragon Ball Super Card Game Fusion World FB10 Booster Box (Cross Force)",
-        # Variants: FB10, FB-10, FB_10, FB 10, FB10E, FB10EN.
+        # Variants: FB10, FB-10, FB_10, FB 10, FB10E, FB10EN, FB10-JP.
         # Right-guard prevents matching FB100/FB101/FB108.
         "patterns": [
             r"(?<![a-z0-9])fb[\s\-_]?10(?!\d)",
             r"fusion\s*world[\s\-_]*10(?!\d)",
             r"cross[\s\-_]*force",
+        ],
+    },
+    {
+        "id": "ST01",
+        "series": "Fusion World Story Booster 01",
+        "name": "Dragon Ball Super Card Game Fusion World Story Booster 01 [ST01]",
+        # Variants: ST01, ST-01, ST_01, ST 01, ST01EN, ST01-JP, Story Booster 01.
+        "patterns": [
+            r"(?<![a-z0-9])st[\s\-_]?01(?!\d)",
+            r"story[\s\-_]*booster[\s\-_]*0?1(?!\d)",
         ],
     },
 ]
@@ -134,6 +144,38 @@ PRIORITY_PRODUCT_URLS = [
         "shop": "Gamerz Paradize",
         "country": "NL",
         "url": "https://gamerzparadize.nl/en/products/dragon-ball-scg-fusion-world-10-booster-box",
+    },
+    # ── ST01 (Fusion World Story Booster 01) ──
+    {
+        "id": "ST01",
+        "shop": "4X Trading",
+        "country": "EU",
+        "url": "https://4xtrading.eu/prodotto/dragon-ball-super-card-game-fusion-world-special-story-booster-display-01-st01-20-packs-en/",
+    },
+    {
+        "id": "ST01",
+        "shop": "Nin-Nin-Game",
+        "country": "FR",
+        "url": "https://www.nin-nin-game.com/en/dragon-ball-tcg/230352-dragon-ball-super-card-game-fusion-world-story-booster-01-st01-20-packs-box-bandai-.html",
+    },
+    {
+        "id": "ST01",
+        "shop": "Hobby Genki",
+        "country": "JP",
+        "url": "https://hobby-genki.com/en/dragon-ball-series/85786-dragon-ball-super-card-game-fusion-world-story-booster-st01-20pack-box-4582770011982.html",
+    },
+    # ── JP versions of FB10 + BT31 ──
+    {
+        "id": "FB10",
+        "shop": "Hobby Genki (JP)",
+        "country": "JP",
+        "url": "https://hobby-genki.com/en/dragon-ball-series/dragon-ball-super-card-game-fusion-world-cross-force-fb10-booster-box.html",
+    },
+    {
+        "id": "FB10",
+        "shop": "Nin-Nin-Game",
+        "country": "FR",
+        "url": "https://www.nin-nin-game.com/en/dragon-ball-tcg/217631-dragon-ball-super-card-game-fusion-world-booster-pack-fb10-24-packs-box-bandai-.html",
     },
 ]
 
@@ -319,6 +361,26 @@ SHOP_SEARCHES = [
         "name": "Card Game Shop BE",
         "country": "BE",
         "url": "https://www.cardgameshop.be/en/categories/dragon-ball",
+        "extractor": "generic_shop",
+    },
+    # ── EU shops with English + JP versions ──
+    {
+        "name": "Nin-Nin-Game",
+        "country": "FR",
+        "url": "https://www.nin-nin-game.com/en/dragon-ball-tcg/",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "4X Trading",
+        "country": "IT",
+        "url": "https://4xtrading.eu/categoria-prodotto/dragon-ball-super-card-game/",
+        "extractor": "generic_shop",
+    },
+    # ── Japan shops (JP versions) ──
+    {
+        "name": "Hobby Genki",
+        "country": "JP",
+        "url": "https://hobby-genki.com/en/dragon-ball-series/",
         "extractor": "generic_shop",
     },
     # ── EU marketplace ──
@@ -876,10 +938,17 @@ EBAY_QUERIES = {
         "dragon ball masters b31 booster",
         "dragon ball impact beyond dimensions booster",
         "dragon ball battles beyond dimensions booster",
+        "dragon ball masters bt31 japanese",  # JP version
     ],
     "FB10": [
         "dragon ball fusion world fb10",
         "dragon ball fusion world cross force",
+        "dragon ball fb10 japanese",  # JP version
+    ],
+    "ST01": [
+        "dragon ball fusion world st01",
+        "dragon ball fusion world story booster",
+        "dragon ball st01 japanese",  # JP version
     ],
 }
 EBAY_MARKETS = ["EBAY_NL", "EBAY_DE", "EBAY_GB", "EBAY_BE", "EBAY_FR"]
