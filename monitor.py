@@ -71,14 +71,13 @@ PRIORITY_WATCHLIST = [
         "name": "Dragon Ball Super Card Game Masters BT31 Booster Box",
         # Spelling variants seen in the wild:
         #   B31, BT31, B-31, BT-31, B 31, BT 31, B_31, B31E, BT31EN, B-31-EN
-        # Boundaries: not preceded by alphanumeric (avoid e.g. "ZB31" or "FB31"),
-        # not FOLLOWED by a digit (avoid e.g. "B315"). Letters after are OK
-        # (suffixes like E, EN, JP).
         "patterns": [
             r"(?<![a-z0-9])bt?[\s\-_]?31(?!\d)",
             r"impact[\s\-_]*beyond[\s\-_]*dimensions",
             r"battles[\s\-_]*beyond[\s\-_]*dimensions",
         ],
+        # User already ordered BT31 - keep tracking for dashboard, but no Telegram alerts
+        "alert_enabled": False,
     },
     {
         "id": "FB10",
@@ -2043,6 +2042,14 @@ def write_dashboard_feed():
 BUYABLE_STATUSES = ("in_stock", "preorder")
 
 
+def is_alert_enabled(priority_id):
+    """Check watchlist config: should we alert for this target? Default True."""
+    if not priority_id:
+        return True
+    entry = next((w for w in PRIORITY_WATCHLIST if w["id"] == priority_id), None)
+    return entry.get("alert_enabled", True) if entry else True
+
+
 def cmd_run(dry_run=False, priority_only=False):
     mode = "priority-only (fast)" if priority_only else "full"
     log.info(f"Starting Dragon Ball TCG monitor ({mode})...")
@@ -2051,9 +2058,12 @@ def cmd_run(dry_run=False, priority_only=False):
 
     # ALERT POLICY: only ping Telegram for products that are actually buyable
     # (in_stock or preorder). OOS / unknown are tracked silently.
+    # Also: respect per-target alert_enabled flag (e.g. BT31 already ordered -> no pings).
     priority_hits = [
         p for p in new_products
-        if p.get("priority") and p.get("stock_status") in BUYABLE_STATUSES
+        if p.get("priority")
+        and p.get("stock_status") in BUYABLE_STATUSES
+        and is_alert_enabled(p.get("priority"))
     ]
     new_preorders = [
         p for p in new_products
@@ -2061,7 +2071,14 @@ def cmd_run(dry_run=False, priority_only=False):
     ]
     restocks = [
         (p, old) for p, old, new in status_changes
-        if new in BUYABLE_STATUSES and old not in BUYABLE_STATUSES
+        if new in BUYABLE_STATUSES
+        and old not in BUYABLE_STATUSES
+        and is_alert_enabled(p.get("priority"))
+    ]
+    # Filter price drops too: skip silenced targets
+    price_drops = [
+        (p, old, new) for p, old, new in price_drops
+        if is_alert_enabled(p.get("priority"))
     ]
 
     log.info(
@@ -2104,8 +2121,10 @@ def cmd_run(dry_run=False, priority_only=False):
         for product, old, new in price_drops:
             send_price_drop_alert(product, old, new)
             time.sleep(0.5)
-        # eBay: ping for new listings (sorted by price asc, max 5 per run to avoid spam)
-        for item in sorted(new_ebay, key=lambda x: x.get("price_value", 999))[:5]:
+        # eBay: ping for new listings (sorted by price asc, max 5 per run to avoid spam).
+        # Skip targets where user has alerts disabled (e.g. BT31 already ordered).
+        ebay_alertable = [item for item in new_ebay if is_alert_enabled(item.get("target"))]
+        for item in sorted(ebay_alertable, key=lambda x: x.get("price_value", 999))[:5]:
             sold_stats = ebay_sold.get(item["target"]) if ebay_sold else None
             send_ebay_alert(item, sold_stats)
             time.sleep(0.5)
