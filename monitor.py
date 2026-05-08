@@ -711,29 +711,47 @@ SHOP_SEARCHES = [
 # Dragon Ball specific. PokeBeach / PokeGuardian removed.
 
 NEWS_SOURCES = [
+    # RSS feeds (most reliable, no JS rendering needed)
+    {
+        "name": "Reddit r/DragonballTCG (RSS)",
+        "url": "https://www.reddit.com/r/DragonballTCG/new/.rss",
+        "type": "rss",
+    },
+    {
+        "name": "Reddit r/DragonballSuperTCG (RSS)",
+        "url": "https://www.reddit.com/r/DragonballSuperTCG/new/.rss",
+        "type": "rss",
+    },
+    {
+        "name": "Reddit r/dbsccg (RSS)",
+        "url": "https://www.reddit.com/r/dbsccg/new/.rss",
+        "type": "rss",
+    },
+    {
+        "name": "Reddit r/dbz_tcg (RSS)",
+        "url": "https://www.reddit.com/r/dbz_tcg/new/.rss",
+        "type": "rss",
+    },
+    # HTML pages (fallback - JS-rendered, may return 0)
     {
         "name": "DBS Card Game (Official)",
         "url": "https://www.dbs-cardgame.com/us/news/",
+        "type": "html",
     },
     {
         "name": "Fusion World (Official)",
         "url": "https://www.dbs-cardgame.com/fw/en/news/",
-    },
-    {
-        "name": "Reddit r/DragonballTCG",
-        "url": "https://old.reddit.com/r/DragonballTCG/new/",
-    },
-    {
-        "name": "Reddit r/DragonballSuperTCG",
-        "url": "https://old.reddit.com/r/DragonballSuperTCG/new/",
+        "type": "html",
     },
 ]
 
 NEWS_KEYWORDS = [
     "booster box", "booster display", "release date", "releasing", "release in",
     "pre-order", "preorder", "announced", "reveal", "spoilers", "card list",
-    "set list", "expansion", "next set", "upcoming", "b31", "fb11",
-    "fb12", "b32", "masters", "fusion world",
+    "set list", "expansion", "next set", "upcoming", "story booster",
+    # Current and future set codes (catch announcements early)
+    "b31", "b32", "b33", "fb10", "fb11", "fb12", "st01", "st02",
+    "masters", "fusion world", "cross force",
 ]
 
 # ─── Extractors ──────────────────────────────────────────────────────────
@@ -1184,21 +1202,35 @@ def detect_priority_match(title):
 
 
 def is_relevant_news(title):
-    """News must mention Dragon Ball + Masters/FW + a news keyword. No Pokemon, no other DB series, no eBay listings."""
+    """News must mention Dragon Ball + (Masters/FW context OR a current/future set code).
+
+    Looser than before: any DB headline mentioning a relevant set or news keyword
+    counts. Old-series only headlines still blocked. eBay listings blocked.
+    """
     title_lower = title.lower()
-    has_dragonball = any(kw in title_lower for kw in ["dragon ball", "dragonball", "dbs", "dbsccg"])
+    has_dragonball = any(kw in title_lower for kw in ["dragon ball", "dragonball", "dbs", "dbsccg", "fusion world", "fusionworld"])
     if not has_dragonball:
         return False
-    if "ebay" in title_lower:
+    if "ebay" in title_lower or "for sale" in title_lower:
         return False
+    # Skip pure old-series news (Zenkai, Unison, etc) - but only if title is exclusively about old series
     if any(kw in title_lower for kw in BLOCKED_SERIES_KEYWORDS):
-        return False
+        # Allow if also mentions current era
+        if not (
+            any(kw in title_lower for kw in ALLOWED_SERIES_KEYWORDS)
+            or ALLOWED_SERIES_REGEX.search(title_lower)
+            or "story booster" in title_lower
+        ):
+            return False
+    # Pass if either: (1) target-series mentioned, (2) Story Booster, (3) news keyword
     has_target_series = (
         any(kw in title_lower for kw in ALLOWED_SERIES_KEYWORDS)
         or ALLOWED_SERIES_REGEX.search(title_lower)
+        or "story booster" in title_lower
     )
     has_news_kw = any(kw in title_lower for kw in NEWS_KEYWORDS)
-    return has_target_series and has_news_kw
+    # Match if any signal present (was AND, now OR)
+    return has_target_series or has_news_kw
 
 
 # ─── eBay Integration ────────────────────────────────────────────────────
@@ -1649,20 +1681,54 @@ def scrape_shops(context):
     return new_products, status_changes, price_drops
 
 
+def fetch_rss_headlines(url):
+    """Parse RSS/Atom feed and return list of {title, url} dicts."""
+    try:
+        r = requests.get(url, headers={"User-Agent": "Mozilla/5.0 dragonball-monitor"}, timeout=15)
+        r.raise_for_status()
+        text = r.text
+        # Cheap parse - matches both RSS <item> and Atom <entry>
+        items = re.findall(
+            r"<(?:item|entry)>(.*?)</(?:item|entry)>",
+            text,
+            flags=re.DOTALL,
+        )
+        results = []
+        for item in items[:30]:
+            title_m = re.search(r"<title[^>]*>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</title>", item, flags=re.DOTALL)
+            link_m = re.search(r'<link[^>]*href="([^"]+)"|<link>([^<]+)</link>', item)
+            if not title_m or not link_m:
+                continue
+            title = re.sub(r"\s+", " ", title_m.group(1)).strip()
+            url_v = (link_m.group(1) or link_m.group(2) or "").strip()
+            if title and url_v:
+                results.append({"title": title[:250], "url": url_v[:300]})
+        return results
+    except Exception as e:
+        log.warning(f"RSS fetch failed: {e}")
+        return []
+
+
 def scrape_news(context):
     seen = load_json(SEEN_NEWS_FILE)
     new_news = []
 
     for source in NEWS_SOURCES:
-        page = context.new_page()
         try:
             log.info(f"Checking news: {source['name']}...")
-            page.goto(source["url"], wait_until="domcontentloaded", timeout=15000)
-            page.wait_for_timeout(2000)
-            accept_cookies(page)
-            page.wait_for_timeout(1000)
+            if source.get("type") == "rss":
+                headlines = fetch_rss_headlines(source["url"])
+            else:
+                page = context.new_page()
+                try:
+                    page.goto(source["url"], wait_until="domcontentloaded", timeout=15000)
+                    page.wait_for_timeout(2000)
+                    accept_cookies(page)
+                    page.wait_for_timeout(1000)
+                    headlines = page.evaluate(NEWS_EXTRACTOR_JS)
+                finally:
+                    page.close()
 
-            headlines = page.evaluate(NEWS_EXTRACTOR_JS)
             relevant = [
                 h for h in headlines
                 if is_relevant_news(h["title"]) and is_shop_url(h.get("url", ""))
@@ -1688,8 +1754,6 @@ def scrape_news(context):
 
         except Exception as e:
             log.warning(f"  Error: {e}")
-        finally:
-            page.close()
 
     save_json(SEEN_NEWS_FILE, seen)
     return new_news
