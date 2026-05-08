@@ -1493,19 +1493,112 @@ def accept_cookies(page):
 
 # ─── Scraping ────────────────────────────────────────────────────────────
 
+# How many shops to scrape concurrently. Each worker spawns its own browser.
+# Higher = faster but more memory. 5 fits comfortably in GH Actions runner.
+PARALLEL_WORKERS = 5
+
+
+def scrape_shop_isolated(search):
+    """Scrape one shop with its own Playwright instance (thread-safe).
+
+    Returns: (list of product dicts, success bool, error or None).
+    Each product dict has all fields ready to merge into seen state.
+    """
+    from playwright.sync_api import sync_playwright
+
+    products = []
+    try:
+        with sync_playwright() as pw:
+            browser = pw.chromium.launch(
+                headless=True,
+                args=["--disable-blink-features=AutomationControlled"],
+            )
+            try:
+                context = browser.new_context(
+                    user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+                    locale="nl-NL",
+                    viewport={"width": 1920, "height": 1080},
+                )
+                page = context.new_page()
+                try:
+                    page.goto(search["url"], wait_until="domcontentloaded", timeout=20000)
+                    page.wait_for_timeout(2000)
+                    accept_cookies(page)
+                    page.wait_for_timeout(1500)
+                    if search["extractor"] in ("cardmarket", "generic_shop"):
+                        for _ in range(4):
+                            page.evaluate("window.scrollBy(0, 800)")
+                            page.wait_for_timeout(400)
+                    js_code = EXTRACTOR_JS.get(search["extractor"])
+                    raw_products = page.evaluate(js_code) if js_code else []
+                finally:
+                    page.close()
+
+                # Filter to relevant products
+                relevant = []
+                for p in raw_products:
+                    if not is_dragonball_booster_box(p["title"]):
+                        continue
+                    if not is_shop_url(p.get("url", "")):
+                        continue
+                    pn = parse_price(p.get("price", ""))
+                    if pn is not None and pn < MIN_BOOSTER_BOX_PRICE:
+                        continue
+                    relevant.append(p)
+
+                # Deep-check priorities using same context (reuse browser)
+                for p in relevant:
+                    priority = detect_priority_match(p["title"])
+                    stock_status = detect_stock_status(p.get("fullText", ""))
+                    price = p["price"]
+                    price_num = parse_price(price)
+                    deep_checked = False
+                    if priority and p.get("url"):
+                        deep = deep_check_product(context, p["url"])
+                        if deep:
+                            stock_status = deep["stock_status"]
+                            if deep.get("price"):
+                                price = deep["price"]
+                                price_num = parse_price(price) or price_num
+                            deep_checked = True
+                    products.append({
+                        "title": p["title"],
+                        "shop": search["name"],
+                        "country": search["country"],
+                        "price": price,
+                        "price_num": price_num,
+                        "stock_status": stock_status,
+                        "url": p["url"],
+                        "priority": priority["id"] if priority else None,
+                        "priority_series": priority["series"] if priority else None,
+                        "deep_checked": deep_checked,
+                    })
+            finally:
+                browser.close()
+        return products, True, None
+    except Exception as e:
+        return [], False, e
+
+
 def scrape_shops(context):
-    """Scrape all shop searches. Returns (new_products, status_changes, price_drops)."""
+    """Scrape all shop searches in parallel via ThreadPoolExecutor.
+
+    The `context` arg is unused (kept for backward compatibility) - each worker
+    opens its own browser since sync_playwright is not safe across threads.
+    """
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    _ = context  # unused
+
     seen = load_json(SEEN_PRODUCTS_FILE)
     price_history = load_json(PRICE_HISTORY_FILE)
     health = load_health()
 
     new_products = []
-    status_changes = []  # (product_dict, old_status, new_status)
-    price_drops = []     # (product_dict, old_price, new_price)
-    auto_disabled_now = []  # for Telegram heads-up
+    status_changes = []
+    price_drops = []
+    auto_disabled_now = []
 
-    # Dedupe by hostname: if multiple SHOP_SEARCHES entries hit the same domain,
-    # only check the first one this run (saves time, avoids redundant scrapes).
+    # Dedupe by hostname (skip if same site has multiple search URLs)
     seen_hosts = set()
     deduped = []
     for search in SHOP_SEARCHES:
@@ -1513,155 +1606,76 @@ def scrape_shops(context):
             host = search["url"].split("/")[2].lower().replace("www.", "")
         except Exception:
             host = search["url"]
-        # Only allow ONE category page per host per run; priority URLs run separately
         if host in seen_hosts:
-            log.info(f"SKIP (host already checked this run): {search['name']}")
+            log.info(f"SKIP (host already checked): {search['name']}")
             continue
         seen_hosts.add(host)
+        if is_shop_disabled(health, f"{search['name']}|{search['url']}"):
+            log.info(f"SKIP (auto-disabled): {search['name']}")
+            continue
         deduped.append(search)
 
-    for search in deduped:
-        shop_key = f"{search['name']}|{search['url']}"
-        if is_shop_disabled(health, shop_key):
-            log.info(f"SKIP (auto-disabled): {search['name']} ({search['country']})")
-            continue
+    log.info(f"Scraping {len(deduped)} shops in parallel ({PARALLEL_WORKERS} workers)...")
+    t_start = time.time()
 
-        page = context.new_page()
-        try:
-            log.info(f"Checking {search['name']} ({search['country']})...")
-            page.goto(search["url"], wait_until="domcontentloaded", timeout=20000)
-            page.wait_for_timeout(2000)
-            accept_cookies(page)
-            page.wait_for_timeout(1500)
-
-            if search["extractor"] in ("cardmarket", "generic_shop"):
-                for _ in range(4):
-                    page.evaluate("window.scrollBy(0, 800)")
-                    page.wait_for_timeout(400)
-
-            js_code = EXTRACTOR_JS.get(search["extractor"])
-            if not js_code:
-                continue
-
+    with ThreadPoolExecutor(max_workers=PARALLEL_WORKERS) as ex:
+        futures = {ex.submit(scrape_shop_isolated, s): s for s in deduped}
+        for fut in as_completed(futures):
+            search = futures[fut]
+            shop_key = f"{search['name']}|{search['url']}"
             try:
-                raw_products = page.evaluate(js_code)
+                products, success, error = fut.result()
             except Exception as e:
-                log.warning(f"  Extraction failed: {e}")
-                continue
+                products, success, error = [], False, e
 
-            def _passes(p):
-                if not is_dragonball_booster_box(p["title"]):
-                    return False
-                if not is_shop_url(p.get("url", "")):
-                    return False
-                # Filter accessories/bundles misidentified as boxes by checking price.
-                # Allow products without a price (could be pre-order with hidden price).
-                price_num = parse_price(p.get("price", ""))
-                if price_num is not None and price_num < MIN_BOOSTER_BOX_PRICE:
-                    return False
-                return True
-
-            relevant = [p for p in raw_products if _passes(p)]
-            log.info(f"  Found {len(relevant)} Dragon Ball booster box products")
-            if record_shop_result(health, shop_key, success=True, products_found=len(relevant)):
+            log.info(f"  {search['name']} ({search['country']}): {len(products)} products, ok={success}{f', err={error}' if error else ''}")
+            if record_shop_result(health, shop_key, success=success, error=error, products_found=len(products)):
                 auto_disabled_now.append(search["name"])
 
-            for p in relevant:
-                priority = detect_priority_match(p["title"])
-                stock_status = detect_stock_status(p.get("fullText", ""))
-                price = p["price"]
-                price_num = parse_price(price)
-
-                # Priority hits (B31/FB11) get a deep check on the product detail page.
-                # Far more accurate stock detection (real add-to-cart button check).
-                deep_checked = False
-                if priority and p.get("url"):
-                    log.info(f"  Deep check {priority['id']}: {p['url'][:80]}")
-                    deep = deep_check_product(context, p["url"])
-                    if deep:
-                        stock_status = deep["stock_status"]
-                        if deep.get("price"):
-                            price = deep["price"]
-                            price_num = parse_price(price) or price_num
-                        deep_checked = True
-
-                # Canonical key: normalized URL (dedupe across shop-scrape + priority-URL)
-                h = make_hash(canonical_url(p["url"])) if p.get("url") else make_hash(f"{search['name']}|{p['title']}")
-
-                product_record = {
-                    "title": p["title"],
-                    "shop": search["name"],
-                    "country": search["country"],
-                    "price": price,
-                    "price_num": price_num,
-                    "stock_status": stock_status,
-                    "url": p["url"],
-                    "priority": priority["id"] if priority else None,
-                    "priority_series": priority["series"] if priority else None,
-                    "deep_checked": deep_checked,
-                    "last_seen": datetime.now().isoformat(),
-                }
+            # Merge products into state
+            for product in products:
+                product["last_seen"] = datetime.now().isoformat()
+                h = make_hash(canonical_url(product["url"])) if product.get("url") else make_hash(f"{search['name']}|{product['title']}")
 
                 if h not in seen:
-                    # Brand new
-                    product_record["first_seen"] = datetime.now().isoformat()
-                    seen[h] = product_record
-                    new_products.append(product_record)
+                    product["first_seen"] = datetime.now().isoformat()
+                    seen[h] = product
+                    new_products.append(product)
                     tag = ""
-                    if priority:
-                        tag = f" [PRIORITY: {priority['id']}]"
-                    elif stock_status == "preorder":
+                    if product.get("priority"):
+                        tag = f" [PRIORITY: {product['priority']}]"
+                    elif product.get("stock_status") == "preorder":
                         tag = " [PRE-ORDER]"
-                    log.info(f"  NEW{tag}: {p['title'][:80]} | {p['price']}")
+                    log.info(f"    NEW{tag}: {product['title'][:80]} | {product['price']}")
                 else:
-                    # Existing - check for changes
                     old = seen[h]
                     old_status = old.get("stock_status", "unknown")
                     old_price = old.get("price_num")
+                    if old_status != product["stock_status"] and product["stock_status"] != "unknown":
+                        status_changes.append((product, old_status, product["stock_status"]))
+                    if (old_price and product["price_num"]
+                        and product["price_num"] < old_price * 0.95
+                        and product["price_num"] > old_price * 0.60
+                        and product["stock_status"] in ("in_stock", "preorder")):
+                        price_drops.append((product, old_price, product["price_num"]))
+                    product["first_seen"] = old.get("first_seen", datetime.now().isoformat())
+                    seen[h] = product
 
-                    # Status transition (e.g. out_of_stock -> in_stock = restock!)
-                    if old_status != stock_status and stock_status != "unknown":
-                        status_changes.append((product_record, old_status, stock_status))
-                        log.info(f"  STATUS: {p['title'][:60]} | {old_status} -> {stock_status}")
-
-                    # Price drop (>5% lower) — only meaningful if product is BUYABLE.
-                    # Skip OOS items (you can't buy them anyway) and ignore wild swings
-                    # >40% which usually indicate extractor instability, not real drops.
-                    if (
-                        old_price and price_num
-                        and price_num < old_price * 0.95
-                        and price_num > old_price * 0.60
-                        and stock_status in ("in_stock", "preorder")
-                    ):
-                        price_drops.append((product_record, old_price, price_num))
-                        log.info(f"  PRICE DROP: {p['title'][:60]} | €{old_price} -> €{price_num}")
-
-                    # Update record (preserve first_seen)
-                    product_record["first_seen"] = old.get("first_seen", datetime.now().isoformat())
-                    seen[h] = product_record
-
-                # Append to price history
-                if price_num is not None:
+                if product["price_num"] is not None:
                     price_history.setdefault(h, []).append({
                         "ts": datetime.now().isoformat(),
-                        "price": price_num,
-                        "stock_status": stock_status,
+                        "price": product["price_num"],
+                        "stock_status": product["stock_status"],
                     })
-                    # Cap history at 200 points per product
                     price_history[h] = price_history[h][-200:]
 
-        except Exception as e:
-            log.warning(f"  Error scraping {search['name']}: {e}")
-            if record_shop_result(health, shop_key, success=False, error=e):
-                auto_disabled_now.append(search["name"])
-        finally:
-            page.close()
+    elapsed = round(time.time() - t_start)
+    log.info(f"Parallel scrape complete in {elapsed}s ({len(deduped)} shops, {PARALLEL_WORKERS} workers)")
 
     save_json(SEEN_PRODUCTS_FILE, seen)
     save_json(PRICE_HISTORY_FILE, price_history)
     save_json(HEALTH_FILE, health)
 
-    # One-time Telegram heads-up for shops that just got auto-disabled
     if auto_disabled_now and TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID:
         send_telegram(
             "<b>Monitor self-heal:</b>\n"
@@ -1670,13 +1684,6 @@ def scrape_shops(context):
             + "\n".join(f"- {name}" for name in auto_disabled_now)
             + "\n\nUpdate URLs in monitor.py and re-enable in health.json."
         )
-        # Mark as alerted so we don't re-ping
-        for search in SHOP_SEARCHES:
-            if search["name"] in auto_disabled_now:
-                k = f"{search['name']}|{search['url']}"
-                if k in health["shops"]:
-                    health["shops"][k]["alerted_disabled"] = True
-        save_json(HEALTH_FILE, health)
 
     return new_products, status_changes, price_drops
 
