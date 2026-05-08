@@ -95,10 +95,12 @@ PRIORITY_WATCHLIST = [
         "id": "ST01",
         "series": "Fusion World Story Booster 01",
         "name": "Dragon Ball Super Card Game Fusion World Story Booster 01 [ST01]",
-        # Variants: ST01, ST-01, ST_01, ST 01, ST01EN, ST01-JP, Story Booster 01.
+        # Variants: ST01, ST-01, ST_01, ST 01, ST01EN, ST01-JP, Story Booster 01,
+        # plain "Story Booster" (ST01 is the FIRST in the series so any reference
+        # without a number = ST01 for now). When ST02 launches, narrow this.
         "patterns": [
             r"(?<![a-z0-9])st[\s\-_]?01(?!\d)",
-            r"story[\s\-_]*booster[\s\-_]*0?1(?!\d)",
+            r"story[\s\-_]*booster",
         ],
     },
 ]
