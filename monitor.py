@@ -147,15 +147,9 @@ PRIORITY_PRODUCT_URLS = [
     # ── ST01 (Fusion World Story Booster 01) ──
     {
         "id": "ST01",
-        "shop": "4X Trading",
-        "country": "EU",
-        "url": "https://4xtrading.eu/prodotto/dragon-ball-super-card-game-fusion-world-special-story-booster-display-01-st01-20-packs-en/",
-    },
-    {
-        "id": "ST01",
-        "shop": "Nin-Nin-Game",
-        "country": "FR",
-        "url": "https://www.nin-nin-game.com/en/dragon-ball-tcg/230352-dragon-ball-super-card-game-fusion-world-story-booster-01-st01-20-packs-box-bandai-.html",
+        "shop": "PenguinTCG",
+        "country": "UK",
+        "url": "https://www.penguintcg.co.uk/more-tcgs/p/dragon-ball-super-card-game-fusion-world-story-booster-01-st01-booster-box",
     },
     {
         "id": "ST01",
@@ -163,6 +157,7 @@ PRIORITY_PRODUCT_URLS = [
         "country": "JP",
         "url": "https://hobby-genki.com/en/dragon-ball-series/85786-dragon-ball-super-card-game-fusion-world-story-booster-st01-20pack-box-4582770011982.html",
     },
+    # Removed: 4X Trading (404 + 403 bot block), Nin-Nin-Game (403 Forbidden)
     # ── JP versions of FB10 + BT31 ──
     {
         "id": "FB10",
@@ -1293,11 +1288,13 @@ def ebay_search_active(target_id, queries, token):
                                                    "carddass", "starter deck", "starter pack",
                                                    "deck box", "promo card"]):
                         continue
-                    # ST01 specifically: must be Fusion World era (not old Carddass ST01)
-                    if target_id == "ST01" and not (
-                        "fusion world" in title or "fusionworld" in title or "story booster" in title
-                    ):
-                        continue
+                    # ST01 specifically: must be Fusion World era (not old Carddass ST01).
+                    # Hard exclude classic 90s Carddass + IC Carddass false positives.
+                    if target_id == "ST01":
+                        if any(kw in title for kw in ["carddass", "ic carddass", "starter deck"]):
+                            continue
+                        if not ("fusion world" in title or "fusionworld" in title or "story booster" in title):
+                            continue
                     price = item.get("price") or {}
                     found[iid] = {
                         "item_id": iid,
