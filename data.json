@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T16:28:54.177954",
+  "generated_at": "2026-05-08T16:47:50.801299",
   "watchlist": [
     {
       "id": "BT31",
@@ -61,34 +61,6 @@
       "first_seen": "2026-05-07T08:15:58.803099"
     },
     {
-      "title": "Dragon Ball Super Card Game Masters “Ultra-Bout Series” B-31 Boosterbox",
-      "shop": "Arly Trading",
-      "country": "NL",
-      "price": "€109,95",
-      "price_num": 109.95,
-      "stock_status": "out_of_stock",
-      "url": "https://arlytrading.nl/winkel/preorder/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-boosterbox/",
-      "priority": "BT31",
-      "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
-      "deep_checked": true,
-      "last_seen": "2026-05-08T15:53:31.471505",
-      "first_seen": "2026-05-02T10:22:43.224086"
-    },
-    {
-      "title": "Pre-Order Dragon Ball Super Card Game - Fusion World FB10 – TCGHAVEN",
-      "shop": "TCGHaven",
-      "country": "NL",
-      "price": "€99,00",
-      "price_num": 99.0,
-      "stock_status": "out_of_stock",
-      "url": "https://tcghaven.nl/products/pre-order-dragon-ball-super-card-game-fusion-world-fb10",
-      "priority": "FB10",
-      "priority_series": "Fusion World Cross Force",
-      "deep_checked": true,
-      "last_seen": "2026-05-08T15:54:16.807900",
-      "first_seen": "2026-05-02T10:23:29.172559"
-    },
-    {
       "title": "404",
       "shop": "4X Trading",
       "country": "EU",
@@ -99,7 +71,7 @@
       "priority": "ST01",
       "priority_series": "Fusion World Story Booster 01",
       "deep_checked": true,
-      "last_seen": "2026-05-08T15:55:06.587808",
+      "last_seen": "2026-05-08T15:18:30.890617",
       "first_seen": "2026-05-07T08:14:51.959719"
     },
     {
@@ -113,8 +85,78 @@
       "priority": "ST01",
       "priority_series": "Fusion World Story Booster 01",
       "deep_checked": true,
-      "last_seen": "2026-05-08T15:55:29.124420",
+      "last_seen": "2026-05-08T15:18:53.248794",
       "first_seen": "2026-05-07T08:15:14.307755"
+    },
+    {
+      "title": "Dragon Ball Super CG: Masters: Ultra Bout #4 (B31) - Booster Box",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "£162.99",
+      "price_num": 162.99,
+      "stock_status": "out_of_stock",
+      "url": "https://zatu.com/products/dragon-ball-super-cg-masters-ultra-bout-4-b31-booster-box?_pos=4&_sid=99ffc93d1&_ss=r",
+      "priority": "BT31",
+      "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
+      "deep_checked": true,
+      "last_seen": "2026-05-08T15:43:11.794079",
+      "first_seen": "2026-05-08T15:43:11.794088"
+    },
+    {
+      "title": "Dragon Ball Super Card Game Masters \"Ultra-Bout Series\" B-31 Booster Display (24 Packs) - EN Pre-Order",
+      "shop": "AlpsTCG",
+      "country": "NL",
+      "price": "€119,95",
+      "price_num": 119.95,
+      "stock_status": "out_of_stock",
+      "url": "https://alpstcg.nl/products/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-booster-display-24-packs-en-pre-order",
+      "priority": "BT31",
+      "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
+      "deep_checked": true,
+      "last_seen": "2026-05-08T16:30:48.626158",
+      "first_seen": "2026-05-02T10:22:20.362270"
+    },
+    {
+      "title": "Dragon Ball Super Card Game Masters “Ultra-Bout Series” B-31 Boosterbox",
+      "shop": "Arly Trading",
+      "country": "NL",
+      "price": "€109,95",
+      "price_num": 109.95,
+      "stock_status": "out_of_stock",
+      "url": "https://arlytrading.nl/winkel/preorder/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-boosterbox/",
+      "priority": "BT31",
+      "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
+      "deep_checked": true,
+      "last_seen": "2026-05-08T16:31:18.468057",
+      "first_seen": "2026-05-02T10:22:43.224086"
+    },
+    {
+      "title": "Pre-Order Dragon Ball Super Card Game - Fusion World FB10 – TCGHAVEN",
+      "shop": "TCGHaven",
+      "country": "NL",
+      "price": "€99,00",
+      "price_num": 99.0,
+      "stock_status": "out_of_stock",
+      "url": "https://tcghaven.nl/products/pre-order-dragon-ball-super-card-game-fusion-world-fb10",
+      "priority": "FB10",
+      "priority_series": "Fusion World Cross Force",
+      "deep_checked": true,
+      "last_seen": "2026-05-08T16:32:03.495724",
+      "first_seen": "2026-05-02T10:23:29.172559"
+    },
+    {
+      "title": "Dragon Ball Super Card Game: Fusion World - Story Booster 01 [ST01] - Booster Box [MAX. 2 PER CUSTOMER]",
+      "shop": "PenguinTCG",
+      "country": "UK",
+      "price": "£120.00",
+      "price_num": 120.0,
+      "stock_status": "out_of_stock",
+      "url": "https://www.penguintcg.co.uk/more-tcgs/p/dragon-ball-super-card-game-fusion-world-story-booster-01-st01-booster-box",
+      "priority": "ST01",
+      "priority_series": "Fusion World Story Booster 01",
+      "deep_checked": true,
+      "last_seen": "2026-05-08T16:32:38.108358",
+      "first_seen": "2026-05-08T16:32:38.108369"
     },
     {
       "title": "403 Forbidden",
@@ -127,7 +169,7 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T15:56:33.915373",
+      "last_seen": "2026-05-08T16:33:43.043426",
       "first_seen": "2026-05-07T08:16:21.123591"
     },
     {
@@ -141,8 +183,8 @@
       "priority": "BT31",
       "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
       "deep_checked": true,
-      "last_seen": "2026-05-08T15:57:00.081963",
-      "first_seen": "2026-05-08T15:57:00.081972"
+      "last_seen": "2026-05-08T16:34:07.611568",
+      "first_seen": "2026-05-08T15:20:21.856307"
     },
     {
       "title": "DRAGON BALL SUPER CARD GAME - Box of 24 Packs - FB-10",
@@ -155,8 +197,8 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T15:57:22.694219",
-      "first_seen": "2026-05-08T15:57:22.694228"
+      "last_seen": "2026-05-08T16:34:30.029742",
+      "first_seen": "2026-05-08T15:20:43.232772"
     },
     {
       "title": "Dragon Ball Super Card Game Fusion World – Box FB-10 (ENG)",
@@ -169,8 +211,8 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T15:57:47.222484",
-      "first_seen": "2026-05-08T15:57:47.222494"
+      "last_seen": "2026-05-08T16:34:54.501812",
+      "first_seen": "2026-05-08T15:20:52.566850"
     },
     {
       "title": "403 - Forbidden",
@@ -183,8 +225,8 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T15:58:10.331910",
-      "first_seen": "2026-05-08T15:58:10.331923"
+      "last_seen": "2026-05-08T16:35:17.832262",
+      "first_seen": "2026-05-08T15:21:15.411996"
     },
     {
       "title": "Dragon Ball Super Card Game - Fusion World Fb-10 Booster Display (24 Packs) - En",
@@ -197,8 +239,8 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T15:58:33.693301",
-      "first_seen": "2026-05-08T15:58:33.693337"
+      "last_seen": "2026-05-08T16:35:41.379657",
+      "first_seen": "2026-05-08T15:21:38.543997"
     },
     {
       "title": "Dragon Ball Super: Fusion World Booster Display (FB10) (24 Pack) (ENG)",
@@ -211,8 +253,8 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T15:58:58.812398",
-      "first_seen": "2026-05-08T15:58:58.812409"
+      "last_seen": "2026-05-08T16:36:05.859411",
+      "first_seen": "2026-05-08T15:22:02.864763"
     },
     {
       "title": "Dragon Ball Super Card Game: Booster Box Fusion World 10 (FB10) (24 Packs)",
@@ -225,22 +267,22 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T15:59:08.408571",
-      "first_seen": "2026-05-08T15:59:08.408581"
+      "last_seen": "2026-05-08T16:36:15.204998",
+      "first_seen": "2026-05-08T15:22:12.336028"
     },
     {
       "title": "Dragon Ball Super FB10 Cross Force Booster Box",
       "shop": "Loot Cave",
       "country": "DE",
-      "price": "199,90€",
-      "price_num": 199.9,
+      "price": "149,90€",
+      "price_num": 149.9,
       "stock_status": "in_stock",
       "url": "https://lootcave.de/shop/dragon-ball-super-fb10-cross-force-booster-box/",
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T15:59:35.039801",
-      "first_seen": "2026-05-08T15:59:35.039810"
+      "last_seen": "2026-05-08T16:36:43.256672",
+      "first_seen": "2026-05-08T15:22:38.226605"
     },
     {
       "title": "Não perca o próximo lançamento do seu jogo preferido, faça já hoje a sua pré-reserva",
@@ -253,8 +295,8 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T16:00:00.863125",
-      "first_seen": "2026-05-08T16:00:00.863135"
+      "last_seen": "2026-05-08T16:37:08.932791",
+      "first_seen": "2026-05-08T15:23:03.928703"
     },
     {
       "title": "Dragon Ball Super CG: Fusion World: Booster Box 10 (FB10)",
@@ -267,8 +309,8 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T16:00:27.839011",
-      "first_seen": "2026-05-08T16:00:27.839023"
+      "last_seen": "2026-05-08T16:37:35.112796",
+      "first_seen": "2026-05-08T15:23:30.122778"
     },
     {
       "title": "Dragon Ball Card Game Masters Boite de boosters B31 English Battles Beyond Dimensions",
@@ -281,8 +323,8 @@
       "priority": "BT31",
       "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
       "deep_checked": true,
-      "last_seen": "2026-05-08T16:01:13.036987",
-      "first_seen": "2026-05-08T16:01:13.036999"
+      "last_seen": "2026-05-08T16:38:20.317342",
+      "first_seen": "2026-05-08T15:24:15.202181"
     },
     {
       "title": "Home / SHOP / TCG / Pre-order | Dragon Ball Super Card Game | Fusion World FB10 Booster Box | English",
@@ -295,8 +337,8 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T16:02:01.563351",
-      "first_seen": "2026-05-08T16:02:01.563365"
+      "last_seen": "2026-05-08T16:39:07.774442",
+      "first_seen": "2026-05-08T15:25:03.085885"
     },
     {
       "title": "Cross Force Booster Box Dragon Ball Fusion World FB 10",
@@ -309,8 +351,8 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T16:02:26.125231",
-      "first_seen": "2026-05-08T16:02:26.125242"
+      "last_seen": "2026-05-08T16:39:31.958939",
+      "first_seen": "2026-05-08T15:25:27.064174"
     },
     {
       "title": "Dragon Ball Super CG: Fusion World Cross Force - Booster Box(FB10)",
@@ -323,8 +365,8 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T16:02:55.392179",
-      "first_seen": "2026-05-08T16:02:55.392190"
+      "last_seen": "2026-05-08T16:40:00.943449",
+      "first_seen": "2026-05-08T15:25:55.992780"
     },
     {
       "title": "Collection: Dragon Ball",
@@ -337,8 +379,8 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T16:03:19.538878",
-      "first_seen": "2026-05-08T16:03:19.538890"
+      "last_seen": "2026-05-08T16:40:25.159364",
+      "first_seen": "2026-05-08T15:26:19.859772"
     },
     {
       "title": "403 - Forbidden",
@@ -351,22 +393,22 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T16:03:43.295556",
-      "first_seen": "2026-05-08T16:03:43.295566"
+      "last_seen": "2026-05-08T16:40:48.316893",
+      "first_seen": "2026-05-08T15:26:43.112832"
     },
     {
       "title": "Booster Box Display FB-10 (24 boosters) – DBSCG Fusion World",
       "shop": "Anime World",
       "country": "GR",
-      "price": "172,16€",
-      "price_num": 172.16,
+      "price": "165,99€",
+      "price_num": 165.99,
       "stock_status": "preorder",
       "url": "https://animeworld.gr/product/booster-box-display-fb-10-24-boosters-dbscg-fusion-world/",
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T16:04:10.183003",
-      "first_seen": "2026-05-08T16:04:10.183013"
+      "last_seen": "2026-05-08T16:41:15.393355",
+      "first_seen": "2026-05-08T15:27:06.339651"
     },
     {
       "title": "Box of 24 Boosters - Cross Force - FB10 - Dragon Ball Super CG Fusion World - EN",
@@ -379,8 +421,8 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T16:04:35.009569",
-      "first_seen": "2026-05-08T16:04:35.009578"
+      "last_seen": "2026-05-08T16:41:40.044497",
+      "first_seen": "2026-05-08T15:27:30.586177"
     },
     {
       "title": "Dragon Ball Fusion World Booster Box FB10 (24 Packs)",
@@ -393,22 +435,8 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T16:05:00.041071",
-      "first_seen": "2026-05-08T16:05:00.041084"
-    },
-    {
-      "title": "Dragon Ball Super Card Game Masters \"Ultra-Bout Series\" B-31 Booster Display (24 Packs) - EN Pre-Order",
-      "shop": "AlpsTCG",
-      "country": "NL",
-      "price": "€119,95",
-      "price_num": 119.95,
-      "stock_status": "out_of_stock",
-      "url": "https://alpstcg.nl/products/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-booster-display-24-packs-en-pre-order?_pos=1&_sid=4b2dd0fda&_ss=r",
-      "priority": "BT31",
-      "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
-      "deep_checked": true,
-      "last_seen": "2026-05-08T16:08:57.955779",
-      "first_seen": "2026-05-02T10:22:20.362270"
+      "last_seen": "2026-05-08T16:42:05.022726",
+      "first_seen": "2026-05-08T15:27:55.590045"
     },
     {
       "title": "Dragon Ball SCG - Fusion World 10 - Booster Box",
@@ -421,7 +449,7 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T16:10:35.640378",
+      "last_seen": "2026-05-08T16:44:02.508933",
       "first_seen": "2026-05-02T10:23:52.351002"
     },
     {
@@ -435,7 +463,7 @@
       "priority": "BT31",
       "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
       "deep_checked": true,
-      "last_seen": "2026-05-08T16:10:57.337965",
+      "last_seen": "2026-05-08T16:44:02.509017",
       "first_seen": "2026-05-02T10:32:19.843094"
     },
     {
@@ -449,22 +477,8 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T16:16:53.488649",
-      "first_seen": "2026-05-08T16:16:53.488659"
-    },
-    {
-      "title": "Dragon Ball Super CG: Masters: Ultra Bout #4 (B31) - Booster Box",
-      "shop": "Zatu",
-      "country": "UK",
-      "price": "£162.99",
-      "price_num": 162.99,
-      "stock_status": "out_of_stock",
-      "url": "https://zatu.com/products/dragon-ball-super-cg-masters-ultra-bout-4-b31-booster-box?_pos=4&_sid=2753dae91&_ss=r",
-      "priority": "BT31",
-      "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
-      "deep_checked": true,
-      "last_seen": "2026-05-08T16:20:27.375416",
-      "first_seen": "2026-05-08T16:20:27.375426"
+      "last_seen": "2026-05-08T16:44:56.405301",
+      "first_seen": "2026-05-08T15:39:41.866786"
     },
     {
       "title": "PREORDER - DRAGON BALL FUSION WORLD FB10 BOOSTER BOX - ENGLISH (SEALED)",
@@ -477,8 +491,8 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T16:21:13.921280",
-      "first_seen": "2026-05-08T16:21:13.921291"
+      "last_seen": "2026-05-08T16:45:43.036280",
+      "first_seen": "2026-05-08T15:43:57.676158"
     },
     {
       "title": "Dragon Ball Masters Ultra Bout Set 4 Impact Beyond Dimensions BT-31 English Booster Box - Pre-Order",
@@ -491,8 +505,8 @@
       "priority": "BT31",
       "priority_series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
       "deep_checked": true,
-      "last_seen": "2026-05-08T16:22:49.318929",
-      "first_seen": "2026-05-08T16:22:49.318936"
+      "last_seen": "2026-05-08T16:46:20.106149",
+      "first_seen": "2026-05-08T15:45:31.970099"
     },
     {
       "title": "Dragon Ball Fusion World English FB-10 Cross Force Booster Box - Pre-Order",
@@ -505,8 +519,8 @@
       "priority": "FB10",
       "priority_series": "Fusion World Cross Force",
       "deep_checked": true,
-      "last_seen": "2026-05-08T16:23:10.970125",
-      "first_seen": "2026-05-08T16:01:36.587508"
+      "last_seen": "2026-05-08T16:46:20.106162",
+      "first_seen": "2026-05-08T15:24:38.332915"
     },
     {
       "title": "Dragon Ball Super Boosterbox - B29 Fearsome Rivals",
@@ -523,6 +537,216 @@
       "first_seen": "2026-05-02T10:32:32.575531"
     },
     {
+      "title": "Dragon Ball Super CG: Masters - Booster Box - Ultra Bout #3 (B30)",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/products/dragon-ball-super-cg-masters-booster-box-ultra-bout-3-b30?_pos=1&_sid=99ffc93d1&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T15:42:47.130720",
+      "first_seen": "2026-05-08T15:42:47.130724"
+    },
+    {
+      "title": "Dragon Ball Super CG: Fusion World - Dual Evolution - Booster Box (FB09)",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/products/dragon-ball-super-cg-booster-box-fusion-world-09-fb09?_pos=2&_sid=99ffc93d1&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T15:42:47.130812",
+      "first_seen": "2026-05-08T15:42:47.130815"
+    },
+    {
+      "title": "Dragon Ball Super CG: Masters - Fearsome Rivals - Booster Box",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/products/dragon-ball-super-cg-masters-new-series-02-booster-box?_pos=5&_sid=99ffc93d1&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T15:43:11.794246",
+      "first_seen": "2026-05-08T15:43:11.794249"
+    },
+    {
+      "title": "Dragon Ball Super Fusion World: Booster Box - Fusion World",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/products/dragon-ball-super-cg-booster-box-fusion-world?_pos=9&_sid=99ffc93d1&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T15:43:11.794320",
+      "first_seen": "2026-05-08T15:43:11.794323"
+    },
+    {
+      "title": "Dragon Ball Super Fusion World: Manga Booster Box 01 (SB-01)",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/products/dragon-ball-super-fusion-world-manga-booster-box-01-sb-01?_pos=10&_sid=99ffc93d1&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T15:43:11.794380",
+      "first_seen": "2026-05-08T15:43:11.794390"
+    },
+    {
+      "title": "Dragon Ball Super Masters: Mythic Booster (MB-01) - Booster Box",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/products/dragon-ball-super-cg-mythic-booster-mb-01-booster-box?_pos=11&_sid=99ffc93d1&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T15:43:11.794452",
+      "first_seen": "2026-05-08T15:43:11.794456"
+    },
+    {
+      "title": "Dragon Ball Super CG: New Adventure - Booster Box (FB05)",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/products/dragon-ball-super-cg-fusion-world-05-booster-box-fb05?_pos=12&_sid=99ffc93d1&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T15:43:11.794515",
+      "first_seen": "2026-05-08T15:43:11.794518"
+    },
+    {
+      "title": "Dragon Ball Super CG: Booster Box B07",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/products/dragon-ball-super-cg-booster-box-b07?_pos=13&_sid=99ffc93d1&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T15:43:11.794596",
+      "first_seen": "2026-05-08T15:43:11.794600"
+    },
+    {
+      "title": "Dragon Ball Super Masters: Power Absorbed (BT20) - Booster Box",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/products/dragon-ball-super-cg-booster-box-zenkai-series-set-03-b20?_pos=15&_sid=99ffc93d1&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T15:43:11.794656",
+      "first_seen": "2026-05-08T15:43:11.794658"
+    },
+    {
+      "title": "Dragon Ball Super Fusion World: Rivals Clash (FB06) - Booster Box",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/products/dragon-ball-super-fusion-world-fusion-world-06-booster-box-fb06?_pos=17&_sid=99ffc93d1&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T15:43:11.794714",
+      "first_seen": "2026-05-08T15:43:11.794716"
+    },
+    {
+      "title": "Dragon Ball Super Masters: Beyond Generations (BT24) - Booster Box",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/products/dragon-ball-super-cg-masters-zenkai-series-ex-set-07-booster-box-b24?_pos=18&_sid=99ffc93d1&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T15:43:11.794763",
+      "first_seen": "2026-05-08T15:43:11.794765"
+    },
+    {
+      "title": "Dragon Ball Super Masters: Realm Of Gods (BT16) - Booster Box",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/products/dragon-ball-super-cg-uw07-b16-booster-box?_pos=19&_sid=99ffc93d1&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T15:43:11.794812",
+      "first_seen": "2026-05-08T15:43:11.794814"
+    },
+    {
+      "title": "Dragon Ball Super Masters: Critical Blow (BT22) - Booster Box",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/products/dragon-ball-super-cg-zenkai-series-set-05-b22-booster-box?_pos=22&_sid=99ffc93d1&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T15:43:11.794862",
+      "first_seen": "2026-05-08T15:43:11.794865"
+    },
+    {
+      "title": "Dragon Ball Super CG: Booster Box - Fusion World 02 (FB02)",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/products/dragon-ball-super-cg-booster-box-fusion-world-02-fb02?_pos=23&_sid=99ffc93d1&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T15:43:11.794918",
+      "first_seen": "2026-05-08T15:43:11.794920"
+    },
+    {
+      "title": "Dragon Ball Super CG: Booster Box - Fusion World 08 (FB08)",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/products/dragon-ball-super-cg-booster-box-fusion-world-08-fb08?_pos=24&_sid=99ffc93d1&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T15:43:11.794970",
+      "first_seen": "2026-05-08T15:43:11.794978"
+    },
+    {
       "title": "Dragon Ball Super Three Glorious Fighters B30 Booster Box - Pokeca.NL",
       "shop": "Pokeca",
       "country": "NL",
@@ -533,7 +757,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.689910",
+      "last_seen": "2026-05-08T16:42:31.084954",
       "first_seen": "2026-05-02T10:26:28.372267"
     },
     {
@@ -547,7 +771,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.689950",
+      "last_seen": "2026-05-08T16:42:31.085003",
       "first_seen": "2026-05-02T10:26:28.372359"
     },
     {
@@ -561,7 +785,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.689980",
+      "last_seen": "2026-05-08T16:42:31.085018",
       "first_seen": "2026-05-02T10:26:28.372431"
     },
     {
@@ -575,7 +799,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690008",
+      "last_seen": "2026-05-08T16:42:31.085030",
       "first_seen": "2026-05-02T10:26:28.372489"
     },
     {
@@ -589,7 +813,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690043",
+      "last_seen": "2026-05-08T16:42:31.085040",
       "first_seen": "2026-05-02T10:26:28.372551"
     },
     {
@@ -603,7 +827,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690077",
+      "last_seen": "2026-05-08T16:42:31.085051",
       "first_seen": "2026-05-02T10:26:28.372629"
     },
     {
@@ -617,7 +841,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690101",
+      "last_seen": "2026-05-08T16:42:31.085062",
       "first_seen": "2026-05-02T10:26:28.372682"
     },
     {
@@ -631,7 +855,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690136",
+      "last_seen": "2026-05-08T16:42:31.085072",
       "first_seen": "2026-05-02T10:26:28.372750"
     },
     {
@@ -645,7 +869,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690163",
+      "last_seen": "2026-05-08T16:42:31.085082",
       "first_seen": "2026-05-02T10:26:28.372815"
     },
     {
@@ -659,7 +883,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690187",
+      "last_seen": "2026-05-08T16:42:31.085092",
       "first_seen": "2026-05-02T10:26:28.372879"
     },
     {
@@ -673,7 +897,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690214",
+      "last_seen": "2026-05-08T16:42:31.085102",
       "first_seen": "2026-05-02T10:26:28.372942"
     },
     {
@@ -687,7 +911,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690239",
+      "last_seen": "2026-05-08T16:42:31.085112",
       "first_seen": "2026-05-02T10:26:28.372998"
     },
     {
@@ -701,7 +925,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690265",
+      "last_seen": "2026-05-08T16:42:31.085123",
       "first_seen": "2026-05-02T10:26:28.373065"
     },
     {
@@ -715,7 +939,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690290",
+      "last_seen": "2026-05-08T16:42:31.085133",
       "first_seen": "2026-05-02T10:26:28.373122"
     },
     {
@@ -729,7 +953,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690372",
+      "last_seen": "2026-05-08T16:42:31.085143",
       "first_seen": "2026-05-02T10:26:28.373182"
     },
     {
@@ -743,7 +967,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690404",
+      "last_seen": "2026-05-08T16:42:31.085153",
       "first_seen": "2026-05-02T10:26:28.373242"
     },
     {
@@ -757,7 +981,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690430",
+      "last_seen": "2026-05-08T16:42:31.085163",
       "first_seen": "2026-05-02T10:26:28.373299"
     },
     {
@@ -771,7 +995,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690456",
+      "last_seen": "2026-05-08T16:42:31.085172",
       "first_seen": "2026-05-02T10:26:28.373356"
     },
     {
@@ -785,7 +1009,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690481",
+      "last_seen": "2026-05-08T16:42:31.085182",
       "first_seen": "2026-05-02T10:26:28.373415"
     },
     {
@@ -799,7 +1023,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690506",
+      "last_seen": "2026-05-08T16:42:31.085191",
       "first_seen": "2026-05-02T10:26:28.373472"
     },
     {
@@ -813,7 +1037,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690531",
+      "last_seen": "2026-05-08T16:42:31.085201",
       "first_seen": "2026-05-02T10:26:28.373526"
     },
     {
@@ -827,7 +1051,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:09.690555",
+      "last_seen": "2026-05-08T16:42:31.085212",
       "first_seen": "2026-05-02T10:26:28.373603"
     },
     {
@@ -841,7 +1065,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:34.132227",
+      "last_seen": "2026-05-08T16:42:32.053089",
       "first_seen": "2026-05-02T10:26:52.793806"
     },
     {
@@ -855,7 +1079,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:34.132278",
+      "last_seen": "2026-05-08T16:42:32.053138",
       "first_seen": "2026-05-02T10:26:52.793902"
     },
     {
@@ -869,7 +1093,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:34.132331",
+      "last_seen": "2026-05-08T16:42:32.053152",
       "first_seen": "2026-05-02T10:26:52.793974"
     },
     {
@@ -883,7 +1107,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:34.132367",
+      "last_seen": "2026-05-08T16:42:32.053162",
       "first_seen": "2026-05-02T10:26:52.794046"
     },
     {
@@ -897,7 +1121,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:34.132397",
+      "last_seen": "2026-05-08T16:42:32.053172",
       "first_seen": "2026-05-02T10:26:52.794111"
     },
     {
@@ -911,7 +1135,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:34.132427",
+      "last_seen": "2026-05-08T16:42:32.053182",
       "first_seen": "2026-05-02T10:26:52.794171"
     },
     {
@@ -925,7 +1149,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:34.132456",
+      "last_seen": "2026-05-08T16:42:32.053193",
       "first_seen": "2026-05-02T10:26:52.794226"
     },
     {
@@ -939,7 +1163,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:34.132484",
+      "last_seen": "2026-05-08T16:42:32.053204",
       "first_seen": "2026-05-02T10:26:52.794279"
     },
     {
@@ -953,7 +1177,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:34.132513",
+      "last_seen": "2026-05-08T16:42:32.053214",
       "first_seen": "2026-05-02T10:26:52.794334"
     },
     {
@@ -967,7 +1191,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:34.132541",
+      "last_seen": "2026-05-08T16:42:32.053239",
       "first_seen": "2026-05-02T10:26:52.794387"
     },
     {
@@ -981,7 +1205,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:34.132569",
+      "last_seen": "2026-05-08T16:42:32.053251",
       "first_seen": "2026-05-02T10:26:52.794439"
     },
     {
@@ -995,7 +1219,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:34.132597",
+      "last_seen": "2026-05-08T16:42:32.053260",
       "first_seen": "2026-05-02T10:26:52.794491"
     },
     {
@@ -1009,7 +1233,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:34.132625",
+      "last_seen": "2026-05-08T16:42:32.053269",
       "first_seen": "2026-05-02T10:26:52.794552"
     },
     {
@@ -1023,7 +1247,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:34.132651",
+      "last_seen": "2026-05-08T16:42:32.053280",
       "first_seen": "2026-05-02T10:26:52.794635"
     },
     {
@@ -1037,7 +1261,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:59.434894",
+      "last_seen": "2026-05-08T16:42:32.058117",
       "first_seen": "2026-05-02T10:28:25.114022"
     },
     {
@@ -1051,7 +1275,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:59.434945",
+      "last_seen": "2026-05-08T16:42:32.058158",
       "first_seen": "2026-05-02T10:28:25.114108"
     },
     {
@@ -1065,7 +1289,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:59.434986",
+      "last_seen": "2026-05-08T16:42:32.058172",
       "first_seen": "2026-05-02T10:28:25.114166"
     },
     {
@@ -1079,7 +1303,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:59.435017",
+      "last_seen": "2026-05-08T16:42:32.058184",
       "first_seen": "2026-05-02T10:28:25.114212"
     },
     {
@@ -1093,7 +1317,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:59.435055",
+      "last_seen": "2026-05-08T16:42:32.058198",
       "first_seen": "2026-05-02T10:28:25.114251"
     },
     {
@@ -1107,7 +1331,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:59.435092",
+      "last_seen": "2026-05-08T16:42:32.058210",
       "first_seen": "2026-05-02T10:28:25.114289"
     },
     {
@@ -1121,7 +1345,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:59.435122",
+      "last_seen": "2026-05-08T16:42:32.058222",
       "first_seen": "2026-05-02T10:28:25.114336"
     },
     {
@@ -1135,7 +1359,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:59.435155",
+      "last_seen": "2026-05-08T16:42:32.058245",
       "first_seen": "2026-05-02T10:28:25.114378"
     },
     {
@@ -1149,7 +1373,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:59.435182",
+      "last_seen": "2026-05-08T16:42:32.058254",
       "first_seen": "2026-05-02T10:28:25.114420"
     },
     {
@@ -1163,7 +1387,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:59.435200",
+      "last_seen": "2026-05-08T16:42:32.058265",
       "first_seen": "2026-05-02T10:28:25.114465"
     },
     {
@@ -1177,7 +1401,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:59.435217",
+      "last_seen": "2026-05-08T16:42:32.058275",
       "first_seen": "2026-05-02T10:28:25.114506"
     },
     {
@@ -1191,7 +1415,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:59.435233",
+      "last_seen": "2026-05-08T16:42:32.058287",
       "first_seen": "2026-05-02T10:28:25.114556"
     },
     {
@@ -1205,7 +1429,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:59.435251",
+      "last_seen": "2026-05-08T16:42:32.058298",
       "first_seen": "2026-05-02T10:28:25.114617"
     },
     {
@@ -1219,7 +1443,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:59.435269",
+      "last_seen": "2026-05-08T16:42:32.058309",
       "first_seen": "2026-05-02T10:28:25.114658"
     },
     {
@@ -1233,7 +1457,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:59.435286",
+      "last_seen": "2026-05-08T16:42:32.058320",
       "first_seen": "2026-05-02T10:28:25.114715"
     },
     {
@@ -1247,7 +1471,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:59.435337",
+      "last_seen": "2026-05-08T16:42:32.058332",
       "first_seen": "2026-05-02T10:28:25.114757"
     },
     {
@@ -1261,36 +1485,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:06:59.435365",
+      "last_seen": "2026-05-08T16:42:32.058343",
       "first_seen": "2026-05-02T10:28:25.114796"
-    },
-    {
-      "title": "Dragon Ball SCG Masters - UB05 Booster Box - B32",
-      "shop": "Gamerz Paradize (booster boxen)",
-      "country": "NL",
-      "price": "€99,99",
-      "price_num": 99.99,
-      "stock_status": "unknown",
-      "url": "https://gamerzparadize.nl/en/products/dragon-ball-scg-masters-ub05-booster-box-b32",
-      "priority": null,
-      "priority_series": null,
-      "deep_checked": false,
-      "last_seen": "2026-05-08T16:10:35.640469",
-      "first_seen": "2026-05-02T10:31:58.092559"
-    },
-    {
-      "title": "Dragon Ball Super Card Game - Fusion World Special Booster Box",
-      "shop": "Gamerz Paradize (booster boxen)",
-      "country": "NL",
-      "price": "€109,99",
-      "price_num": 109.99,
-      "stock_status": "unknown",
-      "url": "https://gamerzparadize.nl/en/products/dragon-ball-super-card-game-fusion-world-special-booster-box",
-      "priority": null,
-      "priority_series": null,
-      "deep_checked": false,
-      "last_seen": "2026-05-08T16:10:57.338061",
-      "first_seen": "2026-05-02T10:32:19.843259"
     },
     {
       "title": "Dragon Ball Super Boosterbox - Fusion World FB03 Raging Roar",
@@ -1303,7 +1499,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:11:09.807794",
+      "last_seen": "2026-05-08T16:43:10.288240",
       "first_seen": "2026-05-02T10:32:32.575620"
     },
     {
@@ -1317,7 +1513,7 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:11:09.807845",
+      "last_seen": "2026-05-08T16:43:10.288293",
       "first_seen": "2026-05-02T10:32:32.575684"
     },
     {
@@ -1331,22 +1527,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:11:09.807885",
+      "last_seen": "2026-05-08T16:43:10.288309",
       "first_seen": "2026-05-02T10:32:32.575735"
-    },
-    {
-      "title": "Dragon Ball Super Card Game Fusion World SP01 Special Booster Display 01 Box 20 Packs ENG",
-      "shop": "OnyTCG (Fusion World preorders)",
-      "country": "IT",
-      "price": "Prijs onbekend",
-      "price_num": null,
-      "stock_status": "preorder",
-      "url": "https://onytcg.com/en/prodotto/dragon-ball-super-card-game-fusion-world-sp01-special-booster-display-01-box-20-packs-eng",
-      "priority": null,
-      "priority_series": null,
-      "deep_checked": false,
-      "last_seen": "2026-05-08T16:13:12.523769",
-      "first_seen": "2026-05-08T16:13:12.523775"
     },
     {
       "title": "Dragon Ball FB09 Dual Evolution Booster Box 24 Packs JP Fusion World| Il Nuovo Mondo Shop",
@@ -1359,8 +1541,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:13:39.593271",
-      "first_seen": "2026-05-08T16:13:39.593276"
+      "last_seen": "2026-05-08T16:43:45.103035",
+      "first_seen": "2026-05-08T15:36:29.395640"
     },
     {
       "title": "Dragon Ball Fusion World FB-11 Booster Box 24 Packs TCG | Il Nuovo Mondo Shop",
@@ -1373,8 +1555,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:13:39.593434",
-      "first_seen": "2026-05-08T16:13:39.593440"
+      "last_seen": "2026-05-08T16:43:45.103086",
+      "first_seen": "2026-05-08T15:36:29.395735"
     },
     {
       "title": "DRAGON BALL FUSION WORLD - Ultra Limit FB-04 - Display of 24 Packs (ENG) | Il Nuovo Mondo Shop",
@@ -1387,8 +1569,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:13:39.593531",
-      "first_seen": "2026-05-08T16:13:39.593534"
+      "last_seen": "2026-05-08T16:43:45.103102",
+      "first_seen": "2026-05-08T15:36:29.395827"
     },
     {
       "title": "DRAGON BALL FUSION WORLD - Raging Roar FB-03 - Display of 24 Packs (ENG) | Il Nuovo Mondo Shop",
@@ -1401,8 +1583,50 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:13:39.593634",
-      "first_seen": "2026-05-08T16:13:39.593639"
+      "last_seen": "2026-05-08T16:43:45.103115",
+      "first_seen": "2026-05-08T15:36:29.395900"
+    },
+    {
+      "title": "Dragon Ball Super Card Game Fusion World SP01 Special Booster Display 01 Box 20 Packs ENG",
+      "shop": "OnyTCG (Fusion World preorders)",
+      "country": "IT",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "preorder",
+      "url": "https://onytcg.com/en/prodotto/dragon-ball-super-card-game-fusion-world-sp01-special-booster-display-01-box-20-packs-eng",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T16:43:46.768542",
+      "first_seen": "2026-05-08T15:36:03.556325"
+    },
+    {
+      "title": "Dragon Ball SCG Masters - UB05 Booster Box - B32",
+      "shop": "Gamerz Paradize (booster boxen)",
+      "country": "NL",
+      "price": "€99,99",
+      "price_num": 99.99,
+      "stock_status": "unknown",
+      "url": "https://gamerzparadize.nl/en/products/dragon-ball-scg-masters-ub05-booster-box-b32",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T16:44:02.508994",
+      "first_seen": "2026-05-02T10:31:58.092559"
+    },
+    {
+      "title": "Dragon Ball Super Card Game - Fusion World Special Booster Box",
+      "shop": "Gamerz Paradize (booster boxen)",
+      "country": "NL",
+      "price": "€109,99",
+      "price_num": 109.99,
+      "stock_status": "unknown",
+      "url": "https://gamerzparadize.nl/en/products/dragon-ball-super-card-game-fusion-world-special-booster-box",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T16:44:02.509044",
+      "first_seen": "2026-05-02T10:32:19.843259"
     },
     {
       "title": "Dragon Ball Super CG Fusion World - Ultra Limit (FB04) - Booster Box (24x Packs)",
@@ -1415,8 +1639,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:15:41.823936",
-      "first_seen": "2026-05-08T16:15:41.823941"
+      "last_seen": "2026-05-08T16:44:24.153730",
+      "first_seen": "2026-05-08T15:38:30.543975"
     },
     {
       "title": "Dragon Ball Super CG Fusion World - Raging Roar (FB03) - Booster Box (24x packs)",
@@ -1429,8 +1653,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:15:41.824076",
-      "first_seen": "2026-05-08T16:15:41.824081"
+      "last_seen": "2026-05-08T16:44:24.153781",
+      "first_seen": "2026-05-08T15:38:30.544063"
     },
     {
       "title": "Dragon Ball Super CG Fusion World - New Adventure (FB05) - Booster Box (24x Packs)",
@@ -1443,8 +1667,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:15:41.824165",
-      "first_seen": "2026-05-08T16:15:41.824169"
+      "last_seen": "2026-05-08T16:44:24.153795",
+      "first_seen": "2026-05-08T15:38:30.544129"
     },
     {
       "title": "Dragon Ball Super CG Fusion World - Blazing Aura (FB02) - Booster Box (24x Packs)",
@@ -1457,8 +1681,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:15:41.824257",
-      "first_seen": "2026-05-08T16:15:41.824263"
+      "last_seen": "2026-05-08T16:44:24.153806",
+      "first_seen": "2026-05-08T15:38:30.544199"
     },
     {
       "title": "Dragon Ball Super CG Fusion World - Manga Booster (SB01) - Booster Box (24x Packs)",
@@ -1471,8 +1695,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:15:41.824371",
-      "first_seen": "2026-05-08T16:15:41.824376"
+      "last_seen": "2026-05-08T16:44:24.153818",
+      "first_seen": "2026-05-08T15:38:30.544262"
     },
     {
       "title": "Dragon Ball Super CG Masters - Ultra-Bout Series Set 01 - Prismatic Clash (B28) - Booster Box (24x Packs)",
@@ -1485,8 +1709,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:15:41.824478",
-      "first_seen": "2026-05-08T16:15:41.824482"
+      "last_seen": "2026-05-08T16:44:24.153828",
+      "first_seen": "2026-05-08T15:38:30.544353"
     },
     {
       "title": "Dragon Ball Super CG Fusion World - Rivals Clash (FB06) - Booster Box (24x Packs)",
@@ -1499,8 +1723,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:15:41.824548",
-      "first_seen": "2026-05-08T16:15:41.824552"
+      "last_seen": "2026-05-08T16:44:24.153840",
+      "first_seen": "2026-05-08T15:38:30.544412"
     },
     {
       "title": "Dragon Ball Super CG Masters  - Ultra-Bout Series Set 02 - Fearsome Rivals (B29) - Booster Box (24x Packs)",
@@ -1513,8 +1737,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:15:41.824641",
-      "first_seen": "2026-05-08T16:15:41.824644"
+      "last_seen": "2026-05-08T16:44:24.153850",
+      "first_seen": "2026-05-08T15:38:30.544493"
     },
     {
       "title": "Dragon Ball Super CG - Masters - Mythic Booster (MB-01) - Booster Box (24x Packs)",
@@ -1527,8 +1751,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:15:41.824721",
-      "first_seen": "2026-05-08T16:15:41.824724"
+      "last_seen": "2026-05-08T16:44:24.153861",
+      "first_seen": "2026-05-08T15:38:30.544572"
     },
     {
       "title": "Dragon Ball Super CG Fusion World - Saiyan's Pride (FB08) - Booster Box (24x Packs)",
@@ -1541,8 +1765,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:15:41.824796",
-      "first_seen": "2026-05-08T16:15:41.824799"
+      "last_seen": "2026-05-08T16:44:24.153871",
+      "first_seen": "2026-05-08T15:38:30.544636"
     },
     {
       "title": "Dragon Ball Super CG Fusion World - Awakened Pulse (FB01) - Booster Box (24x Packs)",
@@ -1555,8 +1779,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:15:41.824866",
-      "first_seen": "2026-05-08T16:15:41.824869"
+      "last_seen": "2026-05-08T16:44:24.153879",
+      "first_seen": "2026-05-08T15:38:30.544691"
     },
     {
       "title": "Dragon Ball Super CG Fusion World - Manga Booster (SB02) - Booster Box (24x Packs)",
@@ -1569,8 +1793,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:15:41.824940",
-      "first_seen": "2026-05-08T16:15:41.824943"
+      "last_seen": "2026-05-08T16:44:24.153885",
+      "first_seen": "2026-05-08T15:38:30.544746"
     },
     {
       "title": "Dragon Ball Fusion World – Booster Box [FB11] (Preorder)",
@@ -1583,106 +1807,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:16:53.488834",
-      "first_seen": "2026-05-08T16:16:53.488841"
-    },
-    {
-      "title": "Dragon Ball Super CG: Masters - Booster Box - Ultra Bout #3 (B30)",
-      "shop": "Zatu",
-      "country": "UK",
-      "price": "Prijs onbekend",
-      "price_num": null,
-      "stock_status": "unknown",
-      "url": "https://zatu.com/products/dragon-ball-super-cg-masters-booster-box-ultra-bout-3-b30?_pos=1&_sid=2753dae91&_ss=r",
-      "priority": null,
-      "priority_series": null,
-      "deep_checked": false,
-      "last_seen": "2026-05-08T16:20:02.217078",
-      "first_seen": "2026-05-08T16:20:02.217084"
-    },
-    {
-      "title": "Dragon Ball Super CG: Fusion World - Dual Evolution - Booster Box (FB09)",
-      "shop": "Zatu",
-      "country": "UK",
-      "price": "Prijs onbekend",
-      "price_num": null,
-      "stock_status": "unknown",
-      "url": "https://zatu.com/products/dragon-ball-super-cg-booster-box-fusion-world-09-fb09?_pos=2&_sid=2753dae91&_ss=r",
-      "priority": null,
-      "priority_series": null,
-      "deep_checked": false,
-      "last_seen": "2026-05-08T16:20:02.217189",
-      "first_seen": "2026-05-08T16:20:02.217194"
-    },
-    {
-      "title": "Dragon Ball Super CG: Masters - Fearsome Rivals - Booster Box",
-      "shop": "Zatu",
-      "country": "UK",
-      "price": "Prijs onbekend",
-      "price_num": null,
-      "stock_status": "unknown",
-      "url": "https://zatu.com/products/dragon-ball-super-cg-masters-new-series-02-booster-box?_pos=5&_sid=2753dae91&_ss=r",
-      "priority": null,
-      "priority_series": null,
-      "deep_checked": false,
-      "last_seen": "2026-05-08T16:20:27.375590",
-      "first_seen": "2026-05-08T16:20:27.375594"
-    },
-    {
-      "title": "Dragon Ball Super Fusion World: Booster Box - Fusion World",
-      "shop": "Zatu",
-      "country": "UK",
-      "price": "Prijs onbekend",
-      "price_num": null,
-      "stock_status": "unknown",
-      "url": "https://zatu.com/products/dragon-ball-super-cg-booster-box-fusion-world?_pos=9&_sid=2753dae91&_ss=r",
-      "priority": null,
-      "priority_series": null,
-      "deep_checked": false,
-      "last_seen": "2026-05-08T16:20:27.375669",
-      "first_seen": "2026-05-08T16:20:27.375672"
-    },
-    {
-      "title": "Dragon Ball Super Fusion World: Manga Booster Box 01 (SB-01)",
-      "shop": "Zatu",
-      "country": "UK",
-      "price": "Prijs onbekend",
-      "price_num": null,
-      "stock_status": "unknown",
-      "url": "https://zatu.com/products/dragon-ball-super-fusion-world-manga-booster-box-01-sb-01?_pos=10&_sid=2753dae91&_ss=r",
-      "priority": null,
-      "priority_series": null,
-      "deep_checked": false,
-      "last_seen": "2026-05-08T16:20:27.375760",
-      "first_seen": "2026-05-08T16:20:27.375764"
-    },
-    {
-      "title": "Dragon Ball Super Masters: Mythic Booster (MB-01) - Booster Box",
-      "shop": "Zatu",
-      "country": "UK",
-      "price": "Prijs onbekend",
-      "price_num": null,
-      "stock_status": "unknown",
-      "url": "https://zatu.com/products/dragon-ball-super-cg-mythic-booster-mb-01-booster-box?_pos=11&_sid=2753dae91&_ss=r",
-      "priority": null,
-      "priority_series": null,
-      "deep_checked": false,
-      "last_seen": "2026-05-08T16:20:27.375853",
-      "first_seen": "2026-05-08T16:20:27.375856"
-    },
-    {
-      "title": "Dragon Ball Super CG: New Adventure - Booster Box (FB05)",
-      "shop": "Zatu",
-      "country": "UK",
-      "price": "Prijs onbekend",
-      "price_num": null,
-      "stock_status": "unknown",
-      "url": "https://zatu.com/products/dragon-ball-super-cg-fusion-world-05-booster-box-fb05?_pos=12&_sid=2753dae91&_ss=r",
-      "priority": null,
-      "priority_series": null,
-      "deep_checked": false,
-      "last_seen": "2026-05-08T16:20:27.375916",
-      "first_seen": "2026-05-08T16:20:27.375918"
+      "last_seen": "2026-05-08T16:44:56.405351",
+      "first_seen": "2026-05-08T15:39:41.866938"
     },
     {
       "title": "Dragon Ball Super CG: Booster Box B07",
@@ -1691,96 +1817,54 @@
       "price": "Prijs onbekend",
       "price_num": null,
       "stock_status": "unknown",
-      "url": "https://zatu.com/products/dragon-ball-super-cg-booster-box-b07?_pos=13&_sid=2753dae91&_ss=r",
+      "url": "https://zatu.com/en-us/products/dragon-ball-super-cg-booster-box-b07?_pos=1&_sid=e9e11a1cd&_ss=r",
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:20:27.375980",
-      "first_seen": "2026-05-08T16:20:27.375985"
+      "last_seen": "2026-05-08T16:45:15.312753",
+      "first_seen": "2026-05-08T16:45:15.312795"
     },
     {
-      "title": "Dragon Ball Super Masters: Power Absorbed (BT20) - Booster Box",
+      "title": "Dragon Ball Super Fusion World: Manga Booster Box 01 (SB-01)",
       "shop": "Zatu",
       "country": "UK",
       "price": "Prijs onbekend",
       "price_num": null,
       "stock_status": "unknown",
-      "url": "https://zatu.com/products/dragon-ball-super-cg-booster-box-zenkai-series-set-03-b20?_pos=15&_sid=2753dae91&_ss=r",
+      "url": "https://zatu.com/en-us/products/dragon-ball-super-fusion-world-manga-booster-box-01-sb-01?_pos=2&_sid=e9e11a1cd&_ss=r",
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:20:27.376079",
-      "first_seen": "2026-05-08T16:20:27.376083"
+      "last_seen": "2026-05-08T16:45:15.312843",
+      "first_seen": "2026-05-08T16:45:15.312860"
     },
     {
-      "title": "Dragon Ball Super Fusion World: Rivals Clash (FB06) - Booster Box",
+      "title": "Dragon Ball Super Masters: Mythic Booster (MB-01) - Booster Box",
       "shop": "Zatu",
       "country": "UK",
       "price": "Prijs onbekend",
       "price_num": null,
       "stock_status": "unknown",
-      "url": "https://zatu.com/products/dragon-ball-super-fusion-world-fusion-world-06-booster-box-fb06?_pos=17&_sid=2753dae91&_ss=r",
+      "url": "https://zatu.com/en-us/products/dragon-ball-super-cg-mythic-booster-mb-01-booster-box?_pos=4&_sid=e9e11a1cd&_ss=r",
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:20:27.376163",
-      "first_seen": "2026-05-08T16:20:27.376168"
+      "last_seen": "2026-05-08T16:45:15.312896",
+      "first_seen": "2026-05-08T16:45:15.312909"
     },
     {
-      "title": "Dragon Ball Super Masters: Beyond Generations (BT24) - Booster Box",
+      "title": "Dragon Ball Super Fusion World: Wish For Shenron (FB07) - Booster Box",
       "shop": "Zatu",
       "country": "UK",
       "price": "Prijs onbekend",
       "price_num": null,
       "stock_status": "unknown",
-      "url": "https://zatu.com/products/dragon-ball-super-cg-masters-zenkai-series-ex-set-07-booster-box-b24?_pos=18&_sid=2753dae91&_ss=r",
+      "url": "https://zatu.com/en-us/products/dragon-ball-super-fusion-world-fb07-booster-box?_pos=6&_sid=e9e11a1cd&_ss=r",
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:20:27.376245",
-      "first_seen": "2026-05-08T16:20:27.376249"
-    },
-    {
-      "title": "Dragon Ball Super Masters: Realm Of Gods (BT16) - Booster Box",
-      "shop": "Zatu",
-      "country": "UK",
-      "price": "Prijs onbekend",
-      "price_num": null,
-      "stock_status": "unknown",
-      "url": "https://zatu.com/products/dragon-ball-super-cg-uw07-b16-booster-box?_pos=19&_sid=2753dae91&_ss=r",
-      "priority": null,
-      "priority_series": null,
-      "deep_checked": false,
-      "last_seen": "2026-05-08T16:20:27.376409",
-      "first_seen": "2026-05-08T16:20:27.376414"
-    },
-    {
-      "title": "Dragon Ball Super Masters: Critical Blow (BT22) - Booster Box",
-      "shop": "Zatu",
-      "country": "UK",
-      "price": "Prijs onbekend",
-      "price_num": null,
-      "stock_status": "unknown",
-      "url": "https://zatu.com/products/dragon-ball-super-cg-zenkai-series-set-05-b22-booster-box?_pos=22&_sid=2753dae91&_ss=r",
-      "priority": null,
-      "priority_series": null,
-      "deep_checked": false,
-      "last_seen": "2026-05-08T16:20:27.376502",
-      "first_seen": "2026-05-08T16:20:27.376507"
-    },
-    {
-      "title": "Dragon Ball Super CG: Booster Box - Fusion World 02 (FB02)",
-      "shop": "Zatu",
-      "country": "UK",
-      "price": "Prijs onbekend",
-      "price_num": null,
-      "stock_status": "unknown",
-      "url": "https://zatu.com/products/dragon-ball-super-cg-booster-box-fusion-world-02-fb02?_pos=23&_sid=2753dae91&_ss=r",
-      "priority": null,
-      "priority_series": null,
-      "deep_checked": false,
-      "last_seen": "2026-05-08T16:20:27.376603",
-      "first_seen": "2026-05-08T16:20:27.376607"
+      "last_seen": "2026-05-08T16:45:15.312941",
+      "first_seen": "2026-05-08T16:45:15.312953"
     },
     {
       "title": "Dragon Ball Super CG: Booster Box - Fusion World 08 (FB08)",
@@ -1789,12 +1873,166 @@
       "price": "Prijs onbekend",
       "price_num": null,
       "stock_status": "unknown",
-      "url": "https://zatu.com/products/dragon-ball-super-cg-booster-box-fusion-world-08-fb08?_pos=24&_sid=2753dae91&_ss=r",
+      "url": "https://zatu.com/en-us/products/dragon-ball-super-cg-booster-box-fusion-world-08-fb08?_pos=7&_sid=e9e11a1cd&_ss=r",
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:20:27.376683",
-      "first_seen": "2026-05-08T16:20:27.376688"
+      "last_seen": "2026-05-08T16:45:15.312980",
+      "first_seen": "2026-05-08T16:45:15.312991"
+    },
+    {
+      "title": "Dragon Ball Super Masters: Power Absorbed (BT20) - Booster Box",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/en-us/products/dragon-ball-super-cg-booster-box-zenkai-series-set-03-b20?_pos=8&_sid=e9e11a1cd&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T16:45:15.313019",
+      "first_seen": "2026-05-08T16:45:15.313029"
+    },
+    {
+      "title": "Dragon Ball Super CG: Masters - Fearsome Rivals - Booster Box",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/en-us/products/dragon-ball-super-cg-masters-new-series-02-booster-box?_pos=9&_sid=e9e11a1cd&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T16:45:15.313056",
+      "first_seen": "2026-05-08T16:45:15.313067"
+    },
+    {
+      "title": "Dragon Ball Super CG: New Adventure - Booster Box (FB05)",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/en-us/products/dragon-ball-super-cg-fusion-world-05-booster-box-fb05?_pos=10&_sid=e9e11a1cd&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T16:45:15.313095",
+      "first_seen": "2026-05-08T16:45:15.313107"
+    },
+    {
+      "title": "Dragon Ball Super CG: Booster Box - Fusion World 02 (FB02)",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/en-us/products/dragon-ball-super-cg-booster-box-fusion-world-02-fb02?_pos=12&_sid=e9e11a1cd&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T16:45:15.313136",
+      "first_seen": "2026-05-08T16:45:15.313155"
+    },
+    {
+      "title": "Dragon Ball Super Fusion World: Rivals Clash (FB06) - Booster Box",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/en-us/products/dragon-ball-super-fusion-world-fusion-world-06-booster-box-fb06?_pos=13&_sid=e9e11a1cd&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T16:45:15.313195",
+      "first_seen": "2026-05-08T16:45:15.313209"
+    },
+    {
+      "title": "Dragon Ball Super Masters: Critical Blow (BT22) - Booster Box",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/en-us/products/dragon-ball-super-cg-zenkai-series-set-05-b22-booster-box?_pos=15&_sid=e9e11a1cd&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T16:45:15.313285",
+      "first_seen": "2026-05-08T16:45:15.313299"
+    },
+    {
+      "title": "Dragon Ball Super Masters: Beyond Generations (BT24) - Booster Box",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/en-us/products/dragon-ball-super-cg-masters-zenkai-series-ex-set-07-booster-box-b24?_pos=16&_sid=e9e11a1cd&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T16:45:15.313335",
+      "first_seen": "2026-05-08T16:45:15.313348"
+    },
+    {
+      "title": "Dragon Ball Super CG: Fusion World - Dual Evolution - Booster Box (FB09)",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/en-us/products/dragon-ball-super-cg-booster-box-fusion-world-09-fb09?_pos=18&_sid=e9e11a1cd&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T16:45:15.313383",
+      "first_seen": "2026-05-08T16:45:15.313396"
+    },
+    {
+      "title": "Dragon Ball Super Masters: Realm Of Gods (BT16) - Booster Box",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/en-us/products/dragon-ball-super-cg-uw07-b16-booster-box?_pos=19&_sid=e9e11a1cd&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T16:45:15.313430",
+      "first_seen": "2026-05-08T16:45:15.313442"
+    },
+    {
+      "title": "Dragon Ball Super Fusion World: Booster Box - Fusion World",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/en-us/products/dragon-ball-super-cg-booster-box-fusion-world?_pos=22&_sid=e9e11a1cd&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T16:45:15.313473",
+      "first_seen": "2026-05-08T16:45:15.313485"
+    },
+    {
+      "title": "Dragon Ball Super Fusion World: Ultra Limit (FB04) - Booster Box",
+      "shop": "Zatu",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://zatu.com/en-us/products/dragon-ball-super-cg-booster-box-fusion-world-04-fb04?_pos=23&_sid=e9e11a1cd&_ss=r",
+      "priority": null,
+      "priority_series": null,
+      "deep_checked": false,
+      "last_seen": "2026-05-08T16:45:15.313515",
+      "first_seen": "2026-05-08T16:45:15.313526"
     },
     {
       "title": "PREORDER - DRAGON BALL MASTERS B32 BOOSTER BOX - ENGLISH (SEALED)",
@@ -1807,8 +2045,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:20:51.695326",
-      "first_seen": "2026-05-08T16:20:51.695332"
+      "last_seen": "2026-05-08T16:45:43.036190",
+      "first_seen": "2026-05-08T15:43:35.688305"
     },
     {
       "title": "PREORDER -DRAGON BALL FUSION WORLD FB11 BOOSTER BOX - ENGLISH (SEALED)",
@@ -1821,8 +2059,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:20:51.695432",
-      "first_seen": "2026-05-08T16:20:51.695436"
+      "last_seen": "2026-05-08T16:45:43.036252",
+      "first_seen": "2026-05-08T15:43:35.688399"
     },
     {
       "title": "PREORDER - DRAGON BALL MASTERS B30 BOOSTER BOX - ENGLISH (SEALED)",
@@ -1835,8 +2073,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:20:51.695516",
-      "first_seen": "2026-05-08T16:20:51.695520"
+      "last_seen": "2026-05-08T16:45:43.036268",
+      "first_seen": "2026-05-08T15:43:35.688464"
     },
     {
       "title": "Dragon Ball Masters Ultra Bout Set 5 BT-32 English Booster Box - Pre-Order",
@@ -1849,8 +2087,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:22:27.572675",
-      "first_seen": "2026-05-08T16:22:27.572682"
+      "last_seen": "2026-05-08T16:46:20.106110",
+      "first_seen": "2026-05-08T15:45:10.312315"
     },
     {
       "title": "Dragon Ball Masters Ultra Bout Set 3 Three Glorious Fighters BT-30 English Booster Box",
@@ -1863,8 +2101,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:23:10.970207",
-      "first_seen": "2026-05-08T16:23:10.970210"
+      "last_seen": "2026-05-08T16:46:20.106174",
+      "first_seen": "2026-05-08T15:45:53.510650"
     },
     {
       "title": "Dragon Ball Masters Prismatic Clash BT-28 English Booster Box - Pre-Order",
@@ -1877,8 +2115,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:23:10.970377",
-      "first_seen": "2026-05-08T16:23:10.970382"
+      "last_seen": "2026-05-08T16:46:20.106184",
+      "first_seen": "2026-05-08T15:45:53.510796"
     },
     {
       "title": "Dragon Ball Fusion World English FB-09 Dual Evolution Booster Box - Pre-Order",
@@ -1891,8 +2129,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:23:10.970470",
-      "first_seen": "2026-05-08T16:23:10.970473"
+      "last_seen": "2026-05-08T16:46:20.106194",
+      "first_seen": "2026-05-08T15:45:53.510881"
     },
     {
       "title": "Dragon Ball Fusion World Saiyan’s Pride FB-08 English Booster Box",
@@ -1905,8 +2143,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:23:10.970581",
-      "first_seen": "2026-05-08T16:23:10.970584"
+      "last_seen": "2026-05-08T16:46:20.106205",
+      "first_seen": "2026-05-08T15:45:53.511009"
     },
     {
       "title": "Dragon Ball Fusion World Manga Booster 02 SB-02 English Booster Box",
@@ -1919,8 +2157,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:23:10.970678",
-      "first_seen": "2026-05-08T16:23:10.970681"
+      "last_seen": "2026-05-08T16:46:20.106216",
+      "first_seen": "2026-05-08T15:45:53.511123"
     },
     {
       "title": "Dragon Ball Fusion World Wish For Shenron FB-07 English Booster Box",
@@ -1933,8 +2171,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:23:10.970768",
-      "first_seen": "2026-05-08T16:23:10.970771"
+      "last_seen": "2026-05-08T16:46:20.106237",
+      "first_seen": "2026-05-08T15:45:53.511202"
     },
     {
       "title": "Dragon Ball Fusion World New Adventure FB-05 English Booster Box",
@@ -1947,8 +2185,8 @@
       "priority": null,
       "priority_series": null,
       "deep_checked": false,
-      "last_seen": "2026-05-08T16:23:10.970862",
-      "first_seen": "2026-05-08T16:23:10.970865"
+      "last_seen": "2026-05-08T16:46:20.106249",
+      "first_seen": "2026-05-08T15:45:53.511262"
     }
   ],
   "news": [],
@@ -3388,12 +3626,22 @@
         "stock_status": "out_of_stock"
       },
       {
-        "ts": "2026-05-08T15:52:37.157054",
+        "ts": "2026-05-08T15:16:04.135078",
         "price": 119.99,
         "stock_status": "out_of_stock"
       },
       {
-        "ts": "2026-05-08T16:10:57.337981",
+        "ts": "2026-05-08T15:33:50.111065",
+        "price": 119.99,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-08T16:30:24.336527",
+        "price": 119.99,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-08T16:44:02.509039",
         "price": 119.99,
         "stock_status": "out_of_stock"
       }
@@ -4145,12 +4393,17 @@
         "stock_status": "out_of_stock"
       },
       {
-        "ts": "2026-05-08T15:53:01.314778",
+        "ts": "2026-05-08T15:16:28.136280",
         "price": 119.95,
         "stock_status": "out_of_stock"
       },
       {
-        "ts": "2026-05-08T16:08:57.955796",
+        "ts": "2026-05-08T15:31:51.357495",
+        "price": 119.95,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-08T16:30:48.626177",
         "price": 119.95,
         "stock_status": "out_of_stock"
       }
@@ -4672,7 +4925,12 @@
         "stock_status": "out_of_stock"
       },
       {
-        "ts": "2026-05-08T15:53:31.471526",
+        "ts": "2026-05-08T15:16:57.630276",
+        "price": 109.95,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-08T16:31:18.468076",
         "price": 109.95,
         "stock_status": "out_of_stock"
       }
@@ -5194,7 +5452,12 @@
         "stock_status": "out_of_stock"
       },
       {
-        "ts": "2026-05-08T15:54:16.807915",
+        "ts": "2026-05-08T15:17:42.989910",
+        "price": 99.0,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-08T16:32:03.495740",
         "price": 99.0,
         "stock_status": "out_of_stock"
       }
@@ -6183,12 +6446,22 @@
         "stock_status": "unknown"
       },
       {
-        "ts": "2026-05-08T15:54:40.272631",
+        "ts": "2026-05-08T15:18:06.200346",
         "price": 84.99,
         "stock_status": "out_of_stock"
       },
       {
-        "ts": "2026-05-08T16:10:35.640393",
+        "ts": "2026-05-08T15:33:28.287652",
+        "price": 84.99,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-08T16:32:27.028420",
+        "price": 84.99,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-08T16:44:02.508986",
         "price": 84.99,
         "stock_status": "out_of_stock"
       }
@@ -6655,7 +6928,12 @@
         "stock_status": "unknown"
       },
       {
-        "ts": "2026-05-08T16:10:35.640479",
+        "ts": "2026-05-08T15:33:28.287721",
+        "price": 99.99,
+        "stock_status": "unknown"
+      },
+      {
+        "ts": "2026-05-08T16:44:02.509013",
         "price": 99.99,
         "stock_status": "unknown"
       }
@@ -7122,7 +7400,12 @@
         "stock_status": "unknown"
       },
       {
-        "ts": "2026-05-08T16:10:57.338071",
+        "ts": "2026-05-08T15:33:50.111148",
+        "price": 109.99,
+        "stock_status": "unknown"
+      },
+      {
+        "ts": "2026-05-08T16:44:02.509054",
         "price": 109.99,
         "stock_status": "unknown"
       }
@@ -7175,109 +7458,171 @@
         "stock_status": "unknown"
       },
       {
-        "ts": "2026-05-08T15:55:06.587824",
+        "ts": "2026-05-08T15:18:30.890633",
         "price": 200.0,
         "stock_status": "unknown"
       }
     ],
     "51594402113ced91aef1591b5bab3042": [
       {
-        "ts": "2026-05-08T15:57:00.082116",
+        "ts": "2026-05-08T15:20:21.856414",
+        "price": 149.99,
+        "stock_status": "preorder"
+      },
+      {
+        "ts": "2026-05-08T16:34:07.611585",
         "price": 149.99,
         "stock_status": "preorder"
       }
     ],
     "3dd7d9ef9474b016114400145664bd6f": [
       {
-        "ts": "2026-05-08T15:57:22.694350",
+        "ts": "2026-05-08T15:20:43.232870",
+        "price": 119.9,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-08T16:34:30.029759",
         "price": 119.9,
         "stock_status": "out_of_stock"
       }
     ],
     "1ed9b773e5640f1f19c5684683bebdd6": [
       {
-        "ts": "2026-05-08T15:58:33.693430",
+        "ts": "2026-05-08T15:21:38.544108",
+        "price": 239.0,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-08T16:35:41.379672",
         "price": 239.0,
         "stock_status": "out_of_stock"
       }
     ],
     "0269cd048a2d69cf30cb4ecf57d177db": [
       {
-        "ts": "2026-05-08T15:59:08.408690",
+        "ts": "2026-05-08T15:22:12.336137",
+        "price": 119.76,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-08T16:36:15.205013",
         "price": 119.76,
         "stock_status": "out_of_stock"
       }
     ],
     "a7eab33517fce6f7801d60bce8cb6b22": [
       {
-        "ts": "2026-05-08T15:59:35.039932",
-        "price": 199.9,
+        "ts": "2026-05-08T15:22:38.226746",
+        "price": 149.9,
+        "stock_status": "in_stock"
+      },
+      {
+        "ts": "2026-05-08T16:36:43.256689",
+        "price": 149.9,
         "stock_status": "in_stock"
       }
     ],
     "1a127c71b9052b36dbe0be02829a95ff": [
       {
-        "ts": "2026-05-08T16:00:00.863240",
+        "ts": "2026-05-08T15:23:03.928825",
+        "price": 85.0,
+        "stock_status": "preorder"
+      },
+      {
+        "ts": "2026-05-08T16:37:08.932806",
         "price": 85.0,
         "stock_status": "preorder"
       }
     ],
     "349d3ba35a0480569df36ec271947510": [
       {
-        "ts": "2026-05-08T16:00:27.839133",
+        "ts": "2026-05-08T15:23:30.122906",
+        "price": 119.99,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-08T16:37:35.112810",
         "price": 119.99,
         "stock_status": "out_of_stock"
       }
     ],
     "0d80f067d17fec07af64b6bb0d48cb22": [
       {
-        "ts": "2026-05-08T16:01:13.037119",
+        "ts": "2026-05-08T15:24:15.202501",
+        "price": 129.99,
+        "stock_status": "in_stock"
+      },
+      {
+        "ts": "2026-05-08T16:38:20.317354",
         "price": 129.99,
         "stock_status": "in_stock"
       }
     ],
     "3c0bf257aa43d31afd3de4154e2771ce": [
       {
-        "ts": "2026-05-08T16:02:01.563497",
+        "ts": "2026-05-08T15:25:03.086008",
+        "price": 149.9,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-08T16:39:07.774459",
         "price": 149.9,
         "stock_status": "out_of_stock"
       }
     ],
-    "42e019372e0fd22fadd36d7c1bda5408": [
-      {
-        "ts": "2026-05-08T16:04:10.183116",
-        "price": 172.16,
-        "stock_status": "preorder"
-      }
-    ],
     "c599df5a9e36c00f191a19642139410d": [
       {
-        "ts": "2026-05-08T16:04:35.009690",
+        "ts": "2026-05-08T15:27:30.586285",
+        "price": 108.0,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-08T16:41:40.044513",
         "price": 108.0,
         "stock_status": "out_of_stock"
       }
     ],
     "50d53f2caf06dceeffe14587dc175a26": [
       {
-        "ts": "2026-05-08T16:05:00.041389",
+        "ts": "2026-05-08T15:27:55.590401",
+        "price": 150.0,
+        "stock_status": "preorder"
+      },
+      {
+        "ts": "2026-05-08T16:42:05.022856",
         "price": 150.0,
         "stock_status": "preorder"
       }
     ],
     "2ea826578129e7043dbc4c5c9bca3733": [
       {
-        "ts": "2026-05-08T16:20:27.375525",
+        "ts": "2026-05-08T15:43:11.794193",
         "price": 162.99,
         "stock_status": "out_of_stock"
+      }
+    ],
+    "c56dec834e04bc322e9a052640bb416b": [
+      {
+        "ts": "2026-05-08T16:32:38.108477",
+        "price": 120.0,
+        "stock_status": "out_of_stock"
+      }
+    ],
+    "42e019372e0fd22fadd36d7c1bda5408": [
+      {
+        "ts": "2026-05-08T16:41:15.393462",
+        "price": 165.99,
+        "stock_status": "preorder"
       }
     ]
   },
   "stats": {
-    "total_products": 138,
+    "total_products": 155,
     "preorders": 16,
     "in_stock": 4,
-    "out_of_stock": 39,
-    "priority_hits": 35,
+    "out_of_stock": 40,
+    "priority_hits": 36,
     "news_articles": 0,
     "shops_total": 55,
     "shops_healthy": 54,
@@ -7289,8 +7634,8 @@
         "shop": "Bol.com",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 49,
-        "last_success": "2026-05-08T16:05:21.959410",
+        "consecutive_zero_results": 50,
+        "last_success": "2026-05-08T16:42:27.617156",
         "last_error": null
       },
       {
@@ -7329,8 +7674,8 @@
         "shop": "TBH Store",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 49,
-        "last_success": "2026-05-08T16:05:45.318669",
+        "consecutive_zero_results": 50,
+        "last_success": "2026-05-08T16:42:29.345976",
         "last_error": null
       },
       {
@@ -7338,7 +7683,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-08T16:06:09.689195",
+        "last_success": "2026-05-08T16:42:31.084945",
         "last_error": null
       },
       {
@@ -7346,7 +7691,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-08T16:06:34.132128",
+        "last_success": "2026-05-08T16:42:32.053079",
         "last_error": null
       },
       {
@@ -7362,55 +7707,55 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-08T16:06:59.434826",
+        "last_success": "2026-05-08T16:42:32.058109",
         "last_error": null
       },
       {
         "shop": "TF-Robots",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 49,
-        "last_success": "2026-05-08T16:07:22.942692",
+        "consecutive_zero_results": 50,
+        "last_success": "2026-05-08T16:42:51.498082",
         "last_error": null
       },
       {
         "shop": "Dracoon",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 49,
-        "last_success": "2026-05-08T16:07:46.299182",
+        "consecutive_zero_results": 50,
+        "last_success": "2026-05-08T16:42:53.229836",
         "last_error": null
       },
       {
         "shop": "TCGHaven",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 49,
-        "last_success": "2026-05-08T16:08:10.585729",
+        "consecutive_zero_results": 50,
+        "last_success": "2026-05-08T16:42:56.639318",
         "last_error": null
       },
       {
         "shop": "AlpsTCG",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 0,
-        "last_success": "2026-05-08T16:08:35.879088",
+        "consecutive_zero_results": 1,
+        "last_success": "2026-05-08T16:42:57.360711",
         "last_error": null
       },
       {
         "shop": "TcgReus",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 49,
-        "last_success": "2026-05-08T16:09:22.138498",
+        "consecutive_zero_results": 50,
+        "last_success": "2026-05-08T16:42:57.732212",
         "last_error": null
       },
       {
         "shop": "Arly Trading",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 49,
-        "last_success": "2026-05-08T16:09:48.937158",
+        "consecutive_zero_results": 50,
+        "last_success": "2026-05-08T16:43:18.603275",
         "last_error": null
       },
       {
@@ -7418,7 +7763,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-08T16:10:13.772729",
+        "last_success": "2026-05-08T16:44:02.508925",
         "last_error": null
       },
       {
@@ -7426,15 +7771,15 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-08T16:11:09.807727",
+        "last_success": "2026-05-08T16:43:10.288220",
         "last_error": null
       },
       {
         "shop": "Cardmarket",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 49,
-        "last_success": "2026-05-08T16:24:23.787776",
+        "consecutive_zero_results": 50,
+        "last_success": "2026-05-08T16:45:52.399222",
         "last_error": null
       },
       {
@@ -7449,40 +7794,40 @@
         "shop": "Magic Madhouse",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 49,
-        "last_success": "2026-05-08T16:24:37.960983",
+        "consecutive_zero_results": 50,
+        "last_success": "2026-05-08T16:45:54.836115",
         "last_error": null
       },
       {
         "shop": "Chaos Cards",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 49,
-        "last_success": "2026-05-08T16:25:01.322181",
+        "consecutive_zero_results": 50,
+        "last_success": "2026-05-08T16:46:06.920488",
         "last_error": null
       },
       {
         "shop": "Total Cards",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 49,
-        "last_success": "2026-05-08T16:25:25.842168",
+        "consecutive_zero_results": 50,
+        "last_success": "2026-05-08T16:46:17.641985",
         "last_error": null
       },
       {
         "shop": "Fantasywelt",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 49,
-        "last_success": "2026-05-08T16:25:49.336878",
+        "consecutive_zero_results": 50,
+        "last_success": "2026-05-08T16:46:16.390030",
         "last_error": null
       },
       {
         "shop": "Amazon.nl",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 49,
-        "last_success": "2026-05-08T16:26:11.160167",
+        "consecutive_zero_results": 50,
+        "last_success": "2026-05-08T16:46:17.331171",
         "last_error": null
       },
       {
@@ -7497,40 +7842,40 @@
         "shop": "Amazon.co.uk",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 49,
-        "last_success": "2026-05-08T16:26:33.183162",
+        "consecutive_zero_results": 50,
+        "last_success": "2026-05-08T16:46:29.072666",
         "last_error": null
       },
       {
         "shop": "Nin-Nin-Game",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 3,
-        "last_success": "2026-05-08T16:11:33.260005",
+        "consecutive_zero_results": 4,
+        "last_success": "2026-05-08T16:43:21.441822",
         "last_error": null
       },
       {
         "shop": "4X Trading",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 3,
-        "last_success": "2026-05-08T16:11:57.881647",
+        "consecutive_zero_results": 4,
+        "last_success": "2026-05-08T16:43:23.249417",
         "last_error": null
       },
       {
         "shop": "Hobby Genki",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 3,
-        "last_success": "2026-05-08T16:12:21.233424",
+        "consecutive_zero_results": 4,
+        "last_success": "2026-05-08T16:43:34.007720",
         "last_error": null
       },
       {
         "shop": "Master of Games",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 1,
-        "last_success": "2026-05-08T16:12:47.596086",
+        "consecutive_zero_results": 2,
+        "last_success": "2026-05-08T16:43:45.599615",
         "last_error": null
       },
       {
@@ -7538,7 +7883,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-08T16:13:12.523688",
+        "last_success": "2026-05-08T16:43:46.768536",
         "last_error": null
       },
       {
@@ -7546,39 +7891,39 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-08T16:13:39.593199",
+        "last_success": "2026-05-08T16:43:45.103029",
         "last_error": null
       },
       {
         "shop": "GameTrade",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 1,
-        "last_success": "2026-05-08T16:14:04.788862",
+        "consecutive_zero_results": 2,
+        "last_success": "2026-05-08T16:43:59.575270",
         "last_error": null
       },
       {
         "shop": "WonderClub",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 1,
-        "last_success": "2026-05-08T16:14:28.614615",
+        "consecutive_zero_results": 2,
+        "last_success": "2026-05-08T16:44:09.282662",
         "last_error": null
       },
       {
         "shop": "Jap-One",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 1,
-        "last_success": "2026-05-08T16:14:52.786624",
+        "consecutive_zero_results": 2,
+        "last_success": "2026-05-08T16:44:10.446610",
         "last_error": null
       },
       {
         "shop": "Aquitaz",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 1,
-        "last_success": "2026-05-08T16:15:16.996126",
+        "consecutive_zero_results": 2,
+        "last_success": "2026-05-08T16:44:11.740515",
         "last_error": null
       },
       {
@@ -7586,15 +7931,15 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-08T16:15:41.823856",
+        "last_success": "2026-05-08T16:44:24.153723",
         "last_error": null
       },
       {
         "shop": "Zavvi (Dragon Ball)",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 1,
-        "last_success": "2026-05-08T16:16:06.604886",
+        "consecutive_zero_results": 2,
+        "last_success": "2026-05-08T16:44:11.868542",
         "last_error": null
       },
       {
@@ -7602,71 +7947,71 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-08T16:16:31.445040",
+        "last_success": "2026-05-08T16:44:56.405292",
         "last_error": null
       },
       {
         "shop": "Games Island",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 1,
-        "last_success": "2026-05-08T16:17:05.272176",
+        "consecutive_zero_results": 2,
+        "last_success": "2026-05-08T16:44:22.881003",
         "last_error": null
       },
       {
         "shop": "Loot Cave",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 1,
-        "last_success": "2026-05-08T16:17:30.105059",
+        "consecutive_zero_results": 2,
+        "last_success": "2026-05-08T16:44:37.223848",
         "last_error": null
       },
       {
         "shop": "PT Merch",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 1,
-        "last_success": "2026-05-08T16:17:55.001832",
+        "consecutive_zero_results": 2,
+        "last_success": "2026-05-08T16:44:37.517290",
         "last_error": null
       },
       {
         "shop": "Gathering Games",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 1,
-        "last_success": "2026-05-08T16:18:19.956770",
+        "consecutive_zero_results": 2,
+        "last_success": "2026-05-08T16:44:47.946373",
         "last_error": null
       },
       {
         "shop": "Firestorm Games",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 1,
-        "last_success": "2026-05-08T16:18:33.505257",
+        "consecutive_zero_results": 2,
+        "last_success": "2026-05-08T16:44:48.111594",
         "last_error": null
       },
       {
         "shop": "Flevance",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 1,
-        "last_success": "2026-05-08T16:18:57.704729",
+        "consecutive_zero_results": 2,
+        "last_success": "2026-05-08T16:45:01.702549",
         "last_error": null
       },
       {
         "shop": "TCG Store IT",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 1,
-        "last_success": "2026-05-08T16:19:22.668750",
+        "consecutive_zero_results": 2,
+        "last_success": "2026-05-08T16:45:02.866209",
         "last_error": null
       },
       {
         "shop": "Card Treasure",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 1,
-        "last_success": "2026-05-08T16:19:46.844245",
+        "consecutive_zero_results": 2,
+        "last_success": "2026-05-08T16:45:12.531460",
         "last_error": null
       },
       {
@@ -7674,7 +8019,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-08T16:20:02.217008",
+        "last_success": "2026-05-08T16:45:15.312745",
         "last_error": null
       },
       {
@@ -7682,23 +8027,23 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-08T16:20:51.695229",
+        "last_success": "2026-05-08T16:45:43.036182",
         "last_error": null
       },
       {
         "shop": "CarteMagic",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 1,
-        "last_success": "2026-05-08T16:21:37.969517",
+        "consecutive_zero_results": 2,
+        "last_success": "2026-05-08T16:45:26.174190",
         "last_error": null
       },
       {
         "shop": "Anime World GR",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 1,
-        "last_success": "2026-05-08T16:22:03.527935",
+        "consecutive_zero_results": 2,
+        "last_success": "2026-05-08T16:45:28.590513",
         "last_error": null
       },
       {
@@ -7706,23 +8051,23 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-08T16:22:27.572591",
+        "last_success": "2026-05-08T16:46:20.106103",
         "last_error": null
       },
       {
         "shop": "Cardoreum",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 1,
-        "last_success": "2026-05-08T16:23:35.449924",
+        "consecutive_zero_results": 2,
+        "last_success": "2026-05-08T16:45:40.031706",
         "last_error": null
       },
       {
         "shop": "Fantasy Sphere",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 1,
-        "last_success": "2026-05-08T16:24:00.380492",
+        "consecutive_zero_results": 2,
+        "last_success": "2026-05-08T16:45:51.385661",
         "last_error": null
       }
     ],
@@ -7755,7 +8100,7 @@
         "shop": "Dracoon",
         "id": "FB10",
         "consecutive_unknown": 103,
-        "consecutive_failures": 2,
+        "consecutive_failures": 3,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
@@ -7795,7 +8140,7 @@
         "shop": "Hobby Genki",
         "id": "ST01",
         "consecutive_unknown": 1,
-        "consecutive_failures": 2,
+        "consecutive_failures": 3,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
@@ -7803,14 +8148,14 @@
         "shop": "Hobby Genki (JP)",
         "id": "FB10",
         "consecutive_unknown": 1,
-        "consecutive_failures": 2,
+        "consecutive_failures": 3,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
       {
         "shop": "Nin-Nin-Game",
         "id": "FB10",
-        "consecutive_unknown": 3,
+        "consecutive_unknown": 4,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -7820,7 +8165,7 @@
         "id": "BT31",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-05-08T15:56:58.290896",
+        "last_buyable": "2026-05-08T16:34:05.875355",
         "last_error": null
       },
       {
@@ -7836,13 +8181,13 @@
         "id": "FB10",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-05-08T15:57:45.671185",
+        "last_buyable": "2026-05-08T16:34:52.958746",
         "last_error": null
       },
       {
         "shop": "WonderClub",
         "id": "FB10",
-        "consecutive_unknown": 1,
+        "consecutive_unknown": 2,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -7858,7 +8203,7 @@
       {
         "shop": "Aquitaz",
         "id": "FB10",
-        "consecutive_unknown": 1,
+        "consecutive_unknown": 2,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -7876,7 +8221,7 @@
         "id": "FB10",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-05-08T15:59:32.128669",
+        "last_buyable": "2026-05-08T16:36:40.400352",
         "last_error": null
       },
       {
@@ -7884,7 +8229,7 @@
         "id": "FB10",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-05-08T15:59:58.462534",
+        "last_buyable": "2026-05-08T16:37:06.597071",
         "last_error": null
       },
       {
@@ -7899,7 +8244,7 @@
         "shop": "Firestorm Games",
         "id": "BT31",
         "consecutive_unknown": 0,
-        "consecutive_failures": 1,
+        "consecutive_failures": 2,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
@@ -7908,7 +8253,7 @@
         "id": "BT31",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-05-08T16:01:11.228495",
+        "last_buyable": "2026-05-08T16:38:18.535934",
         "last_error": null
       },
       {
@@ -7916,7 +8261,7 @@
         "id": "FB10",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-05-08T16:01:35.130678",
+        "last_buyable": "2026-05-08T16:38:42.234306",
         "last_error": null
       },
       {
@@ -7948,13 +8293,13 @@
         "id": "FB10",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-05-08T16:03:17.626599",
+        "last_buyable": "2026-05-08T16:40:23.095704",
         "last_error": null
       },
       {
         "shop": "CarteMagic",
         "id": "FB10",
-        "consecutive_unknown": 1,
+        "consecutive_unknown": 2,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -7964,7 +8309,7 @@
         "id": "FB10",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-05-08T16:04:07.856196",
+        "last_buyable": "2026-05-08T16:41:13.151198",
         "last_error": null
       },
       {
@@ -7980,7 +8325,15 @@
         "id": "FB10",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-05-08T16:04:57.829676",
+        "last_buyable": "2026-05-08T16:42:03.009506",
+        "last_error": null
+      },
+      {
+        "shop": "PenguinTCG",
+        "id": "ST01",
+        "consecutive_unknown": 0,
+        "consecutive_failures": 0,
+        "last_buyable": null,
         "last_error": null
       }
     ]
@@ -8003,7 +8356,8 @@
         "buying_options": [
           "FIXED_PRICE"
         ],
-        "first_seen": "2026-05-08T16:28:20.414823"
+        "first_seen": "2026-05-08T15:50:57.778693",
+        "last_seen": "2026-05-08T16:47:39.725138"
       },
       {
         "item_id": "v1|366395139420|0",
@@ -8011,7 +8365,7 @@
         "title": "PRESALE Dragon Ball DBSCG Fusion World CROSS FORCE Sealed BOX in Japanese NEW",
         "price_value": 98.23,
         "price_currency": "EUR",
-        "url": "https://www.ebay.nl/itm/366395139420?_skw=dragon+ball+fusion+world+fb10&hash=item554eda255c:g:nKEAAeSwDgxp~SWz&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGYxyreWj%2BpEMO%2B1fIjgYetC97OCMx5IFHAHoabTq%2BzTz%2FJ8cp%2B348DLQc1dZZnEdcafL%2F0gLdK1OIRSyNuDL49EWgUT7AQH6yOg2k4E4%2F3qgk3cKo3sc2Uyzsv6mveWc%2FjidUqz1RIHKOCxpFKStuLuNxsfuctoLNcrxo%2B1A5Q81YDXbsc8sS3J6xPvGj%2FO5FM%2BSjjw0NiVWuES22d3m920CTKxeTl7VUPZpkNGVvYgjIsuPK1nt448VRGcWN1EknmyFqo7fvFZ1YeTVhBsHlWwfpSwBz7%2F2AJ6k0EOzVquNHFW5J8rylqRjVezqr%2FeMVE%3D",
+        "url": "https://www.ebay.nl/itm/366395139420?_skw=dragon+ball+fusion+world+fb10&hash=item554eda255c:g:nKEAAeSwDgxp~SWz&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGYxyreWj%2BpEMO%2B1fIjgYetC97OCMx5IFHAHoabTq%2BzTz%2FJ8cp%2B348DLQc1dZZnEdcafL%2F0gLdK1OIRSyNuDL49EWgUT7AQH6yOg2k4E4%2F3qgk3cKo3sc2Uyzsv6mveWc%2FgmqqXqM5wxRUlgdv2EhK6UhsxktTmRenhamJqAHiotxtNTlEgD%2F4QQRh1AOa0fWAQEvauScDOgx7shUTohQxdpUgHAxFct4bBkiNqVtikCI7m9QwD7LKjQ11CUFXz3T98heoZnDJeRm%2FkwJvUgpOh3QCop%2BSauJI4twvCn3YwpzSBTw70IA5oVgN%2BfHk4G3DA%3D",
         "condition": "New/Factory Sealed",
         "seller": "porver",
         "feedback_pct": "99.7",
@@ -8021,7 +8375,8 @@
         "buying_options": [
           "FIXED_PRICE"
         ],
-        "first_seen": "2026-05-08T16:28:15.832793"
+        "first_seen": "2026-05-08T15:50:53.498118",
+        "last_seen": "2026-05-08T16:47:39.725130"
       },
       {
         "item_id": "v1|236799892460|0",
@@ -8040,7 +8395,7 @@
           "FIXED_PRICE"
         ],
         "first_seen": "2026-05-07T08:30:51.324041",
-        "last_seen": "2026-05-08T16:28:24.748278"
+        "last_seen": "2026-05-08T16:47:39.725132"
       },
       {
         "item_id": "v1|147270256801|0",
@@ -8059,7 +8414,7 @@
           "FIXED_PRICE"
         ],
         "first_seen": "2026-05-07T08:30:51.324030",
-        "last_seen": "2026-05-08T16:28:24.748283"
+        "last_seen": "2026-05-08T16:47:39.725135"
       },
       {
         "item_id": "v1|206256909210|0",
@@ -8078,28 +8433,10 @@
           "FIXED_PRICE"
         ],
         "first_seen": "2026-05-07T08:30:51.324006",
-        "last_seen": "2026-05-08T16:28:24.748143"
-      },
-      {
-        "item_id": "v1|161868089668|0",
-        "target": "ST01",
-        "title": "IC Carddass Dragon Ball Part 1 Starter Deck ST01 Sealed Japanese",
-        "price_value": 18.33,
-        "price_currency": "EUR",
-        "url": "https://www.ebay.nl/itm/161868089668?_skw=dragon+ball+st01+japanese&hash=item25b0170944:g:8NMAAOSwwbdWKy7U",
-        "condition": "New",
-        "seller": "poly_100",
-        "feedback_pct": "100.0",
-        "country": "JP",
-        "marketplace": "EBAY_NL",
-        "image": "https://i.ebayimg.com/images/g/8NMAAOSwwbdWKy7U/s-l225.jpg",
-        "buying_options": [
-          "FIXED_PRICE"
-        ],
-        "first_seen": "2026-05-07T08:31:05.463026"
+        "last_seen": "2026-05-08T16:47:39.725119"
       }
     ],
     "sold_stats": {},
-    "active_count": 6
+    "active_count": 5
   }
 }
