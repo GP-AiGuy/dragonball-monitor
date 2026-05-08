@@ -238,6 +238,74 @@ PRIORITY_PRODUCT_URLS = [
         "country": "UK",
         "url": "https://gatheringgames.co.uk/products/dragon-ball-super-cg-fusion-world-booster-box-10-fb10",
     },
+    # ── BT31 (note: user already ordered, but keep tracking for better deals) ──
+    {
+        "id": "BT31",
+        "shop": "Firestorm Games",
+        "country": "UK",
+        "url": "https://www.firestormgames.co.uk/dragon-ball-super-cg:-masters---booster-box---ultra-bout-4-b31",
+    },
+    {
+        "id": "BT31",
+        "shop": "Flevance",
+        "country": "FR",
+        "url": "https://flevance.fr/products/810158838680-dragon-ball-card-game-masters-boite-de-24-boosters-b31-english",
+    },
+    # ── FB10 (more shops across EU/CH/GR/Asia) ──
+    {
+        "id": "FB10",
+        "shop": "88 Cardhouse",
+        "country": "EU",
+        "url": "https://www.88cardhouse.com/collections/dragon-ball-super/products/dragon-ball-fusion-world-english-fb-10-booster-box-pre-order",
+    },
+    {
+        "id": "FB10",
+        "shop": "Funny Pop Box",
+        "country": "EU",
+        "url": "https://funnypopbox.com/product/pre-order-dragon-ball-super-card-game-fusion-world-fb10-booster-box-english/",
+    },
+    {
+        "id": "FB10",
+        "shop": "Card Treasure",
+        "country": "CH",
+        "url": "https://cardtreasure.ch/products/cross-force-booster-box-dragon-ballb-fusion-world-fb-10",
+    },
+    {
+        "id": "FB10",
+        "shop": "Zatu",
+        "country": "UK",
+        "url": "https://zatu.com/products/dragon-ball-super-cg-fusion-world-cross-force-booster-boxfb10",
+    },
+    {
+        "id": "FB10",
+        "shop": "Frida M Store",
+        "country": "EU",
+        "url": "https://fridamstore.com/collections/dragon-ball-fusion-world",
+    },
+    {
+        "id": "FB10",
+        "shop": "CarteMagic",
+        "country": "IT",
+        "url": "https://www.cartemagic.com/prodotto/dragon-ball-fb10-super-card-game-booster-box-24-bustine-versione-inglese/",
+    },
+    {
+        "id": "FB10",
+        "shop": "Anime World",
+        "country": "GR",
+        "url": "https://animeworld.gr/product/booster-box-display-fb-10-24-boosters-dbscg-fusion-world/",
+    },
+    {
+        "id": "FB10",
+        "shop": "Fantasy Sphere",
+        "country": "EU",
+        "url": "https://en.fantasysphere.net/product/boite-de-24-boosters-fb10-dragon-ball-super-cg-fusion-world-en-10040799",
+    },
+    {
+        "id": "FB10",
+        "shop": "Cardoreum",
+        "country": "EU",
+        "url": "https://cardoreum.eu/products/dragon-ball-fusion-world-booster-box-fb10-24-packs",
+    },
 ]
 
 # ─── Filters ─────────────────────────────────────────────────────────────
@@ -545,6 +613,72 @@ SHOP_SEARCHES = [
         "name": "Gathering Games",
         "country": "UK",
         "url": "https://gatheringgames.co.uk/collections/dragon-ball-super-cg",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Firestorm Games",
+        "country": "UK",
+        "url": "https://www.firestormgames.co.uk/category/trading-card-games/dragon-ball-super",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Flevance",
+        "country": "FR",
+        "url": "https://flevance.fr/collections/dragon-ball",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "TCG Store IT",
+        "country": "IT",
+        "url": "https://tcg-store.it/home/giochi-di-carte/dragon-ball/booster-box-dragon-ball/",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Card Treasure",
+        "country": "CH",
+        "url": "https://cardtreasure.ch/collections/dragon-ball-super-fusion-world",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Zatu",
+        "country": "UK",
+        "url": "https://zatu.com/search?type=product&q=dragon+ball+super+booster+box",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Frida M Store",
+        "country": "EU",
+        "url": "https://fridamstore.com/collections/dragon-ball-fusion-world",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "CarteMagic",
+        "country": "IT",
+        "url": "https://www.cartemagic.com/categoria-prodotto/dragon-ball/",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Anime World GR",
+        "country": "GR",
+        "url": "https://animeworld.gr/product-category/trading-card-games/dragon-ball-super-card-game/",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "88 Cardhouse",
+        "country": "EU",
+        "url": "https://www.88cardhouse.com/collections/dragon-ball-super",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Cardoreum",
+        "country": "EU",
+        "url": "https://cardoreum.eu/collections/dragon-ball-super",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Fantasy Sphere",
+        "country": "EU",
+        "url": "https://en.fantasysphere.net/dragon-ball-super-cg",
         "extractor": "generic_shop",
     },
     # ── EU marketplace ──
