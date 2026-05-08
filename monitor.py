@@ -404,27 +404,9 @@ SHOP_SEARCHES = [
         "extractor": "bol",
     },
     {
-        "name": "Bol.com",
-        "country": "NL",
-        "url": "https://www.bol.com/nl/nl/s/?searchtext=dragon+ball+fusion+world+booster",
-        "extractor": "bol",
-    },
-    {
-        "name": "Bol.com",
-        "country": "NL",
-        "url": "https://www.bol.com/nl/nl/s/?searchtext=dragon+ball+masters+booster",
-        "extractor": "bol",
-    },
-    {
         "name": "Ludofy",
         "country": "NL",
         "url": "https://ludofy.com/search?q=dragon+ball+fusion+world",
-        "extractor": "generic_shop",
-    },
-    {
-        "name": "TBH Store",
-        "country": "NL",
-        "url": "https://www.tbhstore.nl/zoeken/?q=dragon+ball+booster+box",
         "extractor": "generic_shop",
     },
     {
@@ -443,12 +425,6 @@ SHOP_SEARCHES = [
         "name": "Spellenvariant",
         "country": "NL",
         "url": "https://www.spellenvariant.nl/trading-card-games/dragon-ball-tcg",
-        "extractor": "generic_shop",
-    },
-    {
-        "name": "Gamerz Paradize",
-        "country": "NL",
-        "url": "https://gamerzparadize.nl/collections/brand-dragon-ball-super-card-game",
         "extractor": "generic_shop",
     },
     {
@@ -725,12 +701,6 @@ SHOP_SEARCHES = [
         "name": "Amazon.nl",
         "country": "NL",
         "url": "https://www.amazon.nl/s?k=dragon+ball+super+card+game+booster+box&i=toys",
-        "extractor": "amazon",
-    },
-    {
-        "name": "Amazon.nl",
-        "country": "NL",
-        "url": "https://www.amazon.nl/s?k=dragon+ball+fusion+world+booster+display&i=toys",
         "extractor": "amazon",
     },
     {
@@ -1504,7 +1474,23 @@ def scrape_shops(context):
     price_drops = []     # (product_dict, old_price, new_price)
     auto_disabled_now = []  # for Telegram heads-up
 
+    # Dedupe by hostname: if multiple SHOP_SEARCHES entries hit the same domain,
+    # only check the first one this run (saves time, avoids redundant scrapes).
+    seen_hosts = set()
+    deduped = []
     for search in SHOP_SEARCHES:
+        try:
+            host = search["url"].split("/")[2].lower().replace("www.", "")
+        except Exception:
+            host = search["url"]
+        # Only allow ONE category page per host per run; priority URLs run separately
+        if host in seen_hosts:
+            log.info(f"SKIP (host already checked this run): {search['name']}")
+            continue
+        seen_hosts.add(host)
+        deduped.append(search)
+
+    for search in deduped:
         shop_key = f"{search['name']}|{search['url']}"
         if is_shop_disabled(health, shop_key):
             log.info(f"SKIP (auto-disabled): {search['name']} ({search['country']})")
