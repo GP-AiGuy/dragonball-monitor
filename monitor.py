@@ -103,6 +103,17 @@ PRIORITY_WATCHLIST = [
             r"story[\s\-_]*booster",
         ],
     },
+    {
+        "id": "FB11",
+        "series": "Fusion World Brightness of Hope",
+        "name": "Dragon Ball Super Card Game Fusion World FB11 Booster Box (Brightness of Hope)",
+        # Variants: FB11, FB-11, FB_11, FB11E, FB11-JP, plus official subtitle
+        "patterns": [
+            r"(?<![a-z0-9])fb[\s\-_]?11(?!\d)",
+            r"fusion\s*world[\s\-_]*11(?!\d)",
+            r"brightness[\s\-_]*of[\s\-_]*hope",
+        ],
+    },
 ]
 
 # Known direct product URLs. Always deep-checked every run, regardless of whether
