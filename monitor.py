@@ -2061,28 +2061,31 @@ def send_news_digest(new_news):
 
 # ─── Dashboard Feed ──────────────────────────────────────────────────────
 
-def cmd_digest():
+def cmd_digest(highlight_urls=None, header=None):
     """Send Telegram digest of currently buyable priority products.
 
-    Triggered separately from scrapes (via --digest flag, daily workflow).
+    Args:
+        highlight_urls: optional set of canonical URLs to mark as NEW/CHANGED in the digest.
+        header: optional override for the title (e.g. "Nieuwe vondst!" vs "Dagelijks overzicht").
+
     Reads existing state - does NOT scrape. Cheap, fast, idempotent.
     """
     seen = load_json(SEEN_PRODUCTS_FILE)
     ebay_listings = load_json(EBAY_LISTINGS_FILE)
     ebay_sold = load_json(EBAY_SOLD_FILE)
+    highlight_urls = highlight_urls or set()
 
     # Group buyable priority products by target
     by_target = {}
     for p in seen.values():
         if not p.get("priority"):
             continue
-        if not is_alert_enabled(p["priority"]):  # skip BT31 (silenced)
+        if not is_alert_enabled(p["priority"]):
             continue
         if p.get("stock_status") not in BUYABLE_STATUSES:
             continue
         by_target.setdefault(p["priority"], []).append(p)
 
-    # Group buyable eBay listings by target (skip BT31)
     ebay_by_target = {}
     for item in ebay_listings.values():
         tid = item.get("target")
@@ -2094,7 +2097,7 @@ def cmd_digest():
         log.info("Digest: nothing buyable, skipping send")
         return
 
-    parts = ["<b>Dragon Ball booster boxes - dagelijks overzicht</b>\n"]
+    parts = [f"<b>{header or 'Dragon Ball booster boxes - overzicht'}</b>\n"]
     targets = sorted(set(list(by_target.keys()) + list(ebay_by_target.keys())))
 
     for tid in targets:
@@ -2102,7 +2105,6 @@ def cmd_digest():
         series = watchlist["series"] if watchlist else ""
         parts.append(f"\n<b>{tid}</b> ({series})")
 
-        # Shops
         shops = by_target.get(tid, [])
         if shops:
             shops_sorted = sorted(shops, key=lambda x: x.get("price_num") or 9999)
@@ -2110,9 +2112,9 @@ def cmd_digest():
             for p in shops_sorted[:10]:
                 stat = p.get("stock_status", "?")
                 emoji = "🟢" if stat == "in_stock" else "🟡"
-                parts.append(f"{emoji} {p['shop'][:25]} ({p['country']}) — {p['price']} — <a href=\"{p['url']}\">link</a>")
+                marker = " ⭐ NIEUW" if canonical_url(p.get("url", "")) in highlight_urls else ""
+                parts.append(f"{emoji} {p['shop'][:25]} ({p['country']}) — {p['price']} — <a href=\"{p['url']}\">link</a>{marker}")
 
-        # eBay
         listings = ebay_by_target.get(tid, [])
         if listings:
             listings_sorted = sorted(listings, key=lambda x: x.get("price_value") or 9999)
@@ -2120,7 +2122,8 @@ def cmd_digest():
             avg_str = f" (sold avg: €{sold_avg})" if sold_avg else ""
             parts.append(f"\n<b>eBay ({len(listings)}){avg_str}:</b>")
             for item in listings_sorted[:5]:
-                parts.append(f"💰 {item.get('price_value', 0):.2f} {item.get('price_currency', '')} — {item.get('marketplace','?').replace('EBAY_','')} — <a href=\"{item.get('url','')}\">link</a>")
+                marker = " ⭐ NIEUW" if item.get("url", "") in highlight_urls else ""
+                parts.append(f"💰 {item.get('price_value', 0):.2f} {item.get('price_currency', '')} — {item.get('marketplace','?').replace('EBAY_','')} — <a href=\"{item.get('url','')}\">link</a>{marker}")
 
     parts.append(f"\n\nDashboard: https://gp-aiguy.github.io/dragonball-monitor/")
     msg = "\n".join(parts)
@@ -2262,36 +2265,33 @@ def cmd_run(dry_run=False, priority_only=False):
             tag = f" [{n['priority']}]" if n.get("priority") else ""
             log.info(f"[DRY] NEWS{tag} | {n['source']} | {n['title'][:90]}")
     else:
-        # Alert-time dedup: never ping twice for the same (priority_id, shop) or URL
-        sent_priority = set()
-        sent_preorder = set()
-        for product in priority_hits:
-            key = (product.get("priority"), product["shop"])
-            if key in sent_priority:
-                continue
-            sent_priority.add(key)
-            send_priority_alert(product)
-            time.sleep(0.5)
-        for product in new_preorders:
-            key = canonical_url(product.get("url", "")) or product["title"]
-            if key in sent_preorder:
-                continue
-            sent_preorder.add(key)
-            send_preorder_alert(product)
-            time.sleep(0.5)
-        for product, old in restocks:
-            send_restock_alert(product, old)
-            time.sleep(0.5)
-        for product, old, new in price_drops:
-            send_price_drop_alert(product, old, new)
-            time.sleep(0.5)
-        # eBay: ping for new listings (sorted by price asc, max 5 per run to avoid spam).
-        # Skip targets where user has alerts disabled (e.g. BT31 already ordered).
-        ebay_alertable = [item for item in new_ebay if is_alert_enabled(item.get("target"))]
-        for item in sorted(ebay_alertable, key=lambda x: x.get("price_value", 999))[:5]:
-            sold_stats = ebay_sold.get(item["target"]) if ebay_sold else None
-            send_ebay_alert(item, sold_stats)
-            time.sleep(0.5)
+        # Single consolidated digest format (user preference - cleaner than 5+ pings).
+        # Highlight what's NEW vs already-known across all event types.
+        highlight = set()
+        for p in priority_hits + new_preorders:
+            if p.get("url"):
+                highlight.add(canonical_url(p["url"]))
+        for p, _old, _new in restocks:
+            if p.get("url"):
+                highlight.add(canonical_url(p["url"]))
+        for p, _o, _n in price_drops:
+            if p.get("url"):
+                highlight.add(canonical_url(p["url"]))
+        for item in new_ebay:
+            if is_alert_enabled(item.get("target")) and item.get("url"):
+                highlight.add(item["url"])
+
+        # Only send digest if something noteworthy happened
+        any_event = bool(priority_hits or new_preorders or restocks or price_drops or [
+            i for i in new_ebay if is_alert_enabled(i.get("target"))
+        ])
+        if any_event:
+            cmd_digest(
+                highlight_urls=highlight,
+                header=f"Update: {len(highlight)} nieuwe wijziging(en)",
+            )
+
+        # News still gets its own digest (separate concern, separate flow)
         send_news_digest(new_news)
 
     write_dashboard_feed()
