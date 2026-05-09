@@ -377,10 +377,22 @@ OUT_OF_STOCK_KEYWORDS = [
     "uitverkocht", "niet op voorraad", "out of stock", "sold out",
     "currently unavailable", "niet leverbaar", "tijdelijk uitverkocht",
     "wachtlijst", "notify me", "back in stock",
-    # Dutch shop variants seen on Arly Trading, AlpsTCG, etc
+    # Dutch shop variants
     "momenteel niet beschikbaar", "niet beschikbaar", "tijdelijk niet beschikbaar",
     "voorraad: 0", "geen voorraad", "stock: 0", "out-of-stock",
-    "nicht verfügbar", "epuisé",  # DE/FR for international shops
+    # German (Loot Cave, Games Island, Fantasywelt)
+    "nicht verfügbar", "ausverkauft", "nicht auf lager", "vergriffen",
+    # French (Nin-Nin-Game, Flevance, Fantasy Sphere)
+    "epuisé", "épuisé", "rupture de stock", "indisponible",
+    # Italian (Cardoreum, OnyTCG, GameTrade, WonderClub, etc)
+    "esaurito", "non disponibile", "esaurita",
+    # Spanish (Master of Games)
+    "agotado", "no disponible",
+    # Portuguese (PT Merch)
+    "esgotado", "indisponivel", "indisponível",
+    # Swedish (Aquitaz)
+    "slut", "slutsåld",
+    # Notify-me / waitlist widgets
     "houd mij op de hoogte", "laat het mij weten", "email me",
 ]
 
@@ -918,19 +930,33 @@ DEEP_CHECK_JS = """() => {
         price = allPrices[0].raw.replace(/\\s+/g, '');
         if (!price.includes('€') && !price.includes('£')) price = '€' + price;
     }
-    // Add-to-cart button presence (and not disabled)
+    // Add-to-cart button presence + check button TEXT (some shops keep button visible
+    // but change label to "Sold out" / "Esaurito" / "Ausverkauft" instead of disabling).
     const cartSelectors = [
         'button[name="add"]', 'button.add-to-cart', 'button.product-add',
         'form[action*="cart"] button[type="submit"]', '[class*="AddToCart"]',
         '#add-to-cart', 'button[data-action="add-to-cart"]',
         'button:not([disabled]).btn-cart', 'button.add_to_cart_button',
+        'button[type="submit"]', 'input[type="submit"][value]',
     ];
     let cartBtn = null;
     for (const sel of cartSelectors) {
         const b = document.querySelector(sel);
         if (b) { cartBtn = b; break; }
     }
-    const cartEnabled = !!cartBtn && !cartBtn.disabled && !cartBtn.classList.contains('disabled');
+    const cartBtnText = cartBtn ? (cartBtn.textContent || cartBtn.value || '').trim().toLowerCase() : '';
+    // OOS labels seen on real shops, in NL/EN/DE/FR/IT/ES/PT/SE
+    const oosBtnLabels = [
+        'sold out', 'uitverkocht', 'ausverkauft', 'esaurito', 'epuisé', 'épuisé',
+        'agotado', 'esgotado', 'slut', 'slutsåld', 'vergriffen',
+        'rupture de stock', 'non disponibile', 'no disponible', 'niet beschikbaar',
+        'meld u aan', 'notify me', 'email me when',
+    ];
+    const btnSaysOos = oosBtnLabels.some(s => cartBtnText.includes(s));
+    const cartEnabled = !!cartBtn
+        && !cartBtn.disabled
+        && !cartBtn.classList.contains('disabled')
+        && !btnSaysOos;
     // Notify-me / waitlist signals
     const notifySignals = [
         'notify me', 'op de hoogte', 'mail mij', 'wachtlijst',
@@ -940,6 +966,7 @@ DEEP_CHECK_JS = """() => {
     return {
         price: price,
         cart_enabled: cartEnabled,
+        cart_btn_text: cartBtnText.substring(0, 100),
         has_notify_signup: hasNotify,
         body_excerpt: bodyText.substring(0, 2000),
     };
@@ -2034,6 +2061,73 @@ def send_news_digest(new_news):
 
 # ─── Dashboard Feed ──────────────────────────────────────────────────────
 
+def cmd_digest():
+    """Send Telegram digest of currently buyable priority products.
+
+    Triggered separately from scrapes (via --digest flag, daily workflow).
+    Reads existing state - does NOT scrape. Cheap, fast, idempotent.
+    """
+    seen = load_json(SEEN_PRODUCTS_FILE)
+    ebay_listings = load_json(EBAY_LISTINGS_FILE)
+    ebay_sold = load_json(EBAY_SOLD_FILE)
+
+    # Group buyable priority products by target
+    by_target = {}
+    for p in seen.values():
+        if not p.get("priority"):
+            continue
+        if not is_alert_enabled(p["priority"]):  # skip BT31 (silenced)
+            continue
+        if p.get("stock_status") not in BUYABLE_STATUSES:
+            continue
+        by_target.setdefault(p["priority"], []).append(p)
+
+    # Group buyable eBay listings by target (skip BT31)
+    ebay_by_target = {}
+    for item in ebay_listings.values():
+        tid = item.get("target")
+        if not tid or not is_alert_enabled(tid):
+            continue
+        ebay_by_target.setdefault(tid, []).append(item)
+
+    if not by_target and not ebay_by_target:
+        log.info("Digest: nothing buyable, skipping send")
+        return
+
+    parts = ["<b>Dragon Ball booster boxes - dagelijks overzicht</b>\n"]
+    targets = sorted(set(list(by_target.keys()) + list(ebay_by_target.keys())))
+
+    for tid in targets:
+        watchlist = next((w for w in PRIORITY_WATCHLIST if w["id"] == tid), None)
+        series = watchlist["series"] if watchlist else ""
+        parts.append(f"\n<b>{tid}</b> ({series})")
+
+        # Shops
+        shops = by_target.get(tid, [])
+        if shops:
+            shops_sorted = sorted(shops, key=lambda x: x.get("price_num") or 9999)
+            parts.append(f"\n<b>Winkels ({len(shops)}):</b>")
+            for p in shops_sorted[:10]:
+                stat = p.get("stock_status", "?")
+                emoji = "🟢" if stat == "in_stock" else "🟡"
+                parts.append(f"{emoji} {p['shop'][:25]} ({p['country']}) — {p['price']} — <a href=\"{p['url']}\">link</a>")
+
+        # eBay
+        listings = ebay_by_target.get(tid, [])
+        if listings:
+            listings_sorted = sorted(listings, key=lambda x: x.get("price_value") or 9999)
+            sold_avg = (ebay_sold.get(tid) or {}).get("avg")
+            avg_str = f" (sold avg: €{sold_avg})" if sold_avg else ""
+            parts.append(f"\n<b>eBay ({len(listings)}){avg_str}:</b>")
+            for item in listings_sorted[:5]:
+                parts.append(f"💰 {item.get('price_value', 0):.2f} {item.get('price_currency', '')} — {item.get('marketplace','?').replace('EBAY_','')} — <a href=\"{item.get('url','')}\">link</a>")
+
+    parts.append(f"\n\nDashboard: https://gp-aiguy.github.io/dragonball-monitor/")
+    msg = "\n".join(parts)
+    send_telegram(msg)
+    log.info(f"Digest sent: {len(targets)} target(s), {sum(len(v) for v in by_target.values())} shop products + {sum(len(v) for v in ebay_by_target.values())} eBay listings")
+
+
 def write_dashboard_feed():
     """Write data.json for the dragonball-tracker frontend to consume."""
     seen_products = load_json(SEEN_PRODUCTS_FILE)
@@ -2252,6 +2346,7 @@ def main():
     parser.add_argument("--list", action="store_true", help="Show all tracked products & news")
     parser.add_argument("--priority", action="store_true", help="Show only priority watchlist matches")
     parser.add_argument("--priority-only", action="store_true", help="Fast mode: only deep-check priority URLs (skip slow shop searches)")
+    parser.add_argument("--digest", action="store_true", help="Send Telegram digest of all currently buyable products (no scrape)")
     args = parser.parse_args()
 
     if args.reset:
@@ -2262,6 +2357,10 @@ def main():
 
     if args.list or args.priority:
         cmd_list(priority_only=args.priority)
+        return
+
+    if args.digest:
+        cmd_digest()
         return
 
     new_products, status_changes, price_drops, new_news = cmd_run(dry_run=args.dry_run, priority_only=args.priority_only)
