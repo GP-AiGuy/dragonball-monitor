@@ -755,6 +755,11 @@ NEWS_SOURCES = [
         "url": "https://www.dbs-cardgame.com/fw/en/news/",
         "type": "html",
     },
+    {
+        "name": "Fusion World Archive (Official)",
+        "url": "https://www.dbs-cardgame.com/fw/en/archive/",
+        "type": "html",
+    },
 ]
 
 NEWS_KEYWORDS = [
