@@ -2287,7 +2287,7 @@ def cmd_run(dry_run=False, priority_only=False):
         for p in priority_hits + new_preorders:
             if p.get("url"):
                 highlight.add(canonical_url(p["url"]))
-        for p, _old, _new in restocks:
+        for p, _old in restocks:
             if p.get("url"):
                 highlight.add(canonical_url(p["url"]))
         for p, _o, _n in price_drops:
