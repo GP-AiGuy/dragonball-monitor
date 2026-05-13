@@ -148,6 +148,36 @@ PRIORITY_PRODUCT_URLS = [
         "country": "UK",
         "url": "https://totalcards.net/products/dragon-ball-super-fusion-world-2nd-anniversary-set",
     },
+    {
+        "id": "ANNIV2",
+        "shop": "Gamerz Paradize",
+        "country": "NL",
+        "url": "https://gamerzparadize.nl/en/products/dragon-ball-super-card-game-fusion-world-2nd-anniversary-set",
+    },
+    {
+        "id": "ANNIV2",
+        "shop": "Turol Games",
+        "country": "ES",
+        "url": "https://www.turolgames.com/en/dragon-ball-tcg/124149-dragon-ball-super-card-game-fusion-world-2nd-anniversary-set-english",
+    },
+    {
+        "id": "ANNIV2",
+        "shop": "Candy Cards",
+        "country": "EU",
+        "url": "https://candycards.eu/product/dragon-ball-super-card-game-fusion-world-2nd-anniversary-commemorative-set-english/",
+    },
+    {
+        "id": "ANNIV2",
+        "shop": "Nin-Nin-Game",
+        "country": "FR",
+        "url": "https://www.nin-nin-game.com/en/dragon-ball-tcg/215735-dragon-ball-super-card-game-fusion-world-2nd-anniversary-set-limited-edition-bandai-.html",
+    },
+    {
+        "id": "ANNIV2",
+        "shop": "Montalfan",
+        "country": "ES",
+        "url": "https://montalfan.com/en/product/dragon-ball-super-card-game-fusion-world-2nd-anniversary-set/",
+    },
 ]
 
 # ─── Filters ─────────────────────────────────────────────────────────────
@@ -353,6 +383,30 @@ SHOP_SEARCHES = [
         "name": "Hobby Genki",
         "country": "JP",
         "url": "https://hobby-genki.com/en/dragon-ball-series/",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "NextCards",
+        "country": "DE",
+        "url": "https://nextcards.de/collections/dragonball-fusion-world",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Turol Games",
+        "country": "ES",
+        "url": "https://www.turolgames.com/en/107-dragon-ball-tcg",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Candy Cards",
+        "country": "EU",
+        "url": "https://candycards.eu/product-category/dragon-ball-super-card-game/",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Montalfan",
+        "country": "ES",
+        "url": "https://montalfan.com/en/product-category/dragon-ball-super-card-game/",
         "extractor": "generic_shop",
     },
     {
