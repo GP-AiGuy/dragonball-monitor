@@ -1680,6 +1680,39 @@ def scrape_news(context):
     return new_news
 
 
+def migrate_prune_inactive_priority():
+    """Remove products from state whose priority is no longer in PRIORITY_WATCHLIST.
+
+    Cleans up stale records (BT31, FB10, FB11) left over after narrowing the watchlist.
+    Idempotent.
+    """
+    seen = load_json(SEEN_PRODUCTS_FILE)
+    if not seen:
+        return
+    active_ids = {w["id"] for w in PRIORITY_WATCHLIST}
+    pruned = {
+        k: v for k, v in seen.items()
+        if not v.get("priority") or v["priority"] in active_ids
+    }
+    removed = len(seen) - len(pruned)
+    if removed > 0:
+        log.info(f"Pruned {removed} stale priority records (targets removed from watchlist)")
+        save_json(SEEN_PRODUCTS_FILE, pruned)
+
+    # Also prune eBay listings + sold stats for inactive targets
+    ebay = load_json(EBAY_LISTINGS_FILE)
+    if ebay:
+        kept = {k: v for k, v in ebay.items() if v.get("target") in active_ids}
+        if len(kept) < len(ebay):
+            log.info(f"Pruned {len(ebay) - len(kept)} stale eBay listings")
+            save_json(EBAY_LISTINGS_FILE, kept)
+    sold = load_json(EBAY_SOLD_FILE)
+    if sold:
+        kept_sold = {k: v for k, v in sold.items() if k in active_ids}
+        if len(kept_sold) < len(sold):
+            save_json(EBAY_SOLD_FILE, kept_sold)
+
+
 def migrate_dedup_state():
     """One-time migration: collapse duplicate seen_products entries that refer to the
     same canonical URL (caused by old hash schemes). Keeps the most recently seen record.
@@ -2097,16 +2130,23 @@ BUYABLE_STATUSES = ("in_stock", "preorder")
 
 
 def is_alert_enabled(priority_id):
-    """Check watchlist config: should we alert for this target? Default True."""
+    """Check watchlist config: should we alert for this target?
+
+    Returns False for any priority ID not in current PRIORITY_WATCHLIST -
+    prevents alerts on stale records left over from removed targets.
+    """
     if not priority_id:
         return True
     entry = next((w for w in PRIORITY_WATCHLIST if w["id"] == priority_id), None)
-    return entry.get("alert_enabled", True) if entry else True
+    if entry is None:
+        return False  # target was removed from watchlist
+    return entry.get("alert_enabled", True)
 
 
 def cmd_run(dry_run=False, priority_only=False):
     mode = "priority-only (fast)" if priority_only else "full"
     log.info(f"Starting Dragon Ball TCG monitor ({mode})...")
+    migrate_prune_inactive_priority()  # drop stale BT31/FB10/FB11 records
     migrate_dedup_state()  # idempotent cleanup of old hash-scheme dupes
     new_products, status_changes, price_drops, new_news, new_ebay, ebay_sold = scrape_all(priority_only=priority_only)
 
