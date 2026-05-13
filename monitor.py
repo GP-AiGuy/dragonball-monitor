@@ -66,97 +66,44 @@ DASHBOARD_FEED_FILE = Path(
 
 PRIORITY_WATCHLIST = [
     {
-        "id": "BT31",
-        "series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
-        "name": "Dragon Ball Super Card Game Masters BT31 Booster Box",
-        # Spelling variants seen in the wild:
-        #   B31, BT31, B-31, BT-31, B 31, BT 31, B_31, B31E, BT31EN, B-31-EN
-        "patterns": [
-            r"(?<![a-z0-9])bt?[\s\-_]?31(?!\d)",
-            r"impact[\s\-_]*beyond[\s\-_]*dimensions",
-            r"battles[\s\-_]*beyond[\s\-_]*dimensions",
-        ],
-        # User already ordered BT31 - keep tracking for dashboard, but no Telegram alerts
-        "alert_enabled": False,
-    },
-    {
-        "id": "FB10",
-        "series": "Fusion World Cross Force",
-        "name": "Dragon Ball Super Card Game Fusion World FB10 Booster Box (Cross Force)",
-        # Variants: FB10, FB-10, FB_10, FB 10, FB10E, FB10EN, FB10-JP.
-        # Right-guard prevents matching FB100/FB101/FB108.
-        "patterns": [
-            r"(?<![a-z0-9])fb[\s\-_]?10(?!\d)",
-            r"fusion\s*world[\s\-_]*10(?!\d)",
-            r"cross[\s\-_]*force",
-        ],
-    },
-    {
         "id": "ST01",
         "series": "Fusion World Story Booster 01",
         "name": "Dragon Ball Super Card Game Fusion World Story Booster 01 [ST01]",
         # Variants: ST01, ST-01, ST_01, ST 01, ST01EN, ST01-JP, Story Booster 01,
-        # plain "Story Booster" (ST01 is the FIRST in the series so any reference
-        # without a number = ST01 for now). When ST02 launches, narrow this.
+        # plus "Story Booster 1". Narrow once ST02 launches.
         "patterns": [
-            r"(?<![a-z0-9])st[\s\-_]?01(?!\d)",
-            r"story[\s\-_]*booster",
+            r"(?<![a-z0-9])st[\s\-_]?0?1(?![0-9])",
+            r"story[\s\-_]*booster[\s\-_]*0?1(?![0-9])",
         ],
     },
     {
-        "id": "FB11",
-        "series": "Fusion World Brightness of Hope",
-        "name": "Dragon Ball Super Card Game Fusion World FB11 Booster Box (Brightness of Hope)",
-        # Variants: FB11, FB-11, FB_11, FB11E, FB11-JP, plus official subtitle
+        "id": "ST02",
+        "series": "Fusion World Story Booster 02 (placeholder)",
+        "name": "Dragon Ball Super Card Game Fusion World Story Booster 02 [ST02]",
+        # Not yet announced - pattern ready for when it drops
         "patterns": [
-            r"(?<![a-z0-9])fb[\s\-_]?11(?!\d)",
-            r"fusion\s*world[\s\-_]*11(?!\d)",
-            r"brightness[\s\-_]*of[\s\-_]*hope",
+            r"(?<![a-z0-9])st[\s\-_]?0?2(?![0-9])",
+            r"story[\s\-_]*booster[\s\-_]*0?2(?![0-9])",
+        ],
+    },
+    {
+        "id": "ANNIV2",
+        "series": "Fusion World 2nd Anniversary Set",
+        "name": "Dragon Ball Super Card Game Fusion World 2nd Anniversary Set",
+        # Special collector set (alt-art cards + accessories), NOT a regular booster box.
+        # Variants: "2nd Anniversary Set", "Second Anniversary", "2nd-Anniversary",
+        # plus shorter "Anniversary Set" (until 3rd anniv exists)
+        "patterns": [
+            r"2nd[\s\-_]*anniversary[\s\-_]*set",
+            r"2nd[\s\-_]*anniversary",
+            r"second[\s\-_]*anniversary[\s\-_]*set",
+            r"(?<!3rd[\s\-_])(?<!4th[\s\-_])anniversary[\s\-_]*set",
         ],
     },
 ]
 
-# Known direct product URLs. Always deep-checked every run, regardless of whether
-# the shop's category page surfaces them. Add new ones as they're discovered.
+# Known direct product URLs. Always deep-checked every run.
 PRIORITY_PRODUCT_URLS = [
-    # ── BT31 (Masters Ultra-Bout Set 4) ──
-    {
-        "id": "BT31",
-        "shop": "Gamerz Paradize",
-        "country": "NL",
-        "url": "https://gamerzparadize.nl/products/dragon-ball-scg-masters-ultra-bout-series-set-4-battles-beyond-dimensions-booster-box-b31",
-    },
-    {
-        "id": "BT31",
-        "shop": "AlpsTCG",
-        "country": "NL",
-        "url": "https://alpstcg.nl/products/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-booster-display-24-packs-en-pre-order",
-    },
-    {
-        "id": "BT31",
-        "shop": "Arly Trading",
-        "country": "NL",
-        "url": "https://arlytrading.nl/winkel/preorder/dragon-ball-super-card-game-masters-ultra-bout-series-b-31-boosterbox/",
-    },
-    # ── FB10 (Fusion World Cross Force) ──
-    {
-        "id": "FB10",
-        "shop": "Dracoon",
-        "country": "NL",
-        "url": "https://dracoon.nl/product/fusion-world-cross-force-fb10-boosterbox/",
-    },
-    {
-        "id": "FB10",
-        "shop": "TCGHaven",
-        "country": "NL",
-        "url": "https://tcghaven.nl/products/pre-order-dragon-ball-super-card-game-fusion-world-fb10",
-    },
-    {
-        "id": "FB10",
-        "shop": "Gamerz Paradize",
-        "country": "NL",
-        "url": "https://gamerzparadize.nl/en/products/dragon-ball-scg-fusion-world-10-booster-box",
-    },
     # ── ST01 (Fusion World Story Booster 01) ──
     {
         "id": "ST01",
@@ -170,148 +117,36 @@ PRIORITY_PRODUCT_URLS = [
         "country": "JP",
         "url": "https://hobby-genki.com/en/dragon-ball-series/85786-dragon-ball-super-card-game-fusion-world-story-booster-st01-20pack-box-4582770011982.html",
     },
-    # Removed: 4X Trading (404 + 403 bot block), Nin-Nin-Game (403 Forbidden)
-    # ── JP versions of FB10 + BT31 ──
+    # ── ANNIV2 (Fusion World 2nd Anniversary Set) ──
     {
-        "id": "FB10",
-        "shop": "Hobby Genki (JP)",
+        "id": "ANNIV2",
+        "shop": "Padis Store",
+        "country": "IT",
+        "url": "https://www.padis-store.com/en/dragon-ball-fusion-world/42957-preorder-dragon-ball-fusion-world-2nd-anniversary-set-english-810199501710.html",
+    },
+    {
+        "id": "ANNIV2",
+        "shop": "Hobby Genki",
         "country": "JP",
-        "url": "https://hobby-genki.com/en/dragon-ball-series/dragon-ball-super-card-game-fusion-world-cross-force-fb10-booster-box.html",
+        "url": "https://hobby-genki.com/en/dragon-ball-series/74046-dragon-ball-super-card-game-fusion-world-2nd-anniversary-set-limited-edition.html",
     },
     {
-        "id": "FB10",
-        "shop": "Nin-Nin-Game",
-        "country": "FR",
-        "url": "https://www.nin-nin-game.com/en/dragon-ball-tcg/217631-dragon-ball-super-card-game-fusion-world-booster-pack-fb10-24-packs-box-bandai-.html",
+        "id": "ANNIV2",
+        "shop": "Ichiba Japan",
+        "country": "JP",
+        "url": "https://ichiba-japan.com/en-us/products/2nd-anniversary-set-dragon-ball-super-card-game-fusion-world",
     },
     {
-        "id": "BT31",
-        "shop": "OnyTCG",
-        "country": "IT",
-        "url": "https://onytcg.com/en/prodotto/dragon-ball-super-box-zenkai-new-series-ultra-bout-4-b31-eng",
-    },
-    # ── More FB10 priority URLs (8 added) ──
-    {
-        "id": "FB10",
-        "shop": "Il Nuovo Mondo",
-        "country": "IT",
-        "url": "https://www.ilnuovomondoshop.it/en/trading-cards/dragon-ball-fusion-/dragon-ball-super-card-game-box-of-24-packs-fb-10",
+        "id": "ANNIV2",
+        "shop": "JumpIchiban",
+        "country": "JP",
+        "url": "https://jumpichiban.com/en-us/products/dragon-ball-super-card-game-fusion-world-2nd-anniversary-set",
     },
     {
-        "id": "FB10",
-        "shop": "GameTrade",
-        "country": "IT",
-        "url": "https://www.gametrade.it/Product/147785/Dragon_Ball_Super_Card_Game_Fusion_World_10_Box_FB10_Eng",
-    },
-    {
-        "id": "FB10",
-        "shop": "WonderClub",
-        "country": "IT",
-        "url": "https://wonderclub.it/prodotto/fusion-world-fb10-dragon-ball-cross-force-24-bustine-box-eng/",
-    },
-    {
-        "id": "FB10",
-        "shop": "Jap-One",
-        "country": "EU",
-        "url": "https://jap-one.com/en/dragon-ball-super-card-game-fusion-world-fb-10-booster-display-24-packs-en-810158838338.html",
-    },
-    {
-        "id": "FB10",
-        "shop": "Aquitaz",
-        "country": "SE",
-        "url": "https://aquitaz.se/en/products/dragon-ball-super-fusion-world-booster-display-fb10-24-pack-eng",
-    },
-    {
-        "id": "FB10",
-        "shop": "Zavvi",
+        "id": "ANNIV2",
+        "shop": "Total Cards",
         "country": "UK",
-        "url": "https://www.zavvi.com/p/toys/dragon-ball-super-card-game-booster-box-fusion-world-10-fb10-24-packs/17706253/",
-    },
-    {
-        "id": "FB10",
-        "shop": "Loot Cave",
-        "country": "DE",
-        "url": "https://lootcave.de/shop/dragon-ball-super-fb10-cross-force-booster-box/",
-    },
-    {
-        "id": "FB10",
-        "shop": "PT Merch",
-        "country": "PT",
-        "url": "https://ptmerch.com/pt/dragon-ball-preorder/17326-dragon-ball-super-card-game-fusion-world-fb-10-booster-display-preorder.html",
-    },
-    {
-        "id": "FB10",
-        "shop": "Gathering Games",
-        "country": "UK",
-        "url": "https://gatheringgames.co.uk/products/dragon-ball-super-cg-fusion-world-booster-box-10-fb10",
-    },
-    # ── BT31 (note: user already ordered, but keep tracking for better deals) ──
-    {
-        "id": "BT31",
-        "shop": "Firestorm Games",
-        "country": "UK",
-        "url": "https://www.firestormgames.co.uk/dragon-ball-super-cg:-masters---booster-box---ultra-bout-4-b31",
-    },
-    {
-        "id": "BT31",
-        "shop": "Flevance",
-        "country": "FR",
-        "url": "https://flevance.fr/products/810158838680-dragon-ball-card-game-masters-boite-de-24-boosters-b31-english",
-    },
-    # ── FB10 (more shops across EU/CH/GR/Asia) ──
-    {
-        "id": "FB10",
-        "shop": "88 Cardhouse",
-        "country": "EU",
-        "url": "https://www.88cardhouse.com/collections/dragon-ball-super/products/dragon-ball-fusion-world-english-fb-10-booster-box-pre-order",
-    },
-    {
-        "id": "FB10",
-        "shop": "Funny Pop Box",
-        "country": "EU",
-        "url": "https://funnypopbox.com/product/pre-order-dragon-ball-super-card-game-fusion-world-fb10-booster-box-english/",
-    },
-    {
-        "id": "FB10",
-        "shop": "Card Treasure",
-        "country": "CH",
-        "url": "https://cardtreasure.ch/products/cross-force-booster-box-dragon-ballb-fusion-world-fb-10",
-    },
-    {
-        "id": "FB10",
-        "shop": "Zatu",
-        "country": "UK",
-        "url": "https://zatu.com/products/dragon-ball-super-cg-fusion-world-cross-force-booster-boxfb10",
-    },
-    {
-        "id": "FB10",
-        "shop": "Frida M Store",
-        "country": "EU",
-        "url": "https://fridamstore.com/collections/dragon-ball-fusion-world",
-    },
-    {
-        "id": "FB10",
-        "shop": "CarteMagic",
-        "country": "IT",
-        "url": "https://www.cartemagic.com/prodotto/dragon-ball-fb10-super-card-game-booster-box-24-bustine-versione-inglese/",
-    },
-    {
-        "id": "FB10",
-        "shop": "Anime World",
-        "country": "GR",
-        "url": "https://animeworld.gr/product/booster-box-display-fb-10-24-boosters-dbscg-fusion-world/",
-    },
-    {
-        "id": "FB10",
-        "shop": "Fantasy Sphere",
-        "country": "EU",
-        "url": "https://en.fantasysphere.net/product/boite-de-24-boosters-fb10-dragon-ball-super-cg-fusion-world-en-10040799",
-    },
-    {
-        "id": "FB10",
-        "shop": "Cardoreum",
-        "country": "EU",
-        "url": "https://cardoreum.eu/products/dragon-ball-fusion-world-booster-box-fb10-24-packs",
+        "url": "https://totalcards.net/products/dragon-ball-super-fusion-world-2nd-anniversary-set",
     },
 ]
 
@@ -1184,35 +1019,20 @@ def deep_check_product(context, url):
 
 
 def is_dragonball_booster_box(title):
-    """Strict: title must be a Dragon Ball Masters / Fusion World / Story Booster box.
+    """Narrowed: title must match an active PRIORITY watchlist target.
 
-    Rules (all on title only):
-    1. Must contain a booster-box keyword OR a 12-36 pack-count pattern
-    2. Must NOT contain a hard-exclude keyword (sleeves, ETB, single pack, etc)
-    3. Must NOT contain a blocked old-series keyword (Zenkai, Unison, etc)
-    4. Must mention Masters / Fusion World / Story Booster OR matching set code
-       OR explicit Dragon Ball branding.
+    Currently only tracking ST01 / ST02 / ANNIV2. Other DB products (BT31, FB10,
+    FB11, FB09, etc) are ignored entirely. Adjust PRIORITY_WATCHLIST to broaden.
+
+    Exception for ANNIV2: this is a special collector set (not a regular booster
+    box), so it doesn't need the booster-box keyword - the priority pattern is enough.
     """
     title_lower = title.lower()
-    has_box_kw = any(kw in title_lower for kw in BOOSTER_BOX_KEYWORDS)
-    has_pack_count = PACK_COUNT_BOX_RE.search(title_lower) is not None
-    if not (has_box_kw or has_pack_count):
-        return False
     if any(kw in title_lower for kw in EXCLUDE_KEYWORDS):
         return False
     if any(kw in title_lower for kw in BLOCKED_SERIES_KEYWORDS):
         return False
-    has_dragonball = any(kw in title_lower for kw in DRAGONBALL_KEYWORDS)
-    has_fw_or_code = (
-        "fusion world" in title_lower
-        or "fusionworld" in title_lower
-        or ALLOWED_SERIES_REGEX.search(title_lower) is not None
-    )
-    has_masters_with_code = "masters" in title_lower and ALLOWED_SERIES_REGEX.search(title_lower) is not None
-    has_story_booster = "story booster" in title_lower or re.search(r"(?<![a-z0-9])st[\s\-_]?\d{2}(?!\d)", title_lower)
-    if not (has_dragonball or has_fw_or_code or has_masters_with_code or has_story_booster):
-        return False
-    return True
+    return detect_priority_match(title) is not None
 
 
 # Booster box minimum price (€). Anything below this is almost certainly an
@@ -1279,22 +1099,19 @@ def is_relevant_news(title):
 # ─── eBay Integration ────────────────────────────────────────────────────
 
 EBAY_QUERIES = {
-    "BT31": [
-        "dragon ball masters bt31 booster",
-        "dragon ball masters b31 booster",
-        "dragon ball impact beyond dimensions booster",
-        "dragon ball battles beyond dimensions booster",
-        "dragon ball masters bt31 japanese",  # JP version
-    ],
-    "FB10": [
-        "dragon ball fusion world fb10",
-        "dragon ball fusion world cross force",
-        "dragon ball fb10 japanese",  # JP version
-    ],
     "ST01": [
         "dragon ball fusion world st01",
         "dragon ball fusion world story booster",
-        "dragon ball st01 japanese",  # JP version
+        "dragon ball st01 japanese",
+    ],
+    "ST02": [
+        "dragon ball fusion world st02",
+        "dragon ball fusion world story booster 02",
+    ],
+    "ANNIV2": [
+        "dragon ball fusion world 2nd anniversary set",
+        "dragon ball fusion world second anniversary",
+        "dragon ball fusion world anniversary set",
     ],
 }
 EBAY_MARKETS = ["EBAY_NL", "EBAY_DE", "EBAY_GB", "EBAY_BE", "EBAY_FR"]
@@ -2239,29 +2056,25 @@ def cmd_run(dry_run=False, priority_only=False):
     migrate_dedup_state()  # idempotent cleanup of old hash-scheme dupes
     new_products, status_changes, price_drops, new_news, new_ebay, ebay_sold = scrape_all(priority_only=priority_only)
 
-    # ALERT POLICY: only ping Telegram for products that are actually buyable
-    # (in_stock or preorder). OOS / unknown are tracked silently.
-    # Also: respect per-target alert_enabled flag (e.g. BT31 already ordered -> no pings).
+    # ALERT POLICY: only priority-matched products trigger Telegram.
+    # With narrowed PRIORITY_WATCHLIST, this means ST01/ST02/ANNIV2 only.
     priority_hits = [
         p for p in new_products
         if p.get("priority")
         and p.get("stock_status") in BUYABLE_STATUSES
         and is_alert_enabled(p.get("priority"))
     ]
-    new_preorders = [
-        p for p in new_products
-        if p.get("stock_status") == "preorder" and not p.get("priority")
-    ]
+    new_preorders = []  # no longer used - non-priority products don't alert
     restocks = [
         (p, old) for p, old, new in status_changes
         if new in BUYABLE_STATUSES
         and old not in BUYABLE_STATUSES
+        and p.get("priority")
         and is_alert_enabled(p.get("priority"))
     ]
-    # Filter price drops too: skip silenced targets
     price_drops = [
         (p, old, new) for p, old, new in price_drops
-        if is_alert_enabled(p.get("priority"))
+        if p.get("priority") and is_alert_enabled(p.get("priority"))
     ]
 
     log.info(
