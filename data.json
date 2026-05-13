@@ -1,25 +1,20 @@
 {
-  "generated_at": "2026-05-13T10:48:01.975130",
+  "generated_at": "2026-05-13T14:48:56.585533",
   "watchlist": [
-    {
-      "id": "BT31",
-      "series": "Masters Ultra-Bout Set 4 (Battles Beyond Dimensions)",
-      "name": "Dragon Ball Super Card Game Masters BT31 Booster Box"
-    },
-    {
-      "id": "FB10",
-      "series": "Fusion World Cross Force",
-      "name": "Dragon Ball Super Card Game Fusion World FB10 Booster Box (Cross Force)"
-    },
     {
       "id": "ST01",
       "series": "Fusion World Story Booster 01",
       "name": "Dragon Ball Super Card Game Fusion World Story Booster 01 [ST01]"
     },
     {
-      "id": "FB11",
-      "series": "Fusion World Brightness of Hope",
-      "name": "Dragon Ball Super Card Game Fusion World FB11 Booster Box (Brightness of Hope)"
+      "id": "ST02",
+      "series": "Fusion World Story Booster 02 (placeholder)",
+      "name": "Dragon Ball Super Card Game Fusion World Story Booster 02 [ST02]"
+    },
+    {
+      "id": "ANNIV2",
+      "series": "Fusion World 2nd Anniversary Set",
+      "name": "Dragon Ball Super Card Game Fusion World 2nd Anniversary Set"
     }
   ],
   "products": [
@@ -148,20 +143,6 @@
       "deep_checked": true,
       "last_seen": "2026-05-13T10:31:46.641659",
       "first_seen": "2026-05-02T10:23:29.172559"
-    },
-    {
-      "title": "Dragon Ball Super Card Game: Fusion World - Story Booster 01 [ST01] - Booster Box [MAX. 2 PER CUSTOMER]",
-      "shop": "PenguinTCG",
-      "country": "UK",
-      "price": "£120.00",
-      "price_num": 120.0,
-      "stock_status": "out_of_stock",
-      "url": "https://www.penguintcg.co.uk/more-tcgs/p/dragon-ball-super-card-game-fusion-world-story-booster-01-st01-booster-box",
-      "priority": "ST01",
-      "priority_series": "Fusion World Story Booster 01",
-      "deep_checked": true,
-      "last_seen": "2026-05-13T10:32:20.746244",
-      "first_seen": "2026-05-08T16:32:38.108369"
     },
     {
       "title": "403 Forbidden",
@@ -582,6 +563,160 @@
       "deep_checked": true,
       "last_seen": "2026-05-13T10:46:11.723011",
       "first_seen": "2026-05-08T15:24:38.332915"
+    },
+    {
+      "title": "Dragon Ball Super Card Game: Fusion World - Story Booster 01 [ST01] - Booster Box [MAX. 2 PER CUSTOMER]",
+      "shop": "PenguinTCG",
+      "country": "UK",
+      "price": "£120.00",
+      "price_num": 120.0,
+      "stock_status": "out_of_stock",
+      "url": "https://www.penguintcg.co.uk/more-tcgs/p/dragon-ball-super-card-game-fusion-world-story-booster-01-st01-booster-box",
+      "priority": "ST01",
+      "priority_series": "Fusion World Story Booster 01",
+      "deep_checked": true,
+      "last_seen": "2026-05-13T14:38:50.788001",
+      "first_seen": "2026-05-08T16:32:38.108369"
+    },
+    {
+      "title": "The page you are looking for was not found.",
+      "shop": "Padis Store",
+      "country": "IT",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "in_stock",
+      "url": "https://www.padis-store.com/en/dragon-ball-fusion-world/42957-preorder-dragon-ball-fusion-world-2nd-anniversary-set-english-810199501710.html",
+      "priority": "ANNIV2",
+      "priority_series": "Fusion World 2nd Anniversary Set",
+      "deep_checked": true,
+      "last_seen": "2026-05-13T14:39:36.658400",
+      "first_seen": "2026-05-13T14:39:36.658408"
+    },
+    {
+      "title": "Dragon Ball Super Card Game Fusion World - 2nd Anniversary Set [Pre-Order Jun 2026]",
+      "shop": "JumpIchiban",
+      "country": "JP",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "out_of_stock",
+      "url": "https://jumpichiban.com/en-us/products/dragon-ball-super-card-game-fusion-world-2nd-anniversary-set",
+      "priority": "ANNIV2",
+      "priority_series": "Fusion World 2nd Anniversary Set",
+      "deep_checked": true,
+      "last_seen": "2026-05-13T14:40:45.724527",
+      "first_seen": "2026-05-13T14:40:45.724535"
+    },
+    {
+      "title": "Dragon Ball Super Card Game -  Fusion World - 2nd Anniversary Set",
+      "shop": "Gamerz Paradize",
+      "country": "NL",
+      "price": "€124,99",
+      "price_num": 124.99,
+      "stock_status": "out_of_stock",
+      "url": "https://gamerzparadize.nl/en/products/dragon-ball-super-card-game-fusion-world-2nd-anniversary-set",
+      "priority": "ANNIV2",
+      "priority_series": "Fusion World 2nd Anniversary Set",
+      "deep_checked": true,
+      "last_seen": "2026-05-13T14:41:34.073497",
+      "first_seen": "2026-05-13T14:41:34.073509"
+    },
+    {
+      "title": "Buy Dragon Ball Super Card Game Fusion World - 2nd Anniversary Set (English) from Bandai TCG",
+      "shop": "Turol Games",
+      "country": "ES",
+      "price": "157,00€",
+      "price_num": 157.0,
+      "stock_status": "in_stock",
+      "url": "https://www.turolgames.com/en/dragon-ball-tcg/124149-dragon-ball-super-card-game-fusion-world-2nd-anniversary-set-english",
+      "priority": "ANNIV2",
+      "priority_series": "Fusion World 2nd Anniversary Set",
+      "deep_checked": true,
+      "last_seen": "2026-05-13T14:41:47.940525",
+      "first_seen": "2026-05-13T14:41:47.940535"
+    },
+    {
+      "title": "Dragon Ball Super Card Game Fusion World: 2nd Anniversary Commemorative Set – English",
+      "shop": "Candy Cards",
+      "country": "EU",
+      "price": "€121,91",
+      "price_num": 121.91,
+      "stock_status": "preorder",
+      "url": "https://candycards.eu/product/dragon-ball-super-card-game-fusion-world-2nd-anniversary-commemorative-set-english/",
+      "priority": "ANNIV2",
+      "priority_series": "Fusion World 2nd Anniversary Set",
+      "deep_checked": true,
+      "last_seen": "2026-05-13T14:42:16.538416",
+      "first_seen": "2026-05-13T14:42:16.538429"
+    },
+    {
+      "title": "403 Forbidden",
+      "shop": "Nin-Nin-Game",
+      "country": "FR",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://www.nin-nin-game.com/en/dragon-ball-tcg/215735-dragon-ball-super-card-game-fusion-world-2nd-anniversary-set-limited-edition-bandai-.html",
+      "priority": "ANNIV2",
+      "priority_series": "Fusion World 2nd Anniversary Set",
+      "deep_checked": true,
+      "last_seen": "2026-05-13T14:42:39.087350",
+      "first_seen": "2026-05-13T14:42:39.087360"
+    },
+    {
+      "title": "Dragon Ball Super Card Game – Fusion World – 2nd Anniversary Set RESERVA",
+      "shop": "Montalfan",
+      "country": "ES",
+      "price": "129,99€",
+      "price_num": 129.99,
+      "stock_status": "in_stock",
+      "url": "https://montalfan.com/en/product/dragon-ball-super-card-game-fusion-world-2nd-anniversary-set/",
+      "priority": "ANNIV2",
+      "priority_series": "Fusion World 2nd Anniversary Set",
+      "deep_checked": true,
+      "last_seen": "2026-05-13T14:43:07.201744",
+      "first_seen": "2026-05-13T14:43:07.201755"
+    },
+    {
+      "title": "Dragon Ball Super Card Game 5th Anniversary Set BE21",
+      "shop": "Spellenvariant",
+      "country": "NL",
+      "price": "€64,88",
+      "price_num": 64.88,
+      "stock_status": "preorder",
+      "url": "https://www.spellenvariant.nl/dragon-ball-super-card-game-5th-anniversary-set-be21",
+      "priority": "ANNIV2",
+      "priority_series": "Fusion World 2nd Anniversary Set",
+      "deep_checked": true,
+      "last_seen": "2026-05-13T14:43:56.464330",
+      "first_seen": "2026-05-13T14:43:56.464383"
+    },
+    {
+      "title": "Dragonball Fusion World | 2nd Anniversary Set | Englisch",
+      "shop": "NextCards",
+      "country": "DE",
+      "price": "119,99€",
+      "price_num": 119.99,
+      "stock_status": "in_stock",
+      "url": "https://nextcards.de/products/dragonball-fusion-world-2nd-anniversary-set-en",
+      "priority": "ANNIV2",
+      "priority_series": "Fusion World 2nd Anniversary Set",
+      "deep_checked": true,
+      "last_seen": "2026-05-13T14:45:08.641990",
+      "first_seen": "2026-05-13T14:45:08.642034"
+    },
+    {
+      "title": "1st Anniversary Set - (Fusion World)",
+      "shop": "The Card Vault",
+      "country": "UK",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "out_of_stock",
+      "url": "https://thecardvault.co.uk/en-us/products/dragon-ball-super-cg-fusion-world-1st-anniversary-set",
+      "priority": "ANNIV2",
+      "priority_series": "Fusion World 2nd Anniversary Set",
+      "deep_checked": true,
+      "last_seen": "2026-05-13T14:46:00.553069",
+      "first_seen": "2026-05-13T14:46:00.553132"
     },
     {
       "title": "Dragon Ball Super Boosterbox - B29 Fearsome Rivals",
@@ -12919,6 +13054,11 @@
         "ts": "2026-05-13T10:32:20.746261",
         "price": 120.0,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-13T14:38:50.788019",
+        "price": 120.0,
+        "stock_status": "out_of_stock"
       }
     ],
     "42e019372e0fd22fadd36d7c1bda5408": [
@@ -13369,17 +13509,59 @@
         "price": 119.9,
         "stock_status": "preorder"
       }
+    ],
+    "911d0e68dfa66b33fa468f4d9aba3984": [
+      {
+        "ts": "2026-05-13T14:41:34.073630",
+        "price": 124.99,
+        "stock_status": "out_of_stock"
+      }
+    ],
+    "2ea39405712fde9c7dbe71538a9fe317": [
+      {
+        "ts": "2026-05-13T14:41:47.941044",
+        "price": 157.0,
+        "stock_status": "in_stock"
+      }
+    ],
+    "674fb73137500b15920e840b83db8cab": [
+      {
+        "ts": "2026-05-13T14:42:16.538542",
+        "price": 121.91,
+        "stock_status": "preorder"
+      }
+    ],
+    "be91093a040b561268ea9c549785f283": [
+      {
+        "ts": "2026-05-13T14:43:07.201936",
+        "price": 129.99,
+        "stock_status": "in_stock"
+      }
+    ],
+    "34078a29066c85afd101ffe6ce770354": [
+      {
+        "ts": "2026-05-13T14:43:56.464438",
+        "price": 64.88,
+        "stock_status": "preorder"
+      }
+    ],
+    "375a8b70d9e5c0578a8bdc0f322a59a1": [
+      {
+        "ts": "2026-05-13T14:45:08.642083",
+        "price": 119.99,
+        "stock_status": "in_stock"
+      }
     ]
   },
   "stats": {
-    "total_products": 158,
-    "preorders": 15,
-    "in_stock": 4,
-    "out_of_stock": 44,
-    "priority_hits": 40,
+    "total_products": 168,
+    "preorders": 17,
+    "in_stock": 8,
+    "out_of_stock": 47,
+    "priority_hits": 50,
     "news_articles": 0,
-    "shops_total": 55,
-    "shops_healthy": 54,
+    "shops_total": 59,
+    "shops_healthy": 58,
     "shops_disabled": 1
   },
   "health": {
@@ -13388,8 +13570,8 @@
         "shop": "Bol.com",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 83,
-        "last_success": "2026-05-13T10:42:08.123913",
+        "consecutive_zero_results": 84,
+        "last_success": "2026-05-13T14:43:29.989796",
         "last_error": null
       },
       {
@@ -13428,16 +13610,16 @@
         "shop": "TBH Store",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 83,
-        "last_success": "2026-05-13T10:42:09.345375",
+        "consecutive_zero_results": 84,
+        "last_success": "2026-05-13T14:43:31.701814",
         "last_error": null
       },
       {
         "shop": "Pokeca",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 0,
-        "last_success": "2026-05-13T10:42:10.942992",
+        "consecutive_zero_results": 1,
+        "last_success": "2026-05-13T14:43:33.793475",
         "last_error": null
       },
       {
@@ -13445,7 +13627,7 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-13T10:42:11.885028",
+        "last_success": "2026-05-13T14:43:56.464320",
         "last_error": null
       },
       {
@@ -13460,80 +13642,80 @@
         "shop": "Oppacards",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 0,
-        "last_success": "2026-05-13T10:42:12.874028",
+        "consecutive_zero_results": 1,
+        "last_success": "2026-05-13T14:43:34.701534",
         "last_error": null
       },
       {
         "shop": "TF-Robots",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 83,
-        "last_success": "2026-05-13T10:42:31.861859",
+        "consecutive_zero_results": 84,
+        "last_success": "2026-05-13T14:43:53.786636",
         "last_error": null
       },
       {
         "shop": "Dracoon",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 83,
-        "last_success": "2026-05-13T10:42:33.393006",
+        "consecutive_zero_results": 84,
+        "last_success": "2026-05-13T14:43:55.660917",
         "last_error": null
       },
       {
         "shop": "TCGHaven",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 83,
-        "last_success": "2026-05-13T10:42:36.732085",
+        "consecutive_zero_results": 84,
+        "last_success": "2026-05-13T14:43:59.626899",
         "last_error": null
       },
       {
         "shop": "AlpsTCG",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 34,
-        "last_success": "2026-05-13T10:42:37.512038",
+        "consecutive_zero_results": 35,
+        "last_success": "2026-05-13T14:44:00.522459",
         "last_error": null
       },
       {
         "shop": "TcgReus",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 83,
-        "last_success": "2026-05-13T10:42:38.499604",
+        "consecutive_zero_results": 84,
+        "last_success": "2026-05-13T14:44:18.526978",
         "last_error": null
       },
       {
         "shop": "Arly Trading",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 83,
-        "last_success": "2026-05-13T10:42:58.684032",
+        "consecutive_zero_results": 84,
+        "last_success": "2026-05-13T14:44:22.368445",
         "last_error": null
       },
       {
         "shop": "Gamerz Paradize (booster boxen)",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 0,
-        "last_success": "2026-05-13T10:43:43.308548",
+        "consecutive_zero_results": 1,
+        "last_success": "2026-05-13T14:44:21.016866",
         "last_error": null
       },
       {
         "shop": "Card Game Shop BE",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 0,
-        "last_success": "2026-05-13T10:42:51.070888",
+        "consecutive_zero_results": 1,
+        "last_success": "2026-05-13T14:44:13.401558",
         "last_error": null
       },
       {
         "shop": "Cardmarket",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 83,
-        "last_success": "2026-05-13T10:45:55.155793",
+        "consecutive_zero_results": 84,
+        "last_success": "2026-05-13T14:47:12.923634",
         "last_error": null
       },
       {
@@ -13548,40 +13730,40 @@
         "shop": "Magic Madhouse",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 83,
-        "last_success": "2026-05-13T10:46:01.063448",
+        "consecutive_zero_results": 84,
+        "last_success": "2026-05-13T14:47:08.493859",
         "last_error": null
       },
       {
         "shop": "Chaos Cards",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 83,
-        "last_success": "2026-05-13T10:46:14.020006",
+        "consecutive_zero_results": 84,
+        "last_success": "2026-05-13T14:47:18.641289",
         "last_error": null
       },
       {
         "shop": "Total Cards",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 83,
-        "last_success": "2026-05-13T10:46:20.261486",
+        "consecutive_zero_results": 84,
+        "last_success": "2026-05-13T14:47:27.963771",
         "last_error": null
       },
       {
         "shop": "Fantasywelt",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 83,
-        "last_success": "2026-05-13T10:46:23.635236",
+        "consecutive_zero_results": 84,
+        "last_success": "2026-05-13T14:47:32.433407",
         "last_error": null
       },
       {
         "shop": "Amazon.nl",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 83,
-        "last_success": "2026-05-13T10:46:23.401692",
+        "consecutive_zero_results": 84,
+        "last_success": "2026-05-13T14:47:32.794218",
         "last_error": null
       },
       {
@@ -13596,88 +13778,88 @@
         "shop": "Amazon.co.uk",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 83,
-        "last_success": "2026-05-13T10:46:33.976912",
+        "consecutive_zero_results": 84,
+        "last_success": "2026-05-13T14:47:35.446577",
         "last_error": null
       },
       {
         "shop": "Nin-Nin-Game",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 37,
-        "last_success": "2026-05-13T10:43:01.395526",
+        "consecutive_zero_results": 38,
+        "last_success": "2026-05-13T14:44:24.427397",
         "last_error": null
       },
       {
         "shop": "4X Trading",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 37,
-        "last_success": "2026-05-13T10:43:03.916058",
+        "consecutive_zero_results": 38,
+        "last_success": "2026-05-13T14:44:38.687270",
         "last_error": null
       },
       {
         "shop": "Hobby Genki",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 37,
-        "last_success": "2026-05-13T10:43:14.831270",
+        "consecutive_zero_results": 38,
+        "last_success": "2026-05-13T14:44:42.335776",
         "last_error": null
       },
       {
         "shop": "Master of Games",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 34,
-        "last_success": "2026-05-13T10:43:25.817966",
+        "consecutive_zero_results": 35,
+        "last_success": "2026-05-13T14:45:05.600606",
         "last_error": null
       },
       {
         "shop": "OnyTCG (Fusion World preorders)",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 0,
-        "last_success": "2026-05-13T10:43:26.963972",
+        "consecutive_zero_results": 1,
+        "last_success": "2026-05-13T14:45:08.303559",
         "last_error": null
       },
       {
         "shop": "Il Nuovo Mondo",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 0,
-        "last_success": "2026-05-13T10:43:51.377381",
+        "consecutive_zero_results": 1,
+        "last_success": "2026-05-13T14:45:12.865459",
         "last_error": null
       },
       {
         "shop": "GameTrade",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 35,
-        "last_success": "2026-05-13T10:43:40.326120",
+        "consecutive_zero_results": 36,
+        "last_success": "2026-05-13T14:45:28.047352",
         "last_error": null
       },
       {
         "shop": "WonderClub",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 35,
-        "last_success": "2026-05-13T10:43:50.025516",
+        "consecutive_zero_results": 36,
+        "last_success": "2026-05-13T14:45:30.082321",
         "last_error": null
       },
       {
         "shop": "Jap-One",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 33,
-        "last_success": "2026-05-13T10:43:53.180815",
+        "consecutive_zero_results": 34,
+        "last_success": "2026-05-13T14:45:33.453472",
         "last_error": null
       },
       {
         "shop": "Aquitaz",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 35,
-        "last_success": "2026-05-13T10:44:04.935115",
+        "consecutive_zero_results": 36,
+        "last_success": "2026-05-13T14:45:33.770346",
         "last_error": null
       },
       {
@@ -13685,143 +13867,175 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-05-13T10:44:08.786065",
+        "last_success": "2026-05-13T14:46:00.553062",
         "last_error": null
       },
       {
         "shop": "Zavvi (Dragon Ball)",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 35,
-        "last_success": "2026-05-13T10:43:59.304913",
+        "consecutive_zero_results": 36,
+        "last_success": "2026-05-13T14:45:37.783388",
         "last_error": null
       },
       {
         "shop": "Hobbix Change",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 0,
-        "last_success": "2026-05-13T10:45:01.827949",
+        "consecutive_zero_results": 1,
+        "last_success": "2026-05-13T14:45:55.540776",
         "last_error": null
       },
       {
         "shop": "Games Island",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 35,
-        "last_success": "2026-05-13T10:44:05.615671",
+        "consecutive_zero_results": 36,
+        "last_success": "2026-05-13T14:45:45.483680",
         "last_error": null
       },
       {
         "shop": "Loot Cave",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 35,
-        "last_success": "2026-05-13T10:44:25.568656",
+        "consecutive_zero_results": 36,
+        "last_success": "2026-05-13T14:45:59.720955",
         "last_error": null
       },
       {
         "shop": "PT Merch",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 35,
-        "last_success": "2026-05-13T10:44:31.005948",
+        "consecutive_zero_results": 36,
+        "last_success": "2026-05-13T14:46:04.242648",
         "last_error": null
       },
       {
         "shop": "Gathering Games",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 35,
-        "last_success": "2026-05-13T10:44:32.016934",
+        "consecutive_zero_results": 36,
+        "last_success": "2026-05-13T14:46:10.426502",
         "last_error": null
       },
       {
         "shop": "Firestorm Games",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 35,
-        "last_success": "2026-05-13T10:44:32.813106",
+        "consecutive_zero_results": 36,
+        "last_success": "2026-05-13T14:46:19.485400",
         "last_error": null
       },
       {
         "shop": "Flevance",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 35,
-        "last_success": "2026-05-13T10:44:50.197660",
+        "consecutive_zero_results": 36,
+        "last_success": "2026-05-13T14:46:24.542924",
         "last_error": null
       },
       {
         "shop": "TCG Store IT",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 35,
-        "last_success": "2026-05-13T10:44:56.607014",
+        "consecutive_zero_results": 36,
+        "last_success": "2026-05-13T14:46:28.159053",
         "last_error": null
       },
       {
         "shop": "Card Treasure",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 35,
-        "last_success": "2026-05-13T10:44:56.707948",
+        "consecutive_zero_results": 36,
+        "last_success": "2026-05-13T14:46:28.923195",
         "last_error": null
       },
       {
         "shop": "Zatu",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 0,
-        "last_success": "2026-05-13T10:45:31.293668",
+        "consecutive_zero_results": 1,
+        "last_success": "2026-05-13T14:46:37.325455",
         "last_error": null
       },
       {
         "shop": "Frida M Store",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 0,
-        "last_success": "2026-05-13T10:45:59.665901",
+        "consecutive_zero_results": 1,
+        "last_success": "2026-05-13T14:46:44.651681",
         "last_error": null
       },
       {
         "shop": "CarteMagic",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 35,
-        "last_success": "2026-05-13T10:45:21.135661",
+        "consecutive_zero_results": 36,
+        "last_success": "2026-05-13T14:46:49.019044",
         "last_error": null
       },
       {
         "shop": "Anime World GR",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 35,
-        "last_success": "2026-05-13T10:45:24.518354",
+        "consecutive_zero_results": 36,
+        "last_success": "2026-05-13T14:46:54.772851",
         "last_error": null
       },
       {
         "shop": "88 Cardhouse",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 0,
-        "last_success": "2026-05-13T10:46:11.722935",
+        "consecutive_zero_results": 1,
+        "last_success": "2026-05-13T14:46:53.625458",
         "last_error": null
       },
       {
         "shop": "Cardoreum",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 35,
-        "last_success": "2026-05-13T10:45:46.397941",
+        "consecutive_zero_results": 36,
+        "last_success": "2026-05-13T14:47:02.377677",
         "last_error": null
       },
       {
         "shop": "Fantasy Sphere",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 35,
-        "last_success": "2026-05-13T10:45:49.833810",
+        "consecutive_zero_results": 36,
+        "last_success": "2026-05-13T14:47:10.433227",
+        "last_error": null
+      },
+      {
+        "shop": "Turol Games",
+        "disabled": false,
+        "consecutive_failures": 0,
+        "consecutive_zero_results": 1,
+        "last_success": "2026-05-13T14:44:35.196794",
+        "last_error": null
+      },
+      {
+        "shop": "Candy Cards",
+        "disabled": false,
+        "consecutive_failures": 0,
+        "consecutive_zero_results": 1,
+        "last_success": "2026-05-13T14:44:51.748563",
+        "last_error": null
+      },
+      {
+        "shop": "Montalfan",
+        "disabled": false,
+        "consecutive_failures": 0,
+        "consecutive_zero_results": 1,
+        "last_success": "2026-05-13T14:45:02.275857",
+        "last_error": null
+      },
+      {
+        "shop": "NextCards",
+        "disabled": false,
+        "consecutive_failures": 0,
+        "consecutive_zero_results": 0,
+        "last_success": "2026-05-13T14:45:08.641982",
         "last_error": null
       }
     ],
@@ -13894,7 +14108,7 @@
         "shop": "Hobby Genki",
         "id": "ST01",
         "consecutive_unknown": 1,
-        "consecutive_failures": 71,
+        "consecutive_failures": 72,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
@@ -14089,11 +14303,238 @@
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
+      },
+      {
+        "shop": "Padis Store",
+        "id": "ANNIV2",
+        "consecutive_unknown": 0,
+        "consecutive_failures": 0,
+        "last_buyable": "2026-05-13T14:39:34.897061",
+        "last_error": null
+      },
+      {
+        "shop": "Hobby Genki",
+        "id": "ANNIV2",
+        "consecutive_unknown": 0,
+        "consecutive_failures": 1,
+        "last_buyable": null,
+        "last_error": "deep check failed"
+      },
+      {
+        "shop": "Ichiba Japan",
+        "id": "ANNIV2",
+        "consecutive_unknown": 0,
+        "consecutive_failures": 1,
+        "last_buyable": null,
+        "last_error": "deep check failed"
+      },
+      {
+        "shop": "JumpIchiban",
+        "id": "ANNIV2",
+        "consecutive_unknown": 0,
+        "consecutive_failures": 0,
+        "last_buyable": null,
+        "last_error": null
+      },
+      {
+        "shop": "Total Cards",
+        "id": "ANNIV2",
+        "consecutive_unknown": 0,
+        "consecutive_failures": 1,
+        "last_buyable": null,
+        "last_error": "deep check failed"
+      },
+      {
+        "shop": "Gamerz Paradize",
+        "id": "ANNIV2",
+        "consecutive_unknown": 0,
+        "consecutive_failures": 0,
+        "last_buyable": null,
+        "last_error": null
+      },
+      {
+        "shop": "Turol Games",
+        "id": "ANNIV2",
+        "consecutive_unknown": 0,
+        "consecutive_failures": 0,
+        "last_buyable": "2026-05-13T14:41:45.212380",
+        "last_error": null
+      },
+      {
+        "shop": "Candy Cards",
+        "id": "ANNIV2",
+        "consecutive_unknown": 0,
+        "consecutive_failures": 0,
+        "last_buyable": "2026-05-13T14:42:13.336514",
+        "last_error": null
+      },
+      {
+        "shop": "Nin-Nin-Game",
+        "id": "ANNIV2",
+        "consecutive_unknown": 1,
+        "consecutive_failures": 0,
+        "last_buyable": null,
+        "last_error": null
+      },
+      {
+        "shop": "Montalfan",
+        "id": "ANNIV2",
+        "consecutive_unknown": 0,
+        "consecutive_failures": 0,
+        "last_buyable": "2026-05-13T14:43:03.965705",
+        "last_error": null
       }
     ]
   },
   "ebay": {
     "active_listings": [
+      {
+        "item_id": "v1|389770977172|0",
+        "target": "ANNIV2",
+        "title": "Dragon Ball Fusion World Energy Marker 2nd Anniversary 5 Packs Sealed JP",
+        "price_value": 88.69,
+        "price_currency": "GBP",
+        "url": "https://www.ebay.co.uk/itm/389770977172?_skw=dragon+ball+fusion+world+second+anniversary&hash=item5ac0291f94:g:sKUAAeSwXthpu7i3",
+        "condition": "New/Factory Sealed",
+        "seller": "tyler-japan",
+        "feedback_pct": "100.0",
+        "country": "JP",
+        "marketplace": "EBAY_GB",
+        "image": "https://i.ebayimg.com/images/g/sKUAAeSwXthpu7i3/s-l225.jpg",
+        "buying_options": [
+          "FIXED_PRICE"
+        ],
+        "first_seen": "2026-05-13T14:48:51.397771"
+      },
+      {
+        "item_id": "v1|257446261996|0",
+        "target": "ANNIV2",
+        "title": "Dragon Ball Card Game Fusion World 2nd Anniversary Promo Pack Sealed English",
+        "price_value": 97.06,
+        "price_currency": "GBP",
+        "url": "https://www.ebay.co.uk/itm/257446261996?_skw=dragon+ball+fusion+world+second+anniversary&hash=item3bf0fe34ec:g:lMMAAeSwo3Vpwbhw",
+        "condition": "Ungraded",
+        "seller": "ballsinspiration",
+        "feedback_pct": "98.4",
+        "country": "CA",
+        "marketplace": "EBAY_GB",
+        "image": "https://i.ebayimg.com/images/g/lMMAAeSwo3Vpwbhw/s-l225.jpg",
+        "buying_options": [
+          "FIXED_PRICE",
+          "BEST_OFFER"
+        ],
+        "first_seen": "2026-05-13T14:48:51.397675"
+      },
+      {
+        "item_id": "v1|358548573449|0",
+        "target": "ANNIV2",
+        "title": "Dragon Ball Super Fusion World Card Game 2nd Anniversary 10 Pack Sealed",
+        "price_value": 151.46,
+        "price_currency": "GBP",
+        "url": "https://www.ebay.co.uk/itm/358548573449?_skw=dragon+ball+fusion+world+2nd+anniversary+set&hash=item537b290d09:g:S14AAeSwLGBqA1na",
+        "condition": "Used",
+        "seller": "acoota4",
+        "feedback_pct": "99.5",
+        "country": "JP",
+        "marketplace": "EBAY_GB",
+        "image": "https://i.ebayimg.com/images/g/S14AAeSwLGBqA1na/s-l225.jpg",
+        "buying_options": [
+          "FIXED_PRICE"
+        ],
+        "first_seen": "2026-05-13T14:48:48.164246"
+      },
+      {
+        "item_id": "v1|389792780298|0",
+        "target": "ANNIV2",
+        "title": "Dragon Ball Fusion World Energy Marker 20 Packs 2nd Anniversary Edition Japanese",
+        "price_value": 180.37,
+        "price_currency": "GBP",
+        "url": "https://www.ebay.co.uk/itm/389792780298?_skw=dragon+ball+fusion+world+second+anniversary&hash=item5ac175d00a:g:0vUAAeSwarppwpD7&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGaDNBWnjChGvtjTjUTdnmJ2zxRjmG5fDUb7zOcr0trBYwRpTc0CtaNz%2BqRtjzZtk8XSGUo%2FAotOgZbKUEu34xoWhtmnEscNjmSwfja6McQroh2yVvnNHsCVdUKQfejkUfIccLBQPbl4DI1Lqe6W0slhiZgc1ubqetd8z99WGdpHbwUsLUJ1dsySQcsb0lLx8w8mcfkvQzjTVWQjn%2BVrfWlJ%2BrKNvo3JI45c5%2F6CPUi08kBm3KSxpAoiOYi7IaEgM%2Bcs6kV7Crr9Y6cz7wwMWv--0gzwH4vZBlu8%2BEEKnaabnPfI%2F4Uz5QUA%2BE6pNlGt5JX3LfLiSML2NcI8YuM8c8%2FP",
+        "condition": "New/Factory Sealed",
+        "seller": "ok.trade",
+        "feedback_pct": "100.0",
+        "country": "JP",
+        "marketplace": "EBAY_GB",
+        "image": "https://i.ebayimg.com/images/g/0vUAAeSwarppwpD7/s-l225.jpg",
+        "buying_options": [
+          "FIXED_PRICE"
+        ],
+        "first_seen": "2026-05-13T14:48:51.397815"
+      },
+      {
+        "item_id": "v1|366406258669|0",
+        "target": "ANNIV2",
+        "title": "Dragon Ball Super Fusion World 1st Anniversary Set English Sealed",
+        "price_value": 208.7,
+        "price_currency": "GBP",
+        "url": "https://www.ebay.co.uk/itm/366406258669?_skw=dragon+ball+fusion+world+2nd+anniversary+set&hash=item554f83cfed:g:IlcAAeSwVKVqBHMg",
+        "condition": "New/Factory Sealed",
+        "seller": "junaed.ace",
+        "feedback_pct": "100.0",
+        "country": "GB",
+        "marketplace": "EBAY_GB",
+        "image": "https://i.ebayimg.com/images/g/IlcAAeSwVKVqBHMg/s-l225.jpg",
+        "buying_options": [
+          "FIXED_PRICE",
+          "BEST_OFFER"
+        ],
+        "first_seen": "2026-05-13T14:48:48.164100"
+      },
+      {
+        "item_id": "v1|358477234825|0",
+        "target": "ANNIV2",
+        "title": "Dragon Ball Super Card Game Fusion World Anniversary Set  Sealed",
+        "price_value": 220.58,
+        "price_currency": "GBP",
+        "url": "https://www.ebay.co.uk/itm/358477234825?_skw=dragon+ball+fusion+world+2nd+anniversary+set&hash=item5376e88289:g:Ls8AAeSwZeRp6bKC",
+        "condition": "Used",
+        "seller": "acoota4",
+        "feedback_pct": "99.5",
+        "country": "JP",
+        "marketplace": "EBAY_GB",
+        "image": "https://i.ebayimg.com/images/g/Ls8AAeSwZeRp6bKC/s-l225.jpg",
+        "buying_options": [
+          "FIXED_PRICE"
+        ],
+        "first_seen": "2026-05-13T14:48:48.164351"
+      },
+      {
+        "item_id": "v1|397837902167|0",
+        "target": "ANNIV2",
+        "title": "Dragon Ball Super Card Game Fusion World 1st Anniversary Set Box Sealed JP",
+        "price_value": 323.71,
+        "price_currency": "EUR",
+        "url": "https://www.ebay.nl/itm/397837902167?_skw=dragon+ball+fusion+world+anniversary+set&hash=item5ca0fca157:g:0xoAAeSw8VZppuEX",
+        "condition": "New/Factory Sealed",
+        "seller": "selectstorejaponica",
+        "feedback_pct": "100.0",
+        "country": "JP",
+        "marketplace": "EBAY_NL",
+        "image": "https://i.ebayimg.com/images/g/0xoAAeSw8VZppuEX/s-l225.jpg",
+        "buying_options": [
+          "FIXED_PRICE",
+          "BEST_OFFER"
+        ],
+        "first_seen": "2026-05-13T14:48:52.970349"
+      },
+      {
+        "item_id": "v1|388698431055|0",
+        "target": "ANNIV2",
+        "title": "Dragon Ball Fusion World 1st Anniversary  Set Factory Sealed",
+        "price_value": 600.0,
+        "price_currency": "EUR",
+        "url": "https://www.ebay.de/itm/388698431055?_skw=dragon+ball+fusion+world+anniversary+set&hash=item5a803b5e4f:g:kkwAAeSwyOpocgck",
+        "condition": "Nuevo/Precintado de fábrica",
+        "seller": "erling_cards",
+        "feedback_pct": "99.6",
+        "country": "ES",
+        "marketplace": "EBAY_DE",
+        "image": "https://i.ebayimg.com/images/g/kkwAAeSwyOpocgck/s-l225.jpg",
+        "buying_options": [
+          "FIXED_PRICE"
+        ],
+        "first_seen": "2026-05-13T14:48:53.783885"
+      },
       {
         "item_id": "v1|366395923032|0",
         "target": "FB10",
@@ -14191,6 +14632,6 @@
       }
     ],
     "sold_stats": {},
-    "active_count": 5
+    "active_count": 13
   }
 }
