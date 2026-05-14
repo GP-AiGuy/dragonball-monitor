@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T07:33:29.012574",
+  "generated_at": "2026-05-14T10:02:42.787438",
   "watchlist": [
     {
       "id": "ST01",
@@ -113,7 +113,7 @@
       "priority": "ST01",
       "priority_series": "Fusion World Story Booster 01",
       "deep_checked": true,
-      "last_seen": "2026-05-14T07:28:53.288572",
+      "last_seen": "2026-05-14T09:58:04.308211",
       "first_seen": "2026-05-08T16:32:38.108369"
     },
     {
@@ -127,7 +127,7 @@
       "priority": "ANNIV2",
       "priority_series": "Fusion World 2nd Anniversary Set",
       "deep_checked": true,
-      "last_seen": "2026-05-14T07:29:38.908352",
+      "last_seen": "2026-05-14T09:58:49.392607",
       "first_seen": "2026-05-13T14:39:36.658408"
     },
     {
@@ -141,7 +141,7 @@
       "priority": "ANNIV2",
       "priority_series": "Fusion World 2nd Anniversary Set",
       "deep_checked": true,
-      "last_seen": "2026-05-14T07:30:47.311395",
+      "last_seen": "2026-05-14T09:59:58.875616",
       "first_seen": "2026-05-13T14:40:45.724535"
     },
     {
@@ -155,7 +155,7 @@
       "priority": "ANNIV2",
       "priority_series": "Fusion World 2nd Anniversary Set",
       "deep_checked": true,
-      "last_seen": "2026-05-14T07:31:35.217270",
+      "last_seen": "2026-05-14T10:00:46.558608",
       "first_seen": "2026-05-13T14:41:34.073509"
     },
     {
@@ -169,7 +169,7 @@
       "priority": "ANNIV2",
       "priority_series": "Fusion World 2nd Anniversary Set",
       "deep_checked": true,
-      "last_seen": "2026-05-14T07:31:49.629713",
+      "last_seen": "2026-05-14T10:01:00.823849",
       "first_seen": "2026-05-13T14:41:47.940535"
     },
     {
@@ -183,7 +183,7 @@
       "priority": "ANNIV2",
       "priority_series": "Fusion World 2nd Anniversary Set",
       "deep_checked": true,
-      "last_seen": "2026-05-14T07:32:17.308505",
+      "last_seen": "2026-05-14T10:01:28.237686",
       "first_seen": "2026-05-13T14:42:16.538429"
     },
     {
@@ -197,7 +197,7 @@
       "priority": "ANNIV2",
       "priority_series": "Fusion World 2nd Anniversary Set",
       "deep_checked": true,
-      "last_seen": "2026-05-14T07:32:40.056732",
+      "last_seen": "2026-05-14T10:01:50.591226",
       "first_seen": "2026-05-13T14:42:39.087360"
     },
     {
@@ -211,7 +211,7 @@
       "priority": "ANNIV2",
       "priority_series": "Fusion World 2nd Anniversary Set",
       "deep_checked": true,
-      "last_seen": "2026-05-14T07:33:08.383164",
+      "last_seen": "2026-05-14T10:02:18.046485",
       "first_seen": "2026-05-13T14:43:07.201755"
     },
     {
@@ -12620,6 +12620,11 @@
         "ts": "2026-05-14T07:28:53.288588",
         "price": 120.0,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-14T09:58:04.308230",
+        "price": 120.0,
+        "stock_status": "out_of_stock"
       }
     ],
     "42e019372e0fd22fadd36d7c1bda5408": [
@@ -13141,6 +13146,11 @@
         "ts": "2026-05-14T07:31:35.217290",
         "price": 124.99,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-14T10:00:46.558629",
+        "price": 124.99,
+        "stock_status": "out_of_stock"
       }
     ],
     "2ea39405712fde9c7dbe71538a9fe317": [
@@ -13211,6 +13221,11 @@
       },
       {
         "ts": "2026-05-14T07:31:49.629726",
+        "price": 157.0,
+        "stock_status": "in_stock"
+      },
+      {
+        "ts": "2026-05-14T10:01:00.823865",
         "price": 157.0,
         "stock_status": "in_stock"
       }
@@ -13285,6 +13300,11 @@
         "ts": "2026-05-14T07:32:17.308520",
         "price": 121.91,
         "stock_status": "preorder"
+      },
+      {
+        "ts": "2026-05-14T10:01:28.237700",
+        "price": 121.91,
+        "stock_status": "preorder"
       }
     ],
     "be91093a040b561268ea9c549785f283": [
@@ -13355,6 +13375,11 @@
       },
       {
         "ts": "2026-05-14T07:33:08.383182",
+        "price": 129.99,
+        "stock_status": "in_stock"
+      },
+      {
+        "ts": "2026-05-14T10:02:18.046501",
         "price": 129.99,
         "stock_status": "in_stock"
       }
@@ -13989,7 +14014,7 @@
         "shop": "Hobby Genki",
         "id": "ST01",
         "consecutive_unknown": 1,
-        "consecutive_failures": 85,
+        "consecutive_failures": 86,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
@@ -14190,14 +14215,14 @@
         "id": "ANNIV2",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-05-14T07:29:37.198294",
+        "last_buyable": "2026-05-14T09:58:47.779940",
         "last_error": null
       },
       {
         "shop": "Hobby Genki",
         "id": "ANNIV2",
         "consecutive_unknown": 0,
-        "consecutive_failures": 14,
+        "consecutive_failures": 15,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
@@ -14205,7 +14230,7 @@
         "shop": "Ichiba Japan",
         "id": "ANNIV2",
         "consecutive_unknown": 0,
-        "consecutive_failures": 14,
+        "consecutive_failures": 15,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
@@ -14221,7 +14246,7 @@
         "shop": "Total Cards",
         "id": "ANNIV2",
         "consecutive_unknown": 0,
-        "consecutive_failures": 14,
+        "consecutive_failures": 15,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
@@ -14238,7 +14263,7 @@
         "id": "ANNIV2",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-05-14T07:31:46.104997",
+        "last_buyable": "2026-05-14T10:00:57.558414",
         "last_error": null
       },
       {
@@ -14246,13 +14271,13 @@
         "id": "ANNIV2",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-05-14T07:32:14.287593",
+        "last_buyable": "2026-05-14T10:01:25.378986",
         "last_error": null
       },
       {
         "shop": "Nin-Nin-Game",
         "id": "ANNIV2",
-        "consecutive_unknown": 14,
+        "consecutive_unknown": 15,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -14262,7 +14287,7 @@
         "id": "ANNIV2",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-05-14T07:33:05.081863",
+        "last_buyable": "2026-05-14T10:02:15.016418",
         "last_error": null
       }
     ]
@@ -14286,7 +14311,7 @@
           "FIXED_PRICE"
         ],
         "first_seen": "2026-05-13T14:48:51.397771",
-        "last_seen": "2026-05-14T07:33:28.836716"
+        "last_seen": "2026-05-14T10:02:42.561250"
       },
       {
         "item_id": "v1|257446261996|0",
@@ -14306,7 +14331,7 @@
           "BEST_OFFER"
         ],
         "first_seen": "2026-05-13T14:48:51.397675",
-        "last_seen": "2026-05-14T07:33:28.836714"
+        "last_seen": "2026-05-14T10:02:42.561248"
       },
       {
         "item_id": "v1|358548573449|0",
@@ -14325,7 +14350,7 @@
           "FIXED_PRICE"
         ],
         "first_seen": "2026-05-13T14:48:48.164246",
-        "last_seen": "2026-05-14T07:33:28.836701"
+        "last_seen": "2026-05-14T10:02:42.561233"
       },
       {
         "item_id": "v1|389792780298|0",
@@ -14344,7 +14369,7 @@
           "FIXED_PRICE"
         ],
         "first_seen": "2026-05-13T14:48:51.397815",
-        "last_seen": "2026-05-14T07:33:28.836718"
+        "last_seen": "2026-05-14T10:02:42.561256"
       },
       {
         "item_id": "v1|366406258669|0",
@@ -14382,13 +14407,13 @@
           "FIXED_PRICE"
         ],
         "first_seen": "2026-05-13T14:48:48.164351",
-        "last_seen": "2026-05-14T07:33:28.836711"
+        "last_seen": "2026-05-14T10:02:42.561244"
       },
       {
         "item_id": "v1|397942034886|0",
         "target": "ANNIV2",
         "title": "Dragon Ball Super Card Game Fusion World 1st Anniversary Set Box Sealed JP",
-        "price_value": 278.73,
+        "price_value": 281.0,
         "price_currency": "GBP",
         "url": "https://www.ebay.co.uk/itm/397942034886?_skw=dragon+ball+fusion+world+anniversary+set&hash=item5ca73191c6:g:8UEAAeSw7clqA-cL",
         "condition": "New/Factory Sealed",
@@ -14401,7 +14426,7 @@
           "FIXED_PRICE"
         ],
         "first_seen": "2026-05-13T21:37:10.611618",
-        "last_seen": "2026-05-14T07:33:28.836727"
+        "last_seen": "2026-05-14T10:02:42.561246"
       },
       {
         "item_id": "v1|397837902167|0",
@@ -14421,7 +14446,7 @@
           "BEST_OFFER"
         ],
         "first_seen": "2026-05-13T14:48:52.970349",
-        "last_seen": "2026-05-14T07:33:28.836723"
+        "last_seen": "2026-05-14T10:02:42.561259"
       },
       {
         "item_id": "v1|388698431055|0",
@@ -14440,7 +14465,7 @@
           "FIXED_PRICE"
         ],
         "first_seen": "2026-05-13T14:48:53.783885",
-        "last_seen": "2026-05-14T07:33:28.836725"
+        "last_seen": "2026-05-14T10:02:42.561261"
       }
     ],
     "sold_stats": {},
