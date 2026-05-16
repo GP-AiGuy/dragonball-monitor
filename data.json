@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T21:17:25.360365",
+  "generated_at": "2026-05-16T22:16:22.047748",
   "watchlist": [
     {
       "id": "ST01",
@@ -113,7 +113,7 @@
       "priority": "ST01",
       "priority_series": "Fusion World Story Booster 01",
       "deep_checked": true,
-      "last_seen": "2026-05-16T21:12:46.522114",
+      "last_seen": "2026-05-16T22:11:40.359845",
       "first_seen": "2026-05-08T16:32:38.108369"
     },
     {
@@ -127,7 +127,7 @@
       "priority": "ANNIV2",
       "priority_series": "Fusion World 2nd Anniversary Set",
       "deep_checked": true,
-      "last_seen": "2026-05-16T21:13:31.999404",
+      "last_seen": "2026-05-16T22:12:26.611191",
       "first_seen": "2026-05-13T14:39:36.658408"
     },
     {
@@ -141,7 +141,7 @@
       "priority": "ANNIV2",
       "priority_series": "Fusion World 2nd Anniversary Set",
       "deep_checked": true,
-      "last_seen": "2026-05-16T21:14:40.850424",
+      "last_seen": "2026-05-16T22:13:36.345670",
       "first_seen": "2026-05-13T14:40:45.724535"
     },
     {
@@ -155,7 +155,7 @@
       "priority": "ANNIV2",
       "priority_series": "Fusion World 2nd Anniversary Set",
       "deep_checked": true,
-      "last_seen": "2026-05-16T21:15:28.438366",
+      "last_seen": "2026-05-16T22:14:23.827909",
       "first_seen": "2026-05-13T14:41:34.073509"
     },
     {
@@ -169,7 +169,7 @@
       "priority": "ANNIV2",
       "priority_series": "Fusion World 2nd Anniversary Set",
       "deep_checked": true,
-      "last_seen": "2026-05-16T21:15:41.079061",
+      "last_seen": "2026-05-16T22:14:36.815137",
       "first_seen": "2026-05-13T14:41:47.940535"
     },
     {
@@ -183,7 +183,7 @@
       "priority": "ANNIV2",
       "priority_series": "Fusion World 2nd Anniversary Set",
       "deep_checked": true,
-      "last_seen": "2026-05-16T21:16:09.358131",
+      "last_seen": "2026-05-16T22:15:04.189392",
       "first_seen": "2026-05-13T14:42:16.538429"
     },
     {
@@ -197,7 +197,7 @@
       "priority": "ANNIV2",
       "priority_series": "Fusion World 2nd Anniversary Set",
       "deep_checked": true,
-      "last_seen": "2026-05-16T21:16:31.754152",
+      "last_seen": "2026-05-16T22:15:26.703808",
       "first_seen": "2026-05-13T14:42:39.087360"
     },
     {
@@ -211,7 +211,7 @@
       "priority": "ANNIV2",
       "priority_series": "Fusion World 2nd Anniversary Set",
       "deep_checked": true,
-      "last_seen": "2026-05-16T21:16:59.574677",
+      "last_seen": "2026-05-16T22:15:55.922921",
       "first_seen": "2026-05-13T14:43:07.201755"
     },
     {
@@ -12870,6 +12870,11 @@
         "ts": "2026-05-16T21:12:46.522131",
         "price": 120.0,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-16T22:11:40.359863",
+        "price": 120.0,
+        "stock_status": "out_of_stock"
       }
     ],
     "42e019372e0fd22fadd36d7c1bda5408": [
@@ -13641,6 +13646,11 @@
         "ts": "2026-05-16T21:15:28.438380",
         "price": 124.99,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-05-16T22:14:23.827925",
+        "price": 124.99,
+        "stock_status": "out_of_stock"
       }
     ],
     "2ea39405712fde9c7dbe71538a9fe317": [
@@ -13951,6 +13961,11 @@
       },
       {
         "ts": "2026-05-16T21:15:41.079076",
+        "price": 157.0,
+        "stock_status": "in_stock"
+      },
+      {
+        "ts": "2026-05-16T22:14:36.815153",
         "price": 157.0,
         "stock_status": "in_stock"
       }
@@ -14275,6 +14290,11 @@
         "ts": "2026-05-16T21:16:09.358146",
         "price": 121.91,
         "stock_status": "preorder"
+      },
+      {
+        "ts": "2026-05-16T22:15:04.189407",
+        "price": 121.91,
+        "stock_status": "preorder"
       }
     ],
     "be91093a040b561268ea9c549785f283": [
@@ -14595,6 +14615,11 @@
       },
       {
         "ts": "2026-05-16T21:16:59.574690",
+        "price": 129.99,
+        "stock_status": "in_stock"
+      },
+      {
+        "ts": "2026-05-16T22:15:55.922937",
         "price": 129.99,
         "stock_status": "in_stock"
       }
@@ -15444,7 +15469,7 @@
         "shop": "Hobby Genki",
         "id": "ST01",
         "consecutive_unknown": 1,
-        "consecutive_failures": 135,
+        "consecutive_failures": 136,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
@@ -15645,14 +15670,14 @@
         "id": "ANNIV2",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-05-16T21:13:30.303110",
+        "last_buyable": "2026-05-16T22:12:24.823722",
         "last_error": null
       },
       {
         "shop": "Hobby Genki",
         "id": "ANNIV2",
         "consecutive_unknown": 0,
-        "consecutive_failures": 64,
+        "consecutive_failures": 65,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
@@ -15660,7 +15685,7 @@
         "shop": "Ichiba Japan",
         "id": "ANNIV2",
         "consecutive_unknown": 0,
-        "consecutive_failures": 64,
+        "consecutive_failures": 65,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
@@ -15676,7 +15701,7 @@
         "shop": "Total Cards",
         "id": "ANNIV2",
         "consecutive_unknown": 0,
-        "consecutive_failures": 64,
+        "consecutive_failures": 65,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
@@ -15693,7 +15718,7 @@
         "id": "ANNIV2",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-05-16T21:15:38.322427",
+        "last_buyable": "2026-05-16T22:14:34.254390",
         "last_error": null
       },
       {
@@ -15701,13 +15726,13 @@
         "id": "ANNIV2",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-05-16T21:16:06.262544",
+        "last_buyable": "2026-05-16T22:15:01.221109",
         "last_error": null
       },
       {
         "shop": "Nin-Nin-Game",
         "id": "ANNIV2",
-        "consecutive_unknown": 64,
+        "consecutive_unknown": 65,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -15717,7 +15742,7 @@
         "id": "ANNIV2",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-05-16T21:16:56.375496",
+        "last_buyable": "2026-05-16T22:15:51.777716",
         "last_error": null
       }
     ]
@@ -15741,7 +15766,7 @@
           "FIXED_PRICE"
         ],
         "first_seen": "2026-05-13T14:48:51.397771",
-        "last_seen": "2026-05-16T21:17:25.201565"
+        "last_seen": "2026-05-16T22:16:20.600315"
       },
       {
         "item_id": "v1|257446261996|0",
@@ -15761,7 +15786,7 @@
           "BEST_OFFER"
         ],
         "first_seen": "2026-05-13T14:48:51.397675",
-        "last_seen": "2026-05-16T21:17:25.201564"
+        "last_seen": "2026-05-16T22:16:20.600308"
       },
       {
         "item_id": "v1|358548573449|0",
@@ -15780,7 +15805,7 @@
           "FIXED_PRICE"
         ],
         "first_seen": "2026-05-13T14:48:48.164246",
-        "last_seen": "2026-05-16T21:17:25.201549"
+        "last_seen": "2026-05-16T22:16:20.600294"
       },
       {
         "item_id": "v1|389792780298|0",
@@ -15799,7 +15824,7 @@
           "FIXED_PRICE"
         ],
         "first_seen": "2026-05-13T14:48:51.397815",
-        "last_seen": "2026-05-16T21:17:25.201570"
+        "last_seen": "2026-05-16T22:16:20.600309"
       },
       {
         "item_id": "v1|366406258669|0",
@@ -15837,7 +15862,7 @@
           "FIXED_PRICE"
         ],
         "first_seen": "2026-05-13T14:48:48.164351",
-        "last_seen": "2026-05-16T21:17:25.201561"
+        "last_seen": "2026-05-16T22:16:20.600306"
       },
       {
         "item_id": "v1|397942034886|0",
@@ -15856,7 +15881,7 @@
           "FIXED_PRICE"
         ],
         "first_seen": "2026-05-13T21:37:10.611618",
-        "last_seen": "2026-05-16T21:17:25.201559"
+        "last_seen": "2026-05-16T22:16:20.600303"
       },
       {
         "item_id": "v1|397837902167|0",
@@ -15876,7 +15901,7 @@
           "BEST_OFFER"
         ],
         "first_seen": "2026-05-13T14:48:52.970349",
-        "last_seen": "2026-05-16T21:17:25.201572"
+        "last_seen": "2026-05-16T22:16:20.600317"
       },
       {
         "item_id": "v1|306813928524|0",
@@ -15914,7 +15939,7 @@
           "FIXED_PRICE"
         ],
         "first_seen": "2026-05-16T18:05:00.422472",
-        "last_seen": "2026-05-16T21:17:25.201574"
+        "last_seen": "2026-05-16T22:16:20.600319"
       },
       {
         "item_id": "v1|388698431055|0",
@@ -15933,7 +15958,7 @@
           "FIXED_PRICE"
         ],
         "first_seen": "2026-05-13T14:48:53.783885",
-        "last_seen": "2026-05-16T21:17:25.201576"
+        "last_seen": "2026-05-16T22:16:20.600321"
       }
     ],
     "sold_stats": {},
