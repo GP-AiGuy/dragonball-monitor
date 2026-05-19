@@ -91,13 +91,35 @@ PRIORITY_WATCHLIST = [
         "series": "Fusion World 2nd Anniversary Set",
         "name": "Dragon Ball Super Card Game Fusion World 2nd Anniversary Set",
         # Special collector set (alt-art cards + accessories), NOT a regular booster box.
-        # Variants: "2nd Anniversary Set", "Second Anniversary", "2nd-Anniversary",
-        # plus shorter "Anniversary Set" (until 3rd anniv exists)
         "patterns": [
             r"2nd[\s\-_]*anniversary[\s\-_]*set",
             r"2nd[\s\-_]*anniversary",
             r"second[\s\-_]*anniversary[\s\-_]*set",
             r"(?<!3rd[\s\-_])(?<!4th[\s\-_])anniversary[\s\-_]*set",
+        ],
+    },
+    {
+        "id": "SPECIAL2026V1",
+        "series": "Fusion World Special Booster Box 2026 Vol. 1",
+        "name": "Dragon Ball Super Card Game Fusion World Special Booster Box 2026 Vol. 1",
+        # Special annual release, not yet assigned a B/FB/ST code by Bandai.
+        # Variants: "Special Booster Box 2026 Vol 1", "Special Booster 2026 Vol. 1",
+        # plus possible "SB02" / "Special Booster 02" codes if Bandai labels it that way.
+        "patterns": [
+            r"special[\s\-_]*booster[\s\-_]*box[\s\-_]*2026",
+            r"special[\s\-_]*booster.*2026.*vol\.?[\s\-_]*0?1",
+            r"special[\s\-_]*booster.*vol\.?[\s\-_]*0?1.*2026",
+            r"fusion[\s\-_]*world.*special[\s\-_]*booster",
+        ],
+    },
+    {
+        "id": "B32",
+        "series": "Masters Ultra Bout Set 5 (B32)",
+        "name": "Dragon Ball Super Card Game Masters B32 Ultra Bout (EN)",
+        # Variants: B32, BT32, B-32, BT-32, B 32, BT 32, B32E, BT32EN, B-32-EN
+        "patterns": [
+            r"(?<![a-z0-9])bt?[\s\-_]?32(?!\d)",
+            r"masters.*ultra[\s\-_]*bout.*(?:5|set[\s\-_]*5|v)",
         ],
     },
 ]
@@ -660,15 +682,24 @@ NEWS_SOURCES = [
         "url": "https://www.dbs-cardgame.com/fw/en/archive/",
         "type": "html",
     },
+    {
+        "name": "Fusion World Archive - Products Only (Official)",
+        "url": "https://www.dbs-cardgame.com/fw/en/archive/?subcategory=product",
+        "type": "html",
+    },
 ]
 
 NEWS_KEYWORDS = [
     "booster box", "booster display", "release date", "releasing", "release in",
     "pre-order", "preorder", "announced", "reveal", "spoilers", "card list",
-    "set list", "expansion", "next set", "upcoming", "story booster",
+    "set list", "expansion", "next set", "upcoming",
+    # Current targets (story booster, special booster, anniversary)
+    "story booster", "special booster", "anniversary set",
     # Current and future set codes (catch announcements early)
-    "b31", "b32", "b33", "fb10", "fb11", "fb12", "st01", "st02",
-    "masters", "fusion world", "cross force",
+    "b31", "b32", "b33", "bt31", "bt32", "bt33",
+    "fb10", "fb11", "fb12", "fb13",
+    "st01", "st02", "st03",
+    "masters", "fusion world", "ultra bout", "ultra-bout",
 ]
 
 # ─── Extractors ──────────────────────────────────────────────────────────
@@ -1166,6 +1197,15 @@ EBAY_QUERIES = {
         "dragon ball fusion world 2nd anniversary set",
         "dragon ball fusion world second anniversary",
         "dragon ball fusion world anniversary set",
+    ],
+    "SPECIAL2026V1": [
+        "dragon ball fusion world special booster box 2026",
+        "dragon ball fusion world special booster vol 1 2026",
+    ],
+    "B32": [
+        "dragon ball masters b32 booster",
+        "dragon ball masters bt32 booster",
+        "dragon ball masters ultra bout 5 booster",
     ],
 }
 EBAY_MARKETS = ["EBAY_NL", "EBAY_DE", "EBAY_GB", "EBAY_BE", "EBAY_FR"]
