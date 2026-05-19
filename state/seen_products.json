@@ -509,12 +509,12 @@
     "country": "NL",
     "price": "€99,99",
     "price_num": 99.99,
-    "stock_status": "unknown",
+    "stock_status": "out_of_stock",
     "url": "https://gamerzparadize.nl/en/products/dragon-ball-scg-masters-ub05-booster-box-b32",
-    "priority": null,
-    "priority_series": null,
-    "deep_checked": false,
-    "last_seen": "2026-05-13T10:43:43.308676",
+    "priority": "B32",
+    "priority_series": "Masters Ultra Bout Set 5 (B32)",
+    "deep_checked": true,
+    "last_seen": "2026-05-19T09:08:50.627330",
     "first_seen": "2026-05-02T10:31:58.092559"
   },
   "03e0751b5f816e9900049929606a6823": {
@@ -523,12 +523,12 @@
     "country": "NL",
     "price": "€109,99",
     "price_num": 109.99,
-    "stock_status": "unknown",
+    "stock_status": "out_of_stock",
     "url": "https://gamerzparadize.nl/en/products/dragon-ball-super-card-game-fusion-world-special-booster-box",
-    "priority": null,
-    "priority_series": null,
-    "deep_checked": false,
-    "last_seen": "2026-05-13T10:43:43.308713",
+    "priority": "SPECIAL2026V1",
+    "priority_series": "Fusion World Special Booster Box 2026 Vol. 1",
+    "deep_checked": true,
+    "last_seen": "2026-05-19T09:08:50.627402",
     "first_seen": "2026-05-02T10:32:19.843259"
   },
   "6093af1aec4f2f1afe1ffcae2dac7c6c": {
@@ -871,14 +871,14 @@
     "title": "Dragon Ball Super Card Game Fusion World SP01 Special Booster Display 01 Box 20 Packs ENG",
     "shop": "OnyTCG (Fusion World preorders)",
     "country": "IT",
-    "price": "Prijs onbekend",
-    "price_num": null,
-    "stock_status": "out_of_stock",
+    "price": "129,90€",
+    "price_num": 129.9,
+    "stock_status": "preorder",
     "url": "https://onytcg.com/en/prodotto/dragon-ball-super-card-game-fusion-world-sp01-special-booster-display-01-box-20-packs-eng",
-    "priority": null,
-    "priority_series": null,
-    "deep_checked": false,
-    "last_seen": "2026-05-13T10:43:26.963981",
+    "priority": "SPECIAL2026V1",
+    "priority_series": "Fusion World Special Booster Box 2026 Vol. 1",
+    "deep_checked": true,
+    "last_seen": "2026-05-19T09:09:35.934747",
     "first_seen": "2026-05-08T15:36:03.556325"
   },
   "57b6fd2f1d4ec546396c2d24292744a5": {
@@ -1027,12 +1027,12 @@
     "country": "UK",
     "price": "Prijs onbekend",
     "price_num": null,
-    "stock_status": "in_stock",
+    "stock_status": "preorder",
     "url": "https://thecardvault.co.uk/en-us/products/dragon-ball-super-cg-masters-dbs-b29-booster-box-24-packs",
-    "priority": null,
-    "priority_series": null,
-    "deep_checked": false,
-    "last_seen": "2026-05-13T10:44:08.786231",
+    "priority": "B32",
+    "priority_series": "Masters Ultra Bout Set 5 (B32)",
+    "deep_checked": true,
+    "last_seen": "2026-05-19T09:10:21.321578",
     "first_seen": "2026-05-08T15:38:30.544493"
   },
   "99d690b5eaaef9f62a1e5966d8416451": {
@@ -1307,12 +1307,12 @@
     "country": "EU",
     "price": "Prijs onbekend",
     "price_num": null,
-    "stock_status": "preorder",
+    "stock_status": "out_of_stock",
     "url": "https://fridamstore.com/products/preorder-dragon-ball-masters-b32-booster-box-ingles-sellado",
-    "priority": null,
-    "priority_series": null,
-    "deep_checked": false,
-    "last_seen": "2026-05-13T10:45:59.665910",
+    "priority": "B32",
+    "priority_series": "Masters Ultra Bout Set 5 (B32)",
+    "deep_checked": true,
+    "last_seen": "2026-05-19T09:11:30.280381",
     "first_seen": "2026-05-08T15:43:35.688305"
   },
   "267a56b51c5e034f1175efe8ea71607d": {
@@ -1335,12 +1335,12 @@
     "country": "EU",
     "price": "Prijs onbekend",
     "price_num": null,
-    "stock_status": "preorder",
+    "stock_status": "out_of_stock",
     "url": "https://www.88cardhouse.com/collections/dragon-ball-super/products/dragon-ball-masters-ultra-bout-set-5-bt-32-english-booster-box-pre-order",
-    "priority": null,
-    "priority_series": null,
-    "deep_checked": false,
-    "last_seen": "2026-05-13T10:46:11.722942",
+    "priority": "B32",
+    "priority_series": "Masters Ultra Bout Set 5 (B32)",
+    "deep_checked": true,
+    "last_seen": "2026-05-19T09:11:17.915140",
     "first_seen": "2026-05-08T15:45:10.312315"
   },
   "cd0b66a13ef22cd909bb1680165fa7f8": {
@@ -1452,7 +1452,7 @@
     "priority": "ST01",
     "priority_series": "Fusion World Story Booster 01",
     "deep_checked": true,
-    "last_seen": "2026-05-19T07:48:11.934800",
+    "last_seen": "2026-05-19T09:02:42.118508",
     "first_seen": "2026-05-08T16:32:38.108369"
   },
   "df5cb084c32ca8d036876bbe7a8a059b": {
@@ -1718,7 +1718,7 @@
     "priority": "ANNIV2",
     "priority_series": "Fusion World 2nd Anniversary Set",
     "deep_checked": true,
-    "last_seen": "2026-05-19T07:48:56.943478",
+    "last_seen": "2026-05-19T09:03:27.350846",
     "first_seen": "2026-05-13T14:39:36.658408"
   },
   "0c1bf61b5726dd43b9aeb5c604fdcc15": {
@@ -1732,7 +1732,7 @@
     "priority": "ANNIV2",
     "priority_series": "Fusion World 2nd Anniversary Set",
     "deep_checked": true,
-    "last_seen": "2026-05-19T07:50:06.698785",
+    "last_seen": "2026-05-19T09:04:36.790305",
     "first_seen": "2026-05-13T14:40:45.724535"
   },
   "911d0e68dfa66b33fa468f4d9aba3984": {
@@ -1746,7 +1746,7 @@
     "priority": "ANNIV2",
     "priority_series": "Fusion World 2nd Anniversary Set",
     "deep_checked": true,
-    "last_seen": "2026-05-19T07:50:53.748000",
+    "last_seen": "2026-05-19T09:05:24.488482",
     "first_seen": "2026-05-13T14:41:34.073509"
   },
   "2ea39405712fde9c7dbe71538a9fe317": {
@@ -1760,7 +1760,7 @@
     "priority": "ANNIV2",
     "priority_series": "Fusion World 2nd Anniversary Set",
     "deep_checked": true,
-    "last_seen": "2026-05-19T07:51:07.250110",
+    "last_seen": "2026-05-19T09:05:36.641474",
     "first_seen": "2026-05-13T14:41:47.940535"
   },
   "674fb73137500b15920e840b83db8cab": {
@@ -1774,7 +1774,7 @@
     "priority": "ANNIV2",
     "priority_series": "Fusion World 2nd Anniversary Set",
     "deep_checked": true,
-    "last_seen": "2026-05-19T07:51:33.906060",
+    "last_seen": "2026-05-19T09:06:02.628040",
     "first_seen": "2026-05-13T14:42:16.538429"
   },
   "35a47b3563eed93d6e8829326b64fba5": {
@@ -1788,7 +1788,7 @@
     "priority": "ANNIV2",
     "priority_series": "Fusion World 2nd Anniversary Set",
     "deep_checked": true,
-    "last_seen": "2026-05-19T07:51:56.230827",
+    "last_seen": "2026-05-19T09:06:25.050254",
     "first_seen": "2026-05-13T14:42:39.087360"
   },
   "be91093a040b561268ea9c549785f283": {
@@ -1802,7 +1802,7 @@
     "priority": "ANNIV2",
     "priority_series": "Fusion World 2nd Anniversary Set",
     "deep_checked": true,
-    "last_seen": "2026-05-19T07:52:24.115289",
+    "last_seen": "2026-05-19T09:06:53.574853",
     "first_seen": "2026-05-13T14:43:07.201755"
   },
   "34078a29066c85afd101ffe6ce770354": {
@@ -1816,7 +1816,7 @@
     "priority": "ANNIV2",
     "priority_series": "Fusion World 2nd Anniversary Set",
     "deep_checked": true,
-    "last_seen": "2026-05-19T03:46:56.158649",
+    "last_seen": "2026-05-19T09:07:42.288160",
     "first_seen": "2026-05-13T14:43:56.464383"
   },
   "375a8b70d9e5c0578a8bdc0f322a59a1": {
@@ -1830,7 +1830,7 @@
     "priority": "ANNIV2",
     "priority_series": "Fusion World 2nd Anniversary Set",
     "deep_checked": true,
-    "last_seen": "2026-05-19T07:54:22.415504",
+    "last_seen": "2026-05-19T09:08:56.225569",
     "first_seen": "2026-05-13T14:45:08.642034"
   },
   "7d36cc3ed0ce80f1cf6f24cc47ecd3d0": {
@@ -1844,7 +1844,21 @@
     "priority": "ANNIV2",
     "priority_series": "Fusion World 2nd Anniversary Set",
     "deep_checked": true,
-    "last_seen": "2026-05-19T07:55:09.489491",
+    "last_seen": "2026-05-19T09:10:21.321523",
     "first_seen": "2026-05-13T14:46:00.553132"
+  },
+  "e2e0fd4247b2dc4fbc84308094d6651e": {
+    "title": "PREORDER - DRAGON BALL MASTERS B32 CASE - ENGLISH (SEALED)",
+    "shop": "Frida M Store",
+    "country": "EU",
+    "price": "Prijs onbekend",
+    "price_num": null,
+    "stock_status": "out_of_stock",
+    "url": "https://fridamstore.com/products/preorder-dragon-ball-masters-b32-case-ingles-sellado",
+    "priority": "B32",
+    "priority_series": "Masters Ultra Bout Set 5 (B32)",
+    "deep_checked": true,
+    "last_seen": "2026-05-19T09:11:30.280431",
+    "first_seen": "2026-05-19T09:11:30.280442"
   }
 }
