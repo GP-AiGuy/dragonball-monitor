@@ -1190,53 +1190,97 @@ def is_relevant_news(title):
 # price (active listings median/min) as reference for collection valuation or purchases.
 SINGLES_WATCHLIST = [
     {
-        "id": "E-43-silver",
+        "id": "E-43-silver-EN",
         "name": "Energy Marker E-43 [Silver Foil]",
         "set": "Manga Booster 01",
-        "queries": [
-            "dragon ball energy marker E-43 silver",
-            "dragon ball energy marker E-43 silber",
-        ],
-        # Tokens that MUST be in the title (filter out wrong cards/Gold version)
+        "language": "EN",
+        "queries": ["dragon ball energy marker E-43 silver english"],
         "must_contain": ["e-43"],
-        "must_not_contain": ["gold", "alt art", "psa", "graded"],
+        "must_not_contain": ["gold", "alt art", "psa", "graded", "japans", "japanese", "japanisch", "jp"],
         "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-fusion-world-energy-markers/energy-marker-silver-e-43",
     },
     {
-        "id": "E-46-silver",
+        "id": "E-43-silver-JP",
+        "name": "Energy Marker E-43 [Silver Foil] (Japanese)",
+        "set": "Manga Booster 01 JP",
+        "language": "JP",
+        "queries": [
+            "dragon ball energy marker E-43 japanese",
+            "dragon ball energy marker E-43 japans",
+            "dragon ball energy marker E-43 japanisch",
+        ],
+        "must_contain": ["e-43"],
+        "must_not_contain": ["gold", "alt art", "psa", "graded"],
+        "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-japanese-fusion-world-energy-markers/energy-marker-silver-e-43",
+    },
+    {
+        "id": "E-46-silver-EN",
         "name": "Energy Marker E-46 [Silver Foil]",
         "set": "Manga Booster 01",
-        "queries": [
-            "dragon ball energy marker E-46 silver",
-            "dragon ball energy marker E-46 silber",
-        ],
+        "language": "EN",
+        "queries": ["dragon ball energy marker E-46 silver english"],
         "must_contain": ["e-46"],
-        "must_not_contain": ["gold", "alt art", "psa", "graded"],
+        "must_not_contain": ["gold", "alt art", "psa", "graded", "japans", "japanese", "japanisch", "jp"],
         "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-fusion-world-energy-markers/energy-marker-silver-e-46",
     },
     {
-        "id": "E-50-silver",
+        "id": "E-46-silver-JP",
+        "name": "Energy Marker E-46 [Silver Foil] (Japanese)",
+        "set": "Manga Booster 01 JP",
+        "language": "JP",
+        "queries": [
+            "dragon ball energy marker E-46 japanese",
+            "dragon ball energy marker E-46 japans",
+        ],
+        "must_contain": ["e-46"],
+        "must_not_contain": ["gold", "alt art", "psa", "graded"],
+        "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-japanese-fusion-world-energy-markers/energy-marker-silver-e-46",
+    },
+    {
+        "id": "E-50-silver-EN",
         "name": "Energy Marker E-50 [Silver Foil]",
         "set": "Manga Booster 01",
-        "queries": [
-            "dragon ball energy marker E-50 silver",
-            "dragon ball energy marker E-50 silber",
-        ],
+        "language": "EN",
+        "queries": ["dragon ball energy marker E-50 silver english"],
         "must_contain": ["e-50"],
-        "must_not_contain": ["gold", "alt art", "psa", "graded"],
+        "must_not_contain": ["gold", "alt art", "psa", "graded", "japans", "japanese", "japanisch", "jp"],
         "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-fusion-world-energy-markers/energy-marker-silver-e-50",
     },
     {
-        "id": "SB01-030-altart",
+        "id": "E-50-silver-JP",
+        "name": "Energy Marker E-50 [Silver Foil] (Japanese)",
+        "set": "Manga Booster 01 JP",
+        "language": "JP",
+        "queries": [
+            "dragon ball energy marker E-50 japanese",
+            "dragon ball energy marker E-50 japans",
+        ],
+        "must_contain": ["e-50"],
+        "must_not_contain": ["gold", "alt art", "psa", "graded"],
+        "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-japanese-fusion-world-energy-markers/energy-marker-silver-e-50",
+    },
+    {
+        "id": "SB01-030-altart-EN",
         "name": "Dabura [Alternate Art] SB01-030",
         "set": "Manga Booster 01",
+        "language": "EN",
+        "queries": ["dragon ball dabura SB01-030 alt art english"],
+        "must_contain": ["sb01-030"],
+        "must_not_contain": ["psa", "graded", "bgs", "cgc", "japans", "japanese", "japanisch"],
+        "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-fusion-world-manga-booster-01/dabura-alternate-art-sb01-030",
+    },
+    {
+        "id": "SB01-030-altart-JP",
+        "name": "Dabura [Alternate Art] SB01-030 (Japanese)",
+        "set": "Manga Booster 01 JP",
+        "language": "JP",
         "queries": [
-            "dragon ball dabura SB01-030 alt art",
-            "dragon ball dabura SB01-030 par",
+            "dragon ball dabura SB01-030 japanese",
+            "dragon ball dabura SB01-030 japans",
         ],
         "must_contain": ["sb01-030"],
         "must_not_contain": ["psa", "graded", "bgs", "cgc"],
-        "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-fusion-world-manga-booster-01/dabura-alternate-art-sb01-030",
+        "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-japanese-fusion-world-manga-booster-01/dabura-alternate-art-sb01-030",
     },
 ]
 
@@ -1475,6 +1519,7 @@ def scrape_singles(token):
             result[entry["id"]] = {
                 "name": entry["name"],
                 "set": entry.get("set", ""),
+                "language": entry.get("language", "ANY"),
                 "count": len(prices),
                 "min": prices[0],
                 "median": prices[len(prices) // 2],
@@ -2218,16 +2263,29 @@ def cmd_digest(highlight_urls=None, header=None):
     singles = load_json(SINGLES_FILE)
     if singles:
         parts.append(f"\n<b>Singles (EU markt):</b>")
-        for sid, s in sorted(singles.items()):
-            min_p = s.get("min", 0)
-            med_p = s.get("median", 0)
-            max_p = s.get("max", 0)
-            count = s.get("count", 0)
-            parts.append(f"\n📇 <b>{s['name']}</b>")
-            parts.append(f"   {count} listings | min €{min_p:.2f} | median €{med_p:.2f} | max €{max_p:.2f}")
-            cheapest = (s.get("samples") or [{}])[0]
-            if cheapest.get("url"):
-                parts.append(f"   <a href=\"{cheapest['url']}\">Cheapest: €{cheapest.get('price', 0):.2f}</a>")
+        # Group by language for cleaner output
+        en_items = {k: v for k, v in singles.items() if v.get("language") == "EN"}
+        jp_items = {k: v for k, v in singles.items() if v.get("language") == "JP"}
+        other = {k: v for k, v in singles.items() if v.get("language") not in ("EN", "JP")}
+
+        def emit(group, lang_label, flag):
+            if not group:
+                return
+            parts.append(f"\n<i>{flag} {lang_label}:</i>")
+            for sid, s in sorted(group.items()):
+                min_p = s.get("min", 0)
+                med_p = s.get("median", 0)
+                max_p = s.get("max", 0)
+                count = s.get("count", 0)
+                parts.append(f"📇 <b>{s['name']}</b>")
+                parts.append(f"   {count} listings | min €{min_p:.2f} | median €{med_p:.2f} | max €{max_p:.2f}")
+                cheapest = (s.get("samples") or [{}])[0]
+                if cheapest.get("url"):
+                    parts.append(f"   <a href=\"{cheapest['url']}\">Cheapest: €{cheapest.get('price', 0):.2f}</a>")
+
+        emit(en_items, "English", "🇬🇧")
+        emit(jp_items, "Japanese", "🇯🇵")
+        emit(other, "Other", "")
 
     parts.append(f"\n\nDashboard: https://gp-aiguy.github.io/dragonball-monitor/")
     msg = "\n".join(parts)
