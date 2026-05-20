@@ -56,6 +56,8 @@ MAX_CONSECUTIVE_FAILURES = 5
 EBAY_LISTINGS_FILE = DATA_DIR / "ebay_listings.json"
 EBAY_SOLD_FILE = DATA_DIR / "ebay_sold.json"
 EBAY_TOKEN_FILE = DATA_DIR / "ebay_token.json"
+# Singles tracking: per-card EU price snapshots from eBay
+SINGLES_FILE = DATA_DIR / "singles.json"
 DASHBOARD_FEED_FILE = Path(
     os.getenv("TCG_DASHBOARD_FEED", str(PROJECT_ROOT / "dragonball-tracker" / "data.json"))
 )
@@ -1183,6 +1185,61 @@ def is_relevant_news(title):
 
 # ─── eBay Integration ────────────────────────────────────────────────────
 
+# Singles watchlist: tracked individual cards (Energy Markers, Alt Art rares, etc).
+# These are queried on eBay separately from sealed booster boxes - we want EU market
+# price (active listings median/min) as reference for collection valuation or purchases.
+SINGLES_WATCHLIST = [
+    {
+        "id": "E-43-silver",
+        "name": "Energy Marker E-43 [Silver Foil]",
+        "set": "Manga Booster 01",
+        "queries": [
+            "dragon ball energy marker E-43 silver",
+            "dragon ball energy marker E-43 silber",
+        ],
+        # Tokens that MUST be in the title (filter out wrong cards/Gold version)
+        "must_contain": ["e-43"],
+        "must_not_contain": ["gold", "alt art", "psa", "graded"],
+        "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-fusion-world-energy-markers/energy-marker-silver-e-43",
+    },
+    {
+        "id": "E-46-silver",
+        "name": "Energy Marker E-46 [Silver Foil]",
+        "set": "Manga Booster 01",
+        "queries": [
+            "dragon ball energy marker E-46 silver",
+            "dragon ball energy marker E-46 silber",
+        ],
+        "must_contain": ["e-46"],
+        "must_not_contain": ["gold", "alt art", "psa", "graded"],
+        "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-fusion-world-energy-markers/energy-marker-silver-e-46",
+    },
+    {
+        "id": "E-50-silver",
+        "name": "Energy Marker E-50 [Silver Foil]",
+        "set": "Manga Booster 01",
+        "queries": [
+            "dragon ball energy marker E-50 silver",
+            "dragon ball energy marker E-50 silber",
+        ],
+        "must_contain": ["e-50"],
+        "must_not_contain": ["gold", "alt art", "psa", "graded"],
+        "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-fusion-world-energy-markers/energy-marker-silver-e-50",
+    },
+    {
+        "id": "SB01-030-altart",
+        "name": "Dabura [Alternate Art] SB01-030",
+        "set": "Manga Booster 01",
+        "queries": [
+            "dragon ball dabura SB01-030 alt art",
+            "dragon ball dabura SB01-030 par",
+        ],
+        "must_contain": ["sb01-030"],
+        "must_not_contain": ["psa", "graded", "bgs", "cgc"],
+        "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-fusion-world-manga-booster-01/dabura-alternate-art-sb01-030",
+    },
+]
+
 EBAY_QUERIES = {
     "ST01": [
         "dragon ball fusion world st01",
@@ -1364,6 +1421,74 @@ def ebay_scrape_sold(target_id, queries):
         "median": prices[len(prices) // 2],
         "samples": sold[:10],
     }
+
+
+def scrape_singles(token):
+    """Query eBay for each card in SINGLES_WATCHLIST. Stores per-card EU price stats.
+
+    Returns dict: {single_id: {count, min, median, max, samples, last_scraped}}
+    """
+    if not token or not SINGLES_WATCHLIST:
+        return {}
+    result = {}
+    for entry in SINGLES_WATCHLIST:
+        listings = {}  # itemId -> listing dict, dedupe across markets/queries
+        for q in entry["queries"]:
+            for market in EBAY_MARKETS:
+                try:
+                    r = requests.get(
+                        "https://api.ebay.com/buy/browse/v1/item_summary/search",
+                        params={"q": q, "limit": 50},
+                        headers={
+                            "Authorization": f"Bearer {token}",
+                            "X-EBAY-C-MARKETPLACE-ID": market,
+                        },
+                        timeout=15,
+                    )
+                    if r.status_code != 200:
+                        continue
+                    for item in r.json().get("itemSummaries", []):
+                        title = (item.get("title") or "").lower()
+                        # Filters
+                        if not all(t in title for t in entry.get("must_contain", [])):
+                            continue
+                        if any(t in title for t in entry.get("must_not_contain", [])):
+                            continue
+                        iid = item.get("itemId")
+                        if not iid or iid in listings:
+                            continue
+                        price = (item.get("price") or {})
+                        value = float(price.get("value", 0) or 0)
+                        if 5 <= value <= 5000:
+                            listings[iid] = {
+                                "title": item.get("title", "")[:120],
+                                "price": value,
+                                "currency": price.get("currency", ""),
+                                "marketplace": market,
+                                "url": item.get("itemWebUrl", ""),
+                            }
+                except Exception as e:
+                    log.warning(f"  singles ebay {entry['id']}/{market}: {e}")
+        if listings:
+            prices = sorted(v["price"] for v in listings.values())
+            samples = sorted(listings.values(), key=lambda x: x["price"])[:5]
+            result[entry["id"]] = {
+                "name": entry["name"],
+                "set": entry.get("set", ""),
+                "count": len(prices),
+                "min": prices[0],
+                "median": prices[len(prices) // 2],
+                "max": prices[-1],
+                "avg": round(sum(prices) / len(prices), 2),
+                "samples": samples,
+                "last_scraped": datetime.now().isoformat(),
+                "pricecharting_url": entry.get("pricecharting_url", ""),
+            }
+            log.info(f"  Singles {entry['id']}: {len(prices)} listings, €{prices[0]:.2f}-€{prices[-1]:.2f} (median €{result[entry['id']]['median']:.2f})")
+        else:
+            log.info(f"  Singles {entry['id']}: 0 listings found")
+    save_json(SINGLES_FILE, result)
+    return result
 
 
 def scrape_ebay():
@@ -1913,7 +2038,11 @@ def scrape_all(priority_only=False):
     # eBay (no browser needed - REST API + lightweight scrape)
     new_ebay, ebay_sold = scrape_ebay()
 
-    return new_products, status_changes, price_drops, new_news, new_ebay, ebay_sold
+    # Singles (eBay-based EU prices for tracked individual cards)
+    token = ebay_get_token()
+    singles = scrape_singles(token) if token else {}
+
+    return new_products, status_changes, price_drops, new_news, new_ebay, ebay_sold, singles
 
 
 # ─── Telegram ────────────────────────────────────────────────────────────
@@ -2085,10 +2214,25 @@ def cmd_digest(highlight_urls=None, header=None):
                 marker = " ⭐ NIEUW" if item.get("url", "") in highlight_urls else ""
                 parts.append(f"💰 {item.get('price_value', 0):.2f} {item.get('price_currency', '')} — {item.get('marketplace','?').replace('EBAY_','')} — <a href=\"{item.get('url','')}\">link</a>{marker}")
 
+    # Singles section (tracked individual cards - Energy Markers, Alt Arts)
+    singles = load_json(SINGLES_FILE)
+    if singles:
+        parts.append(f"\n<b>Singles (EU markt):</b>")
+        for sid, s in sorted(singles.items()):
+            min_p = s.get("min", 0)
+            med_p = s.get("median", 0)
+            max_p = s.get("max", 0)
+            count = s.get("count", 0)
+            parts.append(f"\n📇 <b>{s['name']}</b>")
+            parts.append(f"   {count} listings | min €{min_p:.2f} | median €{med_p:.2f} | max €{max_p:.2f}")
+            cheapest = (s.get("samples") or [{}])[0]
+            if cheapest.get("url"):
+                parts.append(f"   <a href=\"{cheapest['url']}\">Cheapest: €{cheapest.get('price', 0):.2f}</a>")
+
     parts.append(f"\n\nDashboard: https://gp-aiguy.github.io/dragonball-monitor/")
     msg = "\n".join(parts)
     send_telegram(msg)
-    log.info(f"Digest sent: {len(targets)} target(s), {sum(len(v) for v in by_target.values())} shop products + {sum(len(v) for v in ebay_by_target.values())} eBay listings")
+    log.info(f"Digest sent: {len(targets)} target(s), {sum(len(v) for v in by_target.values())} shop products + {sum(len(v) for v in ebay_by_target.values())} eBay listings + {len(singles)} singles")
 
 
 def write_dashboard_feed():
@@ -2159,6 +2303,7 @@ def write_dashboard_feed():
             "sold_stats": ebay_sold,
             "active_count": len(ebay_listings),
         },
+        "singles": load_json(SINGLES_FILE),
     }
     save_json(DASHBOARD_FEED_FILE, feed)
     log.info(f"Dashboard feed written: {DASHBOARD_FEED_FILE}")
@@ -2188,7 +2333,7 @@ def cmd_run(dry_run=False, priority_only=False):
     log.info(f"Starting Dragon Ball TCG monitor ({mode})...")
     migrate_prune_inactive_priority()  # drop stale BT31/FB10/FB11 records
     migrate_dedup_state()  # idempotent cleanup of old hash-scheme dupes
-    new_products, status_changes, price_drops, new_news, new_ebay, ebay_sold = scrape_all(priority_only=priority_only)
+    new_products, status_changes, price_drops, new_news, new_ebay, ebay_sold, singles = scrape_all(priority_only=priority_only)
 
     # ALERT POLICY: only priority-matched products trigger Telegram.
     # With narrowed PRIORITY_WATCHLIST, this means ST01/ST02/ANNIV2 only.
