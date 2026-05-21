@@ -68,139 +68,89 @@ DASHBOARD_FEED_FILE = Path(
 
 PRIORITY_WATCHLIST = [
     {
-        "id": "ST01",
-        "series": "Fusion World Story Booster 01",
-        "name": "Dragon Ball Super Card Game Fusion World Story Booster 01 [ST01]",
-        # Variants: ST01, ST-01, ST_01, ST 01, ST01EN, ST01-JP, Story Booster 01,
-        # plus "Story Booster 1". Narrow once ST02 launches.
-        "patterns": [
-            r"(?<![a-z0-9])st[\s\-_]?0?1(?![0-9])",
-            r"story[\s\-_]*booster[\s\-_]*0?1(?![0-9])",
-        ],
-    },
-    {
-        "id": "ST02",
-        "series": "Fusion World Story Booster 02 (placeholder)",
-        "name": "Dragon Ball Super Card Game Fusion World Story Booster 02 [ST02]",
-        # Not yet announced - pattern ready for when it drops
-        "patterns": [
-            r"(?<![a-z0-9])st[\s\-_]?0?2(?![0-9])",
-            r"story[\s\-_]*booster[\s\-_]*0?2(?![0-9])",
-        ],
-    },
-    {
-        "id": "ANNIV2",
-        "series": "Fusion World 2nd Anniversary Set",
-        "name": "Dragon Ball Super Card Game Fusion World 2nd Anniversary Set",
-        # Special collector set (alt-art cards + accessories), NOT a regular booster box.
-        "patterns": [
-            r"2nd[\s\-_]*anniversary[\s\-_]*set",
-            r"2nd[\s\-_]*anniversary",
-            r"second[\s\-_]*anniversary[\s\-_]*set",
-            r"(?<!3rd[\s\-_])(?<!4th[\s\-_])anniversary[\s\-_]*set",
-        ],
-    },
-    {
         "id": "SPECIAL2026V1",
-        "series": "Fusion World Special Booster Box 2026 Vol. 1",
+        "series": "Fusion World Special Booster Vol. 1 (2026)",
         "name": "Dragon Ball Super Card Game Fusion World Special Booster Box 2026 Vol. 1",
-        # Special annual release, not yet assigned a B/FB/ST code by Bandai.
-        # Variants: "Special Booster Box 2026 Vol 1", "Special Booster 2026 Vol. 1",
-        # plus possible "SB02" / "Special Booster 02" codes if Bandai labels it that way.
+        # Known shop naming variants for this ONE product:
+        # - "Special Booster Box 2026 Vol. 1" / "Special Booster Vol 1"
+        # - "Special Booster Display 01" (card-collector.net)
+        # - "SP01 Special Booster Volume 1" (fantasysphere.net, official Bandai code)
+        # - "Play Booster Display 24" (arcanumfumetteria.it)
+        # - Story Booster 01 / ST01 — some shops conflate this name
         "patterns": [
+            r"special[\s\-_]*booster.*vol\.?[\s\-_]*0?1",
             r"special[\s\-_]*booster[\s\-_]*box[\s\-_]*2026",
-            r"special[\s\-_]*booster.*2026.*vol\.?[\s\-_]*0?1",
-            r"special[\s\-_]*booster.*vol\.?[\s\-_]*0?1.*2026",
+            r"special[\s\-_]*booster[\s\-_]*2026",
+            r"special[\s\-_]*booster[\s\-_]*display[\s\-_]*0?1",
+            r"(?<![a-z0-9])sp[\s\-_]?0?1(?![0-9])",
+            r"(?<![a-z0-9])st[\s\-_]?0?1(?![0-9])",  # ST01 (Story Booster 01) - same product per user
+            r"story[\s\-_]*booster[\s\-_]*0?1(?![0-9])",
             r"fusion[\s\-_]*world.*special[\s\-_]*booster",
-        ],
-    },
-    {
-        "id": "B32",
-        "series": "Masters Ultra Bout Set 5 (B32)",
-        "name": "Dragon Ball Super Card Game Masters B32 Ultra Bout (EN)",
-        # Variants: B32, BT32, B-32, BT-32, B 32, BT 32, B32E, BT32EN, B-32-EN
-        "patterns": [
-            r"(?<![a-z0-9])bt?[\s\-_]?32(?!\d)",
-            r"masters.*ultra[\s\-_]*bout.*(?:5|set[\s\-_]*5|v)",
         ],
     },
 ]
 
-# Known direct product URLs. Always deep-checked every run.
+# Known direct product URLs for SPECIAL2026V1. Always deep-checked every run.
 PRIORITY_PRODUCT_URLS = [
-    # ── ST01 (Fusion World Story Booster 01) ──
     {
-        "id": "ST01",
-        "shop": "PenguinTCG",
+        "id": "SPECIAL2026V1",
+        "shop": "Fantasy Sphere",
+        "country": "EU",
+        "url": "https://www.fantasysphere.net/product/boite-de-20-boosters-sp01-special-booster-volume-1-dragon-ball-super-cg-fusion-world-en-10041411",
+    },
+    {
+        "id": "SPECIAL2026V1",
+        "shop": "TCG Traders",
+        "country": "IT",
+        "url": "https://www.tcgtraders.eu/catalogo/booster-box/booster-box-altre-marche/prevendita-7-8-26dragon-ball-super-card-game-fusion-world-box-special-booster-2026-vol-1-eng/",
+    },
+    {
+        "id": "SPECIAL2026V1",
+        "shop": "Pika Pika",
+        "country": "IT",
+        "url": "https://www.pikapika.it/prodotto/dragon-ball-fusion-special-booster-vol-1-box-eng/",
+    },
+    {
+        "id": "SPECIAL2026V1",
+        "shop": "Card Collector",
+        "country": "DE",
+        "url": "https://card-collector.net/products/dragon-ball-super-card-game-fusion-world-special-booster-display-01-20-packs-englisch-ab-07-08-2026",
+    },
+    {
+        "id": "SPECIAL2026V1",
+        "shop": "Arcanum Fumetteria",
+        "country": "IT",
+        "url": "https://www.arcanumfumetteria.it/en/product/preordine-dragon-ball-super-card-games-fusion-world-special-booster-2026-vol-1-play-booster-display-24-eng/",
+    },
+    {
+        "id": "SPECIAL2026V1",
+        "shop": "Unilibro",
+        "country": "IT",
+        "url": "https://giochi.unilibro.it/gioco/bandai/bandai-dragon-ball-super-card-game-fusion-world-box-20-buste-special-booster-2026-vol-1-eng-possibile-allocazione-/0810199500843",
+    },
+    {
+        "id": "SPECIAL2026V1",
+        "shop": "Manga Kaze",
+        "country": "IT",
+        "url": "https://www.mangakaze.com/prodotto/dragon-ball-super-card-game-fusion-world-booster-box-special-booster-2026-vol-1-eng/",
+    },
+    {
+        "id": "SPECIAL2026V1",
+        "shop": "Tony Toys",
+        "country": "IT",
+        "url": "https://tonytoys.it/prodotto/dragon-ball-super-card-game-fusion-world-box-special-booster-2026-vol-1-eng/",
+    },
+    {
+        "id": "SPECIAL2026V1",
+        "shop": "PenguinTCG (ST01)",
         "country": "UK",
         "url": "https://www.penguintcg.co.uk/more-tcgs/p/dragon-ball-super-card-game-fusion-world-story-booster-01-st01-booster-box",
     },
     {
-        "id": "ST01",
-        "shop": "Hobby Genki",
+        "id": "SPECIAL2026V1",
+        "shop": "Hobby Genki (ST01)",
         "country": "JP",
         "url": "https://hobby-genki.com/en/dragon-ball-series/85786-dragon-ball-super-card-game-fusion-world-story-booster-st01-20pack-box-4582770011982.html",
-    },
-    # ── ANNIV2 (Fusion World 2nd Anniversary Set) ──
-    {
-        "id": "ANNIV2",
-        "shop": "Padis Store",
-        "country": "IT",
-        "url": "https://www.padis-store.com/en/dragon-ball-fusion-world/42957-preorder-dragon-ball-fusion-world-2nd-anniversary-set-english-810199501710.html",
-    },
-    {
-        "id": "ANNIV2",
-        "shop": "Hobby Genki",
-        "country": "JP",
-        "url": "https://hobby-genki.com/en/dragon-ball-series/74046-dragon-ball-super-card-game-fusion-world-2nd-anniversary-set-limited-edition.html",
-    },
-    {
-        "id": "ANNIV2",
-        "shop": "Ichiba Japan",
-        "country": "JP",
-        "url": "https://ichiba-japan.com/en-us/products/2nd-anniversary-set-dragon-ball-super-card-game-fusion-world",
-    },
-    {
-        "id": "ANNIV2",
-        "shop": "JumpIchiban",
-        "country": "JP",
-        "url": "https://jumpichiban.com/en-us/products/dragon-ball-super-card-game-fusion-world-2nd-anniversary-set",
-    },
-    {
-        "id": "ANNIV2",
-        "shop": "Total Cards",
-        "country": "UK",
-        "url": "https://totalcards.net/products/dragon-ball-super-fusion-world-2nd-anniversary-set",
-    },
-    {
-        "id": "ANNIV2",
-        "shop": "Gamerz Paradize",
-        "country": "NL",
-        "url": "https://gamerzparadize.nl/en/products/dragon-ball-super-card-game-fusion-world-2nd-anniversary-set",
-    },
-    {
-        "id": "ANNIV2",
-        "shop": "Turol Games",
-        "country": "ES",
-        "url": "https://www.turolgames.com/en/dragon-ball-tcg/124149-dragon-ball-super-card-game-fusion-world-2nd-anniversary-set-english",
-    },
-    {
-        "id": "ANNIV2",
-        "shop": "Candy Cards",
-        "country": "EU",
-        "url": "https://candycards.eu/product/dragon-ball-super-card-game-fusion-world-2nd-anniversary-commemorative-set-english/",
-    },
-    {
-        "id": "ANNIV2",
-        "shop": "Nin-Nin-Game",
-        "country": "FR",
-        "url": "https://www.nin-nin-game.com/en/dragon-ball-tcg/215735-dragon-ball-super-card-game-fusion-world-2nd-anniversary-set-limited-edition-bandai-.html",
-    },
-    {
-        "id": "ANNIV2",
-        "shop": "Montalfan",
-        "country": "ES",
-        "url": "https://montalfan.com/en/product/dragon-ball-super-card-game-fusion-world-2nd-anniversary-set/",
     },
 ]
 
@@ -1285,28 +1235,12 @@ SINGLES_WATCHLIST = [
 ]
 
 EBAY_QUERIES = {
-    "ST01": [
-        "dragon ball fusion world st01",
-        "dragon ball fusion world story booster",
-        "dragon ball st01 japanese",
-    ],
-    "ST02": [
-        "dragon ball fusion world st02",
-        "dragon ball fusion world story booster 02",
-    ],
-    "ANNIV2": [
-        "dragon ball fusion world 2nd anniversary set",
-        "dragon ball fusion world second anniversary",
-        "dragon ball fusion world anniversary set",
-    ],
     "SPECIAL2026V1": [
-        "dragon ball fusion world special booster box 2026",
-        "dragon ball fusion world special booster vol 1 2026",
-    ],
-    "B32": [
-        "dragon ball masters b32 booster",
-        "dragon ball masters bt32 booster",
-        "dragon ball masters ultra bout 5 booster",
+        "dragon ball fusion world special booster 2026",
+        "dragon ball fusion world special booster vol 1",
+        "dragon ball fusion world sp01",
+        "dragon ball fusion world story booster 01",
+        "dragon ball fusion world st01",
     ],
 }
 EBAY_MARKETS = ["EBAY_NL", "EBAY_DE", "EBAY_GB", "EBAY_BE", "EBAY_FR"]
