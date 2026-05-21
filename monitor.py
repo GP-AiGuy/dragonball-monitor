@@ -58,6 +58,8 @@ EBAY_SOLD_FILE = DATA_DIR / "ebay_sold.json"
 EBAY_TOKEN_FILE = DATA_DIR / "ebay_token.json"
 # Singles tracking: per-card EU price snapshots from eBay
 SINGLES_FILE = DATA_DIR / "singles.json"
+# Auto-discovered shop URLs via Google/Brave search (feeds into priority URLs)
+DISCOVERED_URLS_FILE = DATA_DIR / "discovered_urls.json"
 DASHBOARD_FEED_FILE = Path(
     os.getenv("TCG_DASHBOARD_FEED", str(PROJECT_ROOT / "dragonball-tracker" / "data.json"))
 )
@@ -296,6 +298,12 @@ SHOP_SEARCHES = [
         "name": "Zatu (Special Booster search)",
         "country": "UK",
         "url": "https://zatu.com/search?type=product&q=special+booster+dragon+ball",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "88 Cardhouse (Special Booster search)",
+        "country": "EU",
+        "url": "https://www.88cardhouse.com/search?q=special+booster",
         "extractor": "generic_shop",
     },
     {
@@ -1919,6 +1927,111 @@ def migrate_dedup_state():
         save_json(SEEN_PRODUCTS_FILE, new_seen)
 
 
+# ─── Auto-discovery: find new shops via search engines ─────────────────
+
+DISCOVERY_QUERIES = [
+    "dragon ball fusion world special booster vol 1 preorder",
+    "dragon ball fusion world SP01 preorder shop",
+    "dragon ball fusion world ST01 story booster preorder",
+    "dragon ball fusion world special booster 2026 booster box",
+]
+
+# URL filters - what looks like a product page from a real shop
+PRODUCT_URL_PATHS = re.compile(r"/(?:product|products|prodotto|p|item|shop|winkel|tienda|produit|artikel)[/\-_]", re.IGNORECASE)
+# Domains to skip in discovery (social, news, forums, marketplaces we already cover)
+DISCOVERY_BLOCKLIST = [
+    "ebay.", "amazon.", "reddit.com", "facebook.com", "twitter.com", "x.com",
+    "youtube.com", "tiktok.com", "instagram.com", "pinterest.com", "google.com",
+    "duckduckgo.com", "brave.com", "bing.com", "wikipedia.org", "yandex.",
+    "cardmarket.com", "tcgplayer.com", "twitch.tv", "discord.",
+    "dbs-cardgame.com", "bandai-namco.com",
+    # Already known shops (we have them as priority URLs)
+    "fantasysphere.net", "tcgtraders.eu", "pikapika.it", "card-collector.net",
+    "arcanumfumetteria.it", "unilibro.it", "mangakaze.com", "tonytoys.it",
+    "penguintcg.co.uk", "hobby-genki.com",
+]
+
+
+def is_discoverable_url(url):
+    """Heuristic: looks like a product page from a new shop (not already known)."""
+    if not url or not url.startswith("http"):
+        return False
+    low = url.lower()
+    if any(b in low for b in DISCOVERY_BLOCKLIST):
+        return False
+    # Must look like product page
+    if not PRODUCT_URL_PATHS.search(url):
+        return False
+    return True
+
+
+def scrape_discovery(context):
+    """Use Google search to find NEW shops listing the priority target.
+
+    Discovered URLs feed into scrape_priority_urls on next run.
+    Runs once per full sweep (not on fast runs).
+    """
+    from urllib.parse import quote
+    discovered = load_json(DISCOVERED_URLS_FILE) or {}
+    new_count = 0
+    for query in DISCOVERY_QUERIES:
+        page = context.new_page()
+        try:
+            log.info(f"Discovery search: {query}")
+            url = f"https://www.google.com/search?q={quote(query)}&num=20&hl=en"
+            page.goto(url, wait_until="domcontentloaded", timeout=20000)
+            page.wait_for_timeout(2500)
+            # Try cookie banner
+            for sel in ["button:has-text('Accept all')", "button[aria-label*='Accept']", "button:has-text('Reject')"]:
+                try: page.click(sel, timeout=1500); page.wait_for_timeout(800); break
+                except: continue
+            results = page.evaluate("""() => {
+                const out = [];
+                const seen = new Set();
+                document.querySelectorAll('a[href]').forEach(a => {
+                    const u = a.href;
+                    if (!u.startsWith('http')) return;
+                    if (u.includes('google.com')) return;
+                    if (seen.has(u)) return;
+                    seen.add(u);
+                    const text = (a.textContent || '').trim().substring(0, 150);
+                    if (text.length > 5) out.push({url: u, text});
+                });
+                return out.slice(0, 30);
+            }""")
+            for r in results:
+                if not is_discoverable_url(r["url"]):
+                    continue
+                # Check title text suggests it's our target
+                text_lower = r["text"].lower()
+                if not any(kw in text_lower for kw in ["special booster", "story booster", "sp01", "st01", "fusion world"]):
+                    continue
+                # Extract host as shop name fallback
+                try:
+                    host = r["url"].split("/")[2].replace("www.", "")
+                except Exception:
+                    host = "unknown"
+                if r["url"] not in discovered:
+                    discovered[r["url"]] = {
+                        "shop": host,
+                        "title": r["text"][:120],
+                        "first_seen": datetime.now().isoformat(),
+                        "query": query,
+                    }
+                    new_count += 1
+                    log.info(f"  DISCOVERED: {host} -> {r['text'][:60]}")
+        except Exception as e:
+            log.warning(f"Discovery error: {e}")
+        finally:
+            page.close()
+    save_json(DISCOVERED_URLS_FILE, discovered)
+    if new_count:
+        log.info(f"Discovery: {new_count} new shop URL(s) added (total: {len(discovered)})")
+    else:
+        log.info(f"Discovery: 0 new (total known: {len(discovered)})")
+    return discovered
+
+
 def scrape_priority_urls(context):
     """Always deep-check known direct B31/FB11 product URLs.
 
@@ -1934,7 +2047,18 @@ def scrape_priority_urls(context):
     price_drops = []
     broken_priority = []
 
-    for entry in PRIORITY_PRODUCT_URLS:
+    # Merge curated PRIORITY_PRODUCT_URLS with auto-discovered ones
+    all_urls = list(PRIORITY_PRODUCT_URLS)
+    discovered = load_json(DISCOVERED_URLS_FILE) or {}
+    for url, meta in discovered.items():
+        all_urls.append({
+            "id": "SPECIAL2026V1",  # discovery currently targets this product
+            "shop": meta.get("shop", "Discovered"),
+            "country": "?",
+            "url": url,
+        })
+
+    for entry in all_urls:
         url_key = f"{entry['shop']}|{entry['id']}|{entry['url']}"
         log.info(f"Priority URL check: {entry['shop']} {entry['id']} -> {entry['url'][:80]}")
         deep = deep_check_product(context, entry["url"])
@@ -2039,7 +2163,15 @@ def scrape_all(priority_only=False):
             locale="nl-NL",
             viewport={"width": 1920, "height": 1080},
         )
-        # Priority URLs always run (the highest-value check)
+        # Auto-discovery: only on full runs (not fast), since Google rate-limits.
+        # Finds NEW shop URLs that list our target.
+        if not priority_only:
+            try:
+                scrape_discovery(context)
+            except Exception as e:
+                log.warning(f"Discovery skipped: {e}")
+
+        # Priority URLs (includes discovered ones) always run
         prio_new, prio_status, prio_prices = scrape_priority_urls(context)
         if priority_only:
             new_products, status_changes, price_drops, new_news = prio_new, prio_status, prio_prices, []
