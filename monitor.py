@@ -261,6 +261,43 @@ SHOP_SEARCHES = [
         "url": "https://www.bol.com/nl/nl/s/?searchtext=dragon+ball+booster+box",
         "extractor": "bol",
     },
+    # ── Target-specific search URLs (verified to return Special Booster Vol 1 hits) ──
+    {
+        "name": "Bol.com (Special Booster search)",
+        "country": "NL",
+        "url": "https://www.bol.com/nl/nl/s/?searchtext=dragon+ball+special+booster+vol+1",
+        "extractor": "bol",
+    },
+    {
+        "name": "Bol.com (Story Booster search)",
+        "country": "NL",
+        "url": "https://www.bol.com/nl/nl/s/?searchtext=dragon+ball+story+booster",
+        "extractor": "bol",
+    },
+    {
+        "name": "Gamerz Paradize (Special Booster search)",
+        "country": "NL",
+        "url": "https://gamerzparadize.nl/search?q=special+booster",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Gamerz Paradize (ST01 search)",
+        "country": "NL",
+        "url": "https://gamerzparadize.nl/search?q=ST01",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Dracoon (Special Booster search)",
+        "country": "NL",
+        "url": "https://dracoon.nl/?s=special+booster",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "Zatu (Special Booster search)",
+        "country": "UK",
+        "url": "https://zatu.com/search?type=product&q=special+booster+dragon+ball",
+        "extractor": "generic_shop",
+    },
     {
         "name": "Ludofy",
         "country": "NL",
