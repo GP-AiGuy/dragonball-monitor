@@ -1966,8 +1966,9 @@ def is_discoverable_url(url):
 
 
 def scrape_discovery(context):
-    """Use Google search to find NEW shops listing the priority target.
+    """Use Brave search to find NEW shops listing the priority target.
 
+    Brave's search HTML is scrapeable without API key (free, no bot blocks like Google).
     Discovered URLs feed into scrape_priority_urls on next run.
     Runs once per full sweep (not on fast runs).
     """
@@ -1978,26 +1979,22 @@ def scrape_discovery(context):
         page = context.new_page()
         try:
             log.info(f"Discovery search: {query}")
-            url = f"https://www.google.com/search?q={quote(query)}&num=20&hl=en"
+            url = f"https://search.brave.com/search?q={quote(query)}"
             page.goto(url, wait_until="domcontentloaded", timeout=20000)
-            page.wait_for_timeout(2500)
-            # Try cookie banner
-            for sel in ["button:has-text('Accept all')", "button[aria-label*='Accept']", "button:has-text('Reject')"]:
-                try: page.click(sel, timeout=1500); page.wait_for_timeout(800); break
-                except: continue
+            page.wait_for_timeout(3000)
             results = page.evaluate("""() => {
                 const out = [];
                 const seen = new Set();
                 document.querySelectorAll('a[href]').forEach(a => {
                     const u = a.href;
                     if (!u.startsWith('http')) return;
-                    if (u.includes('google.com')) return;
+                    if (u.includes('brave.com') || u.includes('search.brave')) return;
                     if (seen.has(u)) return;
                     seen.add(u);
-                    const text = (a.textContent || '').trim().substring(0, 150);
+                    const text = (a.textContent || '').trim().substring(0, 200);
                     if (text.length > 5) out.push({url: u, text});
                 });
-                return out.slice(0, 30);
+                return out.slice(0, 40);
             }""")
             for r in results:
                 if not is_discoverable_url(r["url"]):
