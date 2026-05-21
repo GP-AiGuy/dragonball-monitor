@@ -154,6 +154,31 @@ PRIORITY_PRODUCT_URLS = [
         "country": "JP",
         "url": "https://hobby-genki.com/en/dragon-ball-series/85786-dragon-ball-super-card-game-fusion-world-story-booster-st01-20pack-box-4582770011982.html",
     },
+    # ── Auto-discovered direct product URLs (verified) ──
+    {
+        "id": "SPECIAL2026V1",
+        "shop": "Dracoon",
+        "country": "NL",
+        "url": "https://dracoon.nl/product/dragon-ball-fusion-world-special-booster-box/",
+    },
+    {
+        "id": "SPECIAL2026V1",
+        "shop": "TCGHaven",
+        "country": "NL",
+        "url": "https://tcghaven.nl/products/pre-order-dragon-ball-super-card-game-fusion-world-special-booster-box-01-20-packs",
+    },
+    {
+        "id": "SPECIAL2026V1",
+        "shop": "NextCards",
+        "country": "DE",
+        "url": "https://nextcards.de/products/dragonball-fusion-world-special-story-booster-display-sp01-en",
+    },
+    {
+        "id": "SPECIAL2026V1",
+        "shop": "Loot Cave",
+        "country": "DE",
+        "url": "https://lootcave.de/shop/dragon-ball-super-special-booster-st-01-box-20-booster/",
+    },
 ]
 
 # ─── Filters ─────────────────────────────────────────────────────────────
@@ -1999,9 +2024,15 @@ def scrape_discovery(context):
             for r in results:
                 if not is_discoverable_url(r["url"]):
                     continue
-                # Check title text suggests it's our target
+                # Title must mention target keywords AND Dragon Ball context
+                # (avoid Digimon "Special Booster" or Yu-Gi-Oh "Special Booster" matches)
                 text_lower = r["text"].lower()
-                if not any(kw in text_lower for kw in ["special booster", "story booster", "sp01", "st01", "fusion world"]):
+                has_target_kw = any(kw in text_lower for kw in ["special booster", "story booster", "sp01", "st01"])
+                has_db_context = any(kw in text_lower for kw in ["dragon ball", "dragonball", "fusion world", "dbs", "dbsccg"])
+                if not (has_target_kw and has_db_context):
+                    continue
+                # Hard exclude other TCG matches
+                if any(kw in text_lower for kw in ["digimon", "yu-gi-oh", "yugioh", "pokemon", "magic the gathering", "one piece"]):
                     continue
                 # Extract host as shop name fallback
                 try:
