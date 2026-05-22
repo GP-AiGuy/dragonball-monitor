@@ -179,6 +179,31 @@ PRIORITY_PRODUCT_URLS = [
         "country": "DE",
         "url": "https://lootcave.de/shop/dragon-ball-super-special-booster-st-01-box-20-booster/",
     },
+    # ── Manually discovered direct product URLs (user-supplied) ──
+    {
+        "id": "SPECIAL2026V1",
+        "shop": "Gamerz Paradize",
+        "country": "NL",
+        "url": "https://gamerzparadize.nl/products/dragon-ball-super-card-game-fusion-world-special-booster-box",
+    },
+    {
+        "id": "SPECIAL2026V1",
+        "shop": "Total Cards",
+        "country": "UK",
+        "url": "https://totalcards.net/products/dragon-ball-super-card-game-fusion-world-st01-story-booster-01-booster-box-20-packs",
+    },
+    {
+        "id": "SPECIAL2026V1",
+        "shop": "Gathering Games",
+        "country": "UK",
+        "url": "https://gatheringgames.co.uk/products/dragon-ball-super-cg-fusion-world-special-booster-box-2026-vol-1",
+    },
+    {
+        "id": "SPECIAL2026V1",
+        "shop": "Turol Games",
+        "country": "ES",
+        "url": "https://www.turolgames.com/en/dragon-ball-tcg/130113-dragon-ball-super-card-game-fusion-world-special-booster-display-01-20-packs-english",
+    },
 ]
 
 # ─── Filters ─────────────────────────────────────────────────────────────
@@ -583,6 +608,12 @@ SHOP_SEARCHES = [
         "name": "CarteMagic",
         "country": "IT",
         "url": "https://www.cartemagic.com/categoria-prodotto/dragon-ball/",
+        "extractor": "generic_shop",
+    },
+    {
+        "name": "CarteMagic (DB preorders)",
+        "country": "IT",
+        "url": "https://www.cartemagic.com/categoria/preordini/filters/brand/dragon-ball/",
         "extractor": "generic_shop",
     },
     {
