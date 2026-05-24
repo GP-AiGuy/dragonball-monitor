@@ -6896,6 +6896,11 @@
       "ts": "2026-05-24T11:46:19.539210",
       "price": 109.99,
       "stock_status": "out_of_stock"
+    },
+    {
+      "ts": "2026-05-24T12:50:56.845153",
+      "price": 109.99,
+      "stock_status": "out_of_stock"
     }
   ],
   "8229bbe1f15c54535acec077886314c6": [
@@ -10742,11 +10747,6 @@
   ],
   "c56dec834e04bc322e9a052640bb416b": [
     {
-      "ts": "2026-05-13T10:32:20.746261",
-      "price": 120.0,
-      "stock_status": "out_of_stock"
-    },
-    {
       "ts": "2026-05-13T14:38:50.788019",
       "price": 120.0,
       "stock_status": "out_of_stock"
@@ -11738,6 +11738,11 @@
     },
     {
       "ts": "2026-05-24T11:43:58.863852",
+      "price": 120.0,
+      "stock_status": "out_of_stock"
+    },
+    {
+      "ts": "2026-05-24T12:48:35.407357",
       "price": 120.0,
       "stock_status": "out_of_stock"
     }
@@ -16142,6 +16147,11 @@
       "ts": "2026-05-24T11:41:04.670554",
       "price": 108.0,
       "stock_status": "in_stock"
+    },
+    {
+      "ts": "2026-05-24T12:45:42.146014",
+      "price": 108.0,
+      "stock_status": "in_stock"
     }
   ],
   "b763df73222c4179988caffe4f790d48": [
@@ -16429,6 +16439,11 @@
       "ts": "2026-05-24T11:41:28.996299",
       "price": 180.0,
       "stock_status": "out_of_stock"
+    },
+    {
+      "ts": "2026-05-24T12:46:06.259336",
+      "price": 180.0,
+      "stock_status": "out_of_stock"
     }
   ],
   "ef7cf568574f9e8248e8e6bbe159566f": [
@@ -16659,6 +16674,11 @@
     },
     {
       "ts": "2026-05-24T11:41:53.629500",
+      "price": 199.0,
+      "stock_status": "in_stock"
+    },
+    {
+      "ts": "2026-05-24T12:46:30.000899",
       "price": 199.0,
       "stock_status": "in_stock"
     }
@@ -16946,6 +16966,11 @@
     },
     {
       "ts": "2026-05-24T11:42:16.654498",
+      "price": 120.0,
+      "stock_status": "out_of_stock"
+    },
+    {
+      "ts": "2026-05-24T12:46:53.363863",
       "price": 120.0,
       "stock_status": "out_of_stock"
     }
@@ -17239,6 +17264,11 @@
     {
       "ts": "2026-05-24T11:43:48.524957",
       "price": 120.0,
+      "stock_status": "in_stock"
+    },
+    {
+      "ts": "2026-05-24T12:48:25.006903",
+      "price": 100.0,
       "stock_status": "in_stock"
     }
   ],
@@ -17647,6 +17677,11 @@
       "ts": "2026-05-24T11:45:28.701581",
       "price": 99.99,
       "stock_status": "out_of_stock"
+    },
+    {
+      "ts": "2026-05-24T12:50:06.296959",
+      "price": 99.99,
+      "stock_status": "out_of_stock"
     }
   ],
   "40ce923674c9c03d409e066343df7fac": [
@@ -17927,6 +17962,11 @@
     },
     {
       "ts": "2026-05-24T11:45:04.711501",
+      "price": 99.0,
+      "stock_status": "out_of_stock"
+    },
+    {
+      "ts": "2026-05-24T12:49:41.951342",
       "price": 99.0,
       "stock_status": "out_of_stock"
     }
@@ -18211,6 +18251,11 @@
       "ts": "2026-05-24T11:45:55.852932",
       "price": 199.9,
       "stock_status": "in_stock"
+    },
+    {
+      "ts": "2026-05-24T12:50:33.413869",
+      "price": 199.9,
+      "stock_status": "in_stock"
     }
   ],
   "f64344a63b9228cc36793c464661d346": [
@@ -18488,6 +18533,11 @@
       "ts": "2026-05-24T11:51:02.897025",
       "price": 206.0,
       "stock_status": "out_of_stock"
+    },
+    {
+      "ts": "2026-05-24T12:55:50.697787",
+      "price": 206.0,
+      "stock_status": "out_of_stock"
     }
   ],
   "f804d2d7409046c0b5a3f89e3b18f845": [
@@ -18708,6 +18758,11 @@
     },
     {
       "ts": "2026-05-24T11:47:07.784491",
+      "price": 119.99,
+      "stock_status": "out_of_stock"
+    },
+    {
+      "ts": "2026-05-24T12:51:45.647318",
       "price": 119.99,
       "stock_status": "out_of_stock"
     }
