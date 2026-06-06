@@ -6943,7 +6943,7 @@
       "stock_status": "out_of_stock"
     },
     {
-      "ts": "2026-06-06T13:52:59.073943",
+      "ts": "2026-06-06T14:12:08.731101",
       "price": 109.99,
       "stock_status": "out_of_stock"
     }
@@ -11787,7 +11787,7 @@
       "stock_status": "out_of_stock"
     },
     {
-      "ts": "2026-06-06T13:50:34.062653",
+      "ts": "2026-06-06T14:09:41.264467",
       "price": 120.0,
       "stock_status": "out_of_stock"
     }
@@ -16275,11 +16275,6 @@
       "ts": "2026-06-06T10:19:56.631553",
       "price": 129.9,
       "stock_status": "preorder"
-    },
-    {
-      "ts": "2026-06-06T14:02:14.507216",
-      "price": 129.9,
-      "stock_status": "preorder"
     }
   ],
   "f2d00fa0f0b71d34a72079e26b634164": [
@@ -17279,7 +17274,7 @@
       "stock_status": "in_stock"
     },
     {
-      "ts": "2026-06-06T13:47:43.060425",
+      "ts": "2026-06-06T14:06:47.644727",
       "price": 108.0,
       "stock_status": "in_stock"
     }
@@ -18281,7 +18276,7 @@
       "stock_status": "out_of_stock"
     },
     {
-      "ts": "2026-06-06T13:48:07.144043",
+      "ts": "2026-06-06T14:07:11.486075",
       "price": 199.5,
       "stock_status": "out_of_stock"
     }
@@ -19174,6 +19169,11 @@
     },
     {
       "ts": "2026-06-06T06:27:18.134813",
+      "price": 199.0,
+      "stock_status": "in_stock"
+    },
+    {
+      "ts": "2026-06-06T14:07:35.860324",
       "price": 199.0,
       "stock_status": "in_stock"
     }
@@ -20175,7 +20175,7 @@
       "stock_status": "out_of_stock"
     },
     {
-      "ts": "2026-06-06T13:48:51.747244",
+      "ts": "2026-06-06T14:07:59.416308",
       "price": 120.0,
       "stock_status": "out_of_stock"
     }
@@ -21177,8 +21177,8 @@
       "stock_status": "in_stock"
     },
     {
-      "ts": "2026-06-06T13:50:23.544744",
-      "price": 150.0,
+      "ts": "2026-06-06T14:09:30.819105",
+      "price": 220.0,
       "stock_status": "in_stock"
     }
   ],
@@ -22179,7 +22179,7 @@
       "stock_status": "out_of_stock"
     },
     {
-      "ts": "2026-06-06T13:52:06.089049",
+      "ts": "2026-06-06T14:11:11.872798",
       "price": 119.99,
       "stock_status": "out_of_stock"
     }
@@ -23181,7 +23181,7 @@
       "stock_status": "out_of_stock"
     },
     {
-      "ts": "2026-06-06T13:51:40.602552",
+      "ts": "2026-06-06T14:10:46.969203",
       "price": 99.0,
       "stock_status": "out_of_stock"
     }
@@ -24183,8 +24183,8 @@
       "stock_status": "in_stock"
     },
     {
-      "ts": "2026-06-06T13:52:35.025675",
-      "price": 199.9,
+      "ts": "2026-06-06T14:11:44.965468",
+      "price": 129.9,
       "stock_status": "in_stock"
     }
   ],
@@ -25185,7 +25185,7 @@
       "stock_status": "out_of_stock"
     },
     {
-      "ts": "2026-06-06T13:57:42.362597",
+      "ts": "2026-06-06T14:16:40.616349",
       "price": 205.0,
       "stock_status": "out_of_stock"
     }
@@ -26182,22 +26182,17 @@
       "stock_status": "out_of_stock"
     },
     {
-      "ts": "2026-06-06T13:53:49.316385",
+      "ts": "2026-06-06T14:12:57.143470",
       "price": 119.99,
       "stock_status": "out_of_stock"
     },
     {
-      "ts": "2026-06-06T13:58:56.470831",
+      "ts": "2026-06-06T14:17:53.504919",
       "price": 119.99,
       "stock_status": "out_of_stock"
     }
   ],
   "354fef47f3d3c66e93e336401dae4c84": [
-    {
-      "ts": "2026-05-23T12:47:30.860086",
-      "price": 157.0,
-      "stock_status": "in_stock"
-    },
     {
       "ts": "2026-05-23T13:45:27.012843",
       "price": 157.0,
@@ -27192,6 +27187,11 @@
       "ts": "2026-06-06T10:12:07.134992",
       "price": 157.0,
       "stock_status": "in_stock"
+    },
+    {
+      "ts": "2026-06-06T14:13:10.107202",
+      "price": 157.0,
+      "stock_status": "in_stock"
     }
   ],
   "0fe42021a915d353da59ccb32352a26d": [
@@ -27442,11 +27442,6 @@
     },
     {
       "ts": "2026-06-06T10:19:33.079469",
-      "price": 119.99,
-      "stock_status": "out_of_stock"
-    },
-    {
-      "ts": "2026-06-06T14:01:51.467860",
       "price": 119.99,
       "stock_status": "out_of_stock"
     }
