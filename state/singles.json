@@ -3,12 +3,19 @@
     "name": "Energy Marker E-43 [Silver Foil]",
     "set": "Manga Booster 01",
     "language": "EN",
-    "count": 5,
-    "min": 175.49,
+    "count": 6,
+    "min": 174.04,
     "median": 263.85,
     "max": 526.82,
-    "avg": 303.28,
+    "avg": 281.74,
     "samples": [
+      {
+        "title": "E-43 Silver Energy Marker Dragon Ball Fusion World SB01 Manga Booster NM-MT",
+        "price": 174.04,
+        "currency": "EUR",
+        "marketplace": "EBAY_NL",
+        "url": "https://www.ebay.nl/itm/198456340485?_skw=dragon+ball+energy+marker+E-43+silver+english&hash=item2e34eb7005:g:FzIAAeSwF4FqPu9D"
+      },
       {
         "title": "Son Goku Bulma E-43 Silver Energy Marker Dragon Ball Manga Booster Fusion World ",
         "price": 175.49,
@@ -36,16 +43,9 @@
         "currency": "EUR",
         "marketplace": "EBAY_DE",
         "url": "https://www.ebay.de/itm/257523401667?_skw=dragon+ball+energy+marker+E-43+silver+english&hash=item3bf59743c3:g:rzMAAeSwTFBqCveG"
-      },
-      {
-        "title": "Dragon Ball Fusion World Manga Booster SB01 Silver Energy Marker E-43  Bgs 9",
-        "price": 526.82,
-        "currency": "EUR",
-        "marketplace": "EBAY_NL",
-        "url": "https://www.ebay.nl/itm/127919419603?_skw=dragon+ball+energy+marker+E-43+silver+english&hash=item1dc89770d3:g:zxoAAeSwHKFqLLuI"
       }
     ],
-    "last_scraped": "2026-06-26T20:11:18.024211",
+    "last_scraped": "2026-06-26T21:41:51.253378",
     "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-fusion-world-energy-markers/energy-marker-silver-e-43"
   },
   "E-43-silver-JP": {
@@ -84,7 +84,7 @@
         "price": 255.44,
         "currency": "GBP",
         "marketplace": "EBAY_GB",
-        "url": "https://www.ebay.co.uk/itm/406991384645?_skw=dragon+ball+energy+marker+E-43+japanese&hash=item5ec293b045:g:wNQAAeSwQERqOBc5&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGZ9JR41MBAPUegWvb1%2FYTsd9ENnH%2F9%2BQUJuJVepvAq1AInhm7vWVXpYSs9MoYmm1vQpcTCBB%2BVirCRqQ4dAqNhpOjjTwzjtrsFPbqyjL%2Bnkp5sWyPPWItAPJpZueX3JSy3vYjNkaeuAk3xoLloX6%2Bg2HKIUnAJi7tg0WVjIpX6wIpX4aqewTvgRKDKDJfem65lF76co14SblAUWzb5C6P--RQj8lRY1pKse55KGsAJCJAkM7Rxp%2FQnTGFLX3dUJ07Lfmwss7TAWC%2FlES6k5CzMah0iCBJkvZH5KuoTvvAbWqpjY99JmkHlpYgwg1uKhPzI%3D"
+        "url": "https://www.ebay.co.uk/itm/406991384645?_skw=dragon+ball+energy+marker+E-43+japanese&hash=item5ec293b045:g:wNQAAeSwQERqOBc5&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGZ9JR41MBAPUegWvb1%2FYTsd9ENnH%2F9%2BQUJuJVepvAq1AInhm7vWVXpYSs9MoYmm1vQpcTCBB%2BVirCRqQ4dAqNhpOjjTwzjtrsFPbqyjL%2Bnkp5sWyPPWItAPJpZueX3JSy3bp1Qo%2Bt4%2BMq%2BM%2Bk5KRZZXPZgpii%2FCDjF2AVnKVua4fTjhyogyED9bFUizgZUgan7bjHImOebPp2qEtM54Yw3P4w%2B2tWIWrpUGsD54uPFCdAqQqQffYsTaHkJ9FnJ0QHS2lqyl93mYtT0HwZIb4MOJ9DKvyv3AzYGbmXtrtCa5d4aAO9XuSrq6F95f%2FctCXJI%3D"
       },
       {
         "title": "Energy Marker E-43 Manga Booster 01 - Dragon Ball Fusion World Japanese",
@@ -94,7 +94,7 @@
         "url": "https://www.ebay.co.uk/itm/357188378069?_skw=dragon+ball+energy+marker+E-43+japanese&hash=item532a161dd5:g:HQsAAeSwJfloX3wb"
       }
     ],
-    "last_scraped": "2026-06-26T20:11:29.158219",
+    "last_scraped": "2026-06-26T21:42:00.385925",
     "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-japanese-fusion-world-energy-markers/energy-marker-silver-e-43"
   },
   "E-46-silver-EN": {
@@ -126,14 +126,14 @@
         "price": 153.91,
         "currency": "EUR",
         "marketplace": "EBAY_NL",
-        "url": "https://www.ebay.nl/itm/127868949403?_skw=dragon+ball+energy+marker+E-46+silver+english&hash=item1dc595539b:g:aHgAAeSwjiVqCTBe&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGYoKjMm9EDvQZRbMhtvJ%2Fy5XgD3PW4V1XOTn1t8fYl9N0OCRyRwo%2FoxKqIF1NiGCrERgmQ8O8DL1twqDwIjN7UuXDSI4Z14K0WxYT%2FkTaqyA2qlAgELJ2QQpMXtnzPTfZ5ts4JpSxivtwMQ0JpfLuDdmmcuxDmhn1xPx6GML7l5axdNfFlvN%2F6Gy5pS%2FHs2KO7x37j344%2F4mATGPAFYNAbCvzFcYZ%2F3z7hDn5ge%2FTVzxA8NmDpt8vDWbKUYHsMKwbdOJDvi%2B1awpb3tr12xNpA9HdC3GDBspfxuRWk8Y%2BS1HCMDniyryhKeKvtLJpkO3hlX7IWTlPJ9PAIuoOAQ5Vht"
+        "url": "https://www.ebay.nl/itm/127868949403?_skw=dragon+ball+energy+marker+E-46+silver+english&hash=item1dc595539b:g:aHgAAeSwjiVqCTBe&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGYoKjMm9EDvQZRbMhtvJ%2Fy5XgD3PW4V1XOTn1t8fYl9N0OCRyRwo%2FoxKqIF1NiGCrERgmQ8O8DL1twqDwIjN7UuXDSI4Z14K0WxYT%2FkTaqyA2qlAgELJ2QQpMXtnzPTfZ4aHhpvEYXoPnbTdmsFtTafcKlaPnHvN0Za3xOjTFoZjF4PQI%2B6N9s0LaoywfW9%2BmckyncyELmPUCC%2Fet4a75dtY0rfrIrfOA1o%2BS%2FM7dU3UNY%2F52OxpUSu3Y9rXDh5R8LItPZGvAtKeY1w9D2LtWzUTLjENOAfQ9WGtHnOmkRfrdP1qHLP53uv%2ByHxO9%2F5otea%2BaimXTTGEUD0d8ujaOEu"
       },
       {
         "title": "Energy Marker E-46 Manga Booster SB01 Dragon Ball Fusion World Booster Silver",
         "price": 159.62,
         "currency": "EUR",
         "marketplace": "EBAY_NL",
-        "url": "https://www.ebay.nl/itm/377288984409?_skw=dragon+ball+energy+marker+E-46+silver+english&hash=item57d82d0759:g:PtwAAeSwyxBqNrHh&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGZCpgTAsxd%2BoUjRU7s5lJzBXSnCNlTiMdVb0kVoXwT78I6%2BoGNnmEABw6PV4PuYyt7uPe115iQGf3NVKpoH2hr97a%2FocPEuRNAvZxBZYoQc68uLIbwQTb184lx8G%2FJRphibPjeXvh4VbXRWMPNvORrhKlSuc0XylGCpI%2BRMZ3j%2FtDHJzgFVqojQ3wzIG%2B2VXJRKO2n%2FEPDNw8iCjpHsdD%2FeyjC7pGfe37oyGo3AeHL91qlK%2FCIIVKDdlo71uOPUMWCHbZIahr8qVhXeSVW%2FCpaM66eYilpr5EToyJvUprmKjGqyuhyjxsWZH2EZ7sF6jkeT6f%2FqwhpAHPGofq3GjbsU"
+        "url": "https://www.ebay.nl/itm/377288984409?_skw=dragon+ball+energy+marker+E-46+silver+english&hash=item57d82d0759:g:PtwAAeSwyxBqNrHh&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGZCpgTAsxd%2BoUjRU7s5lJzBXSnCNlTiMdVb0kVoXwT78I6%2BoGNnmEABw6PV4PuYyt7uPe115iQGf3NVKpoH2hr97a%2FocPEuRNAvZxBZYoQc68uLIbwQTb184lx8G%2FJRphiPxl9dTCCHWyPVaoGmHr6FuK1QEhcXeimqo97ZeLGpnh9iiPyhdDAnT8qahJ7OR%2FiAkMuTpd2FyhygBra2BeCWmtsqS4DyFBUqiig276CIDB0TNeL3hrnjpEeybOy9V4gcPTm4qG0v0DhGzZVd0JbfeNq8vp%2FFcTk2Uo9By1OjBVZd3eGzLBC%2BccR5faz6es5v36o7lQ1ZCaPD8JYHp%2FhR"
       },
       {
         "title": "Dragon Ball Fusion World Booster Silver Energy Marker E-46",
@@ -143,7 +143,7 @@
         "url": "https://www.ebay.nl/itm/127846829828?_skw=dragon+ball+energy+marker+E-46+silver+english&hash=item1dc443cf04:g:5H0AAeSw93Np-U7Y"
       }
     ],
-    "last_scraped": "2026-06-26T20:11:32.717673",
+    "last_scraped": "2026-06-26T21:42:03.291241",
     "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-fusion-world-energy-markers/energy-marker-silver-e-46"
   },
   "E-46-silver-JP": {
@@ -192,7 +192,7 @@
         "url": "https://www.ebay.nl/itm/317882913950?_skw=dragon+ball+energy+marker+E-46+japanese&hash=item4a034c549e:g:iLwAAeSwWpdpkZRk"
       }
     ],
-    "last_scraped": "2026-06-26T20:11:39.477447",
+    "last_scraped": "2026-06-26T21:42:09.347606",
     "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-japanese-fusion-world-energy-markers/energy-marker-silver-e-46"
   },
   "E-50-silver-EN": {
@@ -217,7 +217,7 @@
         "price": 53.2,
         "currency": "EUR",
         "marketplace": "EBAY_NL",
-        "url": "https://www.ebay.nl/itm/800152011681?_skw=dragon+ball+energy+marker+E-50+silver+english&hash=itemba4cc6c3a1:g:VxAAAeSwulZqKKgP&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGZl4nGuqlIz2l9dWGHZrC10RVZK56WWz6Rh9EeoUaeAlje2cPyyOtf%2B%2FJUEkxL0qt1HhaCZDznFxPJyhWzUYJrDWmIkaTZ1wJmqrDX%2BgXG%2BXabIYY05LS1NOWMJQO5WF9frhB%2B9aDWm9KCXTuo52%2BcPvL1BAouP95FNtf961BAHi3P9TpWOQHLWJRIjrqCdXyozFM3XkuYxbvDo%2BlyKv9AoBZ6uH5QAMucWPEk%2BfoJB80kWPUzPDrwe4lI7ovotXQpam32%2BIazK%2Fa8TH%2FvytqcpDN%2BKric9mDvH5eWY3zsvp%2BBWX365LnjIzAFgdIV4SzQLJPvNKJNvZ1FyFjbiCKEQ"
+        "url": "https://www.ebay.nl/itm/800152011681?_skw=dragon+ball+energy+marker+E-50+silver+english&hash=itemba4cc6c3a1:g:VxAAAeSwulZqKKgP&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGZl4nGuqlIz2l9dWGHZrC10RVZK56WWz6Rh9EeoUaeAlje2cPyyOtf%2B%2FJUEkxL0qt1HhaCZDznFxPJyhWzUYJrDWmIkaTZ1wJmqrDX%2BgXG%2BXabIYY05LS1NOWMJQO5WF9eBh1avxT8XtqECdsF%2FKf1Qd%2BcguQRSzfWjxpt6x8qR14o7XTDDxJy%2FpFSirjHYWRfPjvSUCmDIM%2BWvpsXJmNjmqZ--j634HZmNcQo8siJTNZW5z%2BXrqd6o53FwbcjtNEHuLCBmzYbL%2F3oDT%2FYKvJHX9BeJPt4a58Y3PBiiPyOiGOgtRNeSgl7GmcYRKqYsseN027juwy2f6YxMMJOLk800"
       },
       {
         "title": "Dragon Ball Super Fusion World Manga SB01 Energy Marker E-50 Silver Son Goku",
@@ -238,10 +238,10 @@
         "price": 94.59,
         "currency": "EUR",
         "marketplace": "EBAY_NL",
-        "url": "https://www.ebay.nl/itm/117231913190?_skw=dragon+ball+energy+marker+E-50+silver+english&hash=item1b4b9108e6:g:idgAAeSwZGVqIbXW&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGYYNJMPe09YVyoa97yhRaTlF8O09cELaV%2Fcxe1LWvfjIrNpT31HTvkn1M2cOM7ZNuc%2F7D4rVel%2BIksfUN7L3XS70dPTTyaNKsX5KiVx2MKAZ1yDW4Zea7cQlsM42xB6jyy6xrgZ1yA5%2FJVWHz1bZa141%2BdSUJwd2EaolktPmKTKQQZWq%2Fuhi5X7AW5tgbFKkddt4TYACggemCNvfk2PE%2FNiOQ8XtFdzmGwas7iMOC1R5Kd%2F0bUk1bdtggR7Je2d5d0q%2BUGjn47idsbn2QuIagP1hvbl7hGELbOdvjRRmyj2%2F74JD4fk%2BCSptu1QINp4RI1BB6cv%2FGEDeQW56UuhVO3p"
+        "url": "https://www.ebay.nl/itm/117231913190?_skw=dragon+ball+energy+marker+E-50+silver+english&hash=item1b4b9108e6:g:idgAAeSwZGVqIbXW&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGYYNJMPe09YVyoa97yhRaTlF8O09cELaV%2Fcxe1LWvfjIrNpT31HTvkn1M2cOM7ZNuc%2F7D4rVel%2BIksfUN7L3XS70dPTTyaNKsX5KiVx2MKAZ1yDW4Zea7cQlsM42xB6jyyf8%2Fc0tCHCjB6ALrmsTbMCfh1lUZ%2F7x2cz4U6ou65KcXT3ZuhE8iXq%2Bs4tCFu%2Fyv4NYGe%2B0gL9rBBVDxCIFv7HtYwEEU5QlJEMk4irbnUFhu70jNeGWhsC9BBauC7eB95mJjy1YXZZaFyzvhnOaXNbpebcsjE8Ee%2F2UG8%2BfHdb4MH%2FcbfAsDcQtlDgMbkaVUr4ObNh47sVWklbw1L1qR%2FP"
       }
     ],
-    "last_scraped": "2026-06-26T20:11:42.907616",
+    "last_scraped": "2026-06-26T21:42:12.549951",
     "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-fusion-world-energy-markers/energy-marker-silver-e-50"
   },
   "E-50-silver-JP": {
@@ -259,7 +259,7 @@
         "price": 53.2,
         "currency": "EUR",
         "marketplace": "EBAY_NL",
-        "url": "https://www.ebay.nl/itm/800152011681?_skw=dragon+ball+energy+marker+E-50+japanese&hash=itemba4cc6c3a1:g:VxAAAeSwulZqKKgP&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGZl4nGuqlIz2l9dWGHZrC10RVZK56WWz6Rh9EeoUaeAlje2cPyyOtf%2B%2FJUEkxL0qt1HhaCZDznFxPJyhWzUYJrDWmIkaTZ1wJmqrDX%2BgXG%2BXabIYY05LS1NOWMJQO5WF9cniAeeyaNvadC5WHp1UudZCvFt1IPdfntpezGFfdmr1B5u3IpxcIgxwZBue1jBW0P%2F%2BRDhSM2hFz0xdPIMPMtsLUgfd1lvTvwel7XgpIMOrOu7cxwNnZh8%2BicsEa4Xie9DxMqhNd46kkB9JKq4qQ46CS6rELnjMGTMODgXg6l724BViLlkKfwKSycsRiHVH38%3D"
+        "url": "https://www.ebay.nl/itm/800152011681?_skw=dragon+ball+energy+marker+E-50+japanese&hash=itemba4cc6c3a1:g:VxAAAeSwulZqKKgP&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGZl4nGuqlIz2l9dWGHZrC10RVZK56WWz6Rh9EeoUaeAlje2cPyyOtf%2B%2FJUEkxL0qt1HhaCZDznFxPJyhWzUYJrDWmIkaTZ1wJmqrDX%2BgXG%2BXabIYY05LS1NOWMJQO5WF9c1EX%2FNsE%2BLHt16dMy0nxa7jjPvsEh1djTrVAFTI7%2BQasj7xkhWILuOcDdMNyvv49rjNf5fDwwCvUAqvoRaxQV2BRWlo9Scc7csrk1UTzHfDjuO1Mqn9jFt5UFjNwFsWsZfisGdSov1wlT4FuwWZBM63K9yf9W31F5esKv9lWMXICQJaBFm5xkb4mgHOkkjQWw%3D"
       },
       {
         "title": "Energy Marker E-50 Dragon Ball Super Fusion World NM",
@@ -287,21 +287,21 @@
         "price": 68.11,
         "currency": "EUR",
         "marketplace": "EBAY_NL",
-        "url": "https://www.ebay.nl/itm/317886478523?_skw=dragon+ball+energy+marker+E-50+japanese&hash=item4a0382b8bb:g:FhEAAeSwNiFpktvY&amdata=enc%3AAQALAAABAACCtXRWQnOEpyOqnQQ8KGYUGb3ob4HBYewgnq9DJZwzTVpIlQK7LtpGR2BKbdwtxxbiHrOlTTO5i8OQlsvRL%2BYNDvrP2EsUNNA4TvEM64BNUIh5GglNa9cHO1k1AgsZQPKeCQY%2F8MFQfS46IdFNoiaWuuWXtSMKzHrAWKp2J5RHsC%2Bn%2FdEeOs3W5il9gNOjK4ER8CNYjOBTTZHNvLJA060Y3ol%2B1sGJOJUEPs718JLOzV2n0Ze%2FvxpVK8JLLbAM1KSxN1zwvl0lIq4sk9cAUKX3SuueSHHtx%2BkF6YKhfke6Gn6onVXJO9Ky%2FX5qiwLwyqbFst8gzKdeiM7wVcACfX4%3D"
+        "url": "https://www.ebay.nl/itm/317886478523?_skw=dragon+ball+energy+marker+E-50+japanese&hash=item4a0382b8bb:g:FhEAAeSwNiFpktvY"
       }
     ],
-    "last_scraped": "2026-06-26T20:11:50.868620",
+    "last_scraped": "2026-06-26T21:42:18.811580",
     "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-japanese-fusion-world-energy-markers/energy-marker-silver-e-50"
   },
   "SB01-030-altart-JP": {
     "name": "Dabura [Alternate Art] SB01-030 (Japanese)",
     "set": "Manga Booster 01 JP",
     "language": "JP",
-    "count": 16,
+    "count": 17,
     "min": 23.58,
-    "median": 53.2,
+    "median": 53.04,
     "max": 138.35,
-    "avg": 65.99,
+    "avg": 63.95,
     "samples": [
       {
         "title": "Dabura SB01-030 Alt Art | Dragon Ball Fusion World| Manga Booster SB01 Japanese ",
@@ -309,6 +309,13 @@
         "currency": "GBP",
         "marketplace": "EBAY_GB",
         "url": "https://www.ebay.co.uk/itm/267665624355?_skw=dragon+ball+dabura+SB01-030+japanese&hash=item3e521d4d23:g:20EAAeSwQ5pqAI2Y"
+      },
+      {
+        "title": "Dragon Ball Super Card Game Fusion World Dabura Manga SB01-030 Alternative",
+        "price": 31.33,
+        "currency": "EUR",
+        "marketplace": "EBAY_DE",
+        "url": "https://www.ebay.de/itm/198456290194?_skw=dragon+ball+dabura+SB01-030+japans&hash=item2e34eaab92:g:rpUAAeSwI4tqPuke"
       },
       {
         "title": "Dragon Ball Fusion World Card Dabura R SB01-030 PAR Manga Booster 01 LP Japanese",
@@ -330,16 +337,9 @@
         "currency": "EUR",
         "marketplace": "EBAY_NL",
         "url": "https://www.ebay.nl/itm/317879184068?_skw=dragon+ball+dabura+SB01-030+japanese&hash=item4a03136ac4:g:ugkAAeSwCDtpkDrB"
-      },
-      {
-        "title": "Dragon Ball Fusion World Card Dabura R SB01-030 PAR Manga Booster 01 LP Japan...",
-        "price": 51.75,
-        "currency": "EUR",
-        "marketplace": "EBAY_DE",
-        "url": "https://www.ebay.de/itm/317880532000?_skw=dragon+ball+dabura+SB01-030+japans&hash=item4a0327fc20:g:ugkAAeSwCDtpkDrB"
       }
     ],
-    "last_scraped": "2026-06-26T20:12:01.302821",
+    "last_scraped": "2026-06-26T21:42:28.054825",
     "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-japanese-fusion-world-manga-booster-01/dabura-alternate-art-sb01-030"
   }
 }
