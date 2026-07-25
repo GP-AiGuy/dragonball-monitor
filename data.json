@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T13:58:28.174126",
+  "generated_at": "2026-07-25T15:26:54.885670",
   "watchlist": [
     {
       "id": "SPECIAL2026V1",
@@ -107,62 +107,6 @@
       "first_seen": "2026-06-04T17:06:54.701536"
     },
     {
-      "title": "Dragon Ball Fusion Special Booster Vol 1 – Box ENG",
-      "shop": "Pika Pika",
-      "country": "IT",
-      "price": "199,00€",
-      "price_num": 199.0,
-      "stock_status": "in_stock",
-      "url": "https://www.pikapika.it/prodotto/dragon-ball-fusion-special-booster-vol-1-box-eng/",
-      "priority": "SPECIAL2026V1",
-      "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
-      "deep_checked": true,
-      "last_seen": "2026-07-25T11:12:42.140899",
-      "first_seen": "2026-05-21T18:50:07.502914"
-    },
-    {
-      "title": "Boite de 20 Boosters - ST01 : Story Booster Volume 1 - Dragon Ball Super CG Fusion World - EN",
-      "shop": "Fantasy Sphere",
-      "country": "EU",
-      "price": "108,00€",
-      "price_num": 108.0,
-      "stock_status": "in_stock",
-      "url": "https://www.fantasysphere.net/product/boite-de-20-boosters-sp01-special-booster-volume-1-dragon-ball-super-cg-fusion-world-en-10041411",
-      "priority": "SPECIAL2026V1",
-      "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
-      "deep_checked": true,
-      "last_seen": "2026-07-25T13:36:24.654466",
-      "first_seen": "2026-05-21T18:49:17.240668"
-    },
-    {
-      "title": "[PREVENDITA 7.8.26]Dragon Ball Fusion World Box Special Booster 2026 Vol. 1 ENG",
-      "shop": "TCG Traders",
-      "country": "IT",
-      "price": "240.00€",
-      "price_num": 240.0,
-      "stock_status": "out_of_stock",
-      "url": "https://www.tcgtraders.eu/catalogo/booster-box/booster-box-altre-marche/prevendita-7-8-26dragon-ball-super-card-game-fusion-world-box-special-booster-2026-vol-1-eng/",
-      "priority": "SPECIAL2026V1",
-      "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
-      "deep_checked": true,
-      "last_seen": "2026-07-25T13:36:48.422992",
-      "first_seen": "2026-05-21T18:49:42.493163"
-    },
-    {
-      "title": "SPECIAL2026V1",
-      "shop": "Card Collector",
-      "country": "DE",
-      "price": "Prijs onbekend",
-      "price_num": null,
-      "stock_status": "unknown",
-      "url": "https://card-collector.net/products/dragon-ball-super-card-game-fusion-world-special-booster-display-01-20-packs-englisch-ab-07-08-2026",
-      "priority": "SPECIAL2026V1",
-      "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
-      "deep_checked": true,
-      "last_seen": "2026-07-25T13:37:30.825364",
-      "first_seen": "2026-05-21T18:50:30.941419"
-    },
-    {
       "title": "Dragon Ball Super Card Game Fusion World Box Special Booster 2026 Vol 1 ENG",
       "shop": "Tony Toys",
       "country": "IT",
@@ -177,6 +121,62 @@
       "first_seen": "2026-05-21T18:52:01.658593"
     },
     {
+      "title": "Boite de 20 Boosters - ST01 : Story Booster Volume 1 - Dragon Ball Super CG Fusion World - EN",
+      "shop": "Fantasy Sphere",
+      "country": "EU",
+      "price": "108,00€",
+      "price_num": 108.0,
+      "stock_status": "in_stock",
+      "url": "https://www.fantasysphere.net/product/boite-de-20-boosters-sp01-special-booster-volume-1-dragon-ball-super-cg-fusion-world-en-10041411",
+      "priority": "SPECIAL2026V1",
+      "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
+      "deep_checked": true,
+      "last_seen": "2026-07-25T15:04:32.130468",
+      "first_seen": "2026-05-21T18:49:17.240668"
+    },
+    {
+      "title": "[PREVENDITA 7.8.26]Dragon Ball Fusion World Box Special Booster 2026 Vol. 1 ENG",
+      "shop": "TCG Traders",
+      "country": "IT",
+      "price": "240.00€",
+      "price_num": 240.0,
+      "stock_status": "out_of_stock",
+      "url": "https://www.tcgtraders.eu/catalogo/booster-box/booster-box-altre-marche/prevendita-7-8-26dragon-ball-super-card-game-fusion-world-box-special-booster-2026-vol-1-eng/",
+      "priority": "SPECIAL2026V1",
+      "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
+      "deep_checked": true,
+      "last_seen": "2026-07-25T15:04:56.169237",
+      "first_seen": "2026-05-21T18:49:42.493163"
+    },
+    {
+      "title": "Dragon Ball Fusion Special Booster Vol 1 – Box ENG",
+      "shop": "Pika Pika",
+      "country": "IT",
+      "price": "199,00€",
+      "price_num": 199.0,
+      "stock_status": "in_stock",
+      "url": "https://www.pikapika.it/prodotto/dragon-ball-fusion-special-booster-vol-1-box-eng/",
+      "priority": "SPECIAL2026V1",
+      "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
+      "deep_checked": true,
+      "last_seen": "2026-07-25T15:05:20.876093",
+      "first_seen": "2026-05-21T18:50:07.502914"
+    },
+    {
+      "title": "SPECIAL2026V1",
+      "shop": "Card Collector",
+      "country": "DE",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://card-collector.net/products/dragon-ball-super-card-game-fusion-world-special-booster-display-01-20-packs-englisch-ab-07-08-2026",
+      "priority": "SPECIAL2026V1",
+      "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
+      "deep_checked": true,
+      "last_seen": "2026-07-25T15:05:43.196479",
+      "first_seen": "2026-05-21T18:50:30.941419"
+    },
+    {
       "title": "Dragon Ball Super Card Game: Fusion World - Story Booster 01 [ST01] - Booster Box [MAX. 2 PER CUSTOMER]",
       "shop": "PenguinTCG (ST01)",
       "country": "UK",
@@ -187,7 +187,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:39:11.822880",
+      "last_seen": "2026-07-25T15:07:17.460979",
       "first_seen": "2026-05-21T18:52:12.033790"
     },
     {
@@ -201,7 +201,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:40:16.511497",
+      "last_seen": "2026-07-25T15:08:22.189266",
       "first_seen": "2026-05-21T20:07:24.980736"
     },
     {
@@ -215,7 +215,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:40:38.869527",
+      "last_seen": "2026-07-25T15:08:44.545145",
       "first_seen": "2026-05-21T18:54:34.665306"
     },
     {
@@ -229,7 +229,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:41:45.424065",
+      "last_seen": "2026-07-25T15:09:50.755842",
       "first_seen": "2026-05-30T14:08:33.159647"
     },
     {
@@ -243,7 +243,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:42:19.010103",
+      "last_seen": "2026-07-25T15:10:24.000956",
       "first_seen": "2026-05-22T13:51:23.247797"
     },
     {
@@ -257,7 +257,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:42:41.388300",
+      "last_seen": "2026-07-25T15:10:46.300717",
       "first_seen": "2026-05-21T20:08:40.778498"
     },
     {
@@ -271,7 +271,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:43:03.770710",
+      "last_seen": "2026-07-25T15:11:08.611159",
       "first_seen": "2026-05-21T20:09:04.861224"
     },
     {
@@ -285,7 +285,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:43:26.091053",
+      "last_seen": "2026-07-25T15:11:30.881660",
       "first_seen": "2026-05-21T20:09:29.026553"
     },
     {
@@ -299,7 +299,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:43:48.383532",
+      "last_seen": "2026-07-25T15:11:53.200409",
       "first_seen": "2026-05-21T20:09:59.106010"
     },
     {
@@ -313,7 +313,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:44:12.405268",
+      "last_seen": "2026-07-25T15:12:16.570512",
       "first_seen": "2026-05-21T20:10:22.803664"
     },
     {
@@ -327,7 +327,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:44:34.879809",
+      "last_seen": "2026-07-25T15:12:39.152849",
       "first_seen": "2026-05-21T20:10:47.850415"
     },
     {
@@ -341,7 +341,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:44:57.265237",
+      "last_seen": "2026-07-25T15:13:01.543905",
       "first_seen": "2026-05-21T20:11:11.955706"
     },
     {
@@ -355,7 +355,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:45:19.610345",
+      "last_seen": "2026-07-25T15:13:23.817401",
       "first_seen": "2026-05-21T20:11:37.399423"
     },
     {
@@ -369,7 +369,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:45:41.947219",
+      "last_seen": "2026-07-25T15:13:46.096632",
       "first_seen": "2026-05-21T20:12:01.015765"
     },
     {
@@ -383,7 +383,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:46:08.034164",
+      "last_seen": "2026-07-25T15:14:12.333061",
       "first_seen": "2026-05-21T23:14:48.095904"
     },
     {
@@ -397,7 +397,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:46:56.972875",
+      "last_seen": "2026-07-25T15:15:02.429790",
       "first_seen": "2026-05-22T13:51:09.832617"
     },
     {
@@ -411,7 +411,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:47:19.326680",
+      "last_seen": "2026-07-25T15:15:24.746145",
       "first_seen": "2026-06-02T04:20:03.647449"
     },
     {
@@ -425,7 +425,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:47:41.711525",
+      "last_seen": "2026-07-25T15:15:47.010918",
       "first_seen": "2026-06-05T20:10:03.051249"
     },
     {
@@ -439,7 +439,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:48:22.518103",
+      "last_seen": "2026-07-25T15:16:29.806149",
       "first_seen": "2026-05-21T19:17:13.308705"
     },
     {
@@ -453,7 +453,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:48:45.823672",
+      "last_seen": "2026-07-25T15:16:52.870317",
       "first_seen": "2026-05-02T10:32:19.843259"
     },
     {
@@ -467,7 +467,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:49:52.056593",
+      "last_seen": "2026-07-25T15:17:59.059340",
       "first_seen": "2026-06-25T21:59:55.151668"
     },
     {
@@ -481,7 +481,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:50:14.454537",
+      "last_seen": "2026-07-25T15:18:21.376864",
       "first_seen": "2026-06-26T08:11:09.011936"
     },
     {
@@ -495,7 +495,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:50:39.016759",
+      "last_seen": "2026-07-25T15:18:45.800617",
       "first_seen": "2026-06-30T04:03:20.367329"
     },
     {
@@ -509,7 +509,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:51:05.409280",
+      "last_seen": "2026-07-25T15:19:11.278830",
       "first_seen": "2026-07-01T10:06:10.389418"
     },
     {
@@ -523,7 +523,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:51:27.770199",
+      "last_seen": "2026-07-25T15:19:33.615643",
       "first_seen": "2026-07-01T10:06:34.274140"
     },
     {
@@ -537,7 +537,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:51:50.099866",
+      "last_seen": "2026-07-25T15:19:55.943054",
       "first_seen": "2026-07-09T11:12:24.888917"
     },
     {
@@ -551,8 +551,22 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:52:12.566145",
+      "last_seen": "2026-07-25T15:20:18.682430",
       "first_seen": "2026-07-14T17:33:13.673131"
+    },
+    {
+      "title": "SPECIAL2026V1",
+      "shop": "gamersguildaz.com",
+      "country": "?",
+      "price": "Prijs onbekend",
+      "price_num": null,
+      "stock_status": "unknown",
+      "url": "https://gamersguildaz.com/products/dragon-ball-super-tcg-fusion-world-story-booster-01-case-st01",
+      "priority": "SPECIAL2026V1",
+      "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
+      "deep_checked": true,
+      "last_seen": "2026-07-25T15:20:41.043087",
+      "first_seen": "2026-07-25T15:20:41.043094"
     },
     {
       "title": "Dragon Ball Super Card Game Fusion World St01 Special Booster Display 01 Box 20 Packs ENG",
@@ -565,7 +579,7 @@
       "priority": "SPECIAL2026V1",
       "priority_series": "Fusion World Special Booster Vol. 1 (2026)",
       "deep_checked": true,
-      "last_seen": "2026-07-25T13:54:34.799039",
+      "last_seen": "2026-07-25T15:23:03.240471",
       "first_seen": "2026-05-21T18:54:55.748422"
     },
     {
@@ -12932,11 +12946,6 @@
     ],
     "c56dec834e04bc322e9a052640bb416b": [
       {
-        "ts": "2026-07-02T19:29:49.600363",
-        "price": 120.0,
-        "stock_status": "out_of_stock"
-      },
-      {
         "ts": "2026-07-02T21:12:42.090061",
         "price": 120.0,
         "stock_status": "out_of_stock"
@@ -13928,6 +13937,11 @@
       },
       {
         "ts": "2026-07-25T13:39:11.822896",
+        "price": 120.0,
+        "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-07-25T15:07:17.460996",
         "price": 120.0,
         "stock_status": "out_of_stock"
       }
@@ -17837,11 +17851,6 @@
     ],
     "f315ab0db53b4147874f3c473f0437d0": [
       {
-        "ts": "2026-07-02T14:22:47.261132",
-        "price": 129.9,
-        "stock_status": "preorder"
-      },
-      {
         "ts": "2026-07-02T18:09:20.124025",
         "price": 129.9,
         "stock_status": "preorder"
@@ -18835,14 +18844,14 @@
         "ts": "2026-07-25T13:54:34.799103",
         "price": 129.9,
         "stock_status": "preorder"
+      },
+      {
+        "ts": "2026-07-25T15:23:03.240528",
+        "price": 129.9,
+        "stock_status": "preorder"
       }
     ],
     "f2d00fa0f0b71d34a72079e26b634164": [
-      {
-        "ts": "2026-07-02T17:50:20.657309",
-        "price": 108.0,
-        "stock_status": "in_stock"
-      },
       {
         "ts": "2026-07-02T19:26:50.449408",
         "price": 108.0,
@@ -19837,14 +19846,14 @@
         "ts": "2026-07-25T13:36:24.654482",
         "price": 108.0,
         "stock_status": "in_stock"
+      },
+      {
+        "ts": "2026-07-25T15:04:32.130485",
+        "price": 108.0,
+        "stock_status": "in_stock"
       }
     ],
     "b763df73222c4179988caffe4f790d48": [
-      {
-        "ts": "2026-07-02T03:43:22.054241",
-        "price": 189.0,
-        "stock_status": "out_of_stock"
-      },
       {
         "ts": "2026-07-02T07:35:01.829811",
         "price": 189.0,
@@ -20839,14 +20848,14 @@
         "ts": "2026-07-25T13:36:48.423008",
         "price": 240.0,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-07-25T15:04:56.169256",
+        "price": 240.0,
+        "stock_status": "out_of_stock"
       }
     ],
     "ef7cf568574f9e8248e8e6bbe159566f": [
-      {
-        "ts": "2026-06-09T22:02:50.844531",
-        "price": 199.0,
-        "stock_status": "in_stock"
-      },
       {
         "ts": "2026-06-09T23:19:12.449712",
         "price": 199.0,
@@ -21839,6 +21848,11 @@
       },
       {
         "ts": "2026-07-25T11:12:42.140914",
+        "price": 199.0,
+        "stock_status": "in_stock"
+      },
+      {
+        "ts": "2026-07-25T15:05:20.876108",
         "price": 199.0,
         "stock_status": "in_stock"
       }
@@ -27857,11 +27871,6 @@
     ],
     "f804d2d7409046c0b5a3f89e3b18f845": [
       {
-        "ts": "2026-07-11T09:45:16.596571",
-        "price": 119.99,
-        "stock_status": "out_of_stock"
-      },
-      {
         "ts": "2026-07-11T09:50:26.802394",
         "price": 119.99,
         "stock_status": "out_of_stock"
@@ -28855,14 +28864,14 @@
         "ts": "2026-07-25T13:46:56.973004",
         "price": 119.99,
         "stock_status": "out_of_stock"
+      },
+      {
+        "ts": "2026-07-25T15:15:02.429926",
+        "price": 119.99,
+        "stock_status": "out_of_stock"
       }
     ],
     "354fef47f3d3c66e93e336401dae4c84": [
-      {
-        "ts": "2026-06-26T19:57:05.540002",
-        "price": 190.5,
-        "stock_status": "in_stock"
-      },
       {
         "ts": "2026-06-26T21:27:24.977858",
         "price": 190.5,
@@ -29855,6 +29864,11 @@
       },
       {
         "ts": "2026-07-25T13:42:19.010116",
+        "price": 190.5,
+        "stock_status": "in_stock"
+      },
+      {
+        "ts": "2026-07-25T15:10:24.001000",
         "price": 190.5,
         "stock_status": "in_stock"
       }
@@ -31832,11 +31846,6 @@
     ],
     "892ea2e17d84d99ce4b83de0f43d51b2": [
       {
-        "ts": "2026-07-02T07:50:00.062223",
-        "price": 129.9,
-        "stock_status": "preorder"
-      },
-      {
         "ts": "2026-07-02T10:58:25.239166",
         "price": 129.9,
         "stock_status": "preorder"
@@ -32830,6 +32839,11 @@
         "ts": "2026-07-25T13:50:39.016773",
         "price": 149.9,
         "stock_status": "preorder"
+      },
+      {
+        "ts": "2026-07-25T15:18:45.800634",
+        "price": 149.9,
+        "stock_status": "preorder"
       }
     ],
     "ca22e2402f0df9dcdcd25a25b7a374b0": [
@@ -32931,11 +32945,11 @@
     ]
   },
   "stats": {
-    "total_products": 152,
+    "total_products": 153,
     "preorders": 10,
     "in_stock": 7,
     "out_of_stock": 30,
-    "priority_hits": 40,
+    "priority_hits": 41,
     "news_articles": 0,
     "shops_total": 63,
     "shops_healthy": 59,
@@ -32947,8 +32961,8 @@
         "shop": "Bol.com",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 624,
-        "last_success": "2026-07-25T13:52:35.244103",
+        "consecutive_zero_results": 625,
+        "last_success": "2026-07-25T15:21:03.871352",
         "last_error": null
       },
       {
@@ -32987,24 +33001,24 @@
         "shop": "TBH Store",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 621,
-        "last_success": "2026-07-25T13:52:59.029857",
+        "consecutive_zero_results": 622,
+        "last_success": "2026-07-25T15:21:27.568508",
         "last_error": null
       },
       {
         "shop": "Pokeca",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 541,
-        "last_success": "2026-07-25T13:53:00.723039",
+        "consecutive_zero_results": 542,
+        "last_success": "2026-07-25T15:21:29.489919",
         "last_error": null
       },
       {
         "shop": "Spellenvariant",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 466,
-        "last_success": "2026-07-25T13:53:01.697275",
+        "consecutive_zero_results": 467,
+        "last_success": "2026-07-25T15:21:31.136150",
         "last_error": null
       },
       {
@@ -33019,16 +33033,16 @@
         "shop": "Oppacards",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 513,
-        "last_success": "2026-07-25T13:53:03.315566",
+        "consecutive_zero_results": 514,
+        "last_success": "2026-07-25T15:21:32.871010",
         "last_error": null
       },
       {
         "shop": "TF-Robots",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 623,
-        "last_success": "2026-07-25T13:53:01.104625",
+        "consecutive_zero_results": 624,
+        "last_success": "2026-07-25T15:21:30.233127",
         "last_error": null
       },
       {
@@ -33043,32 +33057,32 @@
         "shop": "TCGHaven",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 624,
-        "last_success": "2026-07-25T13:53:22.635602",
+        "consecutive_zero_results": 625,
+        "last_success": "2026-07-25T15:21:51.256416",
         "last_error": null
       },
       {
         "shop": "AlpsTCG",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 575,
-        "last_success": "2026-07-25T13:53:24.417183",
+        "consecutive_zero_results": 576,
+        "last_success": "2026-07-25T15:21:53.261100",
         "last_error": null
       },
       {
         "shop": "TcgReus",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 624,
-        "last_success": "2026-07-25T13:53:25.777257",
+        "consecutive_zero_results": 625,
+        "last_success": "2026-07-25T15:21:55.061230",
         "last_error": null
       },
       {
         "shop": "Arly Trading",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 624,
-        "last_success": "2026-07-25T13:53:28.807806",
+        "consecutive_zero_results": 625,
+        "last_success": "2026-07-25T15:21:59.611549",
         "last_error": null
       },
       {
@@ -33083,16 +33097,16 @@
         "shop": "Card Game Shop BE",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 511,
-        "last_success": "2026-07-25T13:53:16.414318",
+        "consecutive_zero_results": 512,
+        "last_success": "2026-07-25T15:21:45.443408",
         "last_error": null
       },
       {
         "shop": "Cardmarket",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 624,
-        "last_success": "2026-07-25T13:55:46.268546",
+        "consecutive_zero_results": 625,
+        "last_success": "2026-07-25T15:24:16.164055",
         "last_error": null
       },
       {
@@ -33107,32 +33121,32 @@
         "shop": "Magic Madhouse",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 623,
-        "last_success": "2026-07-25T13:55:49.986931",
+        "consecutive_zero_results": 624,
+        "last_success": "2026-07-25T15:24:20.653901",
         "last_error": null
       },
       {
         "shop": "Chaos Cards",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 624,
-        "last_success": "2026-07-25T13:56:01.706365",
+        "consecutive_zero_results": 625,
+        "last_success": "2026-07-25T15:24:31.418072",
         "last_error": null
       },
       {
         "shop": "Total Cards",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 624,
-        "last_success": "2026-07-25T13:56:07.482383",
+        "consecutive_zero_results": 625,
+        "last_success": "2026-07-25T15:24:36.481312",
         "last_error": null
       },
       {
         "shop": "Fantasywelt",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 624,
-        "last_success": "2026-07-25T13:56:09.970317",
+        "consecutive_zero_results": 625,
+        "last_success": "2026-07-25T15:24:39.519504",
         "last_error": null
       },
       {
@@ -33155,32 +33169,32 @@
         "shop": "Amazon.co.uk",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 624,
-        "last_success": "2026-07-25T13:56:09.716821",
+        "consecutive_zero_results": 625,
+        "last_success": "2026-07-25T15:24:38.466117",
         "last_error": null
       },
       {
         "shop": "Nin-Nin-Game",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 578,
-        "last_success": "2026-07-25T13:53:40.165334",
+        "consecutive_zero_results": 579,
+        "last_success": "2026-07-25T15:22:09.157137",
         "last_error": null
       },
       {
         "shop": "4X Trading",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 575,
-        "last_success": "2026-07-25T13:53:47.842370",
+        "consecutive_zero_results": 576,
+        "last_success": "2026-07-25T15:22:16.474712",
         "last_error": null
       },
       {
         "shop": "Hobby Genki",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 578,
-        "last_success": "2026-07-25T13:53:48.160371",
+        "consecutive_zero_results": 579,
+        "last_success": "2026-07-25T15:22:17.082944",
         "last_error": null
       },
       {
@@ -33196,135 +33210,135 @@
         "disabled": false,
         "consecutive_failures": 0,
         "consecutive_zero_results": 0,
-        "last_success": "2026-07-25T13:54:34.799031",
+        "last_success": "2026-07-25T15:23:03.240464",
         "last_error": null
       },
       {
         "shop": "Il Nuovo Mondo",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 539,
-        "last_success": "2026-07-25T13:54:09.055232",
+        "consecutive_zero_results": 540,
+        "last_success": "2026-07-25T15:22:38.066475",
         "last_error": null
       },
       {
         "shop": "GameTrade",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 576,
-        "last_success": "2026-07-25T13:54:00.405404",
+        "consecutive_zero_results": 577,
+        "last_success": "2026-07-25T15:22:29.957773",
         "last_error": null
       },
       {
         "shop": "WonderClub",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 576,
-        "last_success": "2026-07-25T13:54:17.227379",
+        "consecutive_zero_results": 577,
+        "last_success": "2026-07-25T15:22:47.593986",
         "last_error": null
       },
       {
         "shop": "Jap-One",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 571,
-        "last_success": "2026-07-25T13:54:25.122680",
+        "consecutive_zero_results": 572,
+        "last_success": "2026-07-25T15:22:54.601839",
         "last_error": null
       },
       {
         "shop": "Aquitaz",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 576,
-        "last_success": "2026-07-25T13:54:30.221080",
+        "consecutive_zero_results": 577,
+        "last_success": "2026-07-25T15:22:59.211642",
         "last_error": null
       },
       {
         "shop": "The Card Vault",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 474,
-        "last_success": "2026-07-25T13:54:32.692150",
+        "consecutive_zero_results": 475,
+        "last_success": "2026-07-25T15:23:01.747065",
         "last_error": null
       },
       {
         "shop": "Zavvi (Dragon Ball)",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 576,
-        "last_success": "2026-07-25T13:54:26.123083",
+        "consecutive_zero_results": 577,
+        "last_success": "2026-07-25T15:22:56.614821",
         "last_error": null
       },
       {
         "shop": "Hobbix Change",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 541,
-        "last_success": "2026-07-25T13:54:48.886241",
+        "consecutive_zero_results": 542,
+        "last_success": "2026-07-25T15:23:18.397819",
         "last_error": null
       },
       {
         "shop": "Games Island",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 523,
-        "last_success": "2026-07-25T13:54:38.166552",
+        "consecutive_zero_results": 524,
+        "last_success": "2026-07-25T15:23:08.662339",
         "last_error": null
       },
       {
         "shop": "Loot Cave",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 569,
-        "last_success": "2026-07-25T13:54:53.837184",
+        "consecutive_zero_results": 570,
+        "last_success": "2026-07-25T15:23:23.072120",
         "last_error": null
       },
       {
         "shop": "PT Merch",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 576,
-        "last_success": "2026-07-25T13:54:58.529440",
+        "consecutive_zero_results": 577,
+        "last_success": "2026-07-25T15:23:28.690523",
         "last_error": null
       },
       {
         "shop": "Gathering Games",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 576,
-        "last_success": "2026-07-25T13:54:58.625817",
+        "consecutive_zero_results": 577,
+        "last_success": "2026-07-25T15:23:26.946295",
         "last_error": null
       },
       {
         "shop": "Firestorm Games",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 576,
-        "last_success": "2026-07-25T13:55:01.759562",
+        "consecutive_zero_results": 577,
+        "last_success": "2026-07-25T15:23:32.396260",
         "last_error": null
       },
       {
         "shop": "Flevance",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 576,
-        "last_success": "2026-07-25T13:55:12.620367",
+        "consecutive_zero_results": 577,
+        "last_success": "2026-07-25T15:23:42.126674",
         "last_error": null
       },
       {
         "shop": "TCG Store IT",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 571,
-        "last_success": "2026-07-25T13:55:17.708591",
+        "consecutive_zero_results": 572,
+        "last_success": "2026-07-25T15:23:47.556867",
         "last_error": null
       },
       {
         "shop": "Card Treasure",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 576,
-        "last_success": "2026-07-25T13:55:22.302499",
+        "consecutive_zero_results": 577,
+        "last_success": "2026-07-25T15:23:50.721773",
         "last_error": null
       },
       {
@@ -33339,24 +33353,24 @@
         "shop": "Frida M Store",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 474,
-        "last_success": "2026-07-25T13:55:22.573013",
+        "consecutive_zero_results": 475,
+        "last_success": "2026-07-25T15:23:52.404423",
         "last_error": null
       },
       {
         "shop": "CarteMagic",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 576,
-        "last_success": "2026-07-25T13:55:26.005913",
+        "consecutive_zero_results": 577,
+        "last_success": "2026-07-25T15:23:56.854339",
         "last_error": null
       },
       {
         "shop": "Anime World GR",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 571,
-        "last_success": "2026-07-25T13:55:38.096988",
+        "consecutive_zero_results": 572,
+        "last_success": "2026-07-25T15:24:07.507946",
         "last_error": null
       },
       {
@@ -33371,16 +33385,16 @@
         "shop": "Cardoreum",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 574,
-        "last_success": "2026-07-25T13:55:41.373690",
+        "consecutive_zero_results": 575,
+        "last_success": "2026-07-25T15:24:11.281212",
         "last_error": null
       },
       {
         "shop": "Fantasy Sphere",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 576,
-        "last_success": "2026-07-25T13:55:47.329356",
+        "consecutive_zero_results": 577,
+        "last_success": "2026-07-25T15:24:15.641713",
         "last_error": null
       },
       {
@@ -33395,56 +33409,56 @@
         "shop": "Candy Cards",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 541,
-        "last_success": "2026-07-25T13:53:52.916531",
+        "consecutive_zero_results": 542,
+        "last_success": "2026-07-25T15:22:23.389937",
         "last_error": null
       },
       {
         "shop": "Montalfan",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 540,
-        "last_success": "2026-07-25T13:54:06.560985",
+        "consecutive_zero_results": 541,
+        "last_success": "2026-07-25T15:22:35.505777",
         "last_error": null
       },
       {
         "shop": "NextCards",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 36,
-        "last_success": "2026-07-25T13:53:49.429190",
+        "consecutive_zero_results": 37,
+        "last_success": "2026-07-25T15:22:18.927309",
         "last_error": null
       },
       {
         "shop": "Dracoon (Special Booster search)",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 473,
-        "last_success": "2026-07-25T13:52:36.602403",
+        "consecutive_zero_results": 474,
+        "last_success": "2026-07-25T15:21:05.339798",
         "last_error": null
       },
       {
         "shop": "88 Cardhouse (Special Booster search)",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 473,
-        "last_success": "2026-07-25T13:52:36.652492",
+        "consecutive_zero_results": 474,
+        "last_success": "2026-07-25T15:21:05.504202",
         "last_error": null
       },
       {
         "shop": "Gamerz Paradize (Special Booster search)",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 473,
-        "last_success": "2026-07-25T13:52:36.950880",
+        "consecutive_zero_results": 474,
+        "last_success": "2026-07-25T15:21:06.068639",
         "last_error": null
       },
       {
         "shop": "Zatu (Special Booster search)",
         "disabled": false,
         "consecutive_failures": 0,
-        "consecutive_zero_results": 36,
-        "last_success": "2026-07-25T13:52:36.811569",
+        "consecutive_zero_results": 37,
+        "last_success": "2026-07-25T15:21:05.488991",
         "last_error": null
       }
     ],
@@ -33798,7 +33812,7 @@
         "id": "SPECIAL2026V1",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-07-25T13:36:22.899257",
+        "last_buyable": "2026-07-25T15:04:30.381178",
         "last_error": null
       },
       {
@@ -33813,14 +33827,14 @@
         "shop": "Pika Pika",
         "id": "SPECIAL2026V1",
         "consecutive_unknown": 0,
-        "consecutive_failures": 1,
-        "last_buyable": "2026-07-25T11:12:40.462295",
-        "last_error": "deep check failed"
+        "consecutive_failures": 0,
+        "last_buyable": "2026-07-25T15:05:19.096672",
+        "last_error": null
       },
       {
         "shop": "Card Collector",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 36,
+        "consecutive_unknown": 37,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -33829,7 +33843,7 @@
         "shop": "Arcanum Fumetteria",
         "id": "SPECIAL2026V1",
         "consecutive_unknown": 0,
-        "consecutive_failures": 120,
+        "consecutive_failures": 121,
         "last_buyable": "2026-07-12T09:53:55.798909",
         "last_error": "deep check failed"
       },
@@ -33837,7 +33851,7 @@
         "shop": "Unilibro",
         "id": "SPECIAL2026V1",
         "consecutive_unknown": 1,
-        "consecutive_failures": 770,
+        "consecutive_failures": 771,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
@@ -33845,7 +33859,7 @@
         "shop": "Manga Kaze",
         "id": "SPECIAL2026V1",
         "consecutive_unknown": 0,
-        "consecutive_failures": 771,
+        "consecutive_failures": 772,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
@@ -33853,9 +33867,9 @@
         "shop": "Tony Toys",
         "id": "SPECIAL2026V1",
         "consecutive_unknown": 0,
-        "consecutive_failures": 0,
+        "consecutive_failures": 1,
         "last_buyable": "2026-07-25T13:38:58.680789",
-        "last_error": null
+        "last_error": "deep check failed"
       },
       {
         "shop": "PenguinTCG (ST01)",
@@ -33869,7 +33883,7 @@
         "shop": "Hobby Genki (ST01)",
         "id": "SPECIAL2026V1",
         "consecutive_unknown": 0,
-        "consecutive_failures": 771,
+        "consecutive_failures": 772,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
@@ -33877,14 +33891,14 @@
         "shop": "Dracoon",
         "id": "SPECIAL2026V1",
         "consecutive_unknown": 0,
-        "consecutive_failures": 769,
+        "consecutive_failures": 770,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
       {
         "shop": "TCGHaven",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 38,
+        "consecutive_unknown": 39,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -33892,7 +33906,7 @@
       {
         "shop": "NextCards",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 36,
+        "consecutive_unknown": 37,
         "consecutive_failures": 0,
         "last_buyable": "2026-06-16T15:29:16.296808",
         "last_error": null
@@ -33901,14 +33915,14 @@
         "shop": "Loot Cave",
         "id": "SPECIAL2026V1",
         "consecutive_unknown": 0,
-        "consecutive_failures": 44,
+        "consecutive_failures": 45,
         "last_buyable": "2026-07-20T10:58:57.127011",
         "last_error": "deep check failed"
       },
       {
         "shop": "hobbiesville.com",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 38,
+        "consecutive_unknown": 39,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -33916,7 +33930,7 @@
       {
         "shop": "blinkgiftstation.com",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 38,
+        "consecutive_unknown": 39,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -33924,7 +33938,7 @@
       {
         "shop": "heroesworld.ca",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 38,
+        "consecutive_unknown": 39,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -33932,7 +33946,7 @@
       {
         "shop": "zatu.com",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 36,
+        "consecutive_unknown": 37,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -33948,7 +33962,7 @@
       {
         "shop": "japhunter.ch",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 36,
+        "consecutive_unknown": 37,
         "consecutive_failures": 0,
         "last_buyable": "2026-07-21T14:01:50.415084",
         "last_error": null
@@ -33956,7 +33970,7 @@
       {
         "shop": "collectiblemadness.com.au",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 38,
+        "consecutive_unknown": 39,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -33964,7 +33978,7 @@
       {
         "shop": "japan-figure.com",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 36,
+        "consecutive_unknown": 37,
         "consecutive_failures": 0,
         "last_buyable": "2026-07-21T14:02:38.795447",
         "last_error": null
@@ -33972,7 +33986,7 @@
       {
         "shop": "binderly.co.uk",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 38,
+        "consecutive_unknown": 39,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -33988,7 +34002,7 @@
       {
         "shop": "Gamerz Paradize",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 36,
+        "consecutive_unknown": 37,
         "consecutive_failures": 0,
         "last_buyable": "2026-07-21T13:58:31.869861",
         "last_error": null
@@ -33996,7 +34010,7 @@
       {
         "shop": "Total Cards",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 86,
+        "consecutive_unknown": 87,
         "consecutive_failures": 363,
         "last_buyable": null,
         "last_error": "deep check failed"
@@ -34004,7 +34018,7 @@
       {
         "shop": "Gathering Games",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 36,
+        "consecutive_unknown": 37,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -34014,14 +34028,14 @@
         "id": "SPECIAL2026V1",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-07-25T13:42:16.475076",
+        "last_buyable": "2026-07-25T15:10:21.455571",
         "last_error": null
       },
       {
         "shop": "totalcards.net",
         "id": "SPECIAL2026V1",
         "consecutive_unknown": 1,
-        "consecutive_failures": 71,
+        "consecutive_failures": 72,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
@@ -34036,7 +34050,7 @@
       {
         "shop": "store.401games.ca",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 36,
+        "consecutive_unknown": 37,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -34044,7 +34058,7 @@
       {
         "shop": "flipsidegaming.com",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 38,
+        "consecutive_unknown": 39,
         "consecutive_failures": 0,
         "last_buyable": "2026-06-08T12:19:26.464655",
         "last_error": null
@@ -34053,7 +34067,7 @@
         "shop": "totalcards.net",
         "id": "SPECIAL2026V1",
         "consecutive_unknown": 5,
-        "consecutive_failures": 67,
+        "consecutive_failures": 68,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
@@ -34070,14 +34084,14 @@
         "id": "SPECIAL2026V1",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-07-25T13:48:44.296401",
+        "last_buyable": "2026-07-25T15:16:51.396574",
         "last_error": null
       },
       {
         "shop": "dracoon.nl",
         "id": "SPECIAL2026V1",
         "consecutive_unknown": 0,
-        "consecutive_failures": 100,
+        "consecutive_failures": 101,
         "last_buyable": "2026-07-14T14:00:10.265339",
         "last_error": "deep check failed"
       },
@@ -34085,7 +34099,7 @@
         "shop": "rollntrade.com",
         "id": "SPECIAL2026V1",
         "consecutive_unknown": 0,
-        "consecutive_failures": 253,
+        "consecutive_failures": 254,
         "last_buyable": null,
         "last_error": "deep check failed"
       },
@@ -34094,13 +34108,13 @@
         "id": "SPECIAL2026V1",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-07-25T13:49:50.399577",
+        "last_buyable": "2026-07-25T15:17:57.271638",
         "last_error": null
       },
       {
         "shop": "nyzfighters.com",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 36,
+        "consecutive_unknown": 37,
         "consecutive_failures": 0,
         "last_buyable": "2026-07-21T14:08:01.678933",
         "last_error": null
@@ -34110,7 +34124,7 @@
         "id": "SPECIAL2026V1",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-07-25T13:50:37.272221",
+        "last_buyable": "2026-07-25T15:18:44.087889",
         "last_error": null
       },
       {
@@ -34118,13 +34132,13 @@
         "id": "SPECIAL2026V1",
         "consecutive_unknown": 0,
         "consecutive_failures": 0,
-        "last_buyable": "2026-07-25T13:51:01.701696",
+        "last_buyable": "2026-07-25T15:19:08.603061",
         "last_error": null
       },
       {
         "shop": "holohorsegames.com",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 38,
+        "consecutive_unknown": 39,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -34132,7 +34146,7 @@
       {
         "shop": "game-academia.myshopify.com",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 38,
+        "consecutive_unknown": 39,
         "consecutive_failures": 0,
         "last_buyable": "2026-07-21T06:45:55.243833",
         "last_error": null
@@ -34140,7 +34154,15 @@
       {
         "shop": "miyabihobby.com",
         "id": "SPECIAL2026V1",
-        "consecutive_unknown": 38,
+        "consecutive_unknown": 39,
+        "consecutive_failures": 0,
+        "last_buyable": null,
+        "last_error": null
+      },
+      {
+        "shop": "gamersguildaz.com",
+        "id": "SPECIAL2026V1",
+        "consecutive_unknown": 1,
         "consecutive_failures": 0,
         "last_buyable": null,
         "last_error": null
@@ -34167,7 +34189,7 @@
           "BEST_OFFER"
         ],
         "first_seen": "2026-07-17T03:07:16.871182",
-        "last_seen": "2026-07-25T13:57:42.978463"
+        "last_seen": "2026-07-25T15:26:10.335444"
       },
       {
         "item_id": "v1|236953090089|0",
@@ -34186,7 +34208,7 @@
           "FIXED_PRICE"
         ],
         "first_seen": "2026-07-21T14:15:38.690129",
-        "last_seen": "2026-07-25T13:57:42.978465"
+        "last_seen": "2026-07-25T15:26:10.335446"
       },
       {
         "item_id": "v1|127989289961|0",
@@ -34206,7 +34228,7 @@
           "BEST_OFFER"
         ],
         "first_seen": "2026-07-22T21:31:16.104353",
-        "last_seen": "2026-07-25T13:57:42.978451"
+        "last_seen": "2026-07-25T15:26:10.335429"
       },
       {
         "item_id": "v1|336702661974|0",
@@ -34225,7 +34247,7 @@
           "FIXED_PRICE"
         ],
         "first_seen": "2026-07-22T17:42:54.083106",
-        "last_seen": "2026-07-25T13:57:42.978466"
+        "last_seen": "2026-07-25T15:26:10.335448"
       },
       {
         "item_id": "v1|307082052327|0",
@@ -34245,7 +34267,7 @@
           "BEST_OFFER"
         ],
         "first_seen": "2026-07-23T23:20:16.843859",
-        "last_seen": "2026-07-25T13:57:42.978461"
+        "last_seen": "2026-07-25T15:26:10.335440"
       },
       {
         "item_id": "v1|168517093611|0",
@@ -34276,11 +34298,11 @@
       "name": "Energy Marker E-43 [Silver Foil]",
       "set": "Manga Booster 01",
       "language": "EN",
-      "count": 9,
+      "count": 10,
       "min": 104.7,
       "median": 199.0,
       "max": 351.8,
-      "avg": 193.82,
+      "avg": 192.01,
       "samples": [
         {
           "title": "Son Goku Bulma E-43 Silver Energy Marker Dragon Ball Manga Booster Fusion World ",
@@ -34304,32 +34326,32 @@
           "url": "https://www.ebay.nl/itm/188662968975?_skw=dragon+ball+energy+marker+E-43+silver+english&hash=item2bed30728f:g:ylIAAeSwahlqXDZw"
         },
         {
+          "title": "Son Goku Bulma E-43 Silver Energy Marker Dragon Ball Manga Booster Fusion World ",
+          "price": 175.79,
+          "currency": "EUR",
+          "marketplace": "EBAY_NL",
+          "url": "https://www.ebay.nl/itm/147460778291?_skw=dragon+ball+energy+marker+E-43+silver+english&hash=item225558e933:g:ScoAAeSwYttqZL~s"
+        },
+        {
           "title": "E-43 Silver Energy Marker Dragon Ball Fusion World SB01 Manga Booster NM-MT",
           "price": 175.79,
           "currency": "EUR",
           "marketplace": "EBAY_NL",
           "url": "https://www.ebay.nl/itm/198456340485?_skw=dragon+ball+energy+marker+E-43+silver+english&hash=item2e34eb7005:g:FzIAAeSwF4FqPu9D"
-        },
-        {
-          "title": "Dragon Ball Card Manga Booster Energy Marker SB01 E-43 Silver Bulma",
-          "price": 199.0,
-          "currency": "EUR",
-          "marketplace": "EBAY_DE",
-          "url": "https://www.ebay.de/itm/336667258369?_skw=dragon+ball+energy+marker+E-43+silver+english&hash=item4e62eeae01:g:uPMAAeSwAotqRhvf"
         }
       ],
-      "last_scraped": "2026-07-25T13:57:46.966384",
+      "last_scraped": "2026-07-25T15:26:14.381901",
       "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-fusion-world-energy-markers/energy-marker-silver-e-43"
     },
     "E-43-silver-JP": {
       "name": "Energy Marker E-43 [Silver Foil] (Japanese)",
       "set": "Manga Booster 01 JP",
       "language": "JP",
-      "count": 38,
+      "count": 39,
       "min": 100.0,
-      "median": 247.14,
+      "median": 245.65,
       "max": 369.38,
-      "avg": 240.13,
+      "avg": 238.48,
       "samples": [
         {
           "title": "Energy Marker E-43 | Bulma & Goku V.1 - Token | Dragon Ball ENG",
@@ -34367,7 +34389,7 @@
           "url": "https://www.ebay.co.uk/itm/358560139469?_skw=dragon+ball+energy+marker+E-43+japanese&hash=item537bd988cd:g:pv0AAeSwIGhqB5KZ"
         }
       ],
-      "last_scraped": "2026-07-25T13:57:57.654165",
+      "last_scraped": "2026-07-25T15:26:24.164093",
       "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-japanese-fusion-world-energy-markers/energy-marker-silver-e-43"
     },
     "E-46-silver-EN": {
@@ -34392,7 +34414,7 @@
           "price": 76.18,
           "currency": "EUR",
           "marketplace": "EBAY_NL",
-          "url": "https://www.ebay.nl/itm/318614119917?_skw=dragon+ball+energy+marker+E-46+silver+english&hash=item4a2ee1a5ed:g:2ewAAeSwK8xqXz0o&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGaWkZetpaW%2FslsFGyylh2DHjcjP%2BhCDGHzS8p9aqzj6NfEAk%2FogJUp0zyYvPfKrefzMIYIPdNfmK7xpgf1mCWiuk7SRIce8xrChcvhyNGNIO6pUF5sIiKqx14DSlOV09Xv2Hi%2Fju%2FxVUfQTJ1M287T8hmmNkjuHPZdL%2Bn6FGgKr5wq2SolVAVskkG1sp6YYmpnbNPg%2BMZFgKTgO0q%2BRJ6NbDHY%2FQaFKrn6A7H11rzu%2BQ4w6mjn7zws2So3jpQKijqQS0E4WyFW0xQZ43gL%2BoRtnG2gZ%2F7uIBid5ulqnA7mfu4I5Lu8%2BAS0E5Ovm0wm16mbkgAt0y7%2Bly8yvTntQBmMr"
+          "url": "https://www.ebay.nl/itm/318614119917?_skw=dragon+ball+energy+marker+E-46+silver+english&hash=item4a2ee1a5ed:g:2ewAAeSwK8xqXz0o&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGaWkZetpaW%2FslsFGyylh2DHjcjP%2BhCDGHzS8p9aqzj6NfEAk%2FogJUp0zyYvPfKrefzMIYIPdNfmK7xpgf1mCWiuk7SRIce8xrChcvhyNGNIO6pUF5sIiKqx14DSlOV09Xs%2B4f5JxITr%2F%2BAAJ76pDhHEslclyr5sq7iZ17vaaysLBeC%2F2BBXfkgZuWRYa170eDVsFUp4d3PWn6pKMPGlgI%2F1TEtXJ8JHEy%2BJURkRb0Zy6s6CycPb8dis%2FcvHs19WQo6Hi9bMBWH8vriETLDEhEyef8ssCR2wVRsaez7GOb%2B0IEA24Kl1%2FnA3PsFh0mOMiTqyF4UpNzTattnpIk5EraD9"
         },
         {
           "title": "Dragon Ball Super Fusion World Energy Marker E-46 Silver Manga Booster 01 EN",
@@ -34406,28 +34428,28 @@
           "price": 118.0,
           "currency": "EUR",
           "marketplace": "EBAY_NL",
-          "url": "https://www.ebay.nl/itm/158037780642?_skw=dragon+ball+energy+marker+E-46+silver+english&hash=item24cbc928a2:g:8ugAAeSwuOVqQlkO&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGaXxcYB5INkz7dn9Ve42IcQmPsRIbHF1U33jGAZLbB2YqM9hMNtn5zzu%2FaZXusqiK%2FG549HjkSfP7XawaGGsIvQatN9k%2FNveDI%2FO%2Fym7TjTrzMSpoje4mU83p0%2F2qjEpjJclOsOF7uuI0cB8tRCYaDtljSg3oXJjvOY89vAFW4ZCXemrMd0ZgBDxzArlZ9SYIhtaQWzEDdpCaQ4di29%2FeNMrs9tBvcQVHO%2BKJWmED3p61BJX3QRlhp%2B5MuO8zQcoKK8R8W4TwoPf%2FGHPRaSOrHavKo1iNuZtL8cK0GMb%2BWJ1%2BLCQZv51u2N95qHr9ISFTdGEo0jTvcsVQjOE5vEuD4D"
+          "url": "https://www.ebay.nl/itm/158037780642?_skw=dragon+ball+energy+marker+E-46+silver+english&hash=item24cbc928a2:g:8ugAAeSwuOVqQlkO&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGaXxcYB5INkz7dn9Ve42IcQmPsRIbHF1U33jGAZLbB2YqM9hMNtn5zzu%2FaZXusqiK%2FG549HjkSfP7XawaGGsIvQatN9k%2FNveDI%2FO%2Fym7TjTrzMSpoje4mU83p0%2F2qjEpjK8uEV9gOaBjrkwQbCzRcz6WHfclqg%2Bu3OEK6aQzgUBiHEEsTrJ%2FciuKDhDRZEocp4u8mWneZnu6TT6EuQ43pYqnOifN%2FvvwdzXF8fRmSOvTFcEZLrRPuwKkliQCtV5Kd5aoHQJndiA7f5Sa%2BZEMMPfLQ1WV7JenCpTBpONdGoWO%2BK2pJyunGxEhq7yen%2F7AHBEU710aG7uz8e1JJHxqYq1"
         },
         {
           "title": "Energy Marker E-46 Manga Booster SB01 Dragon Ball Fusion World Booster Silver",
           "price": 153.91,
           "currency": "EUR",
           "marketplace": "EBAY_NL",
-          "url": "https://www.ebay.nl/itm/127868949403?_skw=dragon+ball+energy+marker+E-46+silver+english&hash=item1dc595539b:g:aHgAAeSwjiVqCTBe&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGYoKjMm9EDvQZRbMhtvJ%2Fy5XgD3PW4V1XOTn1t8fYl9N0OCRyRwo%2FoxKqIF1NiGCrERgmQ8O8DL1twqDwIjN7UuXDSI4Z14K0WxYT%2FkTaqyA2qlAgELJ2QQpMXtnzPTfZ607p6BiSNSafOCRIO2Yqoqf1va6%2BKfb1pLMxvarhgdvuYxyiCSPslsZ32%2BqYHZj7jRSXjq3Bpb8EWXHLMHn%2FMxnN6zYLjtF3v9hzXJSwKq%2F8jfKxwAdwTp7or0eD2GEYanh8qBk%2BgjKsyDWpaang%2B%2BSBji5hHOjbNFK4cWxUBih1jkK612GnZiPgMGPaGXPjALWorZRNnqXWJxkuG8%2Bj2k"
+          "url": "https://www.ebay.nl/itm/127868949403?_skw=dragon+ball+energy+marker+E-46+silver+english&hash=item1dc595539b:g:aHgAAeSwjiVqCTBe&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGYoKjMm9EDvQZRbMhtvJ%2Fy5XgD3PW4V1XOTn1t8fYl9N0OCRyRwo%2FoxKqIF1NiGCrERgmQ8O8DL1twqDwIjN7UuXDSI4Z14K0WxYT%2FkTaqyA2qlAgELJ2QQpMXtnzPTfZ4oIO3Y6Y3ynz8EDE7zjvHBJCo7O7366gJV6kOObdLgNBiRIufysUNp%2Bb%2B9P8eeU1zIONeXMOL5Ddt1ZLqgM5dyq9IslghRYfeBNxzQyUspuT%2ByViFV7MIlMawjhZ2Inkh1uVqeRuMNeovaYhEvcBsrBi0A2RVVnEmNdQVtE55dnIi9fntNlVKLAp0SlQ7uJYN15dLzBGRDxZTj1cP0yM2q"
         }
       ],
-      "last_scraped": "2026-07-25T13:58:01.009620",
+      "last_scraped": "2026-07-25T15:26:27.650218",
       "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-fusion-world-energy-markers/energy-marker-silver-e-46"
     },
     "E-46-silver-JP": {
       "name": "Energy Marker E-46 [Silver Foil] (Japanese)",
       "set": "Manga Booster 01 JP",
       "language": "JP",
-      "count": 21,
+      "count": 22,
       "min": 69.17,
-      "median": 130.72,
+      "median": 143.36,
       "max": 175.58,
-      "avg": 130.57,
+      "avg": 132.02,
       "samples": [
         {
           "title": "Energy Marker () Fusion World Energy Markers E-46 NM Holo",
@@ -34465,18 +34487,18 @@
           "url": "https://www.ebay.co.uk/itm/198482889385?_skw=dragon+ball+energy+marker+E-46+japanese&hash=item2e36808aa9:g:5dQAAeSwbodqTRl6"
         }
       ],
-      "last_scraped": "2026-07-25T13:58:07.943507",
+      "last_scraped": "2026-07-25T15:26:34.527884",
       "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-japanese-fusion-world-energy-markers/energy-marker-silver-e-46"
     },
     "E-50-silver-EN": {
       "name": "Energy Marker E-50 [Silver Foil]",
       "set": "Manga Booster 01",
       "language": "EN",
-      "count": 10,
+      "count": 11,
       "min": 38.31,
       "median": 70.56,
       "max": 180.91,
-      "avg": 78.97,
+      "avg": 79.78,
       "samples": [
         {
           "title": "Dragon Ball Fusion World Energy Marker E-50 Silver",
@@ -34497,7 +34519,7 @@
           "price": 53.2,
           "currency": "EUR",
           "marketplace": "EBAY_NL",
-          "url": "https://www.ebay.nl/itm/800152011681?_skw=dragon+ball+energy+marker+E-50+silver+english&hash=itemba4cc6c3a1:g:VxAAAeSwulZqKKgP&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGZl4nGuqlIz2l9dWGHZrC10RVZK56WWz6Rh9EeoUaeAlje2cPyyOtf%2B%2FJUEkxL0qt1HhaCZDznFxPJyhWzUYJrDWmIkaTZ1wJmqrDX%2BgXG%2BXabIYY05LS1NOWMJQO5WF9ddI529pUonl2PWKDFR7Lff8bgjMF39EF%2FOsnBHkFEsoTPpuv3vTbqrxWHgQsKOtQiOAZHzoIiLtUjK%2FuQ7Ts56jKjXrlyBukwBW0QnFqCBgE2DOz299GNv2uWwywTlwVrSdkGQqfvS9oYnFHry7J29KRcfmqphV3bnkksNTcYO%2BBB%2FP32%2FJ9tx7iMte%2FjTF2S6Cz4KWrVhflb%2FvltGnE0K"
+          "url": "https://www.ebay.nl/itm/800152011681?_skw=dragon+ball+energy+marker+E-50+silver+english&hash=itemba4cc6c3a1:g:VxAAAeSwulZqKKgP&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGZl4nGuqlIz2l9dWGHZrC10RVZK56WWz6Rh9EeoUaeAlje2cPyyOtf%2B%2FJUEkxL0qt1HhaCZDznFxPJyhWzUYJrDWmIkaTZ1wJmqrDX%2BgXG%2BXabIYY05LS1NOWMJQO5WF9eLFwflo4ooNTu8uqPLK9fgviLIPD1HfpLBEHfwbpaqAwoeM0j0XX1xeP2P3sYN98bqHZIH5vW3A7ENm%2FHkxCKeQLn8KfuaqYcFYlGnFFL2Sibfuc7zt4ztBjpsX4vdUne9rYG0Fmjm%2BItk9xBWJq7fb2SOAvJLi9%2BVe3jOvTk3rjMWl3MaSx262MajjksQhS9Q0pzX3DUFa5%2BFEIWMs6ov"
         },
         {
           "title": "Energy Marker SB01 E-50 - Dragon Ball Fusion World Manga Booster - Silver- MINT",
@@ -34514,18 +34536,18 @@
           "url": "https://www.ebay.de/itm/336667271210?_skw=dragon+ball+energy+marker+E-50+silver+english&hash=item4e62eee02a:g:8FYAAeSwQ2tqRiBr"
         }
       ],
-      "last_scraped": "2026-07-25T13:58:11.324708",
+      "last_scraped": "2026-07-25T15:26:37.826536",
       "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-fusion-world-energy-markers/energy-marker-silver-e-50"
     },
     "E-50-silver-JP": {
       "name": "Energy Marker E-50 [Silver Foil] (Japanese)",
       "set": "Manga Booster 01 JP",
       "language": "JP",
-      "count": 24,
+      "count": 23,
       "min": 38.31,
-      "median": 81.63,
+      "median": 75.52,
       "max": 353.99,
-      "avg": 94.88,
+      "avg": 92.06,
       "samples": [
         {
           "title": "Dragon Ball Fusion World Energy Marker E-50 Silver",
@@ -34563,7 +34585,7 @@
           "url": "https://www.ebay.co.uk/itm/278168733630?_skw=dragon+ball+energy+marker+E-50+japans&hash=item40c42607be:g:NVYAAeSwTnJqT4QN"
         }
       ],
-      "last_scraped": "2026-07-25T13:58:18.028683",
+      "last_scraped": "2026-07-25T15:26:44.821524",
       "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-japanese-fusion-world-energy-markers/energy-marker-silver-e-50"
     },
     "SB01-030-altart-EN": {
@@ -34584,7 +34606,7 @@
           "url": "https://www.ebay.nl/itm/800267724043?_skw=dragon+ball+dabura+SB01-030+alt+art+english&hash=itemba53ac650b:g:Ez8AAeSwTnJqQ~Bb"
         }
       ],
-      "last_scraped": "2026-07-25T13:58:21.225915",
+      "last_scraped": "2026-07-25T15:26:48.020699",
       "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-fusion-world-manga-booster-01/dabura-alternate-art-sb01-030"
     },
     "SB01-030-altart-JP": {
@@ -34633,7 +34655,7 @@
           "url": "https://www.ebay.co.uk/itm/317036673295?_skw=dragon+ball+dabura+SB01-030+japanese&hash=item49d0dbb90f:g:9KQAAeSwKyloX3vB"
         }
       ],
-      "last_scraped": "2026-07-25T13:58:27.637455",
+      "last_scraped": "2026-07-25T15:26:54.413928",
       "pricecharting_url": "https://www.pricecharting.com/game/dragon-ball-japanese-fusion-world-manga-booster-01/dabura-alternate-art-sb01-030"
     }
   }
