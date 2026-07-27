@@ -37,7 +37,7 @@
       "BEST_OFFER"
     ],
     "first_seen": "2026-07-17T03:07:16.871182",
-    "last_seen": "2026-07-26T23:21:41.418948"
+    "last_seen": "2026-07-27T03:40:37.061558"
   },
   "v1|236953090089|0": {
     "item_id": "v1|236953090089|0",
@@ -56,7 +56,7 @@
       "FIXED_PRICE"
     ],
     "first_seen": "2026-07-21T14:15:38.690129",
-    "last_seen": "2026-07-26T23:21:41.418950"
+    "last_seen": "2026-07-27T03:40:37.061675"
   },
   "v1|336702661974|0": {
     "item_id": "v1|336702661974|0",
@@ -75,7 +75,7 @@
       "FIXED_PRICE"
     ],
     "first_seen": "2026-07-22T17:42:54.083106",
-    "last_seen": "2026-07-26T23:21:41.418952"
+    "last_seen": "2026-07-27T03:40:37.061678"
   },
   "v1|127989289961|0": {
     "item_id": "v1|127989289961|0",
@@ -95,7 +95,7 @@
       "BEST_OFFER"
     ],
     "first_seen": "2026-07-22T21:31:16.104353",
-    "last_seen": "2026-07-26T23:21:41.418938"
+    "last_seen": "2026-07-27T03:40:37.061545"
   },
   "v1|307082052327|0": {
     "item_id": "v1|307082052327|0",
@@ -116,5 +116,43 @@
     ],
     "first_seen": "2026-07-23T23:20:16.843859",
     "last_seen": "2026-07-25T19:31:00.156926"
+  },
+  "v1|358847977030|0": {
+    "item_id": "v1|358847977030|0",
+    "target": "SPECIAL2026V1",
+    "title": "Dragon Ball Super Fusion World Story Booster 01 ST01 Booster Box PRESALE",
+    "price_value": 527.43,
+    "price_currency": "EUR",
+    "url": "https://www.ebay.nl/itm/358847977030?_skw=dragon+ball+fusion+world+story+booster+01&hash=item538d019646:g:IoQAAeSwe41qZrE2",
+    "condition": "New/Factory Sealed",
+    "seller": "black-arrowcollectibles",
+    "feedback_pct": "99.7",
+    "country": "US",
+    "marketplace": "EBAY_NL",
+    "image": "https://i.ebayimg.com/images/g/IoQAAeSwe41qZrE2/s-l225.jpg",
+    "buying_options": [
+      "FIXED_PRICE",
+      "BEST_OFFER"
+    ],
+    "first_seen": "2026-07-27T03:40:31.277195"
+  },
+  "v1|298535328779|0": {
+    "item_id": "v1|298535328779|0",
+    "target": "SPECIAL2026V1",
+    "title": "Dragon Ball Super English Fusion World Story Booster ST01 20 Packs Ships 8/21",
+    "price_value": 474.93,
+    "price_currency": "EUR",
+    "url": "https://www.ebay.nl/itm/298535328779?_skw=dragon+ball+fusion+world+story+booster+01&hash=item4582179c0b:g:2pMAAeSwXiNqZrcJ",
+    "condition": "New/Factory Sealed",
+    "seller": "mos2340",
+    "feedback_pct": "100.0",
+    "country": "US",
+    "marketplace": "EBAY_NL",
+    "image": "https://i.ebayimg.com/images/g/2pMAAeSwXiNqZrcJ/s-l225.jpg",
+    "buying_options": [
+      "FIXED_PRICE",
+      "BEST_OFFER"
+    ],
+    "first_seen": "2026-07-27T03:40:31.277233"
   }
 }
