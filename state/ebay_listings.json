@@ -37,7 +37,7 @@
       "BEST_OFFER"
     ],
     "first_seen": "2026-07-17T03:07:16.871182",
-    "last_seen": "2026-08-03T07:51:59.903265"
+    "last_seen": "2026-08-03T11:48:19.401621"
   },
   "v1|236953090089|0": {
     "item_id": "v1|236953090089|0",
@@ -135,7 +135,7 @@
       "BEST_OFFER"
     ],
     "first_seen": "2026-07-27T03:40:31.277195",
-    "last_seen": "2026-08-03T07:51:59.903253"
+    "last_seen": "2026-08-03T11:48:19.401613"
   },
   "v1|298535328779|0": {
     "item_id": "v1|298535328779|0",
@@ -234,7 +234,7 @@
       "FIXED_PRICE"
     ],
     "first_seen": "2026-08-01T17:23:49.052678",
-    "last_seen": "2026-08-03T07:51:59.903269"
+    "last_seen": "2026-08-03T11:48:19.401655"
   },
   "v1|188731420698|0": {
     "item_id": "v1|188731420698|0",
@@ -255,5 +255,43 @@
     ],
     "first_seen": "2026-08-02T10:21:47.219095",
     "last_seen": "2026-08-03T07:51:59.903272"
+  },
+  "v1|307103565854|0": {
+    "item_id": "v1|307103565854|0",
+    "target": "SPECIAL2026V1",
+    "title": "Dragon Ball Fusion World- Story Booster (ST01) PREORDER 24/08 Sealed Case🇬🇧 ",
+    "price_value": 4936.7,
+    "price_currency": "GBP",
+    "url": "https://www.ebay.co.uk/itm/307103565854?_skw=dragon+ball+fusion+world+special+booster+vol+1&hash=item4780cc881e:g:BgIAAeSwFKNqanz6",
+    "condition": "New/Factory Sealed",
+    "seller": "havocindustries",
+    "feedback_pct": "100.0",
+    "country": "GB",
+    "marketplace": "EBAY_GB",
+    "image": "https://i.ebayimg.com/images/g/BgIAAeSwFKNqanz6/s-l225.jpg",
+    "buying_options": [
+      "FIXED_PRICE",
+      "BEST_OFFER"
+    ],
+    "first_seen": "2026-08-03T11:48:10.762697"
+  },
+  "v1|188735864017|0": {
+    "item_id": "v1|188735864017|0",
+    "target": "SPECIAL2026V1",
+    "title": "Dragon Ball Fusion World- Story Booster (ST01) PREORDER 21/08 Sealed Case🇬🇧 ",
+    "price_value": 5672.99,
+    "price_currency": "EUR",
+    "url": "https://www.ebay.nl/itm/188735864017?_skw=dragon+ball+fusion+world+story+booster+01&hash=item2bf188bcd1:g:HEkAAeSwhZ9qbxhT",
+    "condition": "New/Factory Sealed",
+    "seller": "teddy_99",
+    "feedback_pct": "100.0",
+    "country": "GB",
+    "marketplace": "EBAY_NL",
+    "image": "https://i.ebayimg.com/images/g/HEkAAeSwhZ9qbxhT/s-l225.jpg",
+    "buying_options": [
+      "FIXED_PRICE",
+      "BEST_OFFER"
+    ],
+    "first_seen": "2026-08-03T11:48:14.580678"
   }
 }
