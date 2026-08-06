@@ -95,7 +95,7 @@
       "BEST_OFFER"
     ],
     "first_seen": "2026-07-22T21:31:16.104353",
-    "last_seen": "2026-08-06T06:56:45.299104"
+    "last_seen": "2026-08-06T11:04:59.001831"
   },
   "v1|307082052327|0": {
     "item_id": "v1|307082052327|0",
@@ -294,7 +294,7 @@
       "BEST_OFFER"
     ],
     "first_seen": "2026-08-03T11:48:14.580678",
-    "last_seen": "2026-08-06T06:56:45.299240"
+    "last_seen": "2026-08-06T11:04:59.001801"
   },
   "v1|800457830236|0": {
     "item_id": "v1|800457830236|0",
@@ -314,7 +314,7 @@
       "BEST_OFFER"
     ],
     "first_seen": "2026-08-04T06:52:29.267256",
-    "last_seen": "2026-08-06T06:56:45.299244"
+    "last_seen": "2026-08-06T11:04:59.001805"
   },
   "v1|307107208961|0": {
     "item_id": "v1|307107208961|0",
@@ -333,7 +333,7 @@
       "FIXED_PRICE"
     ],
     "first_seen": "2026-08-04T20:02:27.564714",
-    "last_seen": "2026-08-06T06:56:45.299246"
+    "last_seen": "2026-08-06T11:04:59.001838"
   },
   "v1|188750554903|0": {
     "item_id": "v1|188750554903|0",
@@ -352,6 +352,62 @@
       "FIXED_PRICE",
       "BEST_OFFER"
     ],
-    "first_seen": "2026-08-06T06:56:40.312008"
+    "first_seen": "2026-08-06T06:56:40.312008",
+    "last_seen": "2026-08-06T11:04:59.001763"
+  },
+  "v1|407123957326|0": {
+    "item_id": "v1|407123957326|0",
+    "target": "SPECIAL2026V1",
+    "title": "Presale Dragon Ball Super Card Game Fusion World STORY BOOSTER 01 30 packs",
+    "price_value": 171.38,
+    "price_currency": "EUR",
+    "url": "https://www.ebay.nl/itm/407123957326?_skw=dragon+ball+fusion+world+story+booster+01&hash=item5eca7a964e:g:QXAAAeSwSwhqdDS6",
+    "condition": "New/Factory Sealed",
+    "seller": "japan_card_curator",
+    "feedback_pct": "100.0",
+    "country": "JP",
+    "marketplace": "EBAY_NL",
+    "image": "https://i.ebayimg.com/images/g/QXAAAeSwSwhqdDS6/s-l225.jpg",
+    "buying_options": [
+      "FIXED_PRICE"
+    ],
+    "first_seen": "2026-08-06T11:04:52.401396"
+  },
+  "v1|257665144017|0": {
+    "item_id": "v1|257665144017|0",
+    "target": "SPECIAL2026V1",
+    "title": "Dragon Ball Fusion World Story Booster ST01 Sealed Case 12x Booster Box 21/08/26",
+    "price_value": 5245.91,
+    "price_currency": "EUR",
+    "url": "https://www.ebay.nl/itm/257665144017?_skw=dragon+ball+fusion+world+story+booster+01&hash=item3bfe0a14d1:g:-WQAAeSwqvlqdF6o",
+    "condition": "New/Factory Sealed",
+    "seller": "truenorthtcg1",
+    "feedback_pct": "100.0",
+    "country": "GB",
+    "marketplace": "EBAY_NL",
+    "image": "https://i.ebayimg.com/images/g/-WQAAeSwqvlqdF6o/s-l225.jpg",
+    "buying_options": [
+      "FIXED_PRICE"
+    ],
+    "first_seen": "2026-08-06T11:04:52.401447"
+  },
+  "v1|800454079338|0": {
+    "item_id": "v1|800454079338|0",
+    "target": "SPECIAL2026V1",
+    "title": "2 X Dragon Ball Super English Fusion World Story Booster Boxes ST01 - Presale",
+    "price_value": 1056.29,
+    "price_currency": "EUR",
+    "url": "https://www.ebay.nl/itm/800454079338?_skw=dragon+ball+fusion+world+story+booster+01&hash=itemba5ec7f36a:g:wuIAAeSwENVqcIdn",
+    "condition": "New/Factory Sealed",
+    "seller": "talta-46",
+    "feedback_pct": "100.0",
+    "country": "AU",
+    "marketplace": "EBAY_NL",
+    "image": "https://i.ebayimg.com/images/g/wuIAAeSwENVqcIdn/s-l225.jpg",
+    "buying_options": [
+      "FIXED_PRICE",
+      "BEST_OFFER"
+    ],
+    "first_seen": "2026-08-06T11:04:52.401508"
   }
 }
