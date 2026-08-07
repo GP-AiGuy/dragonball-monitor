@@ -37,7 +37,7 @@
       "BEST_OFFER"
     ],
     "first_seen": "2026-07-17T03:07:16.871182",
-    "last_seen": "2026-08-07T00:27:58.054594"
+    "last_seen": "2026-08-07T04:51:45.562111"
   },
   "v1|236953090089|0": {
     "item_id": "v1|236953090089|0",
@@ -95,7 +95,7 @@
       "BEST_OFFER"
     ],
     "first_seen": "2026-07-22T21:31:16.104353",
-    "last_seen": "2026-08-07T00:27:58.054580"
+    "last_seen": "2026-08-07T04:51:45.562094"
   },
   "v1|307082052327|0": {
     "item_id": "v1|307082052327|0",
@@ -294,7 +294,7 @@
       "BEST_OFFER"
     ],
     "first_seen": "2026-08-03T11:48:14.580678",
-    "last_seen": "2026-08-07T00:27:58.054591"
+    "last_seen": "2026-08-07T04:51:45.562109"
   },
   "v1|800457830236|0": {
     "item_id": "v1|800457830236|0",
@@ -314,7 +314,7 @@
       "BEST_OFFER"
     ],
     "first_seen": "2026-08-04T06:52:29.267256",
-    "last_seen": "2026-08-07T00:27:58.054605"
+    "last_seen": "2026-08-07T04:51:45.562251"
   },
   "v1|307107208961|0": {
     "item_id": "v1|307107208961|0",
@@ -333,7 +333,7 @@
       "FIXED_PRICE"
     ],
     "first_seen": "2026-08-04T20:02:27.564714",
-    "last_seen": "2026-08-07T00:27:58.054609"
+    "last_seen": "2026-08-07T04:51:45.562263"
   },
   "v1|188750554903|0": {
     "item_id": "v1|188750554903|0",
@@ -353,7 +353,7 @@
       "BEST_OFFER"
     ],
     "first_seen": "2026-08-06T06:56:40.312008",
-    "last_seen": "2026-08-07T00:27:58.054596"
+    "last_seen": "2026-08-07T04:51:45.562114"
   },
   "v1|407123957326|0": {
     "item_id": "v1|407123957326|0",
@@ -372,7 +372,7 @@
       "FIXED_PRICE"
     ],
     "first_seen": "2026-08-06T11:04:52.401396",
-    "last_seen": "2026-08-07T00:27:58.054589"
+    "last_seen": "2026-08-07T04:51:45.562106"
   },
   "v1|257665144017|0": {
     "item_id": "v1|257665144017|0",
@@ -391,7 +391,7 @@
       "FIXED_PRICE"
     ],
     "first_seen": "2026-08-06T11:04:52.401447",
-    "last_seen": "2026-08-07T00:27:58.054600"
+    "last_seen": "2026-08-07T04:51:45.562256"
   },
   "v1|800454079338|0": {
     "item_id": "v1|800454079338|0",
@@ -411,7 +411,7 @@
       "BEST_OFFER"
     ],
     "first_seen": "2026-08-06T11:04:52.401508",
-    "last_seen": "2026-08-07T00:27:58.054607"
+    "last_seen": "2026-08-07T04:51:45.562259"
   },
   "v1|800470431999|0": {
     "item_id": "v1|800470431999|0",
@@ -431,6 +431,25 @@
       "BEST_OFFER"
     ],
     "first_seen": "2026-08-06T14:36:25.071023",
-    "last_seen": "2026-08-07T00:27:58.054598"
+    "last_seen": "2026-08-07T04:51:45.562240"
+  },
+  "v1|227465506914|0": {
+    "item_id": "v1|227465506914|0",
+    "target": "SPECIAL2026V1",
+    "title": "STORY BOOSTER 01 Dragon Ball Super Card Fusion World Box Japanese Factory Sealed",
+    "price_value": 218.56,
+    "price_currency": "EUR",
+    "url": "https://www.ebay.nl/itm/227465506914?_skw=dragon+ball+fusion+world+story+booster+01&hash=item34f6003062:g:FQUAAeSwhrBqdSiC",
+    "condition": "New/Factory Sealed",
+    "seller": "tcg-from-japan",
+    "feedback_pct": "99.0",
+    "country": "JP",
+    "marketplace": "EBAY_NL",
+    "image": "https://i.ebayimg.com/images/g/FQUAAeSwhrBqdSiC/s-l225.jpg",
+    "buying_options": [
+      "FIXED_PRICE",
+      "BEST_OFFER"
+    ],
+    "first_seen": "2026-08-07T04:51:39.840439"
   }
 }
