@@ -2,8 +2,8 @@
   "shops": {
     "Bol.com|https://www.bol.com/nl/nl/s/?searchtext=dragon+ball+booster+box": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1131,
-      "last_success": "2026-10-03T23:09:08.570515",
+      "consecutive_zero_results": 1132,
+      "last_success": "2026-10-04T05:10:08.698071",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -41,17 +41,17 @@
       "alerted_disabled": false
     },
     "TBH Store|https://www.tbhstore.nl/c-7253195/dragon-ball-tcg/": {
-      "consecutive_failures": 1,
-      "consecutive_zero_results": 1127,
-      "last_success": "2026-10-03T19:29:46.454645",
-      "last_error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\nnavigating to \"https://www.tbhstore.nl/c-7253195/dragon-ball-tcg/\", waiting until \"domcontentloaded\"\n",
+      "consecutive_failures": 0,
+      "consecutive_zero_results": 1128,
+      "last_success": "2026-10-04T05:10:28.810121",
+      "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Pokeca|https://pokeca.nl/collections/dragon-ball-super": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1048,
-      "last_success": "2026-10-03T23:09:33.709929",
+      "consecutive_zero_results": 1049,
+      "last_success": "2026-10-04T05:10:33.374274",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -59,7 +59,7 @@
     "Spellenvariant|https://www.spellenvariant.nl/trading-card-games/dragon-ball-tcg": {
       "consecutive_failures": 0,
       "consecutive_zero_results": 0,
-      "last_success": "2026-10-03T23:09:56.467879",
+      "last_success": "2026-10-04T05:10:56.267626",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -81,10 +81,10 @@
       "alerted_disabled": false
     },
     "TF-Robots|https://www.tf-robots.nl/?s=dragon+ball+booster": {
-      "consecutive_failures": 1,
-      "consecutive_zero_results": 1129,
-      "last_success": "2026-10-03T19:29:58.069652",
-      "last_error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\nnavigating to \"https://www.tf-robots.nl/?s=dragon+ball+booster\", waiting until \"domcontentloaded\"\n",
+      "consecutive_failures": 0,
+      "consecutive_zero_results": 1130,
+      "last_success": "2026-10-04T05:10:39.667895",
+      "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
@@ -98,32 +98,32 @@
     },
     "TCGHaven|https://tcghaven.nl/collections/dragon-ball-super": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1131,
-      "last_success": "2026-10-03T23:09:35.919229",
+      "consecutive_zero_results": 1132,
+      "last_success": "2026-10-04T05:10:36.371441",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "AlpsTCG|https://alpstcg.nl/collections/dragon-ball-super-card-game": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1081,
-      "last_success": "2026-10-03T23:09:47.819782",
+      "consecutive_zero_results": 1082,
+      "last_success": "2026-10-04T05:10:53.275847",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "TcgReus|https://www.tcgreus.nl/en/categories/dragon-ball-super-card-game": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1131,
-      "last_success": "2026-10-03T23:09:56.290396",
+      "consecutive_zero_results": 1132,
+      "last_success": "2026-10-04T05:10:58.533813",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Arly Trading|https://arlytrading.nl/productcategorie/dragon-ball-super-card-game/": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1124,
-      "last_success": "2026-10-03T23:10:00.088924",
+      "consecutive_zero_results": 1125,
+      "last_success": "2026-10-04T05:11:02.266826",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -146,8 +146,8 @@
     },
     "Cardmarket|https://www.cardmarket.com/en/DragonBallSuperFusionWorld/Products/Booster-Boxes": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1131,
-      "last_success": "2026-10-03T23:12:24.676148",
+      "consecutive_zero_results": 1132,
+      "last_success": "2026-10-04T05:13:22.780060",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -162,32 +162,32 @@
     },
     "Magic Madhouse|https://www.magicmadhouse.co.uk/search?w=dragon+ball+booster+box": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1130,
-      "last_success": "2026-10-03T23:12:28.492879",
+      "consecutive_zero_results": 1131,
+      "last_success": "2026-10-04T05:13:24.809782",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Chaos Cards|https://www.chaoscards.co.uk/cards/dragon-ball-super/sealed-product": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1131,
-      "last_success": "2026-10-03T23:12:31.104087",
+      "consecutive_zero_results": 1132,
+      "last_success": "2026-10-04T05:13:31.799066",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Total Cards|https://www.totalcards.net/dragon-ball-super-card-game?p=1&search=booster+box": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1131,
-      "last_success": "2026-10-03T23:12:41.282147",
+      "consecutive_zero_results": 1132,
+      "last_success": "2026-10-04T05:13:41.896153",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Fantasywelt|https://www.fantasywelt.de/Suche?q=dragon+ball+booster+display": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1131,
-      "last_success": "2026-10-03T23:12:47.359692",
+      "consecutive_zero_results": 1132,
+      "last_success": "2026-10-04T05:13:46.316963",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -210,32 +210,32 @@
     },
     "Amazon.co.uk|https://www.amazon.co.uk/s?k=dragon+ball+super+card+game+booster+box": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1131,
-      "last_success": "2026-10-03T23:12:47.307302",
+      "consecutive_zero_results": 1132,
+      "last_success": "2026-10-04T05:13:45.210638",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Nin-Nin-Game|https://www.nin-nin-game.com/en/dragon-ball-tcg/": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1085,
-      "last_success": "2026-10-03T23:10:00.384584",
+      "consecutive_zero_results": 1086,
+      "last_success": "2026-10-04T05:11:03.682653",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "4X Trading|https://4xtrading.eu/categoria-prodotto/dragon-ball-super-card-game/": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1082,
-      "last_success": "2026-10-03T23:10:12.581628",
+      "consecutive_zero_results": 1083,
+      "last_success": "2026-10-04T05:11:18.019755",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Hobby Genki|https://hobby-genki.com/en/dragon-ball-series/": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1085,
-      "last_success": "2026-10-03T23:10:20.169741",
+      "consecutive_zero_results": 1086,
+      "last_success": "2026-10-04T05:11:19.988669",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -250,24 +250,24 @@
     },
     "OnyTCG (Fusion World preorders)|https://onytcg.com/en/categoria/Preordini-dragon-ball-super-fusion-world": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 33,
-      "last_success": "2026-10-03T23:10:38.100024",
+      "consecutive_zero_results": 34,
+      "last_success": "2026-10-04T05:11:43.086909",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Il Nuovo Mondo|https://www.ilnuovomondoshop.it/en/trading-cards/dragon-ball-fusion-": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1035,
-      "last_success": "2026-10-03T23:10:43.102475",
+      "consecutive_zero_results": 1036,
+      "last_success": "2026-10-04T05:11:42.266717",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "GameTrade|https://www.gametrade.it/Search/dragon-ball-super-fusion-world": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1083,
-      "last_success": "2026-10-03T23:10:50.725599",
+      "consecutive_zero_results": 1084,
+      "last_success": "2026-10-04T05:11:37.308860",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -282,46 +282,46 @@
     },
     "Jap-One|https://jap-one.com/en/65-dragon-ball-super": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1073,
-      "last_success": "2026-10-03T23:10:55.851593",
+      "consecutive_zero_results": 1074,
+      "last_success": "2026-10-04T05:11:55.670848",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Aquitaz|https://aquitaz.se/en/collections/dragon-ball-super": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1083,
-      "last_success": "2026-10-03T23:11:02.752430",
+      "consecutive_zero_results": 1084,
+      "last_success": "2026-10-04T05:12:02.052092",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "The Card Vault|https://thecardvault.co.uk/collections/dragon-ball-super-cg-booster-boxes": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 981,
-      "last_success": "2026-10-03T23:11:09.107272",
+      "consecutive_zero_results": 982,
+      "last_success": "2026-10-04T05:12:08.712826",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Zavvi (Dragon Ball)|https://www.zavvi.com/search/dragon+ball+booster+box.list": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1083,
-      "last_success": "2026-10-03T23:11:11.021677",
+      "consecutive_zero_results": 1084,
+      "last_success": "2026-10-04T05:12:08.560766",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Hobbix Change|https://www.hobbixchange.co.nz/collections/dragon-ball-super-card-game": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1048,
-      "last_success": "2026-10-03T23:11:15.985645",
+      "consecutive_zero_results": 1049,
+      "last_success": "2026-10-04T05:12:12.486638",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Games Island|https://games-island.eu/en/c/Card-Games/Dragon-Ball-Booster-Display": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 2,
       "consecutive_zero_results": 957,
       "last_success": "2026-10-03T19:31:26.790174",
       "last_error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\nnavigating to \"https://games-island.eu/en/c/Card-Games/Dragon-Ball-Booster-Display\", waiting until \"domcontentloaded\"\n",
@@ -330,56 +330,56 @@
     },
     "Loot Cave|https://lootcave.de/category/dragon-ball-super/": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1064,
-      "last_success": "2026-10-03T23:11:26.649276",
+      "consecutive_zero_results": 1065,
+      "last_success": "2026-10-04T05:12:25.832384",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "PT Merch|https://ptmerch.com/pt/dragon-ball-preorder/": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1082,
-      "last_success": "2026-10-03T23:11:33.337375",
+      "consecutive_zero_results": 1083,
+      "last_success": "2026-10-04T05:12:32.726798",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Gathering Games|https://gatheringgames.co.uk/collections/dragon-ball-super-cg": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1083,
-      "last_success": "2026-10-03T23:11:36.348429",
+      "consecutive_zero_results": 1084,
+      "last_success": "2026-10-04T05:12:33.932216",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Firestorm Games|https://www.firestormgames.co.uk/category/trading-card-games/dragon-ball-super": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1083,
-      "last_success": "2026-10-03T23:11:40.035502",
+      "consecutive_zero_results": 1084,
+      "last_success": "2026-10-04T05:12:36.401928",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Flevance|https://flevance.fr/collections/dragon-ball": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1083,
-      "last_success": "2026-10-03T23:11:41.622169",
+      "consecutive_zero_results": 1084,
+      "last_success": "2026-10-04T05:12:40.534793",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "TCG Store IT|https://tcg-store.it/home/giochi-di-carte/dragon-ball/booster-box-dragon-ball/": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1045,
-      "last_success": "2026-10-03T23:11:50.523060",
+      "consecutive_zero_results": 1046,
+      "last_success": "2026-10-04T05:12:49.659892",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Card Treasure|https://cardtreasure.ch/collections/dragon-ball-super-fusion-world": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1079,
-      "last_success": "2026-10-03T23:11:57.697952",
+      "consecutive_zero_results": 1080,
+      "last_success": "2026-10-04T05:12:57.405101",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -394,24 +394,24 @@
     },
     "Frida M Store|https://fridamstore.com/collections/dragon-ball-fusion-world": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 981,
-      "last_success": "2026-10-03T23:12:00.795330",
+      "consecutive_zero_results": 982,
+      "last_success": "2026-10-04T05:12:58.929336",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "CarteMagic|https://www.cartemagic.com/categoria-prodotto/dragon-ball/": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1083,
-      "last_success": "2026-10-03T23:12:04.618002",
+      "consecutive_zero_results": 1084,
+      "last_success": "2026-10-04T05:13:00.936996",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Anime World GR|https://animeworld.gr/product-category/trading-card-games/dragon-ball-super-card-game/": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1077,
-      "last_success": "2026-10-03T23:12:07.294799",
+      "consecutive_zero_results": 1078,
+      "last_success": "2026-10-04T05:13:08.115456",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -426,16 +426,16 @@
     },
     "Cardoreum|https://cardoreum.eu/collections/dragon-ball-super": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1081,
-      "last_success": "2026-10-03T23:12:15.645524",
+      "consecutive_zero_results": 1082,
+      "last_success": "2026-10-04T05:13:14.866920",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Fantasy Sphere|https://en.fantasysphere.net/dragon-ball-super-cg": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1082,
-      "last_success": "2026-10-03T23:12:23.438034",
+      "consecutive_zero_results": 1083,
+      "last_success": "2026-10-04T05:13:22.419574",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -450,16 +450,16 @@
     },
     "Candy Cards|https://candycards.eu/product-category/dragon-ball-super-card-game/": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1048,
-      "last_success": "2026-10-03T23:10:24.423579",
+      "consecutive_zero_results": 1049,
+      "last_success": "2026-10-04T05:11:26.235818",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Montalfan|https://montalfan.com/en/product-category/dragon-ball-super-card-game/": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 1045,
-      "last_success": "2026-10-03T23:10:27.696358",
+      "consecutive_zero_results": 1046,
+      "last_success": "2026-10-04T05:11:30.696936",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -467,39 +467,39 @@
     "NextCards|https://nextcards.de/collections/dragonball-fusion-world": {
       "consecutive_failures": 0,
       "consecutive_zero_results": 0,
-      "last_success": "2026-10-03T23:10:45.653322",
+      "last_success": "2026-10-04T05:11:46.871556",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Dracoon (Special Booster search)|https://dracoon.nl/?s=special+booster": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 980,
-      "last_success": "2026-10-03T23:09:10.121671",
+      "consecutive_zero_results": 981,
+      "last_success": "2026-10-04T05:10:10.162839",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "88 Cardhouse (Special Booster search)|https://www.88cardhouse.com/search?q=special+booster": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 980,
-      "last_success": "2026-10-03T23:09:10.992593",
+      "consecutive_zero_results": 981,
+      "last_success": "2026-10-04T05:10:11.062275",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Gamerz Paradize (Special Booster search)|https://gamerzparadize.nl/search?q=special+booster": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 980,
-      "last_success": "2026-10-03T23:09:11.190057",
+      "consecutive_zero_results": 981,
+      "last_success": "2026-10-04T05:10:11.730090",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
     },
     "Zatu (Special Booster search)|https://zatu.com/search?type=product&q=special+booster+dragon+ball": {
       "consecutive_failures": 0,
-      "consecutive_zero_results": 12,
-      "last_success": "2026-10-03T23:09:02.753682",
+      "consecutive_zero_results": 13,
+      "last_success": "2026-10-04T05:10:03.337975",
       "last_error": null,
       "disabled": false,
       "alerted_disabled": false
@@ -767,7 +767,7 @@
     "Fantasy Sphere|SPECIAL2026V1|https://www.fantasysphere.net/product/boite-de-20-boosters-sp01-special-booster-volume-1-dragon-ball-super-cg-fusion-world-en-10041411": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T22:44:28.863800",
+      "last_buyable": "2026-10-04T04:45:25.733823",
       "last_error": null
     },
     "TCG Traders|SPECIAL2026V1|https://www.tcgtraders.eu/catalogo/booster-box/booster-box-altre-marche/prevendita-7-8-26dragon-ball-super-card-game-fusion-world-box-special-booster-2026-vol-1-eng/": {
@@ -779,54 +779,54 @@
     "Pika Pika|SPECIAL2026V1|https://www.pikapika.it/prodotto/dragon-ball-fusion-special-booster-vol-1-box-eng/": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T22:45:19.269477",
+      "last_buyable": "2026-10-04T04:46:14.591335",
       "last_error": null
     },
     "Card Collector|SPECIAL2026V1|https://card-collector.net/products/dragon-ball-super-card-game-fusion-world-special-booster-display-01-20-packs-englisch-ab-07-08-2026": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T22:45:44.319894",
+      "last_buyable": "2026-10-04T04:46:39.820281",
       "last_error": null
     },
     "Arcanum Fumetteria|SPECIAL2026V1|https://www.arcanumfumetteria.it/en/product/preordine-dragon-ball-super-card-games-fusion-world-special-booster-2026-vol-1-play-booster-display-24-eng/": {
       "consecutive_unknown": 0,
-      "consecutive_failures": 627,
+      "consecutive_failures": 628,
       "last_buyable": "2026-07-12T09:53:55.798909",
       "last_error": "deep check failed"
     },
     "Unilibro|SPECIAL2026V1|https://giochi.unilibro.it/gioco/bandai/bandai-dragon-ball-super-card-game-fusion-world-box-20-buste-special-booster-2026-vol-1-eng-possibile-allocazione-/0810199500843": {
       "consecutive_unknown": 2,
-      "consecutive_failures": 1276,
+      "consecutive_failures": 1277,
       "last_buyable": null,
       "last_error": "deep check failed"
     },
     "Manga Kaze|SPECIAL2026V1|https://www.mangakaze.com/prodotto/dragon-ball-super-card-game-fusion-world-booster-box-special-booster-2026-vol-1-eng/": {
       "consecutive_unknown": 0,
-      "consecutive_failures": 1278,
+      "consecutive_failures": 1279,
       "last_buyable": null,
       "last_error": "deep check failed"
     },
     "Tony Toys|SPECIAL2026V1|https://tonytoys.it/prodotto/dragon-ball-super-card-game-fusion-world-box-special-booster-2026-vol-1-eng/": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T22:47:13.830320",
+      "last_buyable": "2026-10-04T04:48:08.534354",
       "last_error": null
     },
     "PenguinTCG (ST01)|SPECIAL2026V1|https://www.penguintcg.co.uk/more-tcgs/p/dragon-ball-super-card-game-fusion-world-story-booster-01-st01-booster-box": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T22:47:26.236317",
+      "last_buyable": "2026-10-04T04:48:20.969136",
       "last_error": null
     },
     "Hobby Genki (ST01)|SPECIAL2026V1|https://hobby-genki.com/en/dragon-ball-series/85786-dragon-ball-super-card-game-fusion-world-story-booster-st01-20pack-box-4582770011982.html": {
       "consecutive_unknown": 0,
-      "consecutive_failures": 1278,
+      "consecutive_failures": 1279,
       "last_buyable": null,
       "last_error": "deep check failed"
     },
     "Dracoon|SPECIAL2026V1|https://dracoon.nl/product/dragon-ball-fusion-world-special-booster-box/": {
       "consecutive_unknown": 0,
-      "consecutive_failures": 1276,
+      "consecutive_failures": 1277,
       "last_buyable": null,
       "last_error": "deep check failed"
     },
@@ -844,7 +844,7 @@
     },
     "Loot Cave|SPECIAL2026V1|https://lootcave.de/shop/dragon-ball-super-special-booster-st-01-box-20-booster/": {
       "consecutive_unknown": 9,
-      "consecutive_failures": 542,
+      "consecutive_failures": 543,
       "last_buyable": "2026-07-20T10:58:57.127011",
       "last_error": "deep check failed"
     },
@@ -875,25 +875,25 @@
     "pokeninjapan.store|SPECIAL2026V1|https://www.pokeninjapan.store/a/amp/products/box-dragon-ball-tcg-fusion-world-story-booster-01-st01": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T22:52:46.715285",
+      "last_buyable": "2026-10-04T04:53:41.390151",
       "last_error": null
     },
     "japhunter.ch|SPECIAL2026V1|https://japhunter.ch/products/dragon-ball-fusion-world-story-booster-01-st01-booster-box-display-japanese-edition": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T22:53:12.985679",
+      "last_buyable": "2026-10-04T04:54:07.855227",
       "last_error": null
     },
     "collectiblemadness.com.au|SPECIAL2026V1|https://collectiblemadness.com.au/products/dragon-ball-super-card-game-fusion-world-story-st01-booster-box": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T22:53:39.106798",
+      "last_buyable": "2026-10-04T04:54:34.069315",
       "last_error": null
     },
     "japan-figure.com|SPECIAL2026V1|https://japan-figure.com/products/bandai-dragon-ball-super-fusion-world-st01-card-game-booster-box": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T22:54:04.011520",
+      "last_buyable": "2026-10-04T04:54:59.367145",
       "last_error": null
     },
     "binderly.co.uk|SPECIAL2026V1|https://www.binderly.co.uk/products/dragon-ball-super-cg-fusion-world-special-booster-2026-vol-1-booster-box": {
@@ -905,18 +905,18 @@
     "pokeninjapan.store|SPECIAL2026V1|https://www.pokeninjapan.store/products/box-dragon-ball-tcg-fusion-world-story-booster-01-st01": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T22:54:54.938781",
+      "last_buyable": "2026-10-04T04:55:50.020821",
       "last_error": null
     },
     "Gamerz Paradize|SPECIAL2026V1|https://gamerzparadize.nl/products/dragon-ball-super-card-game-fusion-world-special-booster-box": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T22:49:44.359981",
+      "last_buyable": "2026-10-04T04:50:38.371759",
       "last_error": null
     },
     "Total Cards|SPECIAL2026V1|https://totalcards.net/products/dragon-ball-super-card-game-fusion-world-st01-story-booster-01-booster-box-20-packs": {
       "consecutive_unknown": 169,
-      "consecutive_failures": 787,
+      "consecutive_failures": 788,
       "last_buyable": null,
       "last_error": "deep check failed"
     },
@@ -929,12 +929,12 @@
     "Turol Games|SPECIAL2026V1|https://www.turolgames.com/en/dragon-ball-tcg/130113-dragon-ball-super-card-game-fusion-world-special-booster-display-01-20-packs-english": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T22:50:43.117156",
+      "last_buyable": "2026-10-04T04:51:36.439871",
       "last_error": null
     },
     "totalcards.net|SPECIAL2026V1|https://totalcards.net/products/dragon-ball-super-card-game-fusion-world-st01-story-booster-01-booster-pack": {
       "consecutive_unknown": 0,
-      "consecutive_failures": 44,
+      "consecutive_failures": 45,
       "last_buyable": null,
       "last_error": "deep check failed"
     },
@@ -958,7 +958,7 @@
     },
     "totalcards.net|SPECIAL2026V1|https://totalcards.net/products/dragon-ball-super-card-game-fusion-world-st01-story-booster-01-booster-box-20-packs": {
       "consecutive_unknown": 0,
-      "consecutive_failures": 190,
+      "consecutive_failures": 191,
       "last_buyable": null,
       "last_error": "deep check failed"
     },
@@ -971,41 +971,41 @@
     "gamerzparadize.nl|SPECIAL2026V1|https://gamerzparadize.nl/en/products/dragon-ball-super-card-game-fusion-world-special-booster-box": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T22:57:55.084486",
+      "last_buyable": "2026-10-04T04:58:51.997775",
       "last_error": null
     },
     "dracoon.nl|SPECIAL2026V1|https://dracoon.nl/product/dragon-ball-fusion-world-special-booster-box/": {
       "consecutive_unknown": 0,
-      "consecutive_failures": 607,
+      "consecutive_failures": 608,
       "last_buyable": "2026-07-14T14:00:10.265339",
       "last_error": "deep check failed"
     },
     "rollntrade.com|SPECIAL2026V1|https://rollntrade.com/product/dragon-ball-super-card-game-fusion-world-special-booster-box-01-20-packs/": {
       "consecutive_unknown": 0,
-      "consecutive_failures": 760,
+      "consecutive_failures": 761,
       "last_buyable": null,
       "last_error": "deep check failed"
     },
     "coolstuffinc.com|SPECIAL2026V1|https://www.coolstuffinc.com/p/433117": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T22:59:01.312397",
+      "last_buyable": "2026-10-04T04:59:57.879323",
       "last_error": null
     },
     "nyzfighters.com|SPECIAL2026V1|https://nyzfighters.com/products/dragon-ball-super-fusion-world-st01-story-booster-01": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T22:59:24.786188",
+      "last_buyable": "2026-10-04T05:00:21.373717",
       "last_error": null
     },
     "onytcg.com|SPECIAL2026V1|https://onytcg.com/en/product/dragon-ball-super-card-game-fusion-world-st01-special-booster-display-01-box-20-packs-eng": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T22:59:49.243644",
+      "last_buyable": "2026-10-04T05:00:45.438957",
       "last_error": null
     },
     "shop.app|SPECIAL2026V1|https://shop.app/products/15479743479881/dragon-ball-super-tcg-fusion-world-story-booster-01-pre-order": {
-      "consecutive_unknown": 178,
+      "consecutive_unknown": 179,
       "consecutive_failures": 0,
       "last_buyable": "2026-08-26T20:05:25.905885",
       "last_error": null
@@ -1013,25 +1013,25 @@
     "holohorsegames.com|SPECIAL2026V1|https://www.holohorsegames.com/products/dragon-ball-super-tcg-fusion-world-special-booster-01": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T23:00:37.314629",
+      "last_buyable": "2026-10-04T05:01:34.806540",
       "last_error": null
     },
     "game-academia.myshopify.com|SPECIAL2026V1|https://game-academia.myshopify.com/collections/tcg-pre-order-catalog/products/dragon-ball-super-card-game-fusion-world-dbs-st01-story-booster-01-japanese-booster-box": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T23:01:01.002666",
+      "last_buyable": "2026-10-04T05:01:58.480307",
       "last_error": null
     },
     "miyabihobby.com|SPECIAL2026V1|https://miyabihobby.com/products/tdbf23018": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T23:01:24.764660",
+      "last_buyable": "2026-10-04T05:02:22.256096",
       "last_error": null
     },
     "gamersguildaz.com|SPECIAL2026V1|https://gamersguildaz.com/products/dragon-ball-super-tcg-fusion-world-story-booster-01-case-st01": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T23:01:49.234435",
+      "last_buyable": "2026-10-04T05:02:47.089047",
       "last_error": null
     },
     "store.401games.ca|SPECIAL2026V1|https://store.401games.ca/products/dragon-ball-super-fusion-world-story-booster-vol-1": {
@@ -1043,7 +1043,7 @@
     "gameshack.ca|SPECIAL2026V1|https://www.gameshack.ca/products/dbs-fusion-world-special-bbx-1": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T23:02:40.255426",
+      "last_buyable": "2026-10-04T05:03:37.395824",
       "last_error": null
     },
     "universetcg.com|SPECIAL2026V1|https://www.universetcg.com/products/dbs-fw-st01-booster-box-case-preorder": {
@@ -1055,7 +1055,7 @@
     "gamerzparadize.nl|SPECIAL2026V1|https://gamerzparadize.nl/products/dragon-ball-super-card-game-fusion-world-special-booster-box": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T23:03:28.362105",
+      "last_buyable": "2026-10-04T05:04:25.133939",
       "last_error": null
     },
     "88cardhouse.com|SPECIAL2026V1|https://www.88cardhouse.com/products/dragon-ball-fusion-world-english-sb-01-special-booster-01-booster-box-pre-order": {
@@ -1091,19 +1091,19 @@
     "onytcg.it|SPECIAL2026V1|https://onytcg.it/en/product/dragon-ball-super-card-game-fusion-world-st01-special-booster-display-01-box-20-packs-eng": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T23:05:54.570071",
+      "last_buyable": "2026-10-04T05:06:55.460641",
       "last_error": null
     },
     "gamestop.com|SPECIAL2026V1|https://www.gamestop.com/toys-games/trading-cards/products/dragon-ball-super-card-game-fusion-world-story-booster-01-pack-sb01/20033935.html": {
       "consecutive_unknown": 0,
-      "consecutive_failures": 160,
+      "consecutive_failures": 161,
       "last_buyable": null,
       "last_error": "deep check failed"
     },
     "stompinggroundstcg.com|SPECIAL2026V1|https://www.stompinggroundstcg.com/products/dragon-ball-super-fusion-world-story-booster-st01": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T23:06:39.848804",
+      "last_buyable": "2026-10-04T05:07:40.534912",
       "last_error": null
     },
     "rocketcitytoys.com|SPECIAL2026V1|https://www.rocketcitytoys.com/products/dragon-ball-super-card-game-fusion-world-story-booster-01-st01": {
@@ -1115,7 +1115,7 @@
     "mnacardz.com|SPECIAL2026V1|https://mnacardz.com/products/story-booster-01-booster-box-pack-st01": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T23:07:28.235792",
+      "last_buyable": "2026-10-04T05:08:28.471045",
       "last_error": null
     },
     "mypops.ca|SPECIAL2026V1|https://www.mypops.ca/products/dragon-ball-super-tcg-fusion-world-st01-st-01-story-special-booster-01-box-preorder": {
@@ -1133,7 +1133,7 @@
     "lecoindujeu.ca|SPECIAL2026V1|https://www.lecoindujeu.ca/products/story-booster-01-booster-box": {
       "consecutive_unknown": 0,
       "consecutive_failures": 0,
-      "last_buyable": "2026-10-03T23:08:42.556126",
+      "last_buyable": "2026-10-04T05:09:42.470034",
       "last_error": null
     }
   }
